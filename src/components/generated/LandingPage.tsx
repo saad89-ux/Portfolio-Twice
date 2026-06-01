@@ -49,6 +49,69 @@ const serviceCards = [{
   desc: 'Build robust data pipelines and infrastructure for ML operations.',
   img: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/1e6f50bf-cba2-4b1e-a74d-544743d12fc5.png'
 }];
+const portfolioStats = [{
+  value: '3000+',
+  label: 'Projects Completed'
+}, {
+  value: '50+',
+  label: 'Industries Served'
+}, {
+  value: '$5M+',
+  label: 'Revenue Generated'
+}, {
+  value: '95%',
+  label: 'Client Retention'
+}];
+const portfolioCategories = ['All Projects', 'SEO', 'Web Design', 'Google Ads', 'Branding', 'Social Media'];
+const portfolioProjects = [{
+  title: '410 Muscle Therapy',
+  category: 'SEO',
+  tag: 'SEO',
+  image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+  desc: 'Comprehensive SEO strategy that increased organic traffic and leads.',
+  metrics: [{
+    label: 'Traffic Increase',
+    value: '250%'
+  }, {
+    label: 'Keywords Growth',
+    value: '320%'
+  }, {
+    label: 'More Leads',
+    value: '35%'
+  }]
+}, {
+  title: 'Luxury Living Properties',
+  category: 'Web Design',
+  tag: 'Web Design',
+  image: 'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80',
+  desc: 'Modern website design that delivers premium user experience and leads.',
+  metrics: [{
+    label: 'More Inquiries',
+    value: '180%'
+  }, {
+    label: 'User Engagement',
+    value: '2.4x'
+  }, {
+    label: 'Lower Bounce Rate',
+    value: '45%'
+  }]
+}, {
+  title: 'Home Remodeling Services',
+  category: 'Google Ads',
+  tag: 'Google Ads',
+  image: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80',
+  desc: 'Targeted Google Ads campaigns that reduced cost and increased ROI.',
+  metrics: [{
+    label: 'More Conversions',
+    value: '210%'
+  }, {
+    label: 'Lower Cost / Conv.',
+    value: '32%'
+  }, {
+    label: 'Return on Ad Spend',
+    value: '4.6x'
+  }]
+}];
 const valueItems = [{
   title: 'Innovation',
   text: 'Pushing boundaries in AI, blockchain, and quantitative trading to deliver cutting-edge solutions.',
@@ -80,6 +143,28 @@ const storyItems = [{
   highlight: false
 }];
 const clientAvatars = ['3a9e176a-3863-474d-a596-d593c4d569ea.png', '998d15ff-acf1-4ed8-b332-f13d639b3e03.png', '363356fa-f16d-41aa-99ea-3c436d6bc5df.png'];
+const trustStats = [{
+  icon: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/6fb7d62e-df39-494a-aa26-241744ac5ad2.svg',
+  value: '6+',
+  label: 'Years of Experience'
+}, {
+  icon: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/7a673d8c-5833-4e62-9baf-92c5fa1369c4.svg',
+  value: '3,000+',
+  label: 'Happy Clients'
+}, {
+  icon: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/9f786cae-4cd7-4341-a0d5-261f108aa54a.svg',
+  value: '$5M+',
+  label: 'Revenue Generated'
+}, {
+  icon: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/d4ad3299-5a85-4079-b32d-c6e0052e934e.svg',
+  value: '50+',
+  label: 'Industries Served'
+}, {
+  icon: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/d9f0b80b-1630-4621-8c7c-b38b04cf516f.svg',
+  value: '95%',
+  label: 'Client Retention'
+}];
+const trustAvatars = ['https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80', 'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=80&q=80', 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80', 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=80&q=80'];
 const navItems: PageName[] = ['Home', 'Services', 'Portfolio', 'About Us', 'Careers'];
 const FAQItem: React.FC<FAQItemProps> = ({
   number,
@@ -500,12 +585,374 @@ const Footer: React.FC<FooterProps> = ({
       </p>
     </footer>;
 };
+const TrustSection: React.FC = () => {
+  return <section style={{
+    width: '100%',
+    maxWidth: '1440px',
+    margin: '80px auto 0',
+    padding: '80px clamp(24px, 6vw, 90px)',
+    backgroundColor: 'rgba(7, 11, 30, 1)',
+    borderRadius: '48px',
+    position: 'relative',
+    overflow: 'hidden',
+    boxSizing: 'border-box'
+  }}>
+      <div style={{
+      position: 'absolute',
+      inset: 0,
+      backgroundImage: 'radial-gradient(circle at 16% 18%, rgba(10, 132, 255, 0.15), transparent 24%), radial-gradient(circle at 88% 16%, rgba(26, 115, 255, 0.1), transparent 20%), radial-gradient(circle at 50% 85%, rgba(4, 45, 112, 0.16), transparent 35%)',
+      pointerEvents: 'none'
+    }} />
+      <div style={{
+      position: 'relative',
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      gap: '42px',
+      alignItems: 'center'
+    }}>
+        <div style={{
+        position: 'relative',
+        minHeight: '600px',
+        borderRadius: '40px',
+        overflow: 'hidden',
+        backgroundColor: 'rgba(255, 255, 255, 0.04)',
+        border: '1px solid rgba(255, 255, 255, 0.08)'
+      }}>
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=80" alt="Marketing strategist portrait" style={{
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          filter: 'brightness(0.78)'
+        }} />
+          <div style={{
+          position: 'absolute',
+          top: '28px',
+          left: '28px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '18px',
+          zIndex: 2
+        }}>
+            <div style={{
+            padding: '14px 18px',
+            borderRadius: '28px',
+            backgroundColor: 'rgba(10, 132, 255, 0.16)',
+            border: '1px solid rgba(10, 132, 255, 0.24)',
+            color: 'white',
+            fontFamily: '"Barlow", sans-serif',
+            fontWeight: 600,
+            fontSize: '14px',
+            width: 'fit-content'
+          }}>
+              Client-First Always
+            </div>
+            <button style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '12px',
+            padding: '14px 20px',
+            borderRadius: '18px',
+            border: '1px solid rgba(255, 255, 255, 0.14)',
+            backgroundColor: 'rgba(255, 255, 255, 0.08)',
+            color: 'white',
+            fontFamily: '"Barlow", sans-serif',
+            fontWeight: 600,
+            cursor: 'pointer'
+          }}>
+              <span style={{
+              width: '16px',
+              height: '16px',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: '50%',
+              backgroundColor: 'rgba(10, 132, 255, 1)',
+              color: 'white',
+              fontSize: '12px'
+            }}>
+                ▶
+              </span>
+              Watch My Story
+            </button>
+          </div>
+          <div style={{
+          position: 'absolute',
+          bottom: '28px',
+          left: '28px',
+          right: '28px',
+          zIndex: 2,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '16px',
+          backgroundColor: 'rgba(0, 0, 0, 0.48)',
+          borderRadius: '28px',
+          padding: '26px',
+          backdropFilter: 'blur(10px)'
+        }}>
+            <span style={{
+            color: 'rgba(10, 132, 255, 1)',
+            fontSize: '14px',
+            fontFamily: '"Barlow", sans-serif',
+            fontWeight: 700,
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase'
+          }}>
+              Results · Trust · Growth
+            </span>
+            <p style={{
+            color: 'rgba(255, 255, 255, 0.92)',
+            fontSize: '18px',
+            fontFamily: '"Barlow", sans-serif',
+            fontWeight: 600,
+            margin: 0
+          }}>
+              I don’t believe in just completing projects, I believe in building relationships that last.
+            </p>
+          </div>
+        </div>
+        <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '28px'
+      }}>
+          <div style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '10px',
+          padding: '10px 18px',
+          borderRadius: '999px',
+          backgroundColor: 'rgba(10, 132, 255, 0.12)',
+          border: '1px solid rgba(10, 132, 255, 0.22)',
+          width: 'fit-content'
+        }}>
+            <span style={{
+            width: '10px',
+            height: '10px',
+            borderRadius: '999px',
+            backgroundColor: 'rgba(10, 132, 255, 1)'
+          }} />
+            <span style={{
+            color: 'rgba(255, 255, 255, 0.85)',
+            fontSize: '13px',
+            fontFamily: '"Barlow", sans-serif',
+            fontWeight: 600,
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase'
+          }}>
+              My Story
+            </span>
+          </div>
+          <h2 style={{
+          color: 'white',
+          fontSize: 'clamp(40px, 4vw, 58px)',
+          fontFamily: '"Inter", sans-serif',
+          fontWeight: 700,
+          lineHeight: '1.02',
+          margin: 0
+        }}>
+            Behind Every Strategy, There’s a Purpose.
+          </h2>
+          <div style={{
+          display: 'flex',
+          gap: '16px',
+          alignItems: 'flex-start'
+        }}>
+            <div style={{
+            width: '4px',
+            minHeight: '60px',
+            borderRadius: '999px',
+            backgroundColor: 'rgba(10, 132, 255, 1)'
+          }} />
+            <p style={{
+            color: 'rgba(225, 230, 245, 0.92)',
+            fontSize: '16px',
+            fontFamily: '"Barlow", sans-serif',
+            fontWeight: 400,
+            lineHeight: '28px',
+            margin: 0
+          }}>
+              I started this journey with a simple mission — to help businesses grow with honesty, strategy, and results that actually matter. Over the years, I’ve learned that real growth doesn’t come from shortcuts, it comes from trust, consistency, and a deep understanding of each business I work with.
+            </p>
+          </div>
+          <p style={{
+          color: 'rgba(210, 215, 235, 0.85)',
+          fontSize: '16px',
+          fontFamily: '"Barlow", sans-serif',
+          fontWeight: 400,
+          lineHeight: '28px',
+          margin: 0
+        }}>
+              Every campaign I build is customized. Every decision is data-backed. And every success story you see here represents a relationship built on transparency and hard work.
+            </p>
+          <div style={{
+          display: 'flex',
+          gap: '16px',
+          flexWrap: 'wrap'
+        }}>
+            <button style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '12px',
+            padding: '14px 22px',
+            borderRadius: '16px',
+            backgroundColor: 'rgba(10, 132, 255, 1)',
+            border: 'none',
+            color: 'white',
+            fontFamily: '"Barlow", sans-serif',
+            fontWeight: 700,
+            cursor: 'pointer'
+          }}>
+              Watch Video
+            </button>
+            <button style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '10px',
+            padding: '14px 22px',
+            borderRadius: '16px',
+            backgroundColor: 'rgba(255, 255, 255, 0.08)',
+            border: '1px solid rgba(255, 255, 255, 0.14)',
+            color: 'rgba(255, 255, 255, 0.94)',
+            fontFamily: '"Barlow", sans-serif',
+            fontWeight: 600,
+            cursor: 'pointer'
+          }}>
+              Check Reviews
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div style={{
+      marginTop: '56px',
+      padding: '28px',
+      borderRadius: '36px',
+      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+      border: '1px solid rgba(255, 255, 255, 0.09)'
+    }}>
+        <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(5, minmax(0, 1fr))',
+        gap: '18px'
+      }}>
+          {trustStats.map(stat => <div key={stat.label} style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          gap: '10px',
+          padding: '22px 18px',
+          borderRadius: '28px',
+          backgroundColor: 'rgba(7, 11, 30, 1)',
+          border: '1px solid rgba(255, 255, 255, 0.06)'
+        }}>
+            <img src={stat.icon} alt="" style={{
+            width: '34px',
+            height: '34px'
+          }} />
+            <span style={{
+            color: 'white',
+            fontSize: '24px',
+            fontFamily: '"Barlow", sans-serif',
+            fontWeight: 700
+          }}>
+              {stat.value}
+            </span>
+            <span style={{
+            color: 'rgba(225, 230, 245, 0.8)',
+            fontSize: '13px',
+            fontFamily: '"Barlow", sans-serif',
+            fontWeight: 500
+          }}>
+              {stat.label}
+            </span>
+          </div>)}
+        </div>
+      </div>
+
+      <div style={{
+      marginTop: '32px',
+      padding: '28px 30px',
+      borderRadius: '36px',
+      backgroundColor: 'rgba(255, 255, 255, 0.06)',
+      border: '1px solid rgba(255, 255, 255, 0.08)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: '24px',
+      flexWrap: 'wrap'
+    }}>
+        <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '18px',
+        minWidth: '320px'
+      }}>
+          <span style={{
+          color: 'rgba(10, 132, 255, 1)',
+          fontSize: '28px',
+          fontFamily: '"Inter", sans-serif',
+          fontWeight: 800,
+          lineHeight: 1
+        }}>
+            “
+          </span>
+          <div>
+            <p style={{
+            color: 'rgba(255, 255, 255, 0.9)',
+            fontSize: '16px',
+            fontFamily: '"Barlow", sans-serif',
+            fontWeight: 400,
+            lineHeight: '28px',
+            margin: 0
+          }}>
+                Don't just take my word for it — hear it from the people I’ve worked with.
+              </p>
+            <span style={{
+            color: 'rgba(173, 183, 208, 0.9)',
+            fontSize: '13px',
+            fontFamily: '"Barlow", sans-serif',
+            fontWeight: 500
+          }}>
+                Real Clients. Real Feedback.
+              </span>
+          </div>
+        </div>
+        <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '-12px'
+      }}>
+          {trustAvatars.map((src, index) => <img key={src} src={src} alt="Client" style={{
+          width: '48px',
+          height: '48px',
+          borderRadius: '999px',
+          objectFit: 'cover',
+          border: '2px solid rgba(7, 11, 30, 1)',
+          position: 'relative',
+          left: `${index * -14}px`
+        }} />)}
+          <div style={{
+          marginLeft: '16px',
+          color: 'rgba(255, 255, 255, 0.88)',
+          fontFamily: '"Barlow", sans-serif',
+          fontWeight: 600,
+          fontSize: '14px'
+        }}>
+            3K+ Reviews
+          </div>
+        </div>
+      </div>
+    </section>;
+};
 const HomeContent: React.FC<{
   onNavigate: (page: PageName) => void;
 }> = ({
   onNavigate
 }) => {
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
+  const [activePortfolioCategory, setActivePortfolioCategory] = useState('All Projects');
   return <div style={{
     width: '100%',
     display: 'flex',
@@ -691,6 +1138,10 @@ const HomeContent: React.FC<{
         </div>
       </section>
 
+      <AboutSection />
+
+      <TrustSection />
+
       {/* Companies Logo Ticker — marquee */}
       <section className="clients-marquee">
         <div className="clients-marquee-track">
@@ -777,6 +1228,289 @@ const HomeContent: React.FC<{
                 {service.desc}
               </p>
             </div>)}
+        </div>
+      </section>
+
+      {/* Portfolio Showcase Section */}
+      <section id="portfolio-showcase" className="section-pad" style={{
+      width: '100%',
+      maxWidth: '1440px',
+      padding: '150px 0',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      position: 'relative'
+    }}>
+        <div style={{
+        maxWidth: '960px',
+        width: '100%',
+        textAlign: 'center',
+        marginBottom: '38px'
+      }}>
+            <span style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '10px',
+            padding: '8px 18px',
+            borderRadius: '999px',
+            backgroundColor: 'rgba(10, 132, 255, 0.14)',
+            color: 'rgba(10, 132, 255, 1)',
+            fontSize: '12px',
+            fontFamily: '"Barlow", sans-serif',
+            fontWeight: 700,
+            letterSpacing: '0.16em',
+            textTransform: 'uppercase'
+          }}>
+              PORTFOLIO
+            </span>
+            <h2 style={{
+            color: 'white',
+            fontSize: 'clamp(44px, 4vw, 72px)',
+            fontFamily: '"Inter", sans-serif',
+            fontWeight: 800,
+            lineHeight: '1.02',
+            margin: '22px 0 18px'
+          }}>
+              Real Work. Real <span style={{ color: 'rgba(145, 104, 255, 1)' }}>Results.</span>
+            </h2>
+            <p style={{
+            color: 'rgba(235, 239, 255, 0.8)',
+            fontSize: '17px',
+            fontFamily: '"Barlow", sans-serif',
+            lineHeight: '28px',
+            margin: 0
+          }}>
+              Explore how I help businesses grow with data-driven strategies, stunning design, and performance-focused marketing.
+            </p>
+        </div>
+
+        <div style={{
+        width: '100%',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
+        gap: '18px',
+        marginBottom: '44px'
+      }}>
+            {portfolioStats.map(stat => <div key={stat.label} style={{
+            padding: '28px',
+            borderRadius: '30px',
+            backgroundColor: 'rgba(8, 12, 34, 0.95)',
+            border: '1px solid rgba(255, 255, 255, 0.06)',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '12px',
+            minHeight: '168px',
+            justifyContent: 'center'
+          }}>
+              <span style={{
+              color: 'rgba(145, 104, 255, 1)',
+              fontSize: '32px',
+              fontFamily: '"Barlow", sans-serif',
+              fontWeight: 800
+            }}>
+                {stat.value}
+              </span>
+              <span style={{
+              color: 'rgba(235, 239, 255, 0.82)',
+              fontSize: '14px',
+              fontFamily: '"Barlow", sans-serif',
+              fontWeight: 500,
+              lineHeight: '1.4'
+            }}>
+                {stat.label}
+              </span>
+            </div>)}
+        </div>
+
+        <div style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: '14px',
+        justifyContent: 'center',
+        marginBottom: '48px'
+      }}>
+            {portfolioCategories.map(category => <button key={category} onClick={() => setActivePortfolioCategory(category)} style={{
+            minWidth: '118px',
+            padding: '14px 20px',
+            borderRadius: '999px',
+            backgroundColor: activePortfolioCategory === category ? 'rgba(145, 104, 255, 1)' : 'rgba(255, 255, 255, 0.05)',
+            color: activePortfolioCategory === category ? 'white' : 'rgba(235, 239, 255, 0.8)',
+            border: activePortfolioCategory === category ? '1px solid rgba(145, 104, 255, 1)' : '1px solid rgba(255, 255, 255, 0.08)',
+            cursor: 'pointer',
+            fontFamily: '"Barlow", sans-serif',
+            fontSize: '14px',
+            fontWeight: 600,
+            transition: 'all 0.2s ease'
+          }}>
+                {category}
+              </button>)}
+        </div>
+
+        <div style={{
+        width: '100%',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+        gap: '30px',
+        justifyItems: 'center',
+        marginBottom: '50px'
+      }}>
+            {portfolioProjects.filter(project => activePortfolioCategory === 'All Projects' || project.category === activePortfolioCategory).map(project => <article key={project.title} className="ca-interactive-card" style={{
+            width: '100%',
+            maxWidth: '420px',
+            backgroundColor: 'rgba(16, 18, 43, 0.95)',
+            borderRadius: '36px',
+            overflow: 'hidden',
+            border: '1px solid rgba(255, 255, 255, 0.08)',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '24px'
+          }}>
+              <div style={{
+              position: 'relative',
+              width: '100%',
+              height: '220px',
+              overflow: 'hidden'
+            }}>
+                <img src={project.image} alt={project.title} style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                filter: 'brightness(0.78)'
+              }} />
+                <span style={{
+                position: 'absolute',
+                top: '18px',
+                left: '18px',
+                padding: '10px 16px',
+                borderRadius: '999px',
+                backgroundColor: 'rgba(10, 132, 255, 0.18)',
+                color: 'rgba(10, 132, 255, 1)',
+                fontFamily: '"Barlow", sans-serif',
+                fontWeight: 700,
+                fontSize: '12px',
+                letterSpacing: '0.04em',
+                textTransform: 'uppercase'
+              }}>
+                  {project.tag}
+                </span>
+              </div>
+              <div style={{
+              padding: '0 26px 24px'
+            }}>
+                <h3 style={{
+                color: 'white',
+                fontSize: '24px',
+                fontFamily: '"Barlow", sans-serif',
+                fontWeight: 700,
+                margin: '0 0 12px'
+              }}>
+                  {project.title}
+                </h3>
+                <p style={{
+                color: 'rgba(235, 239, 255, 0.84)',
+                fontSize: '15px',
+                fontFamily: '"Barlow", sans-serif',
+                lineHeight: '26px',
+                margin: '0 0 22px'
+              }}>
+                  {project.desc}
+                </p>
+                <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '12px',
+                marginBottom: '24px'
+              }}>
+                    {project.metrics.map(metric => <div key={metric.label} style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    gap: '12px'
+                  }}>
+                      <span style={{
+                      color: 'rgba(235, 239, 255, 0.76)',
+                      fontSize: '14px',
+                      fontFamily: '"Barlow", sans-serif'
+                    }}>
+                        {metric.label}
+                      </span>
+                      <strong style={{
+                      color: 'white',
+                      fontSize: '14px',
+                      fontFamily: '"Barlow", sans-serif'
+                    }}>
+                        {metric.value}
+                      </strong>
+                    </div>)}
+                </div>
+                <button style={{
+                padding: '14px 20px',
+                width: '100%',
+                backgroundColor: 'rgba(145, 104, 255, 1)',
+                color: 'white',
+                border: 'none',
+                borderRadius: '16px',
+                cursor: 'pointer',
+                fontFamily: '"Barlow", sans-serif',
+                fontWeight: 700,
+                fontSize: '14px'
+              }}>
+                  View Case Study
+                </button>
+              </div>
+            </article>)}
+        </div>
+
+        <div style={{
+        width: '100%',
+        maxWidth: '1230px',
+        padding: '30px 36px',
+        borderRadius: '40px',
+        background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02))',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexWrap: 'wrap',
+        gap: '20px'
+      }}>
+            <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '10px'
+          }}>
+                <h3 style={{
+                color: 'white',
+                fontSize: '28px',
+                fontFamily: '"Inter", sans-serif',
+                fontWeight: 700,
+                margin: 0
+              }}>
+                  Want results like these?
+                </h3>
+                <p style={{
+                color: 'rgba(235, 239, 255, 0.8)',
+                fontSize: '16px',
+                fontFamily: '"Barlow", sans-serif',
+                lineHeight: '26px',
+                margin: 0
+              }}>
+                  Let’s build a strategy that grows your business.
+                </p>
+            </div>
+            <button style={{
+            minWidth: '220px',
+            padding: '16px 24px',
+            borderRadius: '18px',
+            backgroundColor: 'rgba(145, 104, 255, 1)',
+            color: 'white',
+            border: 'none',
+            cursor: 'pointer',
+            fontFamily: '"Barlow", sans-serif',
+            fontWeight: 700,
+            fontSize: '14px'
+          }}>
+              Start Your Project
+            </button>
         </div>
       </section>
 
