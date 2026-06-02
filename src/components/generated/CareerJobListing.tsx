@@ -233,7 +233,6 @@ export const CareerJobListing = () => {
   return <div style={{
     width: '100%',
     backgroundColor: '#030303',
-    minHeight: '100vh',
     position: 'relative',
     overflowX: 'hidden'
   }}>

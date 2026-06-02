@@ -64,14 +64,14 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
 }) => {
   return <div className={`about-section ca-fade-in ${className || ''}`} style={{
     width: '100%',
-    maxWidth: '1440px',
+    maxWidth: '100%',
     margin: '0 auto',
     padding: '80px clamp(24px, 6vw, 90px) 90px',
-    backgroundColor: '#070b1e',
+    backgroundColor: 'transparent',
     boxSizing: 'border-box',
     position: 'relative',
-    overflow: 'hidden',
-    borderRadius: '48px',
+    overflow: 'visible',
+    borderRadius: '0',
     ...style
   }}>
       <div style={{

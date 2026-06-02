@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 interface BaseComponentProps {
   className?: string;
@@ -10,6 +11,11 @@ interface ServiceItem {
   features: string[];
   image: string;
   icon: string;
+}
+interface IndustryItem {
+  title: string;
+  description: string;
+  image: string;
 }
 const servicesData: ServiceItem[] = [{
   title: 'Machine Learning Solutions',
@@ -48,43 +54,40 @@ const servicesData: ServiceItem[] = [{
   image: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/9183b02c-60e9-42d8-af39-dfe8c83431db.png',
   icon: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/d9f0b80b-1630-4621-8c7c-b38b04cf516c.svg'
 }];
-const industriesData = [{
-  title: 'Financial Services & Trading',
-  description: 'Advanced analytics and trading solutions for financial institutions.',
-  features: ['Algorithmic trading systems', 'Market analysis', 'Risk management', 'Fraud detection'],
-  image: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/a572fdab-f147-41cf-a720-59e90f464339.png',
-  icon: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/7ecdd344-1303-4510-b60b-c2404030561e.svg'
+const industryCards: IndustryItem[] = [{
+  title: 'E-Commerce',
+  description: 'Building digital storefronts that convert across channels and devices.',
+  image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&q=80'
 }, {
-  title: 'Blockchain & Crypto',
-  description: 'Cutting-edge blockchain solutions and DeFi protocol development.',
-  features: ['DeFi protocols', 'Token systems', 'Smart contracts', 'Blockchain analytics'],
-  image: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/50684f98-7105-40d1-9a0b-f62b2b900062.png',
-  icon: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/0bc02704-3420-4d87-8f28-84ed240576fb.svg'
+  title: 'Healthcare',
+  description: 'Empowering better patient care with intelligent health and diagnostics solutions.',
+  image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&q=80'
 }, {
-  title: 'Esports & Gaming',
-  description: 'Data-driven solutions for esports teams, tournaments, and gaming platforms.',
-  features: ['Player performance analytics', 'Team optimization', 'Tournament management', 'Gaming platform analytics'],
-  image: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/b47e7e11-7d1e-419e-af1a-b42d065a6f7a.png',
-  icon: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/4ff6bcf8-5c4f-4b51-8030-6f5ad810e1fe.svg'
+  title: 'Real Estate',
+  description: 'Creating high-impact property experiences with data-driven digital tools.',
+  image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&q=80'
 }, {
-  title: 'Healthcare & Life Sciences',
-  description: 'AI solutions for medical imaging, patient care optimization, and drug discovery.',
-  features: ['Medical image analysis', 'Clinical trial optimization', 'Patient outcome prediction', 'Drug development'],
-  image: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/d4e3b372-af8e-4131-b63a-5c84ca8b78a5.png',
-  icon: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/4b95fe13-be65-4ad1-91d7-fc9c4ae44ca3.svg'
+  title: 'Education',
+  description: 'Transforming learning with immersive digital experiences and modern platforms.',
+  image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80'
 }, {
-  title: 'Manufacturing',
-  description: 'Smart manufacturing solutions with predictive maintenance and quality control.',
-  features: ['Predictive maintenance', 'Supply chain optimization', 'Quality control automation', 'Process optimization'],
-  image: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/d1c4f016-2d5e-4343-8831-ccb7d0796bd8.png',
-  icon: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/705857df-0ae1-47c5-b32b-79ee96980d69.svg'
+  title: 'Restaurants & Food',
+  description: 'Delivering tasty digital experiences for hospitality and restaurant brands.',
+  image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80'
 }, {
-  title: 'Retail & E-commerce',
-  description: 'AI-powered solutions for personalization and inventory management.',
-  features: ['Demand forecasting', 'Inventory optimization', 'Recommendation systems', 'Customer analytics'],
-  image: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/2ebd53e1-1524-45ab-a91a-8dd3795a0baf.png',
-  icon: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/5cb9be0d-3600-4fcd-9085-7066a9555bb8.svg'
+  title: 'Automotive',
+  description: 'Driving automotive brands forward with premium digital experiences.',
+  image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&q=80'
+}, {
+  title: 'Finance & Banking',
+  description: 'Powering financial services with secure, modern, customer-first digital products.',
+  image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=80'
+}, {
+  title: 'Fashion & Retail',
+  description: 'Crafting polished retail experiences with premium brand storytelling.',
+  image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=80'
 }];
+const industryHeights = [380, 300, 440, 300];
 const ServiceCard = ({
   item
 }: {
@@ -185,10 +188,83 @@ const ServiceCard = ({
       </button>
     </div>;
 };
+const IndustryCard = ({
+  item,
+  index,
+  onHover
+}: {
+  item: IndustryItem;
+  index: number;
+  onHover: (value: boolean) => void;
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const cardHeight = industryHeights[index % industryHeights.length];
+  return <div style={{
+    width: '220px',
+    height: `${cardHeight}px`,
+    position: 'relative',
+    borderRadius: '20px',
+    overflow: 'hidden',
+    flexShrink: 0,
+    cursor: 'pointer',
+    transform: isHovered ? 'scale(1.03)' : 'scale(1)',
+    transition: 'transform 0.3s ease',
+    boxShadow: isHovered ? '0 20px 40px rgba(10, 132, 255, 0.25)' : 'none'
+  }} onMouseEnter={() => {
+    setIsHovered(true);
+    onHover(true);
+  }} onMouseLeave={() => {
+    setIsHovered(false);
+    onHover(false);
+  }}>
+      <img src={item.image} alt={item.title} style={{
+      position: 'absolute',
+      inset: 0,
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover'
+    }} />
+      <div style={{
+      position: 'absolute',
+      inset: 0,
+      background: 'linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%)'
+    }} />
+      <div style={{
+      position: 'absolute',
+      bottom: '50px',
+      left: '20px',
+      right: '20px',
+      zIndex: 2,
+      opacity: isHovered ? 1 : 0,
+      transition: 'opacity 0.3s ease'
+    }}>
+        <div style={{
+        color: 'rgba(255,255,255,0.85)',
+        fontSize: '13px',
+        fontFamily: '"Barlow", sans-serif',
+        lineHeight: 1.5
+      }}>
+          {item.description}
+        </div>
+      </div>
+      <div style={{
+      position: 'absolute',
+      bottom: '20px',
+      left: '20px',
+      zIndex: 2,
+      color: 'white',
+      fontSize: '18px',
+      fontWeight: 700,
+      fontFamily: '"Barlow", sans-serif'
+    }}>
+        {item.title}
+      </div>
+    </div>;
+};
 export const ServicesPage = () => {
+  const [isMarqueePaused, setIsMarqueePaused] = useState(false);
   return <div style={{
     width: '100%',
-    minHeight: '100vh',
     backgroundColor: 'rgba(3, 3, 3, 1)',
     overflowX: 'hidden',
     position: 'relative'
@@ -196,8 +272,9 @@ export const ServicesPage = () => {
       {/* Hero Section */}
       <section style={{
       margin: '53px auto',
-      width: '1254px',
-      height: '376px',
+      width: '100%',
+      maxWidth: '1254px',
+      minHeight: '376px',
       position: 'relative',
       borderRadius: '48px',
       overflow: 'hidden',
@@ -298,35 +375,44 @@ export const ServicesPage = () => {
 
       {/* Industries Section */}
       <section style={{
-      maxWidth: '1230px',
-      margin: '154px auto',
-      textAlign: 'center'
+      width: '100%',
+      backgroundColor: 'rgba(3, 3, 3, 1)',
+      padding: '120px 0 80px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center'
     }}>
         <h2 style={{
-        color: 'white',
-        fontSize: '36px',
-        fontFamily: '"Barlow", sans-serif',
-        fontWeight: 600,
-        marginBottom: '12px'
-      }}>Industries We Serve</h2>
-        <p style={{
-        maxWidth: '961px',
-        margin: '0 auto 88px auto',
-        color: 'rgba(255, 255, 255, 0.9)',
-        fontSize: '16px',
-        fontFamily: '"Barlow", sans-serif',
-        lineHeight: '24px'
+        fontSize: '42px',
+        fontWeight: 700,
+        textAlign: 'center',
+        marginBottom: '60px',
+        fontFamily: '"Barlow", sans-serif'
       }}>
-          Delivering innovative solutions across diverse industries with deep domain expertise
-        </p>
+          <span style={{ color: 'rgba(10, 132, 255, 1)' }}>Industries</span> <span style={{ color: 'rgba(255, 255, 255, 1)' }}>We Serve</span>
+        </h2>
         <div style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        gap: '58px',
-        justifyContent: 'center'
+        width: '100%',
+        overflow: 'hidden',
+        paddingBottom: '20px'
       }}>
-          {industriesData.map((item, index) => <ServiceCard key={index} item={item as ServiceItem} />)}
+          <div style={{
+          display: 'flex',
+          alignItems: 'flex-end',
+          gap: '16px',
+          width: 'max-content',
+          animation: 'marqueeScroll 35s linear infinite',
+          animationPlayState: isMarqueePaused ? 'paused' : 'running'
+        }}>
+            {[...industryCards, ...industryCards].map((item, index) => <IndustryCard key={`${item.title}-${index}`} item={item} index={index} onHover={setIsMarqueePaused} />)}
+          </div>
         </div>
       </section>
+      <style>{`
+        @keyframes marqueeScroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
     </div>;
 };

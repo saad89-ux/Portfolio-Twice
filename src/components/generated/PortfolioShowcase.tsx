@@ -151,7 +151,6 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
   }];
   return <div className={`portfolio-showcase ${props.className || ''}`} style={{
     width: '100%',
-    minHeight: '100vh',
     backgroundColor: 'rgba(3, 3, 3, 1)',
     position: 'relative',
     overflowX: 'hidden',
@@ -173,8 +172,9 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
 
       {/* Hero Section */}
       <section style={{
-      width: '1254px',
-      height: '376px',
+      width: '100%',
+      maxWidth: '1254px',
+      minHeight: '376px',
       backgroundColor: 'rgba(20, 20, 20, 1)',
       borderRadius: '48px',
       position: 'relative',
@@ -243,7 +243,8 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
 
       {/* Filter Section */}
       <section style={{
-      width: '1226px',
+      width: '100%',
+      maxWidth: '1226px',
       marginTop: '129px',
       display: 'flex',
       flexDirection: 'column',
@@ -357,7 +358,8 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
 
       {/* Grid Section */}
       <section style={{
-      width: '1230px',
+      width: '100%',
+      maxWidth: '1230px',
       display: 'flex',
       flexWrap: 'wrap',
       gap: '58px',
