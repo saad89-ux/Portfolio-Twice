@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect } from 'react';
 import { Theme } from './settings/types';
 import { LandingPage } from './components/generated/LandingPage';
 // %IMPORT_STATEMENT
@@ -13,7 +16,9 @@ function App() {
     }
   }
 
-  setTheme(theme);
+  useEffect(() => {
+    setTheme(theme);
+  }, []);
 
   return <LandingPage />; // %EXPORT_STATEMENT%
 }

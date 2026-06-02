@@ -67,7 +67,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
     maxWidth: '1440px',
     margin: '0 auto',
     padding: '80px clamp(24px, 6vw, 90px) 90px',
-    backgroundColor: 'rgba(6, 8, 22, 1)',
+    backgroundColor: '#070b1e',
     boxSizing: 'border-box',
     position: 'relative',
     overflow: 'hidden',
@@ -92,33 +92,6 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
         flexDirection: 'column',
         gap: '24px'
       }}>
-          <div style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '10px',
-          padding: '10px 18px',
-          borderRadius: '999px',
-          backgroundColor: 'rgba(10, 132, 255, 0.12)',
-          border: '1px solid rgba(10, 132, 255, 0.22)',
-          width: 'fit-content'
-        }}>
-            <div style={{
-            width: '10px',
-            height: '10px',
-            borderRadius: '999px',
-            backgroundColor: 'rgba(10, 132, 255, 1)'
-          }} />
-            <span style={{
-            color: 'rgba(255, 255, 255, 0.85)',
-            fontSize: '13px',
-            fontFamily: BarlowFont,
-            fontWeight: 600,
-            letterSpacing: '0.18em',
-            textTransform: 'uppercase'
-          }}>
-              About Me
-            </span>
-          </div>
           <h2 style={{
           color: 'rgba(255, 255, 255, 0.96)',
           fontSize: 'clamp(40px, 4vw, 64px)',
@@ -165,8 +138,8 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
             {aboutStats.map(stat => <div key={stat.label} style={{
             padding: '24px',
             borderRadius: '30px',
-            backgroundColor: 'rgba(255, 255, 255, 0.04)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
+            backgroundColor: 'rgba(10, 132, 255, 0.06)',
+            border: '1px solid rgba(10, 132, 255, 0.14)',
             minHeight: '120px',
             display: 'flex',
             flexDirection: 'column',
@@ -202,9 +175,9 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
             {featureChips.map(chip => <span key={chip} style={{
             padding: '12px 18px',
             borderRadius: '999px',
-            backgroundColor: 'rgba(255, 255, 255, 0.05)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
-            color: 'rgba(255, 255, 255, 0.85)',
+            backgroundColor: 'rgba(10, 132, 255, 0.08)',
+            border: '1px solid rgba(10, 132, 255, 0.16)',
+            color: 'rgba(235, 239, 255, 0.88)',
             fontSize: '14px',
             fontFamily: BarlowFont,
             fontWeight: 500
@@ -243,9 +216,9 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
         minHeight: '620px',
         borderRadius: '40px',
         overflow: 'hidden',
-        backgroundColor: 'rgba(10, 13, 32, 1)',
+        backgroundColor: '#080c20',
         boxShadow: '0 40px 90px rgba(0, 0, 0, 0.35)',
-        border: '1px solid rgba(255, 255, 255, 0.08)'
+        border: '1px solid rgba(10, 132, 255, 0.14)'
       }}>
           <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1100&q=80" alt="Professional portrait" style={{
           position: 'absolute',
