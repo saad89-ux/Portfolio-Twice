@@ -55,7 +55,7 @@ const ActionButton = ({
   width,
   height,
   backgroundColor: '#00c2ff',
-  color: '#FFFFFF',
+  color: 'var(--text-primary)',
   padding: '14px 24px',
   borderRadius: '10px',
   border: 'none',
@@ -89,7 +89,7 @@ const FilterDropdown = ({
   justifyContent: 'space-between',
   alignItems: 'center',
   padding: '0 20px',
-  backgroundColor: '#191919',
+  backgroundColor: 'var(--bg-primary)',
   borderRadius: '100px',
   border: 'none',
   cursor: 'pointer',
@@ -114,7 +114,7 @@ const JobCard = ({
   flexDirection: 'column',
   padding: '50px',
   gap: '40px',
-  backgroundColor: '#1A1A1A',
+  backgroundColor: 'var(--bg-primary)',
   borderRadius: '14px',
   border: '1px solid transparent',
   cursor: 'pointer'
@@ -126,7 +126,7 @@ const JobCard = ({
   }}>
       <div style={{
       padding: '20px',
-      backgroundColor: '#1F1F1F',
+      backgroundColor: 'var(--bg-primary)',
       border: '1px solid #333333',
       borderRadius: '12px'
     }}>
@@ -166,11 +166,11 @@ const JobCard = ({
       alignItems: 'center',
       padding: '10px 16px',
       gap: '8px',
-      backgroundColor: '#1F1F1F',
+      backgroundColor: 'var(--bg-primary)',
       borderRadius: '45px'
     }}>
           <span style={{
-        color: '#B3B3B2',
+        color: 'var(--text-muted)',
         fontSize: '18px',
         fontFamily: '"Roboto Flex", sans-serif'
       }}>{info.label}</span>
@@ -181,7 +181,7 @@ const JobCard = ({
         borderRadius: '50%'
       }} />
           <span style={{
-        color: '#E6E6E6',
+        color: 'var(--text-muted)',
         fontSize: '18px',
         fontFamily: '"Roboto Flex", sans-serif',
         fontWeight: 500
@@ -203,7 +203,7 @@ const JobCard = ({
       textTransform: 'uppercase'
     }}>Skills</h4>
       <p style={{
-      color: '#B3B3B2',
+      color: 'var(--text-muted)',
       fontSize: '18px',
       fontFamily: '"Roboto Flex", sans-serif',
       lineHeight: '27px',
@@ -215,7 +215,7 @@ const JobCard = ({
     width: '100%',
     height: '63px',
     backgroundColor: '#00c2ff',
-    color: '#FFFFFF',
+    color: 'var(--text-primary)',
     borderRadius: '12px',
     border: 'none',
     fontSize: '18px',
@@ -232,7 +232,7 @@ export const CareerJobListing = () => {
   const [search, setSearch] = useState('');
   return <div style={{
     width: '100%',
-    backgroundColor: '#030303',
+    backgroundColor: 'var(--bg-primary)',
     position: 'relative',
     overflowX: 'hidden'
   }}>
@@ -242,7 +242,7 @@ export const CareerJobListing = () => {
       maxWidth: '1254px',
       margin: '53px auto 0',
       height: '376px',
-      backgroundColor: '#141414',
+      backgroundColor: 'var(--bg-primary)',
       borderRadius: '48px',
       position: 'relative',
       overflow: 'hidden'
@@ -314,7 +314,7 @@ export const CareerJobListing = () => {
       {/* Filter Section */}
       <section style={{
       width: '100%',
-      backgroundColor: '#0B0B0B',
+      backgroundColor: 'var(--bg-primary)',
       marginTop: '74px',
       padding: '50px 88px',
       display: 'flex',
@@ -333,7 +333,7 @@ export const CareerJobListing = () => {
         minWidth: '300px',
         display: 'flex',
         alignItems: 'center',
-        backgroundColor: '#191919',
+        backgroundColor: 'var(--bg-primary)',
         borderRadius: '100px',
         padding: '10px 10px 10px 20px',
         gap: '10px'
@@ -342,7 +342,7 @@ export const CareerJobListing = () => {
           flex: 1,
           background: 'none',
           border: 'none',
-          color: '#FFFFFF',
+          color: 'var(--text-primary)',
           fontSize: '16px',
           fontFamily: '"Barlow", sans-serif',
           outline: 'none'
@@ -413,7 +413,7 @@ export const CareerJobListing = () => {
         padding: '48px'
       }}>
           <h2 style={{
-          color: '#FFFFFF',
+          color: 'var(--text-primary)',
           fontSize: '36px',
           fontWeight: 600,
           fontFamily: '"Barlow", sans-serif',
@@ -422,7 +422,7 @@ export const CareerJobListing = () => {
           textAlign: 'center'
         }}>Ready to discuss</h2>
           <p style={{
-          color: '#FFFFFF',
+          color: 'var(--text-primary)',
           fontSize: '20px',
           fontWeight: 600,
           fontFamily: '"Barlow", sans-serif',

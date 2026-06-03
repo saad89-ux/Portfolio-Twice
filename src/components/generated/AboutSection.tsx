@@ -48,7 +48,7 @@ const PrimaryButton: React.FC<{
     boxShadow: isHovered ? '0 18px 36px rgba(0, 194, 255, 0.28)' : '0 12px 20px rgba(0, 194, 255, 0.22)'
   }}>
       <span style={{
-      color: 'rgba(255, 255, 255, 1)',
+      color: 'var(--text-primary)',
       fontSize: '14px',
       fontFamily: BarlowFont,
       fontWeight: 700,
@@ -177,7 +177,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
             borderRadius: '999px',
             backgroundColor: 'rgba(0, 194, 255, 0.08)',
             border: '1px solid rgba(0, 194, 255, 0.16)',
-            color: 'rgba(235, 239, 255, 0.88)',
+            color: 'var(--text-muted)',
             fontSize: '14px',
             fontFamily: BarlowFont,
             fontWeight: 500
@@ -192,7 +192,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
           marginTop: '16px'
         }}>
             <span style={{
-            color: 'white',
+            color: 'var(--text-primary)',
             fontSize: '20px',
             fontFamily: '"Inter", sans-serif',
             fontWeight: 700
@@ -252,7 +252,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
             borderRadius: '999px',
             backgroundColor: 'rgba(255, 255, 255, 0.08)',
             border: '1px solid rgba(255, 255, 255, 0.14)',
-            color: 'white',
+            color: 'var(--text-primary)',
             width: 'fit-content'
           }}>
               <span style={{
@@ -292,7 +292,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
               padding: '14px 18px',
               borderRadius: '24px',
               backgroundColor: 'rgba(255, 255, 255, 0.08)',
-              border: '1px solid rgba(255, 255, 255, 0.12)',
+              border: '1px solid var(--border-light)',
               color: 'rgba(255, 255, 255, 0.9)',
               fontFamily: BarlowFont,
               fontWeight: 600,
@@ -321,7 +321,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
             borderRadius: '999px',
             border: '1px solid rgba(255, 255, 255, 0.16)',
             backgroundColor: 'rgba(255, 255, 255, 0.08)',
-            color: 'white',
+            color: 'var(--text-primary)',
             fontFamily: BarlowFont,
             fontWeight: 600,
             fontSize: '14px',
@@ -335,7 +335,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
               justifyContent: 'center',
               borderRadius: '50%',
               backgroundColor: 'rgba(0, 194, 255, 1)',
-              color: 'white',
+              color: 'var(--text-primary)',
               fontSize: '12px'
             }}>
                 ?
@@ -357,7 +357,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
             padding: '20px 24px',
             borderRadius: '32px',
             backgroundColor: 'rgba(255, 255, 255, 0.08)',
-            border: '1px solid rgba(255, 255, 255, 0.1)'
+            border: '1px solid var(--border-light)'
           }}>
               <div style={{
               display: 'flex',
@@ -376,7 +376,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
                     ?????
                   </span>
                   <span style={{
-                  color: 'white',
+                  color: 'var(--text-primary)',
                   fontFamily: BarlowFont,
                   fontWeight: 700,
                   fontSize: '18px'

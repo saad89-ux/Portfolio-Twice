@@ -24,7 +24,7 @@ const ProjectCard = ({
     paddingTop: '42px',
     paddingBottom: '42px',
     gap: '32px',
-    backgroundColor: 'rgba(20, 20, 20, 1)',
+    backgroundColor: 'var(--bg-secondary)',
     borderRadius: '36px',
     cursor: 'pointer'
   }}>
@@ -42,7 +42,7 @@ const ProjectCard = ({
       alignItems: 'center'
     }}>
         <span style={{
-        color: 'white',
+        color: 'var(--text-primary)',
         fontSize: '24px',
         fontFamily: '"Barlow", sans-serif',
         fontWeight: 600
@@ -64,7 +64,7 @@ const ProjectCard = ({
       </div>
       <p style={{
       width: '487px',
-      color: 'rgba(255, 255, 255, 1)',
+      color: 'var(--text-primary)',
       fontSize: '16px',
       fontFamily: '"Barlow", sans-serif',
       fontWeight: 400,
@@ -92,7 +92,7 @@ const ProjectCard = ({
             width: '15px'
           }} />
               <span style={{
-            color: 'white',
+            color: 'var(--text-primary)',
             fontSize: '14px',
             fontFamily: '"Barlow", sans-serif'
           }}>Lorem Ipsum is simply dummy text</span>
@@ -112,7 +112,7 @@ const ProjectCard = ({
             width: '15px'
           }} />
               <span style={{
-            color: 'white',
+            color: 'var(--text-primary)',
             fontSize: '14px',
             fontFamily: '"Barlow", sans-serif'
           }}>Lorem Ipsum is simply dummy text</span>
@@ -151,7 +151,7 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
   }];
   return <div className={`portfolio-showcase ${props.className || ''}`} style={{
     width: '100%',
-    backgroundColor: 'rgba(3, 3, 3, 1)',
+    backgroundColor: 'var(--bg-primary)',
     position: 'relative',
     overflowX: 'hidden',
     display: 'flex',
@@ -175,7 +175,7 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
       width: '100%',
       maxWidth: '1254px',
       minHeight: '376px',
-      backgroundColor: 'rgba(20, 20, 20, 1)',
+      backgroundColor: 'var(--bg-secondary)',
       borderRadius: '48px',
       position: 'relative',
       marginTop: '53px',
@@ -255,7 +255,7 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
         textAlign: 'center'
       }}>
           <h2 style={{
-          color: 'white',
+          color: 'var(--text-primary)',
           fontSize: '36px',
           fontFamily: '"Barlow", sans-serif',
           fontWeight: 600,
@@ -283,13 +283,13 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
           justifyContent: 'space-between',
           alignItems: 'center',
           padding: '10px 10px 10px 20px',
-          backgroundColor: 'rgba(25, 25, 25, 1)',
+          backgroundColor: 'var(--bg-secondary)',
           borderRadius: '100px'
         }}>
             <input className="ca-interactive-input" type="text" placeholder="Search by keywords..." value={search} onChange={e => setSearch(e.target.value)} style={{
             background: 'none',
             border: 'none',
-            color: 'white',
+            color: 'var(--text-primary)',
             fontSize: '16px',
             fontFamily: '"Barlow", sans-serif',
             outline: 'none',
@@ -319,7 +319,7 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
             {['Machine Learning', 'Data Engineering'].map(cat => <button className="ca-interactive-btn" key={cat} onClick={() => setActiveCategory(activeCategory === cat ? null : cat)} style={{
             height: '56px',
             padding: '0 20px',
-            backgroundColor: 'rgba(25, 25, 25, 1)',
+            backgroundColor: 'var(--bg-secondary)',
             borderRadius: '100px',
             border: activeCategory === cat ? '1px solid rgba(0, 194, 255, 1)' : 'none',
             color: 'rgba(255, 255, 255, 0.8)',
@@ -341,7 +341,7 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
             backgroundColor: 'rgba(0, 194, 255, 1)',
             borderRadius: '100px',
             border: 'none',
-            color: 'white',
+            color: 'var(--text-primary)',
             fontWeight: 500,
             cursor: 'pointer'
           }}>
@@ -384,7 +384,7 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
         animation: 'spin 2s linear infinite'
       }} />
         <span style={{
-        color: 'white',
+        color: 'var(--text-primary)',
         fontSize: '16px',
         fontWeight: 500
       }}>Loading...</span>

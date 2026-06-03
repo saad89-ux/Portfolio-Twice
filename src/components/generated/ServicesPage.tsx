@@ -102,7 +102,7 @@ const ServiceCard = ({
     alignItems: 'center',
     padding: '42px',
     gap: '32px',
-    backgroundColor: 'rgba(20, 20, 20, 1)',
+    backgroundColor: 'var(--bg-secondary)',
     borderRadius: '36px',
     border: isHovered ? '1px solid rgba(0, 194, 255, 0.3)' : '1px solid transparent',
     cursor: 'pointer'
@@ -113,7 +113,7 @@ const ServiceCard = ({
       objectFit: 'contain'
     }} />
       <span style={{
-      color: 'white',
+      color: 'var(--text-primary)',
       fontSize: '24px',
       fontFamily: '"Barlow", sans-serif',
       fontWeight: 600,
@@ -122,7 +122,7 @@ const ServiceCard = ({
     }}>{item.title}</span>
       <span style={{
       width: '487px',
-      color: 'white',
+      color: 'var(--text-primary)',
       fontSize: '16px',
       fontFamily: '"Barlow", sans-serif',
       fontWeight: 400,
@@ -148,7 +148,7 @@ const ServiceCard = ({
           height: '15px'
         }} />
             <span style={{
-          color: 'white',
+          color: 'var(--text-primary)',
           fontSize: '14px',
           fontFamily: '"Barlow", sans-serif',
           fontWeight: 400,
@@ -181,7 +181,7 @@ const ServiceCard = ({
         }} />
         </div>
         <span style={{
-        color: 'white',
+        color: 'var(--text-primary)',
         fontSize: '14px',
         fontFamily: '"Barlow", sans-serif',
         fontWeight: 400
@@ -253,7 +253,7 @@ const IndustryCard = ({
       bottom: '20px',
       left: '20px',
       zIndex: 2,
-      color: 'white',
+      color: 'var(--text-primary)',
       fontSize: '18px',
       fontWeight: 700,
       fontFamily: '"Barlow", sans-serif'
@@ -266,7 +266,7 @@ export const ServicesPage = () => {
   const [isMarqueePaused, setIsMarqueePaused] = useState(false);
   return <div style={{
     width: '100%',
-    backgroundColor: 'rgba(3, 3, 3, 1)',
+    backgroundColor: 'var(--bg-primary)',
     overflowX: 'clip',
     position: 'relative'
   }}>
@@ -279,7 +279,7 @@ export const ServicesPage = () => {
       position: 'relative',
       borderRadius: '48px',
       overflow: 'hidden',
-      backgroundColor: 'rgba(20, 20, 20, 1)'
+      backgroundColor: 'var(--bg-secondary)'
     }}>
         <div style={{
         position: 'absolute',
@@ -348,7 +348,7 @@ export const ServicesPage = () => {
       textAlign: 'center'
     }}>
         <h2 style={{
-        color: 'white',
+        color: 'var(--text-primary)',
         fontSize: '36px',
         fontFamily: '"Barlow", sans-serif',
         fontWeight: 600,

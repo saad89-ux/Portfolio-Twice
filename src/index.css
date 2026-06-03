@@ -339,3 +339,30 @@ select {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Global Theme Switcher Variables */
+:root, .dark {
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --text-muted: rgba(235, 239, 255, 0.7);
+  --text-inverse: #080c20;
+  
+  --bg-primary: rgba(3, 3, 3, 1);
+  --bg-card: rgba(16, 18, 43, 0.95);
+  --bg-card-alt: rgba(10, 12, 32, 0.92);
+  --bg-secondary: rgba(20, 20, 20, 1);
+  --border-light: rgba(255, 255, 255, 0.08);
+}
+
+.light-theme {
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #4b5563;
+  --text-inverse: #ffffff;
+  
+  --bg-primary: #ffffff;
+  --bg-card: #f9fafb;
+  --bg-card-alt: #f3f4f6;
+  --bg-secondary: #f3f4f6;
+  --border-light: rgba(0, 0, 0, 0.08);
+}

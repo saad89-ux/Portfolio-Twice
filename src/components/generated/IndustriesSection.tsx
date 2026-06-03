@@ -112,7 +112,7 @@ export const IndustriesSection = () => {
   return (
     <section
       style={{
-        background: '#030303',
+        backgroundColor: 'var(--bg-primary)',
         display: 'flex',
         alignItems: 'flex-start',
         width: '100%',
@@ -139,7 +139,7 @@ export const IndustriesSection = () => {
                   : '1px solid rgba(255,255,255,.08)',
             }}
           >
-            <p style={{ color: '#666', marginBottom: 16, letterSpacing: '0.1em' }}>
+            <p style={{ color: 'var(--text-muted)', marginBottom: 16, letterSpacing: '0.1em' }}>
               {industry.counter}
             </p>
             <h2
@@ -172,7 +172,7 @@ export const IndustriesSection = () => {
                     borderRadius: 999,
                     border: '1px solid rgba(0,194,255,.25)',
                     background: 'rgba(0,194,255,.08)',
-                    color: '#fff',
+                    color: 'var(--text-primary)',
                   }}
                 >
                   {tag}
@@ -195,7 +195,7 @@ export const IndustriesSection = () => {
           alignItems: 'center',
           justifyContent: 'center',
           padding: '40px 50px',
-          backgroundColor: 'rgba(3, 3, 3, 1)',
+          backgroundColor: 'var(--bg-primary)',
           overflow: 'hidden',
         }}
       >

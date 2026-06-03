@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import '../src/index.css';
+import { ThemeProvider } from '../src/components/ThemeProvider';
 
 export const metadata = {
   title: 'Home',
@@ -12,8 +13,12 @@ export const viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
