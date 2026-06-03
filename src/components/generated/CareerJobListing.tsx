@@ -54,7 +54,7 @@ const ActionButton = ({
 }) => <button className="ca-interactive-btn" style={{
   width,
   height,
-  backgroundColor: '#0A84FF',
+  backgroundColor: '#00c2ff',
   color: '#FFFFFF',
   padding: '14px 24px',
   borderRadius: '10px',
@@ -73,7 +73,7 @@ const ActionButton = ({
   e.currentTarget.style.backgroundColor = '#0070E0';
   e.currentTarget.style.transform = 'translateY(-2px)';
 }} onMouseLeave={e => {
-  e.currentTarget.style.backgroundColor = '#0A84FF';
+  e.currentTarget.style.backgroundColor = '#00c2ff';
   e.currentTarget.style.transform = 'translateY(0)';
 }}>
     {children}
@@ -177,7 +177,7 @@ const JobCard = ({
           <div style={{
         width: '4px',
         height: '4px',
-        backgroundColor: '#0A84FF',
+        backgroundColor: '#00c2ff',
         borderRadius: '50%'
       }} />
           <span style={{
@@ -214,7 +214,7 @@ const JobCard = ({
     <button style={{
     width: '100%',
     height: '63px',
-    backgroundColor: '#0A84FF',
+    backgroundColor: '#00c2ff',
     color: '#FFFFFF',
     borderRadius: '12px',
     border: 'none',
@@ -224,7 +224,7 @@ const JobCard = ({
     cursor: 'pointer',
     textTransform: 'capitalize',
     transition: 'background-color 0.2s ease'
-  }} onMouseEnter={e => e.currentTarget.style.backgroundColor = '#0070E0'} onMouseLeave={e => e.currentTarget.style.backgroundColor = '#0A84FF'}>
+  }} onMouseEnter={e => e.currentTarget.style.backgroundColor = '#0070E0'} onMouseLeave={e => e.currentTarget.style.backgroundColor = '#00c2ff'}>
       Apply Now
     </button>
   </div>;
@@ -351,7 +351,7 @@ export const CareerJobListing = () => {
           width: '36px',
           height: '36px',
           borderRadius: '50%',
-          backgroundColor: '#459CF3',
+          backgroundColor: '#00c2ff',
           border: 'none',
           display: 'flex',
           justifyContent: 'center',

@@ -388,6 +388,10 @@
     display: none;
   }
 
+  .inline {
+    display: inline;
+  }
+
   .inline-block {
     display: inline-block;
   }
@@ -448,14 +452,6 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
     animation-timing-function: cubic-bezier(.4, 0, .2, 1);
-  }
-
-  .paused {
-    animation-play-state: paused;
-  }
-
-  .running {
-    animation-play-state: running;
   }
 }
 
@@ -713,12 +709,12 @@ input, textarea, select {
 }
 
 .ca-interactive-input:focus {
-  box-shadow: 0 0 0 2px #0a84ff73;
+  box-shadow: 0 0 0 2px #00c2ff73;
 }
 
 .ca-interactive-btn:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 0 6px 16px #0a84ff59 !important;
+  box-shadow: 0 6px 16px #00c2ff59 !important;
 }
 
 .ca-interactive-btn:active {

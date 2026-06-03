@@ -52,7 +52,7 @@ const ProjectCard = ({
         <div style={{
         display: 'flex',
         padding: '14px',
-        backgroundColor: isHovered ? 'rgba(89, 176, 255, 1)' : 'rgba(69, 156, 243, 1)',
+        backgroundColor: isHovered ? 'rgba(89, 176, 255, 1)' : 'rgba(0, 194, 255, 1)',
         borderRadius: '135px',
         transition: 'background-color 0.2s ease'
       }}>
@@ -298,7 +298,7 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
             <button className="ca-interactive-btn" style={{
             width: '36px',
             height: '36px',
-            backgroundColor: 'rgba(69, 156, 243, 1)',
+            backgroundColor: 'rgba(0, 194, 255, 1)',
             borderRadius: '50%',
             border: 'none',
             display: 'flex',
@@ -321,7 +321,7 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
             padding: '0 20px',
             backgroundColor: 'rgba(25, 25, 25, 1)',
             borderRadius: '100px',
-            border: activeCategory === cat ? '1px solid rgba(10, 132, 255, 1)' : 'none',
+            border: activeCategory === cat ? '1px solid rgba(0, 194, 255, 1)' : 'none',
             color: 'rgba(255, 255, 255, 0.8)',
             display: 'flex',
             alignItems: 'center',
@@ -338,7 +338,7 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
           }} style={{
             height: '56px',
             padding: '0 30px',
-            backgroundColor: 'rgba(10, 132, 255, 1)',
+            backgroundColor: 'rgba(0, 194, 255, 1)',
             borderRadius: '100px',
             border: 'none',
             color: 'white',

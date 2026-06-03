@@ -4,6 +4,7 @@ import { PortfolioShowcase } from './PortfolioShowcase';
 import { AboutSection } from './AboutSection';
 import { CareerJobListing } from './CareerJobListing';
 import { FAQSection } from './FAQSection';
+import { IndustriesSection } from './IndustriesSection';
 import { Star } from 'lucide-react';
 interface BaseComponentProps {
   className?: string;
@@ -343,8 +344,8 @@ const FAQItem: React.FC<FAQItemProps> = ({
   return <div style={{
     borderRadius: '28px',
     overflow: 'hidden',
-    border: isOpen ? '1px solid rgba(145, 104, 255, 0.68)' : '1px solid rgba(255, 255, 255, 0.08)',
-    background: isOpen ? 'linear-gradient(180deg, rgba(145, 104, 255, 0.16), rgba(10, 132, 255, 0.08))' : 'rgba(8, 12, 32, 0.88)',
+    border: isOpen ? '1px solid rgba(0, 194, 255, 0.68)' : '1px solid rgba(255, 255, 255, 0.08)',
+    background: isOpen ? 'linear-gradient(180deg, rgba(0, 194, 255, 0.16), rgba(0, 194, 255, 0.08))' : 'rgba(8, 12, 32, 0.88)',
     boxShadow: '0 30px 80px rgba(0, 0, 0, 0.25)'
   }}>
       <button onClick={onClick} style={{
@@ -367,7 +368,7 @@ const FAQItem: React.FC<FAQItemProps> = ({
           width: '56px',
           height: '56px',
           borderRadius: '18px',
-          background: isOpen ? '#9168ff' : 'rgba(10, 132, 255, 0.16)',
+          background: isOpen ? '#00c2ff' : 'rgba(0, 194, 255, 0.16)',
           display: 'grid',
           placeItems: 'center',
           color: '#ffffff',
@@ -479,13 +480,13 @@ const Navbar: React.FC<NavbarProps> = ({
           {navItems.map(item => <button key={item} className="nav-item" onClick={() => handleNavClick(item)} style={{
           background: 'none',
           border: 'none',
-          color: activePage === item ? 'rgba(10, 132, 255, 1)' : 'white',
+          color: activePage === item ? 'rgba(0, 194, 255, 1)' : 'white',
           fontSize: '16px',
           fontFamily: '"Barlow", sans-serif',
           cursor: 'pointer',
           padding: '10px',
           transition: 'color 0.2s ease',
-          borderBottom: activePage === item ? '2px solid rgba(10, 132, 255, 1)' : '2px solid transparent'
+          borderBottom: activePage === item ? '2px solid rgba(0, 194, 255, 1)' : '2px solid transparent'
         }}>
               {item}
             </button>)}
@@ -498,7 +499,7 @@ const Navbar: React.FC<NavbarProps> = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'rgba(10, 132, 255, 1)',
+        backgroundColor: 'rgba(0, 194, 255, 1)',
         border: '1px dotted rgba(255, 255, 255, 1)',
         borderRadius: '10px',
         color: 'rgba(255, 255, 255, 1)',
@@ -569,7 +570,7 @@ const Navbar: React.FC<NavbarProps> = ({
           {navItems.map(item => <button key={item} className="nav-item" onClick={() => handleNavClick(item)} style={{
         background: 'none',
         border: 'none',
-        color: activePage === item ? 'rgba(10, 132, 255, 1)' : 'white',
+        color: activePage === item ? 'rgba(0, 194, 255, 1)' : 'white',
         fontSize: '17px',
         fontFamily: '"Barlow", sans-serif',
         cursor: 'pointer',
@@ -588,7 +589,7 @@ const Navbar: React.FC<NavbarProps> = ({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: 'rgba(10, 132, 255, 1)',
+          backgroundColor: 'rgba(0, 194, 255, 1)',
           border: '1px dotted rgba(255, 255, 255, 1)',
           borderRadius: '10px',
           color: 'rgba(255, 255, 255, 1)',
@@ -660,7 +661,7 @@ const Footer: React.FC<FooterProps> = ({
               fontWeight: 800,
               lineHeight: 1.05
             }}>
-                Mohsin
+                Ahsan
                 <br />
                 Designs
               </div>
@@ -827,7 +828,7 @@ const Footer: React.FC<FooterProps> = ({
         fontFamily: '"Barlow", sans-serif',
         margin: 0
       }}>
-          © 2026 Mohsin Designs. All rights reserved.
+          © 2026 Ahsan Designs. All rights reserved.
         </p>
         <div style={{
         display: 'flex',
@@ -860,16 +861,17 @@ const TrustSection: React.FC = () => {
     maxWidth: '1440px',
     margin: '80px auto 0',
     padding: '80px clamp(24px, 6vw, 90px)',
-    backgroundColor: 'rgba(7, 11, 30, 1)',
+    
     borderRadius: '48px',
     position: 'relative',
     overflow: 'hidden',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    border: '1px solid rgba(0, 194, 255, 0.08)'
   }}>
       <div style={{
       position: 'absolute',
       inset: 0,
-      backgroundImage: 'radial-gradient(circle at 16% 18%, rgba(10, 132, 255, 0.15), transparent 24%), radial-gradient(circle at 88% 16%, rgba(26, 115, 255, 0.1), transparent 20%), radial-gradient(circle at 50% 85%, rgba(4, 45, 112, 0.16), transparent 35%)',
+      backgroundImage: 'radial-gradient(circle at 16% 18%, rgba(0, 194, 255, 0.18), transparent 28%), radial-gradient(circle at 88% 16%, rgba(0, 194, 255, 0.14), transparent 24%), radial-gradient(circle at 62% 40%, rgba(0, 194, 255, 0.10), transparent 30%), radial-gradient(circle at 50% 85%, rgba(0, 194, 255, 0.20), transparent 38%), radial-gradient(circle at 22% 78%, rgba(0, 194, 255, 0.10), transparent 32%)',
       pointerEvents: 'none'
     }} />
       <div style={{
@@ -907,8 +909,8 @@ const TrustSection: React.FC = () => {
             <div style={{
             padding: '14px 18px',
             borderRadius: '28px',
-            backgroundColor: 'rgba(10, 132, 255, 0.16)',
-            border: '1px solid rgba(10, 132, 255, 0.24)',
+            backgroundColor: 'rgba(0, 194, 255, 0.16)',
+            border: '1px solid rgba(0, 194, 255, 0.24)',
             color: 'white',
             fontFamily: '"Barlow", sans-serif',
             fontWeight: 600,
@@ -937,7 +939,7 @@ const TrustSection: React.FC = () => {
               alignItems: 'center',
               justifyContent: 'center',
               borderRadius: '50%',
-              backgroundColor: 'rgba(10, 132, 255, 1)',
+              backgroundColor: 'rgba(0, 194, 255, 1)',
               color: 'white',
               fontSize: '12px'
             }}>
@@ -961,7 +963,7 @@ const TrustSection: React.FC = () => {
           backdropFilter: 'blur(10px)'
         }}>
             <span style={{
-            color: 'rgba(10, 132, 255, 1)',
+            color: 'rgba(0, 194, 255, 1)',
             fontSize: '14px',
             fontFamily: '"Barlow", sans-serif',
             fontWeight: 700,
@@ -1005,7 +1007,7 @@ const TrustSection: React.FC = () => {
             width: '4px',
             minHeight: '60px',
             borderRadius: '999px',
-            backgroundColor: 'rgba(10, 132, 255, 1)'
+            backgroundColor: 'rgba(0, 194, 255, 1)'
           }} />
             <p style={{
             color: 'rgba(225, 230, 245, 0.92)',
@@ -1039,7 +1041,7 @@ const TrustSection: React.FC = () => {
             gap: '12px',
             padding: '14px 22px',
             borderRadius: '16px',
-            backgroundColor: 'rgba(10, 132, 255, 1)',
+            backgroundColor: 'rgba(0, 194, 255, 1)',
             border: 'none',
             color: 'white',
             fontFamily: '"Barlow", sans-serif',
@@ -1086,7 +1088,7 @@ const TrustSection: React.FC = () => {
           gap: '10px',
           padding: '22px 18px',
           borderRadius: '28px',
-          backgroundColor: 'rgba(7, 11, 30, 1)',
+          backgroundColor: '#080c20',
           border: '1px solid rgba(255, 255, 255, 0.06)'
         }}>
             <img src={stat.icon} alt="" style={{
@@ -1132,7 +1134,7 @@ const TrustSection: React.FC = () => {
         minWidth: '320px'
       }}>
           <span style={{
-          color: 'rgba(10, 132, 255, 1)',
+          color: 'rgba(0, 194, 255, 1)',
           fontSize: '28px',
           fontFamily: '"Inter", sans-serif',
           fontWeight: 800,
@@ -1171,7 +1173,7 @@ const TrustSection: React.FC = () => {
           height: '48px',
           borderRadius: '999px',
           objectFit: 'cover',
-          border: '2px solid rgba(7, 11, 30, 1)',
+          border: '2px solid #070b1e',
           position: 'relative',
           left: `${index * -14}px`
         }} />)}
@@ -1342,309 +1344,7 @@ const IndustriesServedSection = () => {
   };
 
   return (
-    <section id="industries-served" style={{
-      width: '100%',
-      padding: '120px 0 80px',
-      backgroundColor: 'transparent',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      boxSizing: 'border-box'
-    }}>
-      <div style={{
-        textAlign: 'center',
-        marginBottom: '60px',
-        padding: '0 24px'
-      }}>
-        <span style={{
-          color: '#9168ff',
-          fontSize: '13px',
-          fontWeight: 700,
-          letterSpacing: '0.3em',
-          textTransform: 'uppercase',
-          fontFamily: '"Barlow", sans-serif',
-          display: 'block',
-          marginBottom: '16px'
-        }}>
-          INDUSTRIES
-        </span>
-        <h2 style={{
-          color: '#ffffff',
-          fontSize: 'clamp(38px, 5vw, 64px)',
-          fontWeight: 800,
-          fontFamily: '"Barlow", sans-serif',
-          margin: '0 0 16px',
-          lineHeight: 1.1
-        }}>
-          Industries We Serve
-        </h2>
-        <p style={{
-          color: 'rgba(235, 239, 255, 0.72)',
-          fontSize: '16px',
-          fontFamily: '"Barlow", sans-serif',
-          lineHeight: '26px',
-          maxWidth: '600px',
-          margin: '0 auto'
-        }}>
-          From startups to enterprises — we deliver results across every major industry.
-        </p>
-      </div>
-
-      <div style={{
-        width: '100%',
-        maxWidth: '1200px',
-        display: 'flex',
-        flexDirection: isMobile ? 'column' : 'row',
-        gap: isMobile ? '32px' : '60px',
-        padding: '0 24px',
-        boxSizing: 'border-box'
-      }}>
-        {/* LEFT COLUMN - Scrollable Text Panels (Order 1 on mobile, 0 on desktop) */}
-        <div style={{
-          width: isMobile ? '100%' : '55%',
-          display: 'flex',
-          flexDirection: 'column',
-          order: isMobile ? 1 : 0
-        }}>
-          {industriesData.map((ind, i) => {
-            const isActive = i === activeIdx;
-            return (
-              <div 
-                key={i} 
-                data-index={i}
-                ref={el => { itemRefs.current[i] = el; }}
-                style={{
-                  minHeight: isMobile ? 'auto' : '70vh',
-                  padding: isMobile ? '32px 0' : '40px 0 40px 32px',
-                  borderBottom: i !== industriesData.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none',
-                  borderLeft: isMobile ? 'none' : (isActive ? '3px solid #9168ff' : '3px solid transparent'),
-                  backgroundColor: !isMobile && isActive ? 'rgba(145, 104, 255, 0.04)' : 'transparent',
-                  transition: 'all 0.4s ease',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  boxSizing: 'border-box'
-                }}
-              >
-                <span style={{
-                  fontSize: 'clamp(48px, 6vw, 72px)',
-                  fontWeight: 800,
-                  color: isActive ? 'rgba(145, 104, 255, 0.3)' : 'rgba(255, 255, 255, 0.08)',
-                  fontFamily: '"Barlow", sans-serif',
-                  lineHeight: 1,
-                  marginBottom: '16px',
-                  transition: 'color 0.4s ease'
-                }}>
-                  {ind.id}
-                </span>
-                
-                <h3 style={{
-                  color: isActive ? '#ffffff' : 'rgba(255,255,255,0.4)',
-                  fontSize: 'clamp(32px, 4vw, 42px)',
-                  fontWeight: 800,
-                  fontFamily: '"Barlow", sans-serif',
-                  margin: '0 0 8px',
-                  textShadow: isActive ? '0 0 20px rgba(255,255,255,0.2)' : 'none',
-                  transition: 'all 0.4s ease'
-                }}>
-                  {ind.name}
-                </h3>
-                
-                <div style={{
-                  color: '#9168ff',
-                  fontSize: '18px',
-                  fontStyle: 'italic',
-                  fontWeight: 600,
-                  fontFamily: '"Barlow", sans-serif',
-                  marginBottom: '20px',
-                  opacity: isActive ? 1 : 0.5,
-                  transition: 'opacity 0.4s ease'
-                }}>
-                  {ind.tagline}
-                </div>
-                
-                <p style={{
-                  color: isActive ? 'rgba(235, 239, 255, 0.8)' : 'rgba(235, 239, 255, 0.4)',
-                  fontSize: '16px',
-                  lineHeight: '26px',
-                  fontFamily: '"Barlow", sans-serif',
-                  marginBottom: '32px',
-                  maxWidth: '540px',
-                  transition: 'color 0.4s ease'
-                }}>
-                  {ind.description}
-                </p>
-                
-                <div style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  gap: '12px'
-                }}>
-                  {ind.stats.map((stat, sIdx) => (
-                    <div key={sIdx} style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      background: 'rgba(255, 255, 255, 0.03)',
-                      border: '1px solid rgba(255,255,255,0.08)',
-                      padding: '10px 16px',
-                      borderRadius: '100px',
-                      opacity: isActive ? 1 : 0.4,
-                      transition: 'opacity 0.4s ease'
-                    }}>
-                      <span style={{
-                        color: '#ffffff',
-                        fontWeight: 700,
-                        fontSize: '16px',
-                        fontFamily: '"Barlow", sans-serif'
-                      }}>
-                        {stat.value}
-                      </span>
-                      <span style={{
-                        color: 'rgba(235, 239, 255, 0.6)',
-                        fontSize: '14px',
-                        fontFamily: '"Barlow", sans-serif'
-                      }}>
-                        {stat.label}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* RIGHT COLUMN - Sticky Video Panel (Order 0 on mobile, 1 on desktop) */}
-        <div style={{
-          width: isMobile ? '100%' : '45%',
-          position: isMobile ? 'relative' : 'sticky',
-          top: isMobile ? 'auto' : '100px',
-          height: 'fit-content',
-          alignSelf: 'flex-start',
-          zIndex: 10,
-          order: isMobile ? 0 : 1
-        }}>
-          {isMobile && (
-            <div style={{
-              display: 'flex',
-              overflowX: 'auto',
-              gap: '12px',
-              paddingBottom: '16px',
-              marginBottom: '16px',
-              WebkitOverflowScrolling: 'touch',
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none'
-            }}>
-              {industriesData.map((ind, i) => (
-                <button key={i} onClick={() => handleTabClick(i)} style={{
-                  padding: '8px 16px',
-                  borderRadius: '100px',
-                  border: i === activeIdx ? '1px solid #9168ff' : '1px solid rgba(255,255,255,0.1)',
-                  background: i === activeIdx ? 'rgba(145, 104, 255, 0.15)' : 'rgba(255,255,255,0.03)',
-                  color: i === activeIdx ? '#ffffff' : 'rgba(235, 239, 255, 0.72)',
-                  whiteSpace: 'nowrap',
-                  fontSize: '14px',
-                  fontWeight: 600,
-                  fontFamily: '"Barlow", sans-serif',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease'
-                }}>
-                  {ind.name}
-                </button>
-              ))}
-            </div>
-          )}
-
-          <div style={{
-            position: 'relative',
-            width: '100%',
-            aspectRatio: '16/9',
-            borderRadius: '20px',
-            overflow: 'hidden',
-            border: '1px solid rgba(255,255,255,0.1)',
-            boxShadow: '0 0 40px rgba(139,92,246,0.15)',
-            backgroundColor: '#0a0a0a'
-          }}>
-            {/* Video A */}
-            {!errA ? (
-              <video
-                ref={videoARef}
-                src={srcA}
-                autoPlay muted loop playsInline
-                onError={() => setErrA(true)}
-                style={{
-                  position: 'absolute',
-                  top: 0, left: 0,
-                  width: '100%', height: '100%',
-                  objectFit: 'cover',
-                  opacity: activeVid === 'A' ? 1 : 0,
-                  transition: 'opacity 0.6s ease',
-                  zIndex: activeVid === 'A' ? 2 : 1
-                }}
-              />
-            ) : (
-              <div style={{
-                position: 'absolute', inset: 0,
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                backgroundColor: '#0a0a0a',
-                color: 'white', fontFamily: '"Barlow", sans-serif',
-                opacity: activeVid === 'A' ? 1 : 0,
-                transition: 'opacity 0.6s ease', zIndex: activeVid === 'A' ? 2 : 1
-              }}>
-                {industriesData.find(ind => ind.videoUrl === srcA)?.name || ''}
-              </div>
-            )}
-            
-            {/* Video B */}
-            {srcB && !errB ? (
-              <video
-                ref={videoBRef}
-                src={srcB}
-                autoPlay muted loop playsInline
-                onError={() => setErrB(true)}
-                style={{
-                  position: 'absolute',
-                  top: 0, left: 0,
-                  width: '100%', height: '100%',
-                  objectFit: 'cover',
-                  opacity: activeVid === 'B' ? 1 : 0,
-                  transition: 'opacity 0.6s ease',
-                  zIndex: activeVid === 'B' ? 2 : 1
-                }}
-              />
-            ) : (srcB && errB) ? (
-              <div style={{
-                position: 'absolute', inset: 0,
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                backgroundColor: '#0a0a0a',
-                color: 'white', fontFamily: '"Barlow", sans-serif',
-                opacity: activeVid === 'B' ? 1 : 0,
-                transition: 'opacity 0.6s ease', zIndex: activeVid === 'B' ? 2 : 1
-              }}>
-                {industriesData.find(ind => ind.videoUrl === srcB)?.name || ''}
-              </div>
-            ) : null}
-          </div>
-
-          <div style={{ marginTop: '16px', textAlign: 'center' }}>
-            <div style={{
-              display: 'inline-block',
-              background: '#9168ff',
-              color: 'white',
-              padding: '6px 20px',
-              borderRadius: '999px',
-              fontSize: '14px',
-              fontWeight: 600,
-              fontFamily: '"Barlow", sans-serif',
-              transition: 'opacity 0.3s ease'
-            }}>
-              {industriesData[activeIdx].name}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <IndustriesSection />
   );
 };
 
@@ -1794,7 +1494,7 @@ const TestimonialsSection = () => {
     }}>
       <div style={{ textAlign: 'center', marginBottom: '64px', width: '100%', maxWidth: '1200px', padding: '0 40px', boxSizing: 'border-box' }}>
         <span style={{
-          color: '#9168ff',
+          color: '#00c2ff',
           fontSize: '13px',
           textTransform: 'uppercase',
           letterSpacing: '3px',
@@ -1848,10 +1548,10 @@ const TestimonialsSection = () => {
                     overflow: 'hidden',
                     cursor: 'pointer',
                     transition: 'all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                    border: isActive ? '3px solid #9168ff' : '3px solid rgba(255,255,255,0.1)',
+                    border: isActive ? '3px solid #00c2ff' : '3px solid rgba(255,255,255,0.1)',
                     filter: isActive ? 'brightness(1) saturate(1)' : 'brightness(0.55) saturate(0.8)',
                     transform: isActive ? 'scale(1.18)' : 'scale(1)',
-                    boxShadow: isActive ? '0 0 0 5px rgba(145, 104, 255, 0.25), 0 0 30px rgba(145, 104, 255, 0.35), 0 8px 32px rgba(0,0,0,0.5)' : 'none',
+                    boxShadow: isActive ? '0 0 0 5px rgba(0, 194, 255, 0.25), 0 0 30px rgba(0, 194, 255, 0.35), 0 8px 32px rgba(0,0,0,0.5)' : 'none',
                     zIndex: isActive ? 10 : 1
                   }}>
                     <img src={t.avatar} alt={t.name} loading="lazy" style={{
@@ -1876,7 +1576,7 @@ const TestimonialsSection = () => {
                   height: '48px',
                   borderRadius: '50%',
                   overflow: 'hidden',
-                  border: isActive ? '2px solid #9168ff' : '2px solid rgba(255,255,255,0.1)',
+                  border: isActive ? '2px solid #00c2ff' : '2px solid rgba(255,255,255,0.1)',
                   filter: isActive ? 'brightness(1) saturate(1)' : 'brightness(0.55) saturate(0.8)',
                   transform: isActive ? 'scale(1.15)' : 'scale(1)',
                   transition: 'all 0.3s ease',
@@ -1923,7 +1623,7 @@ const TestimonialsSection = () => {
                 top: '-10px',
                 fontSize: '72px',
                 lineHeight: 1,
-                color: '#9168ff',
+                color: '#00c2ff',
                 fontFamily: 'Georgia, serif',
                 opacity: 0.9
               }}>"</span>
@@ -1943,14 +1643,14 @@ const TestimonialsSection = () => {
                 height: '56px',
                 borderRadius: '50%',
                 objectFit: 'cover',
-                border: '2px solid #9168ff',
-                boxShadow: '0 0 12px rgba(145, 104, 255, 0.4)'
+                border: '2px solid #00c2ff',
+                boxShadow: '0 0 12px rgba(0, 194, 255, 0.4)'
               }} />
               <div>
                 <div style={{
                   fontSize: '16px',
                   fontWeight: 700,
-                  color: '#9168ff',
+                  color: '#00c2ff',
                   fontFamily: '"Barlow", sans-serif'
                 }}>{activeTestimonial.name}, {activeTestimonial.title}</div>
                 <div style={{
@@ -1970,7 +1670,7 @@ const TestimonialsSection = () => {
                   width: idx === activeIndex ? '28px' : '8px',
                   height: '8px',
                   borderRadius: idx === activeIndex ? '4px' : '50%',
-                  background: idx === activeIndex ? '#9168ff' : 'rgba(255,255,255,0.18)',
+                  background: idx === activeIndex ? '#00c2ff' : 'rgba(255,255,255,0.18)',
                   cursor: 'pointer',
                   transition: 'all 0.3s ease'
                 }} />
@@ -2031,17 +1731,20 @@ const HomeContent: React.FC<{
           fontWeight: 700,
           lineHeight: '87.1px',
           margin: '0 0 33px 0',
-          letterSpacing: '-0.02em'
+          letterSpacing: '-0.02em',
+          
         }}>
             <span style={{
-            display: 'block'
+            display: 'inline',
+            marginLeft: '-12px',
           }}>Transforming Data into</span>
             <span className="hero-decisions-badge" style={{
             display: 'inline-block',
-            backgroundColor: 'rgba(10, 132, 255, 1)',
+            backgroundColor: 'rgba(0, 194, 255, 1)',
             borderRadius: '16px',
             padding: '0 28px',
             marginTop: '8px',
+            marginLeft: '25px',
             lineHeight: '77px',
             height: '77px',
             boxSizing: 'border-box'
@@ -2067,7 +1770,7 @@ const HomeContent: React.FC<{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: 'rgba(10, 132, 255, 1)',
+          backgroundColor: 'rgba(0, 194, 255, 1)',
           border: 'none',
           borderRadius: '10px',
           color: 'white',
@@ -2143,7 +1846,7 @@ const HomeContent: React.FC<{
           position: 'absolute',
           width: '320px',
           height: '320px',
-          background: 'radial-gradient(circle, rgba(10, 132, 255, 0.75) 0%, rgba(10, 132, 255, 0.35) 45%, rgba(10, 132, 255, 0) 72%)',
+          background: 'radial-gradient(circle, rgba(0, 194, 255, 0.75) 0%, rgba(0, 194, 255, 0.35) 45%, rgba(0, 194, 255, 0) 72%)',
           filter: 'blur(90px)',
           WebkitFilter: 'blur(90px)',
           left: '126px',
@@ -2285,7 +1988,7 @@ const HomeContent: React.FC<{
             lineHeight: '1.02',
             margin: '22px 0 18px'
           }}>
-              Real Work. Real <span style={{ color: '#0a84ff' }}>Results.</span>
+              Real Work. Real <span style={{ color: '#00c2ff' }}>Results.</span>
             </h2>
             <p style={{
             color: 'rgba(235, 239, 255, 0.8)',
@@ -2317,7 +2020,7 @@ const HomeContent: React.FC<{
             justifyContent: 'center'
           }}>
               <span style={{
-              color: 'rgba(145, 104, 255, 1)',
+              color: 'rgba(0, 194, 255, 1)',
               fontSize: '32px',
               fontFamily: '"Barlow", sans-serif',
               fontWeight: 800
@@ -2347,9 +2050,9 @@ const HomeContent: React.FC<{
             minWidth: '118px',
             padding: '14px 20px',
             borderRadius: '999px',
-            backgroundColor: activePortfolioCategory === category ? '#0a84ff' : 'rgba(255, 255, 255, 0.05)',
+            backgroundColor: activePortfolioCategory === category ? '#00c2ff' : 'rgba(255, 255, 255, 0.05)',
             color: activePortfolioCategory === category ? 'white' : 'rgba(235, 239, 255, 0.8)',
-            border: activePortfolioCategory === category ? '1px solid #0a84ff' : '1px solid rgba(255, 255, 255, 0.08)',
+            border: activePortfolioCategory === category ? '1px solid #00c2ff' : '1px solid rgba(255, 255, 255, 0.08)',
             cursor: 'pointer',
             fontFamily: '"Barlow", sans-serif',
             fontSize: '14px',
@@ -2397,8 +2100,8 @@ const HomeContent: React.FC<{
                 left: '18px',
                 padding: '10px 16px',
                 borderRadius: '999px',
-                backgroundColor: 'rgba(10, 132, 255, 0.18)',
-                color: 'rgba(10, 132, 255, 1)',
+                backgroundColor: 'rgba(0, 194, 255, 0.18)',
+                color: 'rgba(0, 194, 255, 1)',
                 fontFamily: '"Barlow", sans-serif',
                 fontWeight: 700,
                 fontSize: '12px',
@@ -2459,7 +2162,7 @@ const HomeContent: React.FC<{
                 <button style={{
                 padding: '14px 20px',
                 width: '100%',
-                backgroundColor: '#0a84ff',
+                backgroundColor: '#00c2ff',
                 color: 'white',
                 border: 'none',
                 borderRadius: '16px',
@@ -2515,7 +2218,7 @@ const HomeContent: React.FC<{
             minWidth: '220px',
             padding: '16px 24px',
             borderRadius: '18px',
-            backgroundColor: '#0a84ff',
+            backgroundColor: '#00c2ff',
             color: 'white',
             border: 'none',
             cursor: 'pointer',
@@ -2585,7 +2288,7 @@ const HomeContent: React.FC<{
             gap: '12px'
           }}>
               <span style={{
-              color: 'rgba(145, 104, 255, 1)',
+              color: 'rgba(0, 194, 255, 1)',
               fontSize: '32px',
               fontFamily: '"Barlow", sans-serif',
               fontWeight: 800
@@ -2615,9 +2318,9 @@ const HomeContent: React.FC<{
             minWidth: '130px',
             padding: '14px 22px',
             borderRadius: '999px',
-            backgroundColor: activeCaseStudyCategory === category ? '#0a84ff' : 'rgba(255, 255, 255, 0.05)',
+            backgroundColor: activeCaseStudyCategory === category ? '#00c2ff' : 'rgba(255, 255, 255, 0.05)',
             color: activeCaseStudyCategory === category ? 'white' : 'rgba(235, 239, 255, 0.8)',
-            border: activeCaseStudyCategory === category ? '1px solid #0a84ff' : '1px solid rgba(255, 255, 255, 0.08)',
+            border: activeCaseStudyCategory === category ? '1px solid #00c2ff' : '1px solid rgba(255, 255, 255, 0.08)',
             cursor: 'pointer',
             fontFamily: '"Barlow", sans-serif',
             fontSize: '14px',
@@ -2659,10 +2362,10 @@ const HomeContent: React.FC<{
                   alignItems: 'center',
                   gap: '12px',
                   padding: '10px 18px',
-                  backgroundColor: 'rgba(10, 132, 255, 0.12)',
+                  backgroundColor: 'rgba(0, 194, 255, 0.12)',
                   borderRadius: '999px',
                   width: 'fit-content',
-                  color: '#0a84ff',
+                  color: '#00c2ff',
                   fontSize: '12px',
                   fontFamily: '"Barlow", sans-serif',
                   fontWeight: 700,
@@ -2751,7 +2454,7 @@ const HomeContent: React.FC<{
               }}>
                     <div>
                       <h4 style={{
-                      color: '#0a84ff',
+                      color: '#00c2ff',
                       fontSize: '18px',
                       fontFamily: '"Barlow", sans-serif',
                       fontWeight: 700,
@@ -2796,7 +2499,7 @@ const HomeContent: React.FC<{
                     padding: '18px 24px',
                     borderRadius: '18px',
                     border: 'none',
-                    backgroundColor: '#0a84ff',
+                    backgroundColor: '#00c2ff',
                     color: 'white',
                     cursor: 'pointer',
                     fontFamily: '"Barlow", sans-serif',
@@ -2857,8 +2560,8 @@ const HomeContent: React.FC<{
                   gap: '10px',
                   padding: '8px 16px',
                   borderRadius: '999px',
-                  backgroundColor: 'rgba(10, 132, 255, 0.12)',
-                  color: '#0a84ff',
+                  backgroundColor: 'rgba(0, 194, 255, 0.12)',
+                  color: '#00c2ff',
                   fontSize: '12px',
                   fontFamily: '"Barlow", sans-serif',
                   fontWeight: 700,
@@ -2934,7 +2637,7 @@ const HomeContent: React.FC<{
             minWidth: '220px',
             padding: '16px 24px',
             borderRadius: '18px',
-            backgroundColor: '#0a84ff',
+            backgroundColor: '#00c2ff',
             color: 'white',
             border: 'none',
             cursor: 'pointer',
@@ -3047,7 +2750,7 @@ const HomeContent: React.FC<{
       position: 'relative',
       background: 'linear-gradient(180deg, rgba(3, 3, 3, 0.99) 0%, rgba(7, 11, 30, 1) 100%)',
       borderRadius: '40px',
-      border: '1px solid rgba(10, 132, 255, 0.08)'
+      border: '1px solid rgba(0, 194, 255, 0.08)'
     }}>
         <div style={{
           position: 'absolute',
@@ -3170,7 +2873,7 @@ const HomeContent: React.FC<{
                     width: '24px',
                     height: '24px',
                     borderRadius: '999px',
-                    background: 'rgba(10, 132, 255, 0.15)',
+                    background: 'rgba(0, 194, 255, 0.15)',
                     display: 'grid',
                     placeItems: 'center'
                   }}>★</span>
@@ -3404,7 +3107,7 @@ const HomeContent: React.FC<{
               padding: '16px 28px',
               borderRadius: '999px',
               border: '1px solid rgba(255,255,255,0.12)',
-              background: 'linear-gradient(90deg, #0a84ff 0%, #9168ff 100%)',
+              background: 'linear-gradient(90deg, #00c2ff 0%, #00c2ff 100%)',
               color: '#ffffff',
               fontWeight: 700,
               cursor: 'pointer',
@@ -3467,7 +3170,7 @@ const HomeContent: React.FC<{
             <div>
               <span style={{
               display: 'inline-block',
-              color: 'rgba(145, 104, 255, 0.82)',
+              color: 'rgba(0, 194, 255, 0.82)',
               fontSize: '12px',
               fontWeight: 700,
               letterSpacing: '0.28em',
@@ -3483,7 +3186,7 @@ const HomeContent: React.FC<{
               lineHeight: 1.05,
               margin: '24px 0 24px 0'
             }}>
-                Ready to Drive Transformational <span style={{ color: 'rgba(10, 132, 255, 1)' }}>Growth?</span>
+                Ready to Drive Transformational <span style={{ color: 'rgba(0, 194, 255, 1)' }}>Growth?</span>
               </h2>
               <p style={{
               maxWidth: '560px',
@@ -3505,14 +3208,14 @@ const HomeContent: React.FC<{
               padding: '18px 28px',
               borderRadius: '999px',
               border: 'none',
-              background: 'linear-gradient(90deg, rgba(10, 132, 255, 1), rgba(145, 104, 255, 1))',
+              background: 'linear-gradient(90deg, rgba(0, 194, 255, 1), rgba(0, 194, 255, 1))',
               color: 'white',
               fontSize: '14px',
               fontWeight: 700,
               cursor: 'pointer',
               transition: 'box-shadow 0.2s ease, transform 0.2s ease'
             }} onMouseEnter={e => {
-              e.currentTarget.style.boxShadow = '0 20px 40px rgba(10, 132, 255, 0.3)';
+              e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 194, 255, 0.3)';
               e.currentTarget.style.transform = 'translateY(-1px)';
             }} onMouseLeave={e => {
               e.currentTarget.style.boxShadow = 'none';
@@ -3559,11 +3262,11 @@ const HomeContent: React.FC<{
                   width: '38px',
                   height: '38px',
                   borderRadius: '50%',
-                  background: 'rgba(10, 132, 255, 0.16)',
+                  background: 'rgba(0, 194, 255, 0.16)',
                   display: 'grid',
                   placeItems: 'center'
                 }}>
-                  <span style={{ color: 'rgba(10, 132, 255, 1)', fontSize: '18px', fontWeight: 700 }}>•</span>
+                  <span style={{ color: 'rgba(0, 194, 255, 1)', fontSize: '18px', fontWeight: 700 }}>•</span>
                 </div>
                 <span style={{
                   color: 'rgba(235, 239, 255, 0.88)',
@@ -3610,7 +3313,7 @@ const HomeContent: React.FC<{
                 border: '1px solid rgba(255, 255, 255, 0.08)'
               }}>
                 <div style={{
-                  color: 'rgba(10, 132, 255, 1)',
+                  color: 'rgba(0, 194, 255, 1)',
                   fontSize: '22px',
                   fontWeight: 800,
                   marginBottom: '6px'
@@ -3632,7 +3335,7 @@ const HomeContent: React.FC<{
             border: '1px solid rgba(255, 255, 255, 0.08)'
           }}>
               <div style={{
-                color: 'rgba(10, 132, 255, 1)',
+                color: 'rgba(0, 194, 255, 1)',
                 fontSize: '18px',
                 fontWeight: 700,
                 marginBottom: '6px'
@@ -3909,7 +3612,7 @@ export const LandingPage: React.FC<BaseComponentProps> = ({
     minHeight: '100vh',
     backgroundColor: 'rgba(3, 3, 3, 1)',
     boxSizing: 'border-box',
-    overflowX: 'hidden',
+    overflowX: 'clip',
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
@@ -3933,11 +3636,11 @@ export const LandingPage: React.FC<BaseComponentProps> = ({
           animation: robotJump 2.8s ease-in-out infinite;
           transform-origin: center bottom;
         }
-        .nav-item:hover { color: rgba(10, 132, 255, 1) !important; }
-        .primary-btn:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(10, 132, 255, 0.3); }
+        .nav-item:hover { color: rgba(0, 194, 255, 1) !important; }
+        .primary-btn:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 194, 255, 0.3); }
         .primary-btn:active { transform: translateY(0); }
         .service-card:hover { transform: translateY(-8px); background-color: rgba(30, 30, 30, 1) !important; }
-        .value-circle:hover { border-color: rgba(10, 132, 255, 0.5) !important; transform: scale(1.02); }
+        .value-circle:hover { border-color: rgba(0, 194, 255, 0.5) !important; transform: scale(1.02); }
         .mobile-menu { animation: slideDown 0.25s ease; }
         @media (max-width: 767px) {
           .desktop-nav { display: none !important; }

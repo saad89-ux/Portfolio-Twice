@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import { IndustriesSection } from './IndustriesSection';
 interface BaseComponentProps {
   className?: string;
   style?: React.CSSProperties;
@@ -103,7 +104,7 @@ const ServiceCard = ({
     gap: '32px',
     backgroundColor: 'rgba(20, 20, 20, 1)',
     borderRadius: '36px',
-    border: isHovered ? '1px solid rgba(10, 132, 255, 0.3)' : '1px solid transparent',
+    border: isHovered ? '1px solid rgba(0, 194, 255, 0.3)' : '1px solid transparent',
     cursor: 'pointer'
   }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <img src={item.image} alt={item.title} style={{
@@ -168,7 +169,7 @@ const ServiceCard = ({
       transition: 'background 0.2s ease'
     }} onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)'} onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
         <div style={{
-        background: 'rgba(69, 156, 243, 1)',
+        background: 'rgba(0, 194, 255, 1)',
         borderRadius: '135px',
         padding: '6px 14px',
         display: 'flex',
@@ -209,7 +210,7 @@ const IndustryCard = ({
     cursor: 'pointer',
     transform: isHovered ? 'scale(1.03)' : 'scale(1)',
     transition: 'transform 0.3s ease',
-    boxShadow: isHovered ? '0 20px 40px rgba(10, 132, 255, 0.25)' : 'none'
+    boxShadow: isHovered ? '0 20px 40px rgba(0, 194, 255, 0.25)' : 'none'
   }} onMouseEnter={() => {
     setIsHovered(true);
     onHover(true);
@@ -266,7 +267,7 @@ export const ServicesPage = () => {
   return <div style={{
     width: '100%',
     backgroundColor: 'rgba(3, 3, 3, 1)',
-    overflowX: 'hidden',
+    overflowX: 'clip',
     position: 'relative'
   }}>
       {/* Hero Section */}
@@ -373,46 +374,6 @@ export const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section style={{
-      width: '100%',
-      backgroundColor: 'rgba(3, 3, 3, 1)',
-      padding: '120px 0 80px',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center'
-    }}>
-        <h2 style={{
-        fontSize: '42px',
-        fontWeight: 700,
-        textAlign: 'center',
-        marginBottom: '60px',
-        fontFamily: '"Barlow", sans-serif'
-      }}>
-          <span style={{ color: 'rgba(10, 132, 255, 1)' }}>Industries</span> <span style={{ color: 'rgba(255, 255, 255, 1)' }}>We Serve</span>
-        </h2>
-        <div style={{
-        width: '100%',
-        overflow: 'hidden',
-        paddingBottom: '20px'
-      }}>
-          <div style={{
-          display: 'flex',
-          alignItems: 'flex-end',
-          gap: '16px',
-          width: 'max-content',
-          animation: 'marqueeScroll 35s linear infinite',
-          animationPlayState: isMarqueePaused ? 'paused' : 'running'
-        }}>
-            {[...industryCards, ...industryCards].map((item, index) => <IndustryCard key={`${item.title}-${index}`} item={item} index={index} onHover={setIsMarqueePaused} />)}
-          </div>
-        </div>
-      </section>
-      <style>{`
-        @keyframes marqueeScroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-      `}</style>
+      
     </div>;
 };

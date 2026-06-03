@@ -24,12 +24,12 @@ const COLORS = {
   white: '#ffffff',
   grayText: 'rgba(235, 239, 255, 0.72)',
   grayTextLight: 'rgba(235, 239, 255, 0.78)',
-  purple: '#9168ff',
-  purpleAlpha15: 'rgba(145, 104, 255, 0.15)',
-  purpleAlpha12: 'rgba(145, 104, 255, 0.12)',
-  blue: '#0a84ff',
-  blueAlpha15: 'rgba(10, 132, 255, 0.15)',
-  blueAlpha08: 'rgba(10, 132, 255, 0.08)',
+  purple: '#00c2ff',
+  purpleAlpha15: 'rgba(0, 194, 255, 0.15)',
+  purpleAlpha12: 'rgba(0, 194, 255, 0.12)',
+  blue: '#00c2ff',
+  blueAlpha15: 'rgba(0, 194, 255, 0.15)',
+  blueAlpha08: 'rgba(0, 194, 255, 0.08)',
   font: '"Barlow", sans-serif',
 };
 
@@ -173,10 +173,10 @@ const AccordionItem = ({
     <div
       style={{
         background: isOpen
-          ? 'linear-gradient(180deg, rgba(145, 104, 255, 0.12), rgba(10, 132, 255, 0.08))'
+          ? 'linear-gradient(180deg, rgba(0, 194, 255, 0.12), rgba(0, 194, 255, 0.08))'
           : 'rgba(15, 15, 15, 1)',
         border: isOpen
-          ? '1px solid rgba(145, 104, 255, 0.5)'
+          ? '1px solid rgba(0, 194, 255, 0.5)'
           : '1px solid rgba(255, 255, 255, 0.08)',
         borderRadius: '12px',
         overflow: 'hidden',
@@ -475,7 +475,7 @@ export const FAQSection = () => {
                   padding: '20px 22px',
                   borderRadius: '20px',
                   background: COLORS.blueAlpha08,
-                  border: '1px solid rgba(10, 132, 255, 0.18)',
+                  border: '1px solid rgba(0, 194, 255, 0.18)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',

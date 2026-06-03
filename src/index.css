@@ -271,12 +271,12 @@ select {
 }
 
 .ca-interactive-input:focus {
-  box-shadow: 0 0 0 2px rgba(10, 132, 255, 0.45);
+  box-shadow: 0 0 0 2px rgba(0, 194, 255, 0.45);
 }
 
 .ca-interactive-btn:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 0 6px 16px rgba(10, 132, 255, 0.35) !important;
+  box-shadow: 0 6px 16px rgba(0, 194, 255, 0.35) !important;
 }
 
 .ca-interactive-btn:active {

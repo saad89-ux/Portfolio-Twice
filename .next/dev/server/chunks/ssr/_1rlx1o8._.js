@@ -1558,7 +1558,7 @@ const AboutSection = ({ className, style })=>{
                 style: {
                     position: 'absolute',
                     inset: 0,
-                    backgroundImage: 'radial-gradient(circle at 14% 18%, rgba(10, 132, 255, 0.16), transparent 24%), radial-gradient(circle at 86% 22%, rgba(12, 106, 255, 0.12), transparent 20%), radial-gradient(circle at 50% 88%, rgba(5, 54, 149, 0.16), transparent 32%)',
+                    backgroundImage: 'radial-gradient(circle at 14% 18%, rgba(10, 132, 255, 0.16), transparent 24%), radial-gradient(circle at 86% 22%, rgba(26, 115, 255, 0.14), transparent 22%), radial-gradient(circle at 72% 38%, rgba(0, 194, 255, 0.08), transparent 26%), radial-gradient(circle at 50% 88%, rgba(4, 45, 112, 0.18), transparent 32%), radial-gradient(circle at 18% 72%, rgba(120, 185, 255, 0.10), transparent 28%)',
                     pointerEvents: 'none'
                 }
             }, void 0, false, {
@@ -1808,7 +1808,7 @@ const AboutSection = ({ className, style })=>{
                                 style: {
                                     position: 'absolute',
                                     inset: 0,
-                                    background: 'linear-gradient(180deg, rgba(3, 7, 20, 0.12), rgba(3, 7, 20, 0.92) 70%)',
+                                    background: 'linear-gradient(180deg, rgba(3, 3, 3, 0.12) 0%, rgba(7, 11, 30, 0.55) 45%, rgba(8, 12, 32, 0.92) 100%)',
                                     pointerEvents: 'none'
                                 }
                             }, void 0, false, {
@@ -4985,23 +4985,23 @@ const TrustSection = ()=>{
             maxWidth: '1440px',
             margin: '80px auto 0',
             padding: '80px clamp(24px, 6vw, 90px)',
-            backgroundColor: 'rgba(7, 11, 30, 1)',
             borderRadius: '48px',
             position: 'relative',
             overflow: 'hidden',
-            boxSizing: 'border-box'
+            boxSizing: 'border-box',
+            border: '1px solid rgba(10, 132, 255, 0.08)'
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     position: 'absolute',
                     inset: 0,
-                    backgroundImage: 'radial-gradient(circle at 16% 18%, rgba(10, 132, 255, 0.15), transparent 24%), radial-gradient(circle at 88% 16%, rgba(26, 115, 255, 0.1), transparent 20%), radial-gradient(circle at 50% 85%, rgba(4, 45, 112, 0.16), transparent 35%)',
+                    backgroundImage: 'radial-gradient(circle at 16% 18%, rgba(10, 132, 255, 0.18), transparent 28%), radial-gradient(circle at 88% 16%, rgba(26, 115, 255, 0.14), transparent 24%), radial-gradient(circle at 62% 40%, rgba(0, 194, 255, 0.10), transparent 30%), radial-gradient(circle at 50% 85%, rgba(4, 45, 112, 0.20), transparent 38%), radial-gradient(circle at 22% 78%, rgba(145, 104, 255, 0.10), transparent 32%)',
                     pointerEvents: 'none'
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 869,
+                lineNumber: 870,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5036,7 +5036,7 @@ const TrustSection = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 890,
+                                lineNumber: 891,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5065,7 +5065,7 @@ const TrustSection = ()=>{
                                         children: "Client-First Always"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 907,
+                                        lineNumber: 908,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5098,20 +5098,20 @@ const TrustSection = ()=>{
                                                 children: "▶"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 933,
+                                                lineNumber: 934,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             "Watch My Story"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 920,
+                                        lineNumber: 921,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 898,
+                                lineNumber: 899,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5142,7 +5142,7 @@ const TrustSection = ()=>{
                                         children: "Results · Trust · Growth"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 963,
+                                        lineNumber: 964,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5156,19 +5156,19 @@ const TrustSection = ()=>{
                                         children: "I don’t believe in just completing projects, I believe in building relationships that last."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 973,
+                                        lineNumber: 974,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 949,
+                                lineNumber: 950,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 882,
+                        lineNumber: 883,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5190,7 +5190,7 @@ const TrustSection = ()=>{
                                 children: "Behind Every Strategy, There’s a Purpose."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 989,
+                                lineNumber: 990,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5209,7 +5209,7 @@ const TrustSection = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1004,
+                                        lineNumber: 1005,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5224,13 +5224,13 @@ const TrustSection = ()=>{
                                         children: "I started this journey with a simple mission — to help businesses grow with honesty, strategy, and results that actually matter. Over the years, I’ve learned that real growth doesn’t come from shortcuts, it comes from trust, consistency, and a deep understanding of each business I work with."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1010,
+                                        lineNumber: 1011,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 999,
+                                lineNumber: 1000,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5245,7 +5245,7 @@ const TrustSection = ()=>{
                                 children: "Every campaign I build is customized. Every decision is data-backed. And every success story you see here represents a relationship built on transparency and hard work."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 1021,
+                                lineNumber: 1022,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5272,7 +5272,7 @@ const TrustSection = ()=>{
                                         children: "Watch Video"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1036,
+                                        lineNumber: 1037,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5292,25 +5292,25 @@ const TrustSection = ()=>{
                                         children: "Check Reviews"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1051,
+                                        lineNumber: 1052,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 1031,
+                                lineNumber: 1032,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 984,
+                        lineNumber: 985,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 875,
+                lineNumber: 876,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5335,7 +5335,7 @@ const TrustSection = ()=>{
                                 gap: '10px',
                                 padding: '22px 18px',
                                 borderRadius: '28px',
-                                backgroundColor: 'rgba(7, 11, 30, 1)',
+                                backgroundColor: '#080c20',
                                 border: '1px solid rgba(255, 255, 255, 0.06)'
                             },
                             children: [
@@ -5348,7 +5348,7 @@ const TrustSection = ()=>{
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 1092,
+                                    lineNumber: 1093,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5361,7 +5361,7 @@ const TrustSection = ()=>{
                                     children: stat.value
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 1096,
+                                    lineNumber: 1097,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5374,23 +5374,23 @@ const TrustSection = ()=>{
                                     children: stat.label
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 1104,
+                                    lineNumber: 1105,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, stat.label, true, {
                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                            lineNumber: 1082,
+                            lineNumber: 1083,
                             columnNumber: 35
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                    lineNumber: 1077,
+                    lineNumber: 1078,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 1070,
+                lineNumber: 1071,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5426,7 +5426,7 @@ const TrustSection = ()=>{
                                 children: "“"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 1134,
+                                lineNumber: 1135,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5443,7 +5443,7 @@ const TrustSection = ()=>{
                                         children: "Don't just take my word for it — hear it from the people I’ve worked with."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1144,
+                                        lineNumber: 1145,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5456,19 +5456,19 @@ const TrustSection = ()=>{
                                         children: "Real Clients. Real Feedback."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1154,
+                                        lineNumber: 1155,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 1143,
+                                lineNumber: 1144,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 1128,
+                        lineNumber: 1129,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5486,13 +5486,13 @@ const TrustSection = ()=>{
                                         height: '48px',
                                         borderRadius: '999px',
                                         objectFit: 'cover',
-                                        border: '2px solid rgba(7, 11, 30, 1)',
+                                        border: '2px solid #070b1e',
                                         position: 'relative',
                                         left: `${index * -14}px`
                                     }
                                 }, src, false, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 1169,
+                                    lineNumber: 1170,
                                     columnNumber: 45
                                 }, ("TURBOPACK compile-time value", void 0))),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5506,19 +5506,19 @@ const TrustSection = ()=>{
                                 children: "3K+ Reviews"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 1178,
+                                lineNumber: 1179,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 1164,
+                        lineNumber: 1165,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 1116,
+                lineNumber: 1117,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
@@ -5767,7 +5767,7 @@ const IndustriesServedSection = ()=>{
                         children: "INDUSTRIES"
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 1359,
+                        lineNumber: 1360,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -5782,7 +5782,7 @@ const IndustriesServedSection = ()=>{
                         children: "Industries We Serve"
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 1371,
+                        lineNumber: 1372,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5797,13 +5797,13 @@ const IndustriesServedSection = ()=>{
                         children: "From startups to enterprises — we deliver results across every major industry."
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 1381,
+                        lineNumber: 1382,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 1354,
+                lineNumber: 1355,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5857,7 +5857,7 @@ const IndustriesServedSection = ()=>{
                                         children: ind.id
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1429,
+                                        lineNumber: 1430,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -5873,7 +5873,7 @@ const IndustriesServedSection = ()=>{
                                         children: ind.name
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1441,
+                                        lineNumber: 1442,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5890,7 +5890,7 @@ const IndustriesServedSection = ()=>{
                                         children: ind.tagline
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1453,
+                                        lineNumber: 1454,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5906,7 +5906,7 @@ const IndustriesServedSection = ()=>{
                                         children: ind.description
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1466,
+                                        lineNumber: 1467,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5938,7 +5938,7 @@ const IndustriesServedSection = ()=>{
                                                         children: stat.value
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 1495,
+                                                        lineNumber: 1496,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5950,30 +5950,30 @@ const IndustriesServedSection = ()=>{
                                                         children: stat.label
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 1503,
+                                                        lineNumber: 1504,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, sIdx, true, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 1484,
+                                                lineNumber: 1485,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1478,
+                                        lineNumber: 1479,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, i, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 1412,
+                                lineNumber: 1413,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0));
                         })
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 1403,
+                        lineNumber: 1404,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6016,12 +6016,12 @@ const IndustriesServedSection = ()=>{
                                         children: ind.name
                                     }, i, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1540,
+                                        lineNumber: 1541,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 1529,
+                                lineNumber: 1530,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6057,7 +6057,7 @@ const IndustriesServedSection = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1571,
+                                        lineNumber: 1572,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         style: {
@@ -6076,7 +6076,7 @@ const IndustriesServedSection = ()=>{
                                         children: industriesData.find((ind)=>ind.videoUrl === srcA)?.name || ''
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1587,
+                                        lineNumber: 1588,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     srcB && !errB ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
@@ -6100,7 +6100,7 @@ const IndustriesServedSection = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1601,
+                                        lineNumber: 1602,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)) : srcB && errB ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         style: {
@@ -6119,13 +6119,13 @@ const IndustriesServedSection = ()=>{
                                         children: industriesData.find((ind)=>ind.videoUrl === srcB)?.name || ''
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1617,
+                                        lineNumber: 1618,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)) : null
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 1559,
+                                lineNumber: 1560,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6148,30 +6148,30 @@ const IndustriesServedSection = ()=>{
                                     children: industriesData[activeIdx].name
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 1631,
+                                    lineNumber: 1632,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 1630,
+                                lineNumber: 1631,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 1519,
+                        lineNumber: 1520,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 1393,
+                lineNumber: 1394,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/generated/LandingPage.tsx",
-        lineNumber: 1345,
+        lineNumber: 1346,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -6366,7 +6366,7 @@ const TestimonialsSection = ()=>{
                         children: "TESTIMONIALS"
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 1796,
+                        lineNumber: 1797,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -6380,7 +6380,7 @@ const TestimonialsSection = ()=>{
                         children: "What Our Clients Say"
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 1806,
+                        lineNumber: 1807,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6394,20 +6394,20 @@ const TestimonialsSection = ()=>{
                             "Real results. Real feedback.",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 1818,
+                                lineNumber: 1819,
                                 columnNumber: 40
                             }, ("TURBOPACK compile-time value", void 0)),
                             "From brands that trusted us to grow."
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 1813,
+                        lineNumber: 1814,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 1795,
+                lineNumber: 1796,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6469,23 +6469,23 @@ const TestimonialsSection = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 1857,
+                                        lineNumber: 1858,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, idx, false, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 1841,
+                                    lineNumber: 1842,
                                     columnNumber: 19
                                 }, ("TURBOPACK compile-time value", void 0));
                             })
                         }, void 0, false, {
                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                            lineNumber: 1836,
+                            lineNumber: 1837,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 1835,
+                        lineNumber: 1836,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
@@ -6520,18 +6520,18 @@ const TestimonialsSection = ()=>{
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 1885,
+                                    lineNumber: 1886,
                                     columnNumber: 19
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, idx, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 1874,
+                                lineNumber: 1875,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0));
                         })
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 1870,
+                        lineNumber: 1871,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6557,7 +6557,7 @@ const TestimonialsSection = ()=>{
                                     children: activeTestimonial.platform
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 1898,
+                                    lineNumber: 1899,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6578,7 +6578,7 @@ const TestimonialsSection = ()=>{
                                             children: activeTestimonial.rating
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 1909,
+                                            lineNumber: 1910,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6594,18 +6594,18 @@ const TestimonialsSection = ()=>{
                                                     stroke: "#F59E0B"
                                                 }, i, false, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 1914,
+                                                    lineNumber: 1915,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 1912,
+                                            lineNumber: 1913,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 1908,
+                                    lineNumber: 1909,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6629,7 +6629,7 @@ const TestimonialsSection = ()=>{
                                             children: '"'
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 1920,
+                                            lineNumber: 1921,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6644,13 +6644,13 @@ const TestimonialsSection = ()=>{
                                             children: activeTestimonial.quote
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 1930,
+                                            lineNumber: 1931,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 1919,
+                                    lineNumber: 1920,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6674,7 +6674,7 @@ const TestimonialsSection = ()=>{
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 1941,
+                                            lineNumber: 1942,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6693,7 +6693,7 @@ const TestimonialsSection = ()=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 1950,
+                                                    lineNumber: 1951,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6708,19 +6708,19 @@ const TestimonialsSection = ()=>{
                                                     children: activeTestimonial.platformLabel
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 1956,
+                                                    lineNumber: 1957,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 1949,
+                                            lineNumber: 1950,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 1940,
+                                    lineNumber: 1941,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6742,35 +6742,35 @@ const TestimonialsSection = ()=>{
                                             }
                                         }, idx, false, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 1969,
+                                            lineNumber: 1970,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 1967,
+                                    lineNumber: 1968,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                            lineNumber: 1894,
+                            lineNumber: 1895,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 1893,
+                        lineNumber: 1894,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 1821,
+                lineNumber: 1822,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/generated/LandingPage.tsx",
-        lineNumber: 1784,
+        lineNumber: 1785,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -6812,7 +6812,7 @@ const HomeContent = ({ onNavigate })=>{
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2009,
+                        lineNumber: 2010,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6844,7 +6844,7 @@ const HomeContent = ({ onNavigate })=>{
                                         children: "Transforming Data into"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2036,
+                                        lineNumber: 2037,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6862,13 +6862,13 @@ const HomeContent = ({ onNavigate })=>{
                                         children: "Decisions"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2039,
+                                        lineNumber: 2040,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2027,
+                                lineNumber: 2028,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6885,7 +6885,7 @@ const HomeContent = ({ onNavigate })=>{
                                 children: "Leverage the power of machine learning and AI to unlock insights and drive business growth"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2052,
+                                lineNumber: 2053,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -6911,7 +6911,7 @@ const HomeContent = ({ onNavigate })=>{
                                 children: "Book a Meeting"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2063,
+                                lineNumber: 2064,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6943,12 +6943,12 @@ const HomeContent = ({ onNavigate })=>{
                                                 alt: "Client"
                                             }, avatar, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2095,
+                                                lineNumber: 2096,
                                                 columnNumber: 49
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2089,
+                                        lineNumber: 2090,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6968,26 +6968,26 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: "100+"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2112,
+                                                lineNumber: 2113,
                                                 columnNumber: 20
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             " clients have worked with us"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2105,
+                                        lineNumber: 2106,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2084,
+                                lineNumber: 2085,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2020,
+                        lineNumber: 2021,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7018,7 +7018,7 @@ const HomeContent = ({ onNavigate })=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2129,
+                                lineNumber: 2130,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7038,7 +7038,7 @@ const HomeContent = ({ onNavigate })=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2142,
+                                lineNumber: 2143,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7062,7 +7062,7 @@ const HomeContent = ({ onNavigate })=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2161,
+                                        lineNumber: 2162,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -7079,35 +7079,35 @@ const HomeContent = ({ onNavigate })=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2167,
+                                        lineNumber: 2168,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2155,
+                                lineNumber: 2156,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2120,
+                        lineNumber: 2121,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 2001,
+                lineNumber: 2002,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$generated$2f$AboutSection$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AboutSection"], {}, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 2179,
+                lineNumber: 2180,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(TrustSection, {}, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 2181,
+                lineNumber: 2182,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7136,7 +7136,7 @@ const HomeContent = ({ onNavigate })=>{
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2193,
+                        lineNumber: 2194,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -7154,7 +7154,7 @@ const HomeContent = ({ onNavigate })=>{
                         children: "Our Ultimate Set of Services for Your Ideas Implementation"
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2201,
+                        lineNumber: 2202,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7193,7 +7193,7 @@ const HomeContent = ({ onNavigate })=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2234,
+                                        lineNumber: 2235,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -7208,7 +7208,7 @@ const HomeContent = ({ onNavigate })=>{
                                         children: service.title
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2240,
+                                        lineNumber: 2241,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7223,24 +7223,24 @@ const HomeContent = ({ onNavigate })=>{
                                         children: service.desc
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2250,
+                                        lineNumber: 2251,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, service.title, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2221,
+                                lineNumber: 2222,
                                 columnNumber: 40
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2214,
+                        lineNumber: 2215,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 2184,
+                lineNumber: 2185,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7282,13 +7282,13 @@ const HomeContent = ({ onNavigate })=>{
                                         children: "Results."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2288,
+                                        lineNumber: 2289,
                                         columnNumber: 31
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2280,
+                                lineNumber: 2281,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7302,13 +7302,13 @@ const HomeContent = ({ onNavigate })=>{
                                 children: "Explore how I help businesses grow with data-driven strategies, stunning design, and performance-focused marketing."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2290,
+                                lineNumber: 2291,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2274,
+                        lineNumber: 2275,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7342,7 +7342,7 @@ const HomeContent = ({ onNavigate })=>{
                                         children: stat.value
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2319,
+                                        lineNumber: 2320,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7356,18 +7356,18 @@ const HomeContent = ({ onNavigate })=>{
                                         children: stat.label
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2327,
+                                        lineNumber: 2328,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, stat.label, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2308,
+                                lineNumber: 2309,
                                 columnNumber: 41
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2301,
+                        lineNumber: 2302,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7396,12 +7396,12 @@ const HomeContent = ({ onNavigate })=>{
                                 children: category
                             }, category, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2346,
+                                lineNumber: 2347,
                                 columnNumber: 50
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2339,
+                        lineNumber: 2340,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7446,7 +7446,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2388,
+                                                lineNumber: 2389,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7467,13 +7467,13 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: project.tag
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2394,
+                                                lineNumber: 2395,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2382,
+                                        lineNumber: 2383,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7492,7 +7492,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: project.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2414,
+                                                lineNumber: 2415,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7506,7 +7506,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: project.desc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2423,
+                                                lineNumber: 2424,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7532,7 +7532,7 @@ const HomeContent = ({ onNavigate })=>{
                                                                 children: metric.label
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                lineNumber: 2443,
+                                                                lineNumber: 2444,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
@@ -7544,18 +7544,18 @@ const HomeContent = ({ onNavigate })=>{
                                                                 children: metric.value
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                lineNumber: 2450,
+                                                                lineNumber: 2451,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, metric.label, true, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 2438,
+                                                        lineNumber: 2439,
                                                         columnNumber: 52
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2432,
+                                                lineNumber: 2433,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -7574,24 +7574,24 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: "View Case Study"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2459,
+                                                lineNumber: 2460,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2411,
+                                        lineNumber: 2412,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, project.title, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2371,
+                                lineNumber: 2372,
                                 columnNumber: 157
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2363,
+                        lineNumber: 2364,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7627,7 +7627,7 @@ const HomeContent = ({ onNavigate })=>{
                                         children: "Want results like these?"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2495,
+                                        lineNumber: 2496,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7641,13 +7641,13 @@ const HomeContent = ({ onNavigate })=>{
                                         children: "Let’s build a strategy that grows your business."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2504,
+                                        lineNumber: 2505,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2490,
+                                lineNumber: 2491,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -7666,19 +7666,19 @@ const HomeContent = ({ onNavigate })=>{
                                 children: "Start Your Project"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2514,
+                                lineNumber: 2515,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2477,
+                        lineNumber: 2478,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 2265,
+                lineNumber: 2266,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7714,7 +7714,7 @@ const HomeContent = ({ onNavigate })=>{
                                 children: "Real Challenges. Strategic Thinking. Outstanding Results."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2547,
+                                lineNumber: 2548,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7731,13 +7731,13 @@ const HomeContent = ({ onNavigate })=>{
                                 children: "Explore how we help businesses across industries overcome challenges, drive growth, and achieve measurable success with strategy-led digital campaigns."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2557,
+                                lineNumber: 2558,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2541,
+                        lineNumber: 2542,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7769,7 +7769,7 @@ const HomeContent = ({ onNavigate })=>{
                                         children: stat.value
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2587,
+                                        lineNumber: 2588,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7782,18 +7782,18 @@ const HomeContent = ({ onNavigate })=>{
                                         children: stat.label
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2595,
+                                        lineNumber: 2596,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, stat.label, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2578,
+                                lineNumber: 2579,
                                 columnNumber: 41
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2571,
+                        lineNumber: 2572,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7823,12 +7823,12 @@ const HomeContent = ({ onNavigate })=>{
                                 children: category
                             }, category, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2614,
+                                lineNumber: 2615,
                                 columnNumber: 50
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2606,
+                        lineNumber: 2607,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7860,7 +7860,7 @@ const HomeContent = ({ onNavigate })=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2646,
+                                        lineNumber: 2647,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7890,7 +7890,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: caseStudyFeatured.category
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2657,
+                                                lineNumber: 2658,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -7905,7 +7905,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: caseStudyFeatured.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2674,
+                                                lineNumber: 2675,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7920,7 +7920,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: caseStudyFeatured.description
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2684,
+                                                lineNumber: 2685,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7942,12 +7942,12 @@ const HomeContent = ({ onNavigate })=>{
                                                         children: tag
                                                     }, tag, false, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 2699,
+                                                        lineNumber: 2700,
                                                         columnNumber: 56
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2694,
+                                                lineNumber: 2695,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7975,29 +7975,29 @@ const HomeContent = ({ onNavigate })=>{
                                                             children: result.label
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                            lineNumber: 2723,
+                                                            lineNumber: 2724,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, result.label, false, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 2717,
+                                                        lineNumber: 2718,
                                                         columnNumber: 62
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2711,
+                                                lineNumber: 2712,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2651,
+                                        lineNumber: 2652,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2638,
+                                lineNumber: 2639,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -8032,7 +8032,7 @@ const HomeContent = ({ onNavigate })=>{
                                                         children: "The Results"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 2753,
+                                                        lineNumber: 2754,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8061,7 +8061,7 @@ const HomeContent = ({ onNavigate })=>{
                                                                         children: result.label.split(' ')[0]
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                        lineNumber: 2773,
+                                                                        lineNumber: 2774,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -8074,24 +8074,24 @@ const HomeContent = ({ onNavigate })=>{
                                                                         children: result.label
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                        lineNumber: 2783,
+                                                                        lineNumber: 2784,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, result.label, true, {
                                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                lineNumber: 2767,
+                                                                lineNumber: 2768,
                                                                 columnNumber: 68
                                                             }, ("TURBOPACK compile-time value", void 0)))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 2762,
+                                                        lineNumber: 2763,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2752,
+                                                lineNumber: 2753,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8110,13 +8110,13 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: "View Full Case Study"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2794,
+                                                lineNumber: 2795,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2742,
+                                        lineNumber: 2743,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8137,24 +8137,24 @@ const HomeContent = ({ onNavigate })=>{
                                             children: "Discover the exact strategy behind the growth, from conversion optimization to advanced campaign targeting."
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 2815,
+                                            lineNumber: 2816,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2809,
+                                        lineNumber: 2810,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2737,
+                                lineNumber: 2738,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2631,
+                        lineNumber: 2632,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8186,7 +8186,7 @@ const HomeContent = ({ onNavigate })=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2843,
+                                        lineNumber: 2844,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8214,7 +8214,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: card.category
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2854,
+                                                lineNumber: 2855,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -8228,7 +8228,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: card.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2869,
+                                                lineNumber: 2870,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8250,29 +8250,29 @@ const HomeContent = ({ onNavigate })=>{
                                                         ]
                                                     }, stat, true, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 2883,
+                                                        lineNumber: 2884,
                                                         columnNumber: 47
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 2878,
+                                                lineNumber: 2879,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2848,
+                                        lineNumber: 2849,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, card.title, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2835,
+                                lineNumber: 2836,
                                 columnNumber: 41
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2828,
+                        lineNumber: 2829,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8308,7 +8308,7 @@ const HomeContent = ({ onNavigate })=>{
                                         children: "Ready to be our next success story?"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2914,
+                                        lineNumber: 2915,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8322,13 +8322,13 @@ const HomeContent = ({ onNavigate })=>{
                                         children: "Let’s create something extraordinary together."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 2923,
+                                        lineNumber: 2924,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2909,
+                                lineNumber: 2910,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8347,19 +8347,19 @@ const HomeContent = ({ onNavigate })=>{
                                 children: "Start Your Project"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2933,
+                                lineNumber: 2934,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2896,
+                        lineNumber: 2897,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 2532,
+                lineNumber: 2533,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -8373,7 +8373,7 @@ const HomeContent = ({ onNavigate })=>{
                             alt: "Partner companies"
                         }, void 0, false, {
                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                            lineNumber: 2953,
+                            lineNumber: 2954,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -8383,18 +8383,18 @@ const HomeContent = ({ onNavigate })=>{
                             "aria-hidden": "true"
                         }, void 0, false, {
                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                            lineNumber: 2954,
+                            lineNumber: 2955,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                    lineNumber: 2952,
+                    lineNumber: 2953,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 2951,
+                lineNumber: 2952,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -8420,7 +8420,7 @@ const HomeContent = ({ onNavigate })=>{
                         children: "Why Choose Us"
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2967,
+                        lineNumber: 2968,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8464,7 +8464,7 @@ const HomeContent = ({ onNavigate })=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 3004,
+                                        lineNumber: 3005,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -8479,7 +8479,7 @@ const HomeContent = ({ onNavigate })=>{
                                         children: val.title
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 3008,
+                                        lineNumber: 3009,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8494,29 +8494,29 @@ const HomeContent = ({ onNavigate })=>{
                                         children: val.text
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 3017,
+                                        lineNumber: 3018,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, val.title, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 2987,
+                                lineNumber: 2988,
                                 columnNumber: 34
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 2978,
+                        lineNumber: 2979,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 2959,
+                lineNumber: 2960,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(IndustriesServedSection, {}, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 3031,
+                lineNumber: 3032,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -8555,7 +8555,7 @@ const HomeContent = ({ onNavigate })=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 3058,
+                                lineNumber: 3059,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8571,13 +8571,13 @@ const HomeContent = ({ onNavigate })=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 3068,
+                                lineNumber: 3069,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 3052,
+                        lineNumber: 3053,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8615,7 +8615,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: "Our Blog"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3097,
+                                                lineNumber: 3098,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -8636,13 +8636,13 @@ const HomeContent = ({ onNavigate })=>{
                                                         children: "Real Results"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 3114,
+                                                        lineNumber: 3115,
                                                         columnNumber: 37
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3108,
+                                                lineNumber: 3109,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8657,13 +8657,13 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: "Stay ahead with expert insights, proven strategies, and the latest trends in digital marketing."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3122,
+                                                lineNumber: 3123,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 3096,
+                                        lineNumber: 3097,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8687,7 +8687,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3141,
+                                                lineNumber: 3142,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8698,7 +8698,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3147,
+                                                lineNumber: 3148,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8734,14 +8734,14 @@ const HomeContent = ({ onNavigate })=>{
                                                                 children: "★"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                lineNumber: 3169,
+                                                                lineNumber: 3170,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             "Featured"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 3159,
+                                                        lineNumber: 3160,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -8755,7 +8755,7 @@ const HomeContent = ({ onNavigate })=>{
                                                         children: "Blog Intelligence for Modern Brands"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 3179,
+                                                        lineNumber: 3180,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8768,25 +8768,25 @@ const HomeContent = ({ onNavigate })=>{
                                                         children: "Actionable insights and campaign intelligence that keep your team ahead."
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 3188,
+                                                        lineNumber: 3189,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3152,
+                                                lineNumber: 3153,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 3133,
+                                        lineNumber: 3134,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 3090,
+                                lineNumber: 3091,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8825,12 +8825,12 @@ const HomeContent = ({ onNavigate })=>{
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 3223,
+                                                    lineNumber: 3224,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3215,
+                                                lineNumber: 3216,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8844,7 +8844,7 @@ const HomeContent = ({ onNavigate })=>{
                                                         children: stat.value
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 3226,
+                                                        lineNumber: 3227,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8856,24 +8856,24 @@ const HomeContent = ({ onNavigate })=>{
                                                         children: stat.label
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 3231,
+                                                        lineNumber: 3232,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3225,
+                                                lineNumber: 3226,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, stat.label, true, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 3205,
+                                        lineNumber: 3206,
                                         columnNumber: 36
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 3200,
+                                lineNumber: 3201,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8904,7 +8904,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3254,
+                                                lineNumber: 3255,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8924,7 +8924,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: blogPosts[0].tag
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3259,
+                                                lineNumber: 3260,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8950,7 +8950,7 @@ const HomeContent = ({ onNavigate })=>{
                                                                 children: blogPosts[0].category
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                lineNumber: 3281,
+                                                                lineNumber: 3282,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -8963,7 +8963,7 @@ const HomeContent = ({ onNavigate })=>{
                                                                 children: blogPosts[0].title
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                lineNumber: 3288,
+                                                                lineNumber: 3289,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8975,13 +8975,13 @@ const HomeContent = ({ onNavigate })=>{
                                                                 children: blogPosts[0].description
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                lineNumber: 3294,
+                                                                lineNumber: 3295,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 3280,
+                                                        lineNumber: 3281,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9004,7 +9004,7 @@ const HomeContent = ({ onNavigate })=>{
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                lineNumber: 3306,
+                                                                lineNumber: 3307,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9018,25 +9018,25 @@ const HomeContent = ({ onNavigate })=>{
                                                                 children: blogPosts[0].read
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                lineNumber: 3310,
+                                                                lineNumber: 3311,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 3300,
+                                                        lineNumber: 3301,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3272,
+                                                lineNumber: 3273,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 3245,
+                                        lineNumber: 3246,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     blogPosts.slice(1).map((post)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -9066,7 +9066,7 @@ const HomeContent = ({ onNavigate })=>{
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                            lineNumber: 3332,
+                                                            lineNumber: 3333,
                                                             columnNumber: 17
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9077,7 +9077,7 @@ const HomeContent = ({ onNavigate })=>{
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                            lineNumber: 3338,
+                                                            lineNumber: 3339,
                                                             columnNumber: 17
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9097,13 +9097,13 @@ const HomeContent = ({ onNavigate })=>{
                                                             children: post.tag
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                            lineNumber: 3343,
+                                                            lineNumber: 3344,
                                                             columnNumber: 17
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 3327,
+                                                    lineNumber: 3328,
                                                     columnNumber: 15
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9124,7 +9124,7 @@ const HomeContent = ({ onNavigate })=>{
                                                             children: post.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                            lineNumber: 3363,
+                                                            lineNumber: 3364,
                                                             columnNumber: 17
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9137,7 +9137,7 @@ const HomeContent = ({ onNavigate })=>{
                                                             children: post.description
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                            lineNumber: 3369,
+                                                            lineNumber: 3370,
                                                             columnNumber: 17
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9157,7 +9157,7 @@ const HomeContent = ({ onNavigate })=>{
                                                                     children: post.author
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                    lineNumber: 3382,
+                                                                    lineNumber: 3383,
                                                                     columnNumber: 19
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9168,31 +9168,31 @@ const HomeContent = ({ onNavigate })=>{
                                                                     children: post.read
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                    lineNumber: 3386,
+                                                                    lineNumber: 3387,
                                                                     columnNumber: 19
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                            lineNumber: 3375,
+                                                            lineNumber: 3376,
                                                             columnNumber: 17
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 3357,
+                                                    lineNumber: 3358,
                                                     columnNumber: 15
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, post.title, true, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 3320,
+                                            lineNumber: 3321,
                                             columnNumber: 45
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 3240,
+                                lineNumber: 3241,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9219,7 +9219,7 @@ const HomeContent = ({ onNavigate })=>{
                                         children: "Explore All Articles"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 3402,
+                                        lineNumber: 3403,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9244,40 +9244,40 @@ const HomeContent = ({ onNavigate })=>{
                                                 }
                                             }, idx, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3420,
+                                                lineNumber: 3421,
                                                 columnNumber: 412
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 3415,
+                                        lineNumber: 3416,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 3395,
+                                lineNumber: 3396,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 3080,
+                        lineNumber: 3081,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 3040,
+                lineNumber: 3041,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(TestimonialsSection, {}, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 3432,
+                lineNumber: 3433,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$generated$2f$FAQSection$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FAQSection"], {}, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 3436,
+                lineNumber: 3437,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -9325,7 +9325,7 @@ const HomeContent = ({ onNavigate })=>{
                                             children: "Let’s achieve extraordinary together"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 3468,
+                                            lineNumber: 3469,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -9346,13 +9346,13 @@ const HomeContent = ({ onNavigate })=>{
                                                     children: "Growth?"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 3486,
+                                                    lineNumber: 3487,
                                                     columnNumber: 49
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 3478,
+                                            lineNumber: 3479,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9366,13 +9366,13 @@ const HomeContent = ({ onNavigate })=>{
                                             children: "Partner with a team of digital marketing experts who are passionate about your success. Let’s create a strategy that drives real results."
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 3488,
+                                            lineNumber: 3489,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 3467,
+                                    lineNumber: 3468,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9406,7 +9406,7 @@ const HomeContent = ({ onNavigate })=>{
                                             children: "Schedule a Strategy Call"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 3503,
+                                            lineNumber: 3504,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -9433,13 +9433,13 @@ const HomeContent = ({ onNavigate })=>{
                                             children: "See How We Work"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 3523,
+                                            lineNumber: 3524,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 3498,
+                                    lineNumber: 3499,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9482,12 +9482,12 @@ const HomeContent = ({ onNavigate })=>{
                                                         children: "•"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                        lineNumber: 3566,
+                                                        lineNumber: 3567,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 3558,
+                                                    lineNumber: 3559,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -9500,24 +9500,24 @@ const HomeContent = ({ onNavigate })=>{
                                                     children: label
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 3568,
+                                                    lineNumber: 3569,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, label, true, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 3549,
+                                            lineNumber: 3550,
                                             columnNumber: 97
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 3544,
+                                    lineNumber: 3545,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                            lineNumber: 3461,
+                            lineNumber: 3462,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9540,7 +9540,7 @@ const HomeContent = ({ onNavigate })=>{
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 3584,
+                                    lineNumber: 3585,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9551,7 +9551,7 @@ const HomeContent = ({ onNavigate })=>{
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 3590,
+                                    lineNumber: 3591,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9590,7 +9590,7 @@ const HomeContent = ({ onNavigate })=>{
                                                     children: stat.value
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 3612,
+                                                    lineNumber: 3613,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9602,18 +9602,18 @@ const HomeContent = ({ onNavigate })=>{
                                                     children: stat.label
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 3618,
+                                                    lineNumber: 3619,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, stat.label, true, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 3605,
+                                            lineNumber: 3606,
                                             columnNumber: 27
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 3595,
+                                    lineNumber: 3596,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9637,7 +9637,7 @@ const HomeContent = ({ onNavigate })=>{
                                             children: "98%"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 3634,
+                                            lineNumber: 3635,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9649,30 +9649,30 @@ const HomeContent = ({ onNavigate })=>{
                                             children: "Client Retention"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 3640,
+                                            lineNumber: 3641,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                    lineNumber: 3625,
+                                    lineNumber: 3626,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                            lineNumber: 3577,
+                            lineNumber: 3578,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                    lineNumber: 3448,
+                    lineNumber: 3449,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 3441,
+                lineNumber: 3442,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -9710,7 +9710,7 @@ const HomeContent = ({ onNavigate })=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 3669,
+                                lineNumber: 3670,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9721,7 +9721,7 @@ const HomeContent = ({ onNavigate })=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 3677,
+                                lineNumber: 3678,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9755,7 +9755,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: "Request a Quote"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3697,
+                                                lineNumber: 3698,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -9770,7 +9770,7 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: "Ready to Start Your Project?"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3707,
+                                                lineNumber: 3708,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9785,13 +9785,13 @@ const HomeContent = ({ onNavigate })=>{
                                                 children: "For more information about our digital marketing services, or to request a quote from our team, contact us now."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                lineNumber: 3717,
+                                                lineNumber: 3718,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 3691,
+                                        lineNumber: 3692,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9825,7 +9825,7 @@ const HomeContent = ({ onNavigate })=>{
                                                     children: "Request a Quote"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 3746,
+                                                    lineNumber: 3747,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9853,12 +9853,12 @@ const HomeContent = ({ onNavigate })=>{
                                                             }
                                                         }, placeholder, false, {
                                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                            lineNumber: 3760,
+                                                            lineNumber: 3761,
                                                             columnNumber: 76
                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 3755,
+                                                    lineNumber: 3756,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9883,7 +9883,7 @@ const HomeContent = ({ onNavigate })=>{
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                            lineNumber: 3776,
+                                                            lineNumber: 3777,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -9902,7 +9902,7 @@ const HomeContent = ({ onNavigate })=>{
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                            lineNumber: 3787,
+                                                            lineNumber: 3788,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9932,20 +9932,20 @@ const HomeContent = ({ onNavigate })=>{
                                                                     children: "Choose File"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                    lineNumber: 3810,
+                                                                    lineNumber: 3811,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "No File Chosen"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                                    lineNumber: 3821,
+                                                                    lineNumber: 3822,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                            lineNumber: 3798,
+                                                            lineNumber: 3799,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -9964,7 +9964,7 @@ const HomeContent = ({ onNavigate })=>{
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                            lineNumber: 3823,
+                                                            lineNumber: 3824,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -9984,13 +9984,13 @@ const HomeContent = ({ onNavigate })=>{
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                            lineNumber: 3834,
+                                                            lineNumber: 3835,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 3772,
+                                                    lineNumber: 3773,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -10008,7 +10008,7 @@ const HomeContent = ({ onNavigate })=>{
                                                     children: "PankajUX India"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 3848,
+                                                    lineNumber: 3849,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -10022,40 +10022,40 @@ const HomeContent = ({ onNavigate })=>{
                                                     children: "*** Here at Pankajux India your privacy is important to us. Any information shared will be kept internal, confidential, and secure. ***"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                                    lineNumber: 3861,
+                                                    lineNumber: 3862,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                            lineNumber: 3734,
+                                            lineNumber: 3735,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                        lineNumber: 3729,
+                                        lineNumber: 3730,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                                lineNumber: 3682,
+                                lineNumber: 3683,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/generated/LandingPage.tsx",
-                        lineNumber: 3662,
+                        lineNumber: 3663,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/generated/LandingPage.tsx",
-                    lineNumber: 3656,
+                    lineNumber: 3657,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 3651,
+                lineNumber: 3652,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -10073,13 +10073,13 @@ const HomeContent = ({ onNavigate })=>{
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 3878,
+                lineNumber: 3879,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/generated/LandingPage.tsx",
-        lineNumber: 1994,
+        lineNumber: 1995,
         columnNumber: 10
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -10193,7 +10193,7 @@ const LandingPage = ({ className, style })=>{
       `
             }, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 3919,
+                lineNumber: 3920,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Navbar, {
@@ -10202,7 +10202,7 @@ const LandingPage = ({ className, style })=>{
                 scrolled: scrolled
             }, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 3997,
+                lineNumber: 3998,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10213,47 +10213,47 @@ const LandingPage = ({ className, style })=>{
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 4000,
+                lineNumber: 4001,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             activePage === 'Home' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(HomeContent, {
                 onNavigate: handleNavigate
             }, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 4007,
+                lineNumber: 4008,
                 columnNumber: 33
             }, ("TURBOPACK compile-time value", void 0)),
             activePage === 'Services' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$generated$2f$ServicesPage$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ServicesPage"], {}, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 4008,
+                lineNumber: 4009,
                 columnNumber: 37
             }, ("TURBOPACK compile-time value", void 0)),
             activePage === 'Portfolio' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$generated$2f$PortfolioShowcase$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PortfolioShowcase"], {}, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 4009,
+                lineNumber: 4010,
                 columnNumber: 38
             }, ("TURBOPACK compile-time value", void 0)),
             activePage === 'About Us' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$generated$2f$AboutSection$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AboutSection"], {}, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 4010,
+                lineNumber: 4011,
                 columnNumber: 37
             }, ("TURBOPACK compile-time value", void 0)),
             activePage === 'Careers' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$generated$2f$CareerJobListing$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CareerJobListing"], {}, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 4011,
+                lineNumber: 4012,
                 columnNumber: 36
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Footer, {
                 onNavigate: handleNavigate
             }, void 0, false, {
                 fileName: "[project]/src/components/generated/LandingPage.tsx",
-                lineNumber: 4013,
+                lineNumber: 4014,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/generated/LandingPage.tsx",
-        lineNumber: 3907,
+        lineNumber: 3908,
         columnNumber: 10
     }, ("TURBOPACK compile-time value", void 0));
 };
