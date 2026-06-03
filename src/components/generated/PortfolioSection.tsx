@@ -191,7 +191,7 @@ export const PortfolioSection: React.FC = () => {
               height: '220px',
               overflow: 'hidden'
             }}>
-                <img src={project.image} alt={project.title} style={{
+                <img className="ca-hover-popup" src={project.image} alt={project.title} style={{
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',

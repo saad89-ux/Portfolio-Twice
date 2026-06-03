@@ -147,7 +147,7 @@ export const FinalCTASection: React.FC = () => {
           minHeight: '460px',
           backgroundColor: 'rgba(0,0,0,0.18)'
         }}>
-            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80" alt="Team in meeting" style={{
+            <img className="ca-hover-popup" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80" alt="Team in meeting" style={{
             width: '100%',
             height: '100%',
             objectFit: 'cover',

@@ -158,7 +158,7 @@ export const BlogSection: React.FC = () => {
               background: 'linear-gradient(180deg, rgba(11,18,47,0.95) 0%, rgba(5,8,22,0.96) 100%)',
               border: '1px solid var(--border-light)'
             }}>
-              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Blog hero" style={{
+              <img className="ca-hover-popup" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Blog hero" style={{
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
@@ -271,7 +271,7 @@ export const BlogSection: React.FC = () => {
               border: '1px solid var(--border-light)',
               boxShadow: '0 16px 45px rgba(0,0,0,0.30)'
             }}>
-              <img src={blogPosts[0].image} alt={blogPosts[0].title} style={{
+              <img className="ca-hover-popup" src={blogPosts[0].image} alt={blogPosts[0].title} style={{
                 width: '100%',
                 height: '240px',
                 objectFit: 'cover'
@@ -349,7 +349,7 @@ export const BlogSection: React.FC = () => {
                 height: '200px',
                 overflow: 'hidden'
               }}>
-                <img src={post.image} alt={post.title} style={{
+                <img className="ca-hover-popup" src={post.image} alt={post.title} style={{
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
@@ -437,7 +437,7 @@ export const BlogSection: React.FC = () => {
               alignItems: 'center',
               gap: '-12px'
             }}>
-              {['https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=80&q=80', 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=80&q=80', 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=80&q=80', 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80'].map((src, idx) => <img key={idx} src={src} alt="avatar" style={{
+              {['https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=80&q=80', 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=80&q=80', 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=80&q=80', 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80'].map((src, idx) => <img className="ca-hover-popup" key={idx} src={src} alt="avatar" style={{
                 width: '48px',
                 height: '48px',
                 borderRadius: '50%',

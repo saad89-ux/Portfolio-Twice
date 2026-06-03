@@ -958,6 +958,41 @@ input, textarea, select {
   }
 }
 
+:root, .dark {
+  --text-primary: #fff;
+  --text-secondary: #fffc;
+  --text-muted: #ebefffb3;
+  --text-inverse: #080c20;
+  --bg-primary: #030303;
+  --bg-card: #10122bf2;
+  --bg-card-alt: #0a0c20eb;
+  --bg-secondary: #141414;
+  --border-light: #ffffff14;
+}
+
+.light-theme {
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #4b5563;
+  --text-inverse: #fff;
+  --bg-primary: #fff;
+  --bg-card: #f9fafb;
+  --bg-card-alt: #f3f4f6;
+  --bg-secondary: #f3f4f6;
+  --border-light: #00000014;
+}
+
+.ca-hover-popup {
+  will-change: transform;
+  transition: transform .4s cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.ca-hover-popup:hover {
+  z-index: 20;
+  position: relative;
+  transform: scale(1.05)translateY(-2px);
+}
+
 @keyframes enter {
   from {
     opacity: var(--tw-enter-opacity, 1);

@@ -168,7 +168,7 @@ export const CaseStudiesSection: React.FC = () => {
             minHeight: '520px',
             border: '1px solid var(--border-light)'
           }}>
-              <img src={caseStudyFeatured.image} alt={caseStudyFeatured.title} style={{
+              <img className="ca-hover-popup" src={caseStudyFeatured.image} alt={caseStudyFeatured.title} style={{
               width: '100%',
               height: '330px',
               objectFit: 'cover'
@@ -365,7 +365,7 @@ export const CaseStudiesSection: React.FC = () => {
             cursor: 'pointer',
             transition: 'transform 0.2s ease, background-color 0.2s ease'
           }}>
-              <img src={card.image} alt={card.title} style={{
+              <img className="ca-hover-popup" src={card.image} alt={card.title} style={{
               width: '100%',
               height: '196px',
               objectFit: 'cover'

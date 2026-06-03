@@ -291,7 +291,7 @@ export const TestimonialsSection: React.FC = () => {
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginTop: '36px' }}>
-              <img src={activeTestimonial.avatar} alt={activeTestimonial.name} style={{
+              <img className="ca-hover-popup" src={activeTestimonial.avatar} alt={activeTestimonial.name} style={{
                 width: '56px',
                 height: '56px',
                 borderRadius: '50%',

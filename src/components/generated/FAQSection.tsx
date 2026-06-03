@@ -500,6 +500,7 @@ export const FAQSection = () => {
                   >
                     {[1, 2, 3, 4].map((num, idx) => (
                       <img
+                        className="ca-hover-popup"
                         key={num}
                         src={`https://i.pravatar.cc/40?img=${num}`}
                         alt={`Team member ${num}`}

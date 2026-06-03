@@ -220,7 +220,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
         boxShadow: '0 40px 90px rgba(0, 0, 0, 0.35)',
         border: '1px solid rgba(0, 194, 255, 0.14)'
       }}>
-          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1100&q=80" alt="Professional portrait" style={{
+          <img className="ca-hover-popup" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1100&q=80" alt="Professional portrait" style={{
           position: 'absolute',
           inset: 0,
           width: '100%',
@@ -404,7 +404,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
                 position: 'relative',
                 minWidth: '90px'
               }}>
-                    {reviewAvatars.map((src, index) => <img key={src} src={src} alt="Reviewer avatar" style={{
+                    {reviewAvatars.map((src, index) => <img className="ca-hover-popup" key={src} src={src} alt="Reviewer avatar" style={{
                     width: '36px',
                     height: '36px',
                     borderRadius: '999px',

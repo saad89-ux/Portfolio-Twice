@@ -103,7 +103,7 @@ export const HeroSection: React.FC = () => {
             height: '24px',
             flexShrink: 0
           }}>
-              {clientAvatars.map((avatar, i) => <img key={avatar} src={`https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/${avatar}`} style={{
+              {clientAvatars.map((avatar, i) => <img className="ca-hover-popup" key={avatar} src={`https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/${avatar}`} style={{
               width: '24px',
               height: '24px',
               borderRadius: '100px',
@@ -175,7 +175,7 @@ export const HeroSection: React.FC = () => {
             height: '100%',
             objectFit: 'contain'
           }} />
-            <img className="hero-robot" src="https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/de2a68bf-ec21-4394-ae40-09cb18b14ccf.png" alt="AI Robot" style={{
+            <img className="hero-robot ca-hover-popup" src="https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/de2a68bf-ec21-4394-ae40-09cb18b14ccf.png" alt="AI Robot" style={{
             position: 'absolute',
             width: '459px',
             height: 'auto',

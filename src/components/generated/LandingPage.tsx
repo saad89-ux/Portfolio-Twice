@@ -16,6 +16,14 @@ import { TestimonialsSection } from './TestimonialsSection';
 import { FinalCTASection } from './FinalCTASection';
 import { ContactFormSection } from './ContactFormSection';
 import { ThemeSwitch } from '../ThemeSwitch';
+import { CompanyIntroSection } from './CompanyIntroSection';
+import { JourneyTimelineSection } from './JourneyTimelineSection';
+import { MissionVisionSection } from './MissionVisionSection';
+import { CoreValuesSection } from './CoreValuesSection';
+import { WhyTrustUsSection } from './WhyTrustUsSection';
+import { TeamSection } from './TeamSection';
+import { TrustedBrandsSection } from './TrustedBrandsSection';
+import { ResultsImpactSection } from './ResultsImpactSection';
 interface BaseComponentProps {
   className?: string;
   style?: React.CSSProperties;
@@ -862,12 +870,7 @@ const HomeContent: React.FC<{
       <CaseStudiesSection />
 
       {/* Companies Logo Ticker — marquee */}
-      <section className="clients-marquee">
-        <div className="clients-marquee-track">
-          <img className="clients-marquee-img" src="https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/fb494179-70d0-4a84-b2f8-7d84861ddb38.svg" alt="Partner companies" />
-          <img className="clients-marquee-img" src="https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/fb494179-70d0-4a84-b2f8-7d84861ddb38.svg" alt="" aria-hidden="true" />
-        </div>
-      </section>
+      <TrustedBrandsSection />
 
       {/* Why Choose Us */}
       <section className="section-pad" style={{
@@ -1098,7 +1101,7 @@ export const LandingPage: React.FC<BaseComponentProps> = ({
       {activePage === 'Home' && <HomeContent onNavigate={handleNavigate} />}
       {activePage === 'Services' && <ServicesPage />}
       {activePage === 'Portfolio' && <PortfolioShowcase />}
-      {activePage === 'About Us' && <AboutSection />}
+      {activePage === 'About Us' && <><AboutSection /><CompanyIntroSection /><TrustSection /><JourneyTimelineSection /><MissionVisionSection /><CoreValuesSection /><WhyTrustUsSection /><TeamSection /><TrustedBrandsSection /><ResultsImpactSection /><TestimonialsSection /><FAQSection /><FinalCTASection /></>}
       {activePage === 'Careers' && <CareerJobListing />}
 
       <Footer onNavigate={handleNavigate} />

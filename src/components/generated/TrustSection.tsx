@@ -57,7 +57,7 @@ export const TrustSection: React.FC = () => {
         backgroundColor: 'rgba(255, 255, 255, 0.04)',
         border: '1px solid var(--border-light)'
       }}>
-          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=80" alt="Marketing strategist portrait" style={{
+          <img className="ca-hover-popup" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=80" alt="Marketing strategist portrait" style={{
           position: 'absolute',
           inset: 0,
           width: '100%',
@@ -336,7 +336,7 @@ export const TrustSection: React.FC = () => {
         alignItems: 'center',
         gap: '-12px'
       }}>
-          {trustAvatars.map((src, index) => <img key={src} src={src} alt="Client" style={{
+          {trustAvatars.map((src, index) => <img className="ca-hover-popup" key={src} src={src} alt="Client" style={{
           width: '48px',
           height: '48px',
           borderRadius: '999px',

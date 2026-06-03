@@ -66,7 +66,7 @@ export const ServicesGridSection: React.FC = () => {
           transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
           cursor: 'pointer'
         }}>
-              <img src={service.img} alt={service.title} style={{
+              <img className="ca-hover-popup" src={service.img} alt={service.title} style={{
             width: '100%',
             maxWidth: '220px',
             height: 'auto',
