@@ -1,6 +1,18 @@
 "use client";
 import React, { useState } from 'react';
 import { IndustriesSection } from './IndustriesSection';
+import { ServicesEcosystemSection } from './ServicesEcosystemSection';
+import { ServicesPageGridSection } from './ServicesPageGridSection';
+import { ServiceProcessSection } from './ServiceProcessSection';
+import { ServiceCategoriesSection } from './ServiceCategoriesSection';
+import { WhyOurServicesWorkSection } from './WhyOurServicesWorkSection';
+import { ResultsImpactSection } from './ResultsImpactSection';
+import { CaseStudiesSection } from './CaseStudiesSection';
+import { TechnologyStackSection } from './TechnologyStackSection';
+import { TestimonialsSection } from './TestimonialsSection';
+import { FAQSection } from './FAQSection';
+import { FinalCTASection } from './FinalCTASection';
+
 interface BaseComponentProps {
   className?: string;
   style?: React.CSSProperties;
@@ -341,39 +353,29 @@ export const ServicesPage = () => {
       }} />
       </section>
 
-      {/* Services Section */}
-      <section style={{
-      maxWidth: '1230px',
-      margin: '129px auto',
-      textAlign: 'center'
-    }}>
-        <h2 style={{
-        color: 'var(--text-primary)',
-        fontSize: '36px',
-        fontFamily: '"Barlow", sans-serif',
-        fontWeight: 600,
-        marginBottom: '12px'
-      }}>Our Services</h2>
-        <p style={{
-        maxWidth: '667px',
-        margin: '0 auto 108px auto',
-        color: 'rgba(255, 255, 255, 0.9)',
-        fontSize: '16px',
-        fontFamily: '"Barlow", sans-serif',
-        lineHeight: '24px'
-      }}>
-          Comprehensive AI, blockchain, and analytics solutions powered by deep expertise in machine learning and data engineering
-        </p>
-        <div style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        gap: '58px',
-        justifyContent: 'center'
-      }}>
-          {servicesData.map((item, index) => <ServiceCard key={index} item={item} />)}
-        </div>
-      </section>
+      <ServicesEcosystemSection />
 
+      <ServicesPageGridSection />
+
+      <ServiceProcessSection />
+
+      <ServiceCategoriesSection />
+
+      <WhyOurServicesWorkSection />
+
+      <ResultsImpactSection />
+
+      <CaseStudiesSection />
+
+      <IndustriesSection />
+
+      <TechnologyStackSection />
+
+      <TestimonialsSection />
+
+      <FAQSection />
+
+      <FinalCTASection />
       
     </div>;
 };
