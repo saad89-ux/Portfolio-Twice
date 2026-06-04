@@ -175,9 +175,10 @@ const stats = [
 ];
 
 // Helper to draw a node card
-const EcosystemNode = ({ title, desc, icon, align = 'left' }: { title: string, desc: string, icon: React.ReactNode, align?: 'left' | 'right' | 'center' }) => (
+const EcosystemNode = ({ title, desc, icon, align = 'left', onClick }: { title: string, desc: string, icon: React.ReactNode, align?: 'left' | 'right' | 'center', onClick?: () => void }) => (
   <div 
     className="ca-hover-popup"
+    onClick={onClick}
     style={{
       backgroundColor: '#070a18',
       border: '1px solid rgba(0, 194, 255, 0.1)',
@@ -215,7 +216,7 @@ const EcosystemNode = ({ title, desc, icon, align = 'left' }: { title: string, d
   </div>
 );
 
-export const ServicesEcosystemSection: React.FC = () => {
+export const ServicesEcosystemSection: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNavigate }) => {
   const containerW = 1200;
   const containerH = 800;
   const centerX = containerW / 2;
@@ -351,7 +352,7 @@ export const ServicesEcosystemSection: React.FC = () => {
           {/* Left Side */}
           {ecosystemLeft.map((node, i) => (
             <div key={`ln-${i}`} style={{ position: 'absolute', left: 0, top: `${node.y}px`, transform: 'translate(0, -50%)', zIndex: 20 }}>
-              <EcosystemNode title={node.title} desc={node.desc} icon={node.icon} />
+              <EcosystemNode title={node.title} desc={node.desc} icon={node.icon} onClick={node.title === 'SEO' && onNavigate ? () => onNavigate('SEO & ORGANIC GROWTH') : undefined} />
             </div>
           ))}
 

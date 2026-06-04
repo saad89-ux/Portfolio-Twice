@@ -228,7 +228,7 @@ const stats = [
   { value: '95%', label: 'Client Retention', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> }
 ];
 
-export const ServicesPageGridSection: React.FC = () => {
+export const ServicesPageGridSection: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNavigate }) => {
   return (
     <section style={{
       width: '100%',
@@ -292,9 +292,14 @@ export const ServicesPageGridSection: React.FC = () => {
               minHeight: '380px',
               boxSizing: 'border-box',
               cursor: 'pointer',
-              transition: 'all 0.3s ease',
               boxShadow: '0 10px 30px rgba(0,0,0,0.2)'
-            }}>
+            }}
+            onClick={() => {
+              if (item.title.includes('SEO') && onNavigate) {
+                onNavigate('SEO & ORGANIC GROWTH');
+              }
+            }}
+            >
               {/* Graphic background area (right side) */}
               <div style={{ position: 'absolute', top: 0, right: 0, width: '60%', height: '100%', zIndex: 0, pointerEvents: 'none', opacity: 0.8 }}>
                 <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at right, rgba(0,194,255,0.1) 0%, transparent 70%)' }}></div>

@@ -447,6 +447,10 @@
     width: calc(var(--spacing) * 11);
   }
 
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+
   .grow {
     flex-grow: 1;
   }

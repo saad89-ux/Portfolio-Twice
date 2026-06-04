@@ -14,6 +14,7 @@ import { CaseStudiesSection } from './CaseStudiesSection';
 import { BlogSection } from './BlogSection';
 import { TestimonialsSection } from './TestimonialsSection';
 import { FinalCTASection } from './FinalCTASection';
+import { ContactFormpage } from './ContactFormpage';
 import { ContactFormSection } from './ContactFormSection';
 import { ThemeSwitch } from '../ThemeSwitch';
 import { CompanyIntroSection } from './CompanyIntroSection';
@@ -24,6 +25,8 @@ import { WhyTrustUsSection } from './WhyTrustUsSection';
 import { TeamSection } from './TeamSection';
 import { TrustedBrandsSection } from './TrustedBrandsSection';
 import { ResultsImpactSection } from './ResultsImpactSection';
+import { ServicedetailPage } from './ServicedetailPage';
+
 interface BaseComponentProps {
   className?: string;
   style?: React.CSSProperties;
@@ -40,7 +43,7 @@ interface FAQItemProps {
   isOpen: boolean;
   onClick: () => void;
 }
-type PageName = 'Home' | 'Services' | 'Portfolio' | 'About Us' | 'Careers';
+type PageName = 'Home' | 'Services' | 'Portfolio' | 'About Us' | 'Careers' | 'SEO & ORGANIC GROWTH' | 'PERFORMANCE MARKETING' | 'WEB DESIGN & DEVELOPMENT' | 'BRAND STRATEGY & IDENTITY' | 'CONTENT MARKETING' | 'MARKETING AUTOMATION & CRM';
 const faqData: FAQItemData[] = [{
   question: 'What digital marketing services do you offer?',
   answer: 'We offer a full range of digital marketing services including SEO, PPC, Social Media Marketing, Content Marketing, Email Marketing, Conversion Rate Optimization, and Analytics.'
@@ -151,7 +154,7 @@ const storyItems = [{
   imgId: 'a052f191-8e2d-481e-bebb-df751d7d3be8.svg',
   highlight: false
 }];
-const navItems: PageName[] = ['Home', 'Services', 'Portfolio', 'About Us', 'Careers'];
+const navItems: PageName[] = ['Home', 'Services', 'Portfolio', 'About Us', 'Careers', 'Contact'];
 const FAQItem: React.FC<FAQItemProps> = ({
   question,
   answer,
@@ -328,7 +331,7 @@ const Navbar: React.FC<NavbarProps> = ({
         cursor: 'pointer',
         boxSizing: 'border-box',
         transition: 'all 0.2s ease'
-      }}>
+      }} onClick={() => handleNavClick('Contact')}>
           Contact Us
         </button>
 
@@ -430,17 +433,17 @@ const Navbar: React.FC<NavbarProps> = ({
           cursor: 'pointer',
           boxSizing: 'border-box',
           transition: 'all 0.2s ease'
-        }}>
+        }} onClick={() => handleNavClick('Contact')}>
               Contact Us
             </button>
           </div>
         </div>}
     </React.Fragment>;
 };
-interface FooterProps {
-  onNavigate: (page: PageName) => void;
+export interface FooterProps {
+  onNavigate: (page: any) => void;
 }
-const Footer: React.FC<FooterProps> = ({
+export const Footer: React.FC<FooterProps> = ({
   onNavigate
 }) => {
   return <footer style={{
@@ -1099,10 +1102,18 @@ export const LandingPage: React.FC<BaseComponentProps> = ({
 
       {/* Page Content */}
       {activePage === 'Home' && <HomeContent onNavigate={handleNavigate} />}
-      {activePage === 'Services' && <ServicesPage />}
+      {activePage === 'Services' && <ServicesPage onNavigate={handleNavigate} />}
       {activePage === 'Portfolio' && <PortfolioShowcase />}
       {activePage === 'About Us' && <><AboutSection /><CompanyIntroSection /><TrustSection /><JourneyTimelineSection /><MissionVisionSection /><CoreValuesSection /><WhyTrustUsSection /><TeamSection /><TrustedBrandsSection /><ResultsImpactSection /><TestimonialsSection /><FAQSection /><FinalCTASection /></>}
       {activePage === 'Careers' && <CareerJobListing />}
+      {activePage === 'Contact' && <ContactFormpage onNavigate={handleNavigate} />}
+      {activePage === 'SEO & ORGANIC GROWTH' && <ServicedetailPage onNavigate={handleNavigate} serviceName="SEO & ORGANIC GROWTH" />}
+      {activePage === 'PERFORMANCE MARKETING' && <ServicedetailPage onNavigate={handleNavigate} serviceName="PERFORMANCE MARKETING" />}
+      {activePage === 'WEB DESIGN & DEVELOPMENT' && <ServicedetailPage onNavigate={handleNavigate} serviceName="WEB DESIGN & DEVELOPMENT" />}
+      {activePage === 'BRAND STRATEGY & IDENTITY' && <ServicedetailPage onNavigate={handleNavigate} serviceName="BRAND STRATEGY & IDENTITY" />}
+      {activePage === 'CONTENT MARKETING' && <ServicedetailPage onNavigate={handleNavigate} serviceName="CONTENT MARKETING" />}
+      {activePage === 'MARKETING AUTOMATION & CRM' && <ServicedetailPage onNavigate={handleNavigate} serviceName="MARKETING AUTOMATION & CRM" />}
+      
 
       <Footer onNavigate={handleNavigate} />
     </div>;

@@ -18,6 +18,11 @@ interface BaseComponentProps {
   style?: React.CSSProperties;
   children?: React.ReactNode;
 }
+
+interface ServicesPageProps {
+  onNavigate?: (page: any) => void;
+}
+
 interface ServiceItem {
   title: string;
   description: string;
@@ -274,7 +279,7 @@ const IndustryCard = ({
       </div>
     </div>;
 };
-export const ServicesPage = () => {
+export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
   const [isMarqueePaused, setIsMarqueePaused] = useState(false);
   return <div style={{
     width: '100%',
@@ -353,9 +358,9 @@ export const ServicesPage = () => {
       }} />
       </section>
 
-      <ServicesEcosystemSection />
+      <ServicesEcosystemSection onNavigate={onNavigate} />
 
-      <ServicesPageGridSection />
+      <ServicesPageGridSection onNavigate={onNavigate} />
 
       <ServiceProcessSection />
 
