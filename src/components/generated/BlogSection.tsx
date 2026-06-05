@@ -65,9 +65,9 @@ export const BlogSection: React.FC = () => {
       flexDirection: 'column',
       alignItems: 'center',
       position: 'relative',
-      background: 'linear-gradient(180deg, rgba(3, 3, 3, 0.99) 0%, rgba(7, 11, 30, 1) 100%)',
+      background: 'var(--bg-primary)',
       borderRadius: '40px',
-      border: '1px solid rgba(0, 194, 255, 0.08)'
+      border: '1px solid var(--border-light)'
     }}>
         <div style={{
           position: 'absolute',
@@ -155,7 +155,7 @@ export const BlogSection: React.FC = () => {
               minHeight: '360px',
               borderRadius: '32px',
               overflow: 'hidden',
-              background: 'linear-gradient(180deg, rgba(11,18,47,0.95) 0%, rgba(5,8,22,0.96) 100%)',
+              background: 'var(--bg-card)',
               border: '1px solid var(--border-light)'
             }}>
               <img className="ca-hover-popup" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Blog hero" style={{
@@ -167,7 +167,7 @@ export const BlogSection: React.FC = () => {
               <div style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'linear-gradient(180deg, transparent 30%, rgba(3, 3, 8, 0.92) 100%)'
+                background: 'linear-gradient(180deg, transparent 30%, var(--bg-primary) 100%)'
               }} />
               <div style={{
                 position: 'absolute',
@@ -228,9 +228,9 @@ export const BlogSection: React.FC = () => {
               gap: '16px',
               padding: '20px',
               borderRadius: '22px',
-              background: 'rgba(255,255,255,0.03)',
+              background: 'var(--bg-card)',
               border: '1px solid var(--border-light)',
-              boxShadow: '0 8px 30px rgba(0,0,0,0.18)'
+              boxShadow: '0 8px 30px rgba(0,0,0,0.08)'
             }}>
               <div style={{
                 width: '52px',
@@ -267,9 +267,9 @@ export const BlogSection: React.FC = () => {
               minHeight: '460px',
               borderRadius: '32px',
               overflow: 'hidden',
-              background: 'linear-gradient(180deg, #10122b 0%, #070b1e 100%)',
+              background: 'var(--bg-card)',
               border: '1px solid var(--border-light)',
-              boxShadow: '0 16px 45px rgba(0,0,0,0.30)'
+              boxShadow: '0 16px 45px rgba(0,0,0,0.08)'
             }}>
               <img className="ca-hover-popup" src={blogPosts[0].image} alt={blogPosts[0].title} style={{
                 width: '100%',
@@ -340,9 +340,9 @@ export const BlogSection: React.FC = () => {
             {blogPosts.slice(1).map(post => <article key={post.title} style={{
               borderRadius: '28px',
               overflow: 'hidden',
-              background: 'linear-gradient(180deg, #10122b 0%, #070b1e 100%)',
+              background: 'var(--bg-card)',
               border: '1px solid var(--border-light)',
-              boxShadow: '0 12px 28px rgba(0,0,0,0.24)'
+              boxShadow: '0 12px 28px rgba(0,0,0,0.08)'
             }}>
               <div style={{
                 position: 'relative',
@@ -358,7 +358,7 @@ export const BlogSection: React.FC = () => {
                 <div style={{
                   position: 'absolute',
                   inset: 0,
-                  background: 'linear-gradient(180deg, transparent 40%, rgba(3,3,8,0.92) 100%)'
+                  background: 'linear-gradient(180deg, transparent 40%, var(--bg-card) 100%)'
                 }} />
                 <div style={{
                   position: 'absolute',
@@ -441,7 +441,7 @@ export const BlogSection: React.FC = () => {
                 width: '48px',
                 height: '48px',
                 borderRadius: '50%',
-                border: '2px solid rgba(3,3,3,0.96)'
+                border: '2px solid var(--bg-primary)'
               }} />)}
             </div>
           </div>

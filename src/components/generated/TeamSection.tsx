@@ -154,7 +154,7 @@ export const TeamSection: React.FC = () => {
               >
                 OUR TEAM
               </span>
-              <div style={{ width: '40px', height: '1px', backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
+              <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--border-light-alt)' }} />
             </div>
 
             <h2
@@ -291,8 +291,8 @@ export const TeamSection: React.FC = () => {
               style={{
                 position: 'relative',
                 borderRadius: '16px',
-                backgroundColor: '#050816',
-                border: '1px solid rgba(255, 255, 255, 0.05)',
+                backgroundColor: 'var(--bg-card)',
+                border: '1px solid var(--border-light)',
                 overflow: 'hidden',
                 display: 'flex',
                 flexDirection: 'column',
@@ -328,7 +328,7 @@ export const TeamSection: React.FC = () => {
                     borderRadius: '12px',
                     backgroundColor: 'rgba(0, 194, 255, 0.2)',
                     border: '1px solid rgba(0, 194, 255, 0.3)',
-                    color: '#ffffff',
+                    color: 'var(--text-primary)',
                     fontSize: '10px',
                     fontWeight: 700,
                     fontFamily: BarlowFont,
@@ -361,7 +361,7 @@ export const TeamSection: React.FC = () => {
                     left: 0,
                     width: '100%',
                     height: '50%',
-                    background: 'linear-gradient(180deg, transparent 0%, #050816 100%)',
+                    background: 'linear-gradient(180deg, transparent 0%, var(--bg-card) 100%)',
                     zIndex: 3,
                   }}
                 />
@@ -378,11 +378,11 @@ export const TeamSection: React.FC = () => {
                       width: '24px',
                       height: '24px',
                       borderRadius: '4px',
-                      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                      backgroundColor: 'var(--bg-card-light)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      color: 'rgba(255, 255, 255, 0.5)',
+                      color: 'var(--text-muted)',
                     }}
                   >
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
@@ -406,8 +406,8 @@ export const TeamSection: React.FC = () => {
         {/* Bottom Banner */}
         <div
           style={{
-            background: 'linear-gradient(90deg, rgba(8, 12, 32, 0.8) 0%, rgba(12, 16, 42, 0.95) 50%, rgba(8, 12, 32, 0.8) 100%)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
+            background: 'var(--bg-card-alt)',
+            border: '1px solid var(--border-light)',
             borderRadius: '24px',
             padding: '32px 48px',
             display: 'flex',
@@ -415,7 +415,7 @@ export const TeamSection: React.FC = () => {
             justifyContent: 'space-between',
             flexWrap: 'wrap',
             gap: '32px',
-            boxShadow: '0 24px 48px rgba(0, 0, 0, 0.3)',
+            boxShadow: '0 24px 48px rgba(0, 0, 0, 0.05)',
           }}
         >
           {/* Left Block */}
@@ -456,7 +456,7 @@ export const TeamSection: React.FC = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#ffffff',
+                color: 'var(--text-primary)',
                 cursor: 'pointer',
               }}
             >

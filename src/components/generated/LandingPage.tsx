@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ServicesPage } from './ServicesPage';
 import { PortfolioShowcase } from './PortfolioShowcase';
 import { AboutSection } from './AboutSection';
-import { CareerJobListing } from './CareerJobListing';
+
 import { FAQSection } from './FAQSection';
 import { IndustriesSection } from './IndustriesSection';
 import { Star } from 'lucide-react';
@@ -26,6 +26,7 @@ import { TeamSection } from './TeamSection';
 import { TrustedBrandsSection } from './TrustedBrandsSection';
 import { ResultsImpactSection } from './ResultsImpactSection';
 import { ServicedetailPage } from './ServicedetailPage';
+import { BlogPage } from './BlogPage';
 
 interface BaseComponentProps {
   className?: string;
@@ -43,7 +44,7 @@ interface FAQItemProps {
   isOpen: boolean;
   onClick: () => void;
 }
-type PageName = 'Home' | 'Services' | 'Portfolio' | 'About Us' | 'Careers' | 'SEO & ORGANIC GROWTH' | 'PERFORMANCE MARKETING' | 'WEB DESIGN & DEVELOPMENT' | 'BRAND STRATEGY & IDENTITY' | 'CONTENT MARKETING' | 'MARKETING AUTOMATION & CRM';
+type PageName = 'Home' | 'Services' | 'Portfolio' | 'About Us' | 'Careers' | 'SEO & ORGANIC GROWTH' | 'PERFORMANCE MARKETING' | 'WEB DESIGN & DEVELOPMENT' | 'BRAND STRATEGY & IDENTITY' | 'CONTENT MARKETING' | 'MARKETING AUTOMATION & CRM' | 'Contact' | 'Blog';
 const faqData: FAQItemData[] = [{
   question: 'What digital marketing services do you offer?',
   answer: 'We offer a full range of digital marketing services including SEO, PPC, Social Media Marketing, Content Marketing, Email Marketing, Conversion Rate Optimization, and Analytics.'
@@ -154,7 +155,9 @@ const storyItems = [{
   imgId: 'a052f191-8e2d-481e-bebb-df751d7d3be8.svg',
   highlight: false
 }];
-const navItems: PageName[] = ['Home', 'Services', 'Portfolio', 'About Us', 'Careers', 'Contact'];
+const navItems: PageName[] = ['Home', 'About Us', 'Services', 'Portfolio', 'Blog'];
+// Minimal placeholder for careers page content to avoid missing symbol errors.
+const CareerJobListing: React.FC = () => null;
 const FAQItem: React.FC<FAQItemProps> = ({
   question,
   answer,
@@ -257,14 +260,14 @@ const Navbar: React.FC<NavbarProps> = ({
       justifyContent: 'space-between',
       alignItems: 'center',
       padding: '0 86px',
-      backgroundColor: scrolled ? 'rgba(3, 3, 3, 0.95)' : 'rgba(3, 3, 3, 1)',
+      backgroundColor: 'var(--bg-primary)',
       backdropFilter: scrolled ? 'blur(10px)' : 'none',
       boxSizing: 'border-box',
       position: 'fixed',
       top: 0,
       left: 0,
       zIndex: 1000,
-      borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
+      borderBottom: scrolled ? '1px solid var(--border-light)' : 'none',
       transition: 'all 0.3s ease'
     }}>
         {/* Logo */}
@@ -301,7 +304,7 @@ const Navbar: React.FC<NavbarProps> = ({
           {navItems.map(item => <button key={item} className="nav-item" onClick={() => handleNavClick(item)} style={{
           background: 'none',
           border: 'none',
-          color: activePage === item ? 'rgba(0, 194, 255, 1)' : 'white',
+          color: activePage === item ? 'rgba(0, 194, 255, 1)' : 'var(--text-primary)',
           fontSize: '16px',
           fontFamily: '"Barlow", sans-serif',
           cursor: 'pointer',
@@ -321,7 +324,7 @@ const Navbar: React.FC<NavbarProps> = ({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'rgba(0, 194, 255, 1)',
-        border: '1px dotted rgba(255, 255, 255, 1)',
+        border: '1px dotted var(--text-primary)',
         borderRadius: '10px',
         color: 'var(--text-primary)',
         fontSize: '14px',
@@ -356,7 +359,7 @@ const Navbar: React.FC<NavbarProps> = ({
           display: 'block',
           width: '24px',
           height: '2px',
-          backgroundColor: 'white',
+          backgroundColor: 'var(--text-primary)',
           transition: 'all 0.3s ease',
           transform: menuOpen ? 'rotate(45deg) translateY(7px)' : 'none'
         }} />
@@ -364,7 +367,7 @@ const Navbar: React.FC<NavbarProps> = ({
           display: 'block',
           width: '24px',
           height: '2px',
-          backgroundColor: 'white',
+          backgroundColor: 'var(--text-primary)',
           transition: 'all 0.3s ease',
           opacity: menuOpen ? 0 : 1
         }} />
@@ -372,7 +375,7 @@ const Navbar: React.FC<NavbarProps> = ({
           display: 'block',
           width: '24px',
           height: '2px',
-          backgroundColor: 'white',
+          backgroundColor: 'var(--text-primary)',
           transition: 'all 0.3s ease',
           transform: menuOpen ? 'rotate(-45deg) translateY(-7px)' : 'none'
         }} />
@@ -396,7 +399,7 @@ const Navbar: React.FC<NavbarProps> = ({
           {navItems.map(item => <button key={item} className="nav-item" onClick={() => handleNavClick(item)} style={{
         background: 'none',
         border: 'none',
-        color: activePage === item ? 'rgba(0, 194, 255, 1)' : 'white',
+        color: activePage === item ? 'rgba(0, 194, 255, 1)' : 'var(--text-primary)',
         fontSize: '17px',
         fontFamily: '"Barlow", sans-serif',
         cursor: 'pointer',
@@ -423,7 +426,7 @@ const Navbar: React.FC<NavbarProps> = ({
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: 'rgba(0, 194, 255, 1)',
-          border: '1px dotted rgba(255, 255, 255, 1)',
+          border: '1px dotted var(--text-primary)',
           borderRadius: '10px',
           color: 'var(--text-primary)',
           fontSize: '14px',
@@ -441,7 +444,7 @@ const Navbar: React.FC<NavbarProps> = ({
     </React.Fragment>;
 };
 export interface FooterProps {
-  onNavigate: (page: any) => void;
+  onNavigate: (page: PageName) => void;
 }
 export const Footer: React.FC<FooterProps> = ({
   onNavigate
@@ -546,12 +549,23 @@ export const Footer: React.FC<FooterProps> = ({
         }}>
             Services
           </span>
-          {['SEO', 'Performance Marketing', 'Social Media Marketing', 'Web Design', 'Content Marketing', 'Conversion Optimization'].map(item => <span key={item} style={{
+          {[
+            { label: 'SEO & Organic Growth', page: 'SEO & ORGANIC GROWTH' },
+            { label: 'Performance Marketing', page: 'PERFORMANCE MARKETING' },
+            { label: 'Web Design & Development', page: 'WEB DESIGN & DEVELOPMENT' },
+            { label: 'Brand Strategy & Identity', page: 'BRAND STRATEGY & IDENTITY' },
+            { label: 'Content Marketing', page: 'CONTENT MARKETING' },
+            { label: 'Marketing Automation & CRM', page: 'MARKETING AUTOMATION & CRM' }
+          ].map(item => <span key={item.label} onClick={() => onNavigate(item.page as any)} style={{
             color: 'var(--text-muted)',
             fontSize: '16px',
             fontFamily: '"Barlow", sans-serif',
-            cursor: 'default'
-          }}>{item}</span>)}
+            cursor: 'pointer',
+            transition: 'color 0.2s ease'
+          }}
+          onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(0, 194, 255, 1)'; }}
+          onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-muted)'; }}
+          >{item.label}</span>)}
         </div>
 
         <div style={{
@@ -592,11 +606,11 @@ export const Footer: React.FC<FooterProps> = ({
         }}>
             Company
           </span>
-          {['About Us', 'Our Work', 'Case Studies', 'Careers', 'Blog', 'Contact'].map(item => <span key={item} style={{
+          {['About Us', 'Our Work', 'Case Studies', 'Careers', 'Blog', 'Contact'].map(item => <span key={item} onClick={() => { if (item === 'Contact' && onNavigate) onNavigate('Contact'); }} style={{
             color: 'var(--text-muted)',
             fontSize: '16px',
             fontFamily: '"Barlow", sans-serif',
-            cursor: 'default'
+            cursor: item === 'Contact' ? 'pointer' : 'default'
           }}>{item}</span>)}
         </div>
 
@@ -860,7 +874,7 @@ const HomeContent: React.FC<{
     flexDirection: 'column',
     alignItems: 'center'
   }}>
-      <HeroSection />
+      <HeroSection onNavigate={onNavigate} />
 
       <AboutSection />
 
@@ -868,9 +882,9 @@ const HomeContent: React.FC<{
 
       <ServicesGridSection />
 
-      <PortfolioSection />
+      <PortfolioSection onNavigate={onNavigate} />
 
-      <CaseStudiesSection />
+      <CaseStudiesSection onNavigate={onNavigate} />
 
       {/* Companies Logo Ticker — marquee */}
       <TrustedBrandsSection />
@@ -963,11 +977,11 @@ const HomeContent: React.FC<{
 
 
       {/* FAQ Section */}
-      <FAQSection />
+      <FAQSection onNavigate={onNavigate} />
 
 
 
-      <FinalCTASection />
+      <FinalCTASection onNavigate={onNavigate} />
 
       <ContactFormSection />
 
@@ -1104,7 +1118,7 @@ export const LandingPage: React.FC<BaseComponentProps> = ({
       {activePage === 'Home' && <HomeContent onNavigate={handleNavigate} />}
       {activePage === 'Services' && <ServicesPage onNavigate={handleNavigate} />}
       {activePage === 'Portfolio' && <PortfolioShowcase />}
-      {activePage === 'About Us' && <><AboutSection /><CompanyIntroSection /><TrustSection /><JourneyTimelineSection /><MissionVisionSection /><CoreValuesSection /><WhyTrustUsSection /><TeamSection /><TrustedBrandsSection /><ResultsImpactSection /><TestimonialsSection /><FAQSection /><FinalCTASection /></>}
+      {activePage === 'About Us' && <><AboutSection /><CompanyIntroSection /><TrustSection /><JourneyTimelineSection /><MissionVisionSection /><CoreValuesSection /><WhyTrustUsSection /><TeamSection /><TrustedBrandsSection /><ResultsImpactSection /><TestimonialsSection /><FAQSection onNavigate={handleNavigate} /><FinalCTASection onNavigate={handleNavigate} /></>}
       {activePage === 'Careers' && <CareerJobListing />}
       {activePage === 'Contact' && <ContactFormpage onNavigate={handleNavigate} />}
       {activePage === 'SEO & ORGANIC GROWTH' && <ServicedetailPage onNavigate={handleNavigate} serviceName="SEO & ORGANIC GROWTH" />}
@@ -1113,6 +1127,7 @@ export const LandingPage: React.FC<BaseComponentProps> = ({
       {activePage === 'BRAND STRATEGY & IDENTITY' && <ServicedetailPage onNavigate={handleNavigate} serviceName="BRAND STRATEGY & IDENTITY" />}
       {activePage === 'CONTENT MARKETING' && <ServicedetailPage onNavigate={handleNavigate} serviceName="CONTENT MARKETING" />}
       {activePage === 'MARKETING AUTOMATION & CRM' && <ServicedetailPage onNavigate={handleNavigate} serviceName="MARKETING AUTOMATION & CRM" />}
+      {activePage === 'Blog' && <BlogPage />}
       
 
       <Footer onNavigate={handleNavigate} />

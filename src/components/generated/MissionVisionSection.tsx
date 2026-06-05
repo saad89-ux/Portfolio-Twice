@@ -127,7 +127,7 @@ export const MissionVisionSection: React.FC = () => {
         {/* Header */}
         <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <div style={{ width: '40px', height: '1px', backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
+            <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--border-light-alt)' }} />
             <span
               style={{
                 color: '#00c2ff',
@@ -140,7 +140,7 @@ export const MissionVisionSection: React.FC = () => {
             >
               Mission & Vision
             </span>
-            <div style={{ width: '40px', height: '1px', backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
+            <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--border-light-alt)' }} />
           </div>
 
           <h2
@@ -191,7 +191,7 @@ export const MissionVisionSection: React.FC = () => {
               overflow: 'hidden',
               display: 'flex',
               flexDirection: 'column',
-              backgroundColor: '#050816',
+              backgroundColor: 'var(--bg-secondary)',
               minHeight: '600px',
               boxShadow: '0 32px 64px rgba(0, 0, 0, 0.4)',
             }}
@@ -245,7 +245,7 @@ export const MissionVisionSection: React.FC = () => {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#ffffff',
+                  color: 'var(--text-primary)',
                   marginBottom: '32px',
                 }}
               >
@@ -278,7 +278,7 @@ export const MissionVisionSection: React.FC = () => {
               {/* Description */}
               <p
                 style={{
-                  color: 'rgba(235, 239, 255, 0.8)',
+                  color: 'var(--text-secondary)',
                   fontSize: '15px',
                   lineHeight: '26px',
                   fontFamily: BarlowFont,
@@ -307,7 +307,7 @@ export const MissionVisionSection: React.FC = () => {
                         width: '40px',
                         height: '40px',
                         borderRadius: '50%',
-                        backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                        backgroundColor: 'var(--bg-card)',
                         border: '1px solid rgba(0, 194, 255, 0.2)',
                         display: 'flex',
                         alignItems: 'center',
@@ -318,8 +318,8 @@ export const MissionVisionSection: React.FC = () => {
                       {feat.icon}
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                      <span style={{ color: '#ffffff', fontSize: '13px', fontWeight: 700, fontFamily: BarlowFont }}>{feat.title}</span>
-                      <span style={{ color: 'rgba(235, 239, 255, 0.5)', fontSize: '11px', lineHeight: '16px', fontFamily: BarlowFont }}>{feat.desc}</span>
+                      <span style={{ color: 'var(--text-primary)', fontSize: '13px', fontWeight: 700, fontFamily: BarlowFont }}>{feat.title}</span>
+                      <span style={{ color: 'var(--text-muted)', fontSize: '11px', lineHeight: '16px', fontFamily: BarlowFont }}>{feat.desc}</span>
                     </div>
                   </div>
                 ))}
@@ -336,7 +336,7 @@ export const MissionVisionSection: React.FC = () => {
               overflow: 'hidden',
               display: 'flex',
               flexDirection: 'column',
-              backgroundColor: '#050816',
+              backgroundColor: 'var(--bg-secondary)',
               minHeight: '600px',
               boxShadow: '0 32px 64px rgba(0, 0, 0, 0.4)',
             }}
@@ -408,7 +408,7 @@ export const MissionVisionSection: React.FC = () => {
               {/* Description */}
               <p
                 style={{
-                  color: 'rgba(235, 239, 255, 0.8)',
+                  color: 'var(--text-secondary)',
                   fontSize: '15px',
                   lineHeight: '26px',
                   fontFamily: BarlowFont,
@@ -437,7 +437,7 @@ export const MissionVisionSection: React.FC = () => {
                         width: '40px',
                         height: '40px',
                         borderRadius: '50%',
-                        backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                        backgroundColor: 'var(--bg-card)',
                         border: '1px solid rgba(0, 194, 255, 0.2)',
                         display: 'flex',
                         alignItems: 'center',
@@ -448,8 +448,8 @@ export const MissionVisionSection: React.FC = () => {
                       {feat.icon}
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                      <span style={{ color: '#ffffff', fontSize: '13px', fontWeight: 700, fontFamily: BarlowFont }}>{feat.title}</span>
-                      <span style={{ color: 'rgba(235, 239, 255, 0.5)', fontSize: '11px', lineHeight: '16px', fontFamily: BarlowFont }}>{feat.desc}</span>
+                      <span style={{ color: 'var(--text-primary)', fontSize: '13px', fontWeight: 700, fontFamily: BarlowFont }}>{feat.title}</span>
+                      <span style={{ color: 'var(--text-muted)', fontSize: '11px', lineHeight: '16px', fontFamily: BarlowFont }}>{feat.desc}</span>
                     </div>
                   </div>
                 ))}
@@ -464,13 +464,13 @@ export const MissionVisionSection: React.FC = () => {
             marginTop: '16px',
             padding: '32px',
             borderRadius: '16px',
-            backgroundColor: 'rgba(12, 16, 36, 0.6)',
-            border: '1px solid rgba(255, 255, 255, 0.06)',
+            backgroundColor: 'var(--bg-card-alt)',
+            border: '1px solid var(--border-light)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             gap: '16px',
-            boxShadow: '0 16px 32px rgba(0, 0, 0, 0.2)',
+            boxShadow: '0 16px 32px rgba(0, 0, 0, 0.05)',
             textAlign: 'center',
           }}
         >

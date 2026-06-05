@@ -378,9 +378,9 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
 
       <TestimonialsSection />
 
-      <FAQSection />
+      <FAQSection onNavigate={onNavigate} />
 
-      <FinalCTASection />
+      <FinalCTASection onNavigate={onNavigate} />
       
     </div>;
 };

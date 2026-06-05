@@ -180,7 +180,7 @@ const EcosystemNode = ({ title, desc, icon, align = 'left', onClick }: { title: 
     className="ca-hover-popup"
     onClick={onClick}
     style={{
-      backgroundColor: '#070a18',
+      backgroundColor: 'var(--bg-card)',
       border: '1px solid rgba(0, 194, 255, 0.1)',
       borderRadius: '16px',
       padding: '20px',
@@ -209,7 +209,7 @@ const EcosystemNode = ({ title, desc, icon, align = 'left', onClick }: { title: 
       <span style={{ color: 'var(--text-muted)', fontSize: '12px', lineHeight: '18px', fontFamily: BarlowFont }}>{desc}</span>
     </div>
     {align !== 'center' && (
-      <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#00c2ff', flexShrink: 0 }}>
+      <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: 'var(--bg-card-light)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#00c2ff', flexShrink: 0 }}>
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </div>
     )}
@@ -242,7 +242,7 @@ export const ServicesEcosystemSection: React.FC<{ onNavigate?: (page: string) =>
               <span style={{ color: '#00c2ff', fontSize: '13px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', fontFamily: BarlowFont }}>
                 OUR SERVICES ECOSYSTEM
               </span>
-              <div style={{ width: '40px', height: '1px', backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
+              <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--border-light)' }} />
             </div>
             <h2 style={{ margin: 0, color: 'var(--text-primary)', fontSize: 'clamp(36px, 4vw, 56px)', fontFamily: InterFont, fontWeight: 800, lineHeight: 1.1 }}>
               Integrated Services. <br/>
@@ -256,11 +256,11 @@ export const ServicesEcosystemSection: React.FC<{ onNavigate?: (page: string) =>
             </p>
             <button className="ca-hover-popup" style={{
               alignSelf: 'flex-start',
-              background: 'none', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '100px',
+              background: 'none', border: '1px solid var(--border-light)', borderRadius: '100px',
               padding: '8px 24px 8px 8px', display: 'flex', alignItems: 'center', gap: '12px',
               color: 'var(--text-primary)', fontSize: '14px', fontWeight: 600, fontFamily: BarlowFont, cursor: 'pointer'
             }}>
-              <div style={{ width: '36px', height: '36px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: '36px', height: '36px', borderRadius: '50%', backgroundColor: 'var(--bg-card-light)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
               </div>
               See How It Works
@@ -315,7 +315,7 @@ export const ServicesEcosystemSection: React.FC<{ onNavigate?: (page: string) =>
             left: '50%', top: '50%', transform: 'translate(-50%, -50%)',
             width: '320px', height: '320px',
             borderRadius: '50%',
-            backgroundColor: '#050816',
+            backgroundColor: 'var(--bg-secondary)',
             border: '2px solid rgba(0, 194, 255, 0.4)',
             boxShadow: '0 0 80px rgba(0, 194, 255, 0.2), inset 0 0 60px rgba(0, 194, 255, 0.2)',
             zIndex: 10,
@@ -350,25 +350,43 @@ export const ServicesEcosystemSection: React.FC<{ onNavigate?: (page: string) =>
           </div>
 
           {/* Left Side */}
-          {ecosystemLeft.map((node, i) => (
+          {ecosystemLeft.map((node, i) => {
+            const navMap: Record<string, string> = {
+              'SEO': 'SEO & ORGANIC GROWTH',
+              'GOOGLE ADS': 'PERFORMANCE MARKETING',
+              'SOCIAL MEDIA': 'PERFORMANCE MARKETING',
+              'EMAIL MARKETING': 'MARKETING AUTOMATION & CRM'
+            };
+            const target = navMap[node.title];
+            return (
             <div key={`ln-${i}`} style={{ position: 'absolute', left: 0, top: `${node.y}px`, transform: 'translate(0, -50%)', zIndex: 20 }}>
-              <EcosystemNode title={node.title} desc={node.desc} icon={node.icon} onClick={node.title === 'SEO' && onNavigate ? () => onNavigate('SEO & ORGANIC GROWTH') : undefined} />
+              <EcosystemNode title={node.title} desc={node.desc} icon={node.icon} onClick={target && onNavigate ? () => onNavigate(target) : undefined} />
             </div>
-          ))}
+            );
+          })}
 
           {/* Right Side */}
-          {ecosystemRight.map((node, i) => (
+          {ecosystemRight.map((node, i) => {
+            const navMap: Record<string, string> = {
+              'WEB DESIGN': 'WEB DESIGN & DEVELOPMENT',
+              'BRANDING': 'BRAND STRATEGY & IDENTITY',
+              'CONTENT MARKETING': 'CONTENT MARKETING',
+              'ANALYTICS & REPORTING': 'SEO & ORGANIC GROWTH'
+            };
+            const target = navMap[node.title];
+            return (
             <div key={`rn-${i}`} style={{ position: 'absolute', right: 0, top: `${node.y}px`, transform: 'translate(0, -50%)', zIndex: 20 }}>
-              <EcosystemNode title={node.title} desc={node.desc} icon={node.icon} />
+              <EcosystemNode title={node.title} desc={node.desc} icon={node.icon} onClick={target && onNavigate ? () => onNavigate(target) : undefined} />
             </div>
-          ))}
+            );
+          })}
 
         </div>
 
         {/* Bottom Stats Strip */}
         <div style={{
-          backgroundColor: '#070a18',
-          border: '1px solid rgba(255,255,255,0.05)',
+          backgroundColor: 'var(--bg-card)',
+          border: '1px solid var(--border-light)',
           borderRadius: '24px',
           padding: '48px',
           display: 'grid',

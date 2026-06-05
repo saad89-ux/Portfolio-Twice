@@ -262,7 +262,7 @@ export const JourneyTimelineSection: React.FC = () => {
                     width: '56px',
                     height: '56px',
                     borderRadius: '50%',
-                    backgroundColor: 'rgba(8, 12, 32, 1)',
+                    backgroundColor: 'var(--bg-primary)',
                     border: '1px solid rgba(0, 194, 255, 0.6)',
                     boxShadow: '0 0 24px rgba(0, 194, 255, 0.25), inset 0 0 16px rgba(0, 194, 255, 0.1)',
                     display: 'flex',
@@ -292,9 +292,9 @@ export const JourneyTimelineSection: React.FC = () => {
                     width: '100%',
                     borderRadius: '16px',
                     overflow: 'hidden',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
-                    boxShadow: '0 16px 32px rgba(0, 0, 0, 0.4)',
-                    backgroundColor: 'rgba(255, 255, 255, 0.02)',
+                    border: '1px solid var(--border-light)',
+                    boxShadow: '0 16px 32px rgba(0, 0, 0, 0.08)',
+                    backgroundColor: 'var(--bg-card)',
                     aspectRatio: '1/1',
                   }}
                 >
@@ -346,8 +346,8 @@ export const JourneyTimelineSection: React.FC = () => {
         <div
           style={{
             marginTop: '20px',
-            background: 'linear-gradient(90deg, rgba(8, 12, 32, 0.6) 0%, rgba(12, 16, 42, 0.8) 50%, rgba(8, 12, 32, 0.6) 100%)',
-            border: '1px solid rgba(255, 255, 255, 0.06)',
+            background: 'var(--bg-card)',
+            border: '1px solid var(--border-light)',
             borderRadius: '24px',
             padding: '36px 48px',
             display: 'flex',
@@ -355,7 +355,7 @@ export const JourneyTimelineSection: React.FC = () => {
             justifyContent: 'space-between',
             flexWrap: 'wrap',
             gap: '32px',
-            boxShadow: '0 24px 48px rgba(0, 0, 0, 0.3)',
+            boxShadow: '0 24px 48px rgba(0, 0, 0, 0.08)',
             position: 'relative',
           }}
         >

@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "7a96f50586fea73c2a5d79d81d557e48",
-    "previewModeSigningKey": "10077536c507a57f1c00a9c4b91234b7a6e97dabda845c7909ea78a17b00eac0",
-    "previewModeEncryptionKey": "a164393b51386ad37df33c5f810c27b352d85d43f8cf671a329a213f28a43080"
-  }
-}
+{"version":4,"routes":{"/blog/future-of-growth-marketing-2025":{},"/blog/advanced-seo-strategies":{},"/blog/ecommerce-roas-case-study":{},"/blog/web-design-trends-2025":{},"/blog/brand-positioning-framework":{},"/blog/content-marketing-playbook":{},"/blog/crm-automation-workflow":{},"/blog/ecohome-scaled-revenue":{},"/blog/technova-qualified-leads":{},"/blog/healthplus-appointments":{},"/blog/ai-powered-marketing-rules":{},"/blog/marketing-data-analytics-gold":{},"/blog/content-strategies-that-convert":{},"/blog/digital-marketing-trends-2025":{}},"dynamicRoutes":{"/blog/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/blog/[slug]","routeRegex":"^\\/blog\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"6d9f6bbc6fc8e971ff22a37b86f5a6e5","previewModeSigningKey":"994a76dbf6bae0c9497aad04cf7040c520c84f5e65c1f7233b7e3f445cac006b","previewModeEncryptionKey":"9b248aab976f7b810ea834c9fb96470e2ad7210fd70699cbee31755faa20786e"}}

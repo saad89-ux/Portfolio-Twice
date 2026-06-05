@@ -31,7 +31,8 @@ export const ContactFormSection: React.FC = () => {
             <div style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(180deg, rgba(3, 3, 3, 0.22) 0%, rgba(3, 3, 3, 0.94) 100%)'
+            backgroundColor: 'var(--bg-primary)',
+            opacity: 0.85
           }} />
             <div style={{
             position: 'relative',
@@ -116,7 +117,7 @@ export const ContactFormSection: React.FC = () => {
                       padding: '16px 18px',
                       borderRadius: '18px',
                       border: '1px solid var(--border-light)',
-                      background: 'rgba(255,255,255,0.04)',
+                      background: 'var(--bg-card-light)',
                       color: 'var(--text-primary)',
                       fontSize: '14px',
                       fontFamily: '"Barlow", sans-serif',
@@ -132,7 +133,7 @@ export const ContactFormSection: React.FC = () => {
                       padding: '16px 18px',
                       borderRadius: '18px',
                       border: '1px solid var(--border-light)',
-                      background: 'rgba(255,255,255,0.04)',
+                      background: 'var(--bg-card-light)',
                       color: 'var(--text-primary)',
                       fontSize: '14px',
                       fontFamily: '"Barlow", sans-serif',
@@ -143,7 +144,7 @@ export const ContactFormSection: React.FC = () => {
                       padding: '16px 18px',
                       borderRadius: '18px',
                       border: '1px solid var(--border-light)',
-                      background: 'rgba(255,255,255,0.04)',
+                      background: 'var(--bg-card-light)',
                       color: 'var(--text-primary)',
                       fontSize: '14px',
                       fontFamily: '"Barlow", sans-serif',
@@ -156,14 +157,14 @@ export const ContactFormSection: React.FC = () => {
                       padding: '14px 16px',
                       borderRadius: '18px',
                       border: '1px solid var(--border-light)',
-                      background: 'rgba(255,255,255,0.04)',
+                      background: 'var(--bg-card-light)',
                       color: 'var(--text-muted)',
                       fontSize: '14px',
                       fontFamily: '"Barlow", sans-serif'
                     }}>
                       <button style={{
                         border: 'none',
-                        background: 'rgba(255, 255, 255, 0.12)',
+                        background: 'var(--bg-card-light)',
                         color: 'var(--text-primary)',
                         borderRadius: '14px',
                         padding: '10px 16px',
@@ -179,7 +180,7 @@ export const ContactFormSection: React.FC = () => {
                       padding: '16px 18px',
                       borderRadius: '18px',
                       border: '1px solid var(--border-light)',
-                      background: 'rgba(255,255,255,0.04)',
+                      background: 'var(--bg-card-light)',
                       color: 'var(--text-primary)',
                       fontSize: '14px',
                       fontFamily: '"Barlow", sans-serif',
@@ -191,7 +192,7 @@ export const ContactFormSection: React.FC = () => {
                       padding: '16px 18px',
                       borderRadius: '18px',
                       border: '1px solid var(--border-light)',
-                      background: 'rgba(255,255,255,0.04)',
+                      background: 'var(--bg-card-light)',
                       color: 'var(--text-primary)',
                       fontSize: '14px',
                       fontFamily: '"Barlow", sans-serif',
@@ -204,7 +205,7 @@ export const ContactFormSection: React.FC = () => {
                   padding: '16px 0',
                   borderRadius: '18px',
                   border: 'none',
-                  background: '#ffffff',
+                  background: 'var(--text-primary)',
                   color: 'var(--text-inverse)',
                   fontSize: '15px',
                   fontWeight: 700,

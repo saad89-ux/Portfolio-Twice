@@ -8,9 +8,9 @@ import { FAQSection } from './FAQSection';
 import { FinalCTASection } from './FinalCTASection';
 import { Footer } from './LandingPage';
 
-export type PageName = 'Home' | 'Services' | 'Portfolio' | 'About Us' | 'Careers' | 'SEO & ORGANIC GROWTH' | 'PERFORMANCE MARKETING' | 'WEB DESIGN & DEVELOPMENT' | 'BRAND STRATEGY & IDENTITY' | 'CONTENT MARKETING' | 'MARKETING AUTOMATION & CRM' | 'Contact';
+export type PageName = 'Home' | 'Services' | 'Portfolio' | 'About Us' | 'Careers' | 'SEO & ORGANIC GROWTH' | 'PERFORMANCE MARKETING' | 'WEB DESIGN & DEVELOPMENT' | 'BRAND STRATEGY & IDENTITY' | 'CONTENT MARKETING' | 'MARKETING AUTOMATION & CRM' | 'Contact' | 'Blog';
 
-const navItems: PageName[] = ['Home', 'Services', 'Portfolio', 'About Us', 'Careers', 'Contact'];
+const navItems: PageName[] = ['Home', 'About Us', 'Services', 'Portfolio', 'Blog'];
 
 export interface NavbarProps {
   activePage: PageName;
@@ -42,14 +42,14 @@ export const Navbar: React.FC<NavbarProps> = ({
       justifyContent: 'space-between',
       alignItems: 'center',
       padding: '0 86px',
-      backgroundColor: scrolled ? 'rgba(3, 3, 3, 0.95)' : 'rgba(3, 3, 3, 1)',
+      backgroundColor: 'var(--bg-primary)',
       backdropFilter: scrolled ? 'blur(10px)' : 'none',
       boxSizing: 'border-box',
       position: 'fixed',
       top: 0,
       left: 0,
       zIndex: 1000,
-      borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
+      borderBottom: scrolled ? '1px solid var(--border-light)' : 'none',
       transition: 'all 0.3s ease'
     }}>
       {/* Logo */}
@@ -106,7 +106,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'rgba(0, 194, 255, 1)',
-        border: '1px dotted rgba(255, 255, 255, 1)',
+        border: '1px dotted var(--text-primary)',
         borderRadius: '10px',
         color: 'var(--text-primary)',
         fontSize: '14px',
@@ -141,7 +141,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           display: 'block',
           width: '24px',
           height: '2px',
-          backgroundColor: 'white',
+          backgroundColor: 'var(--text-primary)',
           transition: 'all 0.3s ease',
           transform: menuOpen ? 'rotate(45deg) translateY(7px)' : 'none'
         }} />
@@ -149,7 +149,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           display: 'block',
           width: '24px',
           height: '2px',
-          backgroundColor: 'white',
+          backgroundColor: 'var(--text-primary)',
           transition: 'all 0.3s ease',
           opacity: menuOpen ? 0 : 1
         }} />
@@ -157,7 +157,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           display: 'block',
           width: '24px',
           height: '2px',
-          backgroundColor: 'white',
+          backgroundColor: 'var(--text-primary)',
           transition: 'all 0.3s ease',
           transform: menuOpen ? 'rotate(-45deg) translateY(-7px)' : 'none'
         }} />
@@ -181,7 +181,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       {navItems.map(item => <button key={item} className="nav-item" onClick={() => handleNavClick(item)} style={{
         background: 'none',
         border: 'none',
-        color: activePage === item ? 'rgba(0, 194, 255, 1)' : 'white',
+        color: activePage === item ? 'rgba(0, 194, 255, 1)' : 'var(--text-primary)',
         fontSize: '17px',
         fontFamily: '"Barlow", sans-serif',
         cursor: 'pointer',
@@ -208,7 +208,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: 'rgba(0, 194, 255, 1)',
-          border: '1px dotted rgba(255, 255, 255, 1)',
+          border: '1px dotted var(--text-primary)',
           borderRadius: '10px',
           color: 'var(--text-primary)',
           fontSize: '14px',
@@ -635,7 +635,7 @@ const ChallengeCard: React.FC<{
 
       {/* Card Title */}
       <h3 style={{
-        color: '#ffffff',
+        color: 'var(--text-primary)',
         fontSize: '18px',
         fontFamily: '"Barlow", sans-serif',
         fontWeight: 700,
@@ -686,8 +686,19 @@ const ToolIcon = ({ type }: { type: string }) => {
   }
 };
 
-const ToolsPlatformSection: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<string>('All Tools');
+const ToolsPlatformSection: React.FC<{ serviceName?: string }> = ({ serviceName }) => {
+  const getDefaultCategory = () => {
+    switch (serviceName) {
+      case 'SEO & ORGANIC GROWTH': return 'SEO';
+      case 'PERFORMANCE MARKETING': return 'Advertising';
+      case 'WEB DESIGN & DEVELOPMENT': return 'Design & Development';
+      case 'CONTENT MARKETING': return 'Content';
+      case 'MARKETING AUTOMATION & CRM': return 'Automation';
+      case 'BRAND STRATEGY & IDENTITY': return 'Design & Development'; // Or general
+      default: return 'All Tools';
+    }
+  };
+  const [activeCategory, setActiveCategory] = useState<string>(getDefaultCategory());
   const categories = ['All Tools', 'Analytics', 'SEO', 'Advertising', 'Content', 'Automation', 'Design & Development'];
 
   const filteredTools = activeCategory === 'All Tools' ? toolsData : toolsData.filter(t => t.category === activeCategory || (activeCategory === 'Design & Development' && t.category === 'Design'));
@@ -713,7 +724,7 @@ const ToolsPlatformSection: React.FC = () => {
       <span style={{ color: 'rgba(147, 51, 234, 1)', fontSize: '13px', fontFamily: '"Barlow", sans-serif', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '16px' }}>
         TOOLS & PLATFORMS
       </span>
-      <h2 style={{ color: '#ffffff', fontSize: '42px', fontFamily: '"Barlow", sans-serif', fontWeight: 800, textAlign: 'center', margin: '0 0 16px 0', letterSpacing: '-0.5px' }}>
+      <h2 style={{ color: 'var(--text-primary)', fontSize: '42px', fontFamily: '"Barlow", sans-serif', fontWeight: 800, textAlign: 'center', margin: '0 0 16px 0', letterSpacing: '-0.5px' }}>
         Enterprise-Grade Tools. Better Results.
       </h2>
       <p style={{ color: 'var(--text-secondary)', fontSize: '16px', fontFamily: '"Barlow", sans-serif', fontWeight: 400, textAlign: 'center', maxWidth: '600px', lineHeight: '1.6', margin: '0 0 48px 0' }}>
@@ -730,8 +741,8 @@ const ToolsPlatformSection: React.FC = () => {
               padding: '12px 28px',
               borderRadius: '30px',
               border: cat === activeCategory ? 'none' : '1px solid rgba(255, 255, 255, 0.06)',
-              background: cat === activeCategory ? 'linear-gradient(135deg, rgba(147, 51, 234, 1), rgba(0, 194, 255, 1))' : 'rgba(255, 255, 255, 0.03)',
-              color: cat === activeCategory ? '#ffffff' : 'var(--text-secondary)',
+              background: cat === activeCategory ? 'linear-gradient(135deg, rgba(147, 51, 234, 1), rgba(0, 194, 255, 1))' : 'var(--bg-card-light)',
+              color: activeCategory === cat ? 'var(--text-primary)' : 'var(--text-secondary)',
               fontSize: '14px',
               fontFamily: '"Barlow", sans-serif',
               fontWeight: 600,
@@ -741,14 +752,14 @@ const ToolsPlatformSection: React.FC = () => {
             }}
             onMouseEnter={(e) => {
               if (cat !== activeCategory) {
-                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.06)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.backgroundColor = 'var(--border-light)';
+                e.currentTarget.style.borderColor = 'var(--border-light)';
               }
             }}
             onMouseLeave={(e) => {
               if (cat !== activeCategory) {
-                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.03)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.06)';
+                e.currentTarget.style.backgroundColor = 'var(--bg-card-light)';
+                e.currentTarget.style.borderColor = 'var(--border-light)';
               }
             }}
           >
@@ -779,7 +790,7 @@ const ToolsPlatformSection: React.FC = () => {
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'translateY(0)';
             e.currentTarget.style.boxShadow = 'none';
-            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)';
+            e.currentTarget.style.borderColor = 'var(--border-light)';
           }}
           >
             <div style={{ width: '100%', height: '180px', overflow: 'hidden', padding: '16px 16px 0', boxSizing: 'border-box' }}>
@@ -787,10 +798,10 @@ const ToolsPlatformSection: React.FC = () => {
             </div>
             <div style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-                <div style={{ width: '28px', height: '28px', backgroundColor: 'rgba(255, 255, 255, 0.05)', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ width: '28px', height: '28px', backgroundColor: 'var(--border-light)', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <ToolIcon type={tool.iconType} />
                 </div>
-                <h3 style={{ color: '#ffffff', fontSize: '18px', fontFamily: '"Barlow", sans-serif', fontWeight: 700, margin: 0 }}>{tool.name}</h3>
+                <h3 style={{ color: 'var(--text-primary)', fontSize: '18px', fontFamily: '"Barlow", sans-serif', fontWeight: 700, margin: 0 }}>{tool.name}</h3>
               </div>
               <p style={{ color: 'var(--text-secondary)', fontSize: '14px', fontFamily: '"Barlow", sans-serif', fontWeight: 400, margin: '0 0 24px 0', lineHeight: '1.5', flex: 1 }}>{tool.description}</p>
               
@@ -1065,12 +1076,12 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
           flexWrap: 'wrap'
         }}>
           {/* Book A Strategy Call Button */}
-          <button style={{
+          <button onClick={() => { if (onNavigate) onNavigate('Contact'); }} style={{
             padding: '14px 28px',
             background: 'linear-gradient(135deg, rgba(0, 194, 255, 1), rgba(147, 51, 234, 1))',
             border: 'none',
             borderRadius: '30px',
-            color: '#ffffff',
+            color: 'var(--text-primary)',
             fontSize: '15px',
             fontFamily: '"Barlow", sans-serif',
             fontWeight: 700,
@@ -1094,7 +1105,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
               justifyContent: 'center',
               width: '24px',
               height: '24px',
-              backgroundColor: 'rgba(255, 255, 255, 0.2)',
+              backgroundColor: 'var(--bg-card-light)',
               borderRadius: '50%',
               fontSize: '14px'
             }}>→</span>
@@ -1255,7 +1266,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginTop: '8px' }}>
             <span style={{ fontSize: '13px', color: 'var(--text-secondary)', fontFamily: '"Barlow", sans-serif' }}>Growth</span>
-            <span style={{ fontSize: '26px', color: '#ffffff', fontFamily: '"Barlow", sans-serif', fontWeight: 800 }}>{config.metric1}</span>
+            <span style={{ fontSize: '26px', color: 'var(--text-primary)', fontFamily: '"Barlow", sans-serif', fontWeight: 800 }}>{config.metric1}</span>
           </div>
           {/* SVG Sparkline (Green Upward Trend) */}
           <svg width="100%" height="45" viewBox="0 0 170 45" style={{ marginTop: '8px' }}>
@@ -1296,7 +1307,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
             <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontFamily: '"Barlow", sans-serif', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
               Key Metric
             </div>
-            <div style={{ fontSize: '26px', color: '#ffffff', fontFamily: '"Barlow", sans-serif', fontWeight: 800, marginTop: '4px', lineHeight: '1.2' }}>
+            <div style={{ fontSize: '26px', color: 'var(--text-primary)', fontFamily: '"Barlow", sans-serif', fontWeight: 800, marginTop: '4px', lineHeight: '1.2' }}>
               {config.metric2}
             </div>
             <div style={{ fontSize: '11px', color: 'var(--text-secondary)', fontFamily: '"Barlow", sans-serif', fontWeight: 500 }}>
@@ -1336,7 +1347,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
           <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontFamily: '"Barlow", sans-serif', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
             {config.metric3Label}
           </div>
-          <div style={{ fontSize: '24px', color: '#ffffff', fontFamily: '"Barlow", sans-serif', fontWeight: 800, marginTop: '6px' }}>
+          <div style={{ fontSize: '24px', color: 'var(--text-primary)', fontFamily: '"Barlow", sans-serif', fontWeight: 800, marginTop: '6px' }}>
             {config.metric3}
           </div>
           {/* Blue sparkline */}
@@ -1374,7 +1385,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
           <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontFamily: '"Barlow", sans-serif', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
             {config.metric5Label}
           </div>
-          <div style={{ fontSize: '24px', color: '#ffffff', fontFamily: '"Barlow", sans-serif', fontWeight: 800, marginTop: '6px' }}>
+          <div style={{ fontSize: '24px', color: 'var(--text-primary)', fontFamily: '"Barlow", sans-serif', fontWeight: 800, marginTop: '6px' }}>
             {config.metric5}
           </div>
           {/* Purple sparkline */}
@@ -1416,7 +1427,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
             <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontFamily: '"Barlow", sans-serif', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
               {config.metric4Label}
             </div>
-            <div style={{ fontSize: '24px', color: '#ffffff', fontFamily: '"Barlow", sans-serif', fontWeight: 800, marginTop: '4px' }}>
+            <div style={{ fontSize: '24px', color: 'var(--text-primary)', fontFamily: '"Barlow", sans-serif', fontWeight: 800, marginTop: '4px' }}>
               {config.metric4}
             </div>
             <div style={{ fontSize: '10px', color: 'rgba(16, 185, 129, 1)', fontFamily: '"Barlow", sans-serif', fontWeight: 600, marginTop: '2px' }}>
@@ -1539,7 +1550,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                 display: 'flex',
                 alignItems: 'center',
                 gap: '6px',
-                color: '#ffffff',
+                color: 'var(--text-primary)',
                 fontFamily: '"Inter", sans-serif',
                 fontWeight: 600,
                 fontSize: '15px',
@@ -1575,7 +1586,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
               fontSize: '36px',
               fontFamily: '"Barlow", sans-serif',
               fontWeight: 800,
-              background: `linear-gradient(135deg, ${stat.color}, #ffffff)`,
+              background: `linear-gradient(135deg, ${stat.color}, var(--text-primary))`,
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
@@ -1623,7 +1634,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
 
       {/* Main Section Title */}
       <h2 style={{
-        color: '#ffffff',
+        color: 'var(--text-primary)',
         fontSize: '40px',
         fontFamily: '"Barlow", sans-serif',
         fontWeight: 800,
@@ -1668,7 +1679,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
               width: '8px',
               height: '8px',
               borderRadius: '50%',
-              backgroundColor: dotIndex === 0 ? 'rgba(147, 51, 234, 1)' : 'rgba(255, 255, 255, 0.15)',
+              backgroundColor: dotIndex === 0 ? 'rgba(147, 51, 234, 1)' : 'var(--bg-card-light)',
               boxShadow: dotIndex === 0 ? '0 0 8px rgba(147, 51, 234, 0.8)' : 'none',
               cursor: 'pointer',
               transition: 'all 0.3s ease'
@@ -1721,7 +1732,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
 
       {/* Section Title */}
       <h2 style={{
-        color: '#ffffff',
+        color: 'var(--text-primary)',
         fontSize: '42px',
         fontFamily: '"Barlow", sans-serif',
         fontWeight: 800,
@@ -1774,7 +1785,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                 : 'rgba(10, 12, 32, 0.9)',
               border: idx === 0
                 ? 'none'
-                : '2px solid rgba(255, 255, 255, 0.12)',
+                : '2px solid var(--border-light)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -1785,7 +1796,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
               transition: 'all 0.3s ease'
             }}>
               <span style={{
-                color: '#ffffff',
+                color: 'var(--text-primary)',
                 fontSize: '14px',
                 fontFamily: '"Barlow", sans-serif',
                 fontWeight: 700,
@@ -1940,7 +1951,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
               }}>
                 {/* Step Title */}
                 <h3 style={{
-                  color: '#ffffff',
+                  color: 'var(--text-primary)',
                   fontSize: '16px',
                   fontFamily: '"Barlow", sans-serif',
                   fontWeight: 700,
@@ -2004,7 +2015,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
           minWidth: '220px'
         }}>
           <span style={{
-            color: '#ffffff',
+            color: 'var(--text-primary)',
             fontSize: '17px',
             fontFamily: '"Barlow", sans-serif',
             fontWeight: 700,
@@ -2119,7 +2130,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
 
       {/* Main Headline */}
       <h2 style={{
-        color: '#ffffff',
+        color: 'var(--text-primary)',
         fontSize: '42px',
         fontFamily: '"Barlow", sans-serif',
         fontWeight: 800,
@@ -2219,7 +2230,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
             flex: 1
           }}>
             <h3 style={{
-              color: '#ffffff',
+              color: 'var(--text-primary)',
               fontSize: '22px',
               fontFamily: '"Barlow", sans-serif',
               fontWeight: 800,
@@ -2380,7 +2391,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
 
                 {/* Title */}
                 <h4 style={{
-                  color: '#ffffff',
+                  color: 'var(--text-primary)',
                   fontSize: '17px',
                   fontFamily: '"Barlow", sans-serif',
                   fontWeight: 700,
@@ -2415,7 +2426,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                       width: '32px',
                       height: '32px',
                       borderRadius: '8px',
-                      backgroundColor: 'rgba(255, 255, 255, 0.04)',
+                      backgroundColor: 'var(--bg-card-light)',
                       border: '1px solid rgba(255, 255, 255, 0.1)',
                       display: 'flex',
                       alignItems: 'center',
@@ -2428,8 +2439,8 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                       e.currentTarget.style.borderColor = 'rgba(0, 194, 255, 0.4)';
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.04)';
-                      e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                      e.currentTarget.style.backgroundColor = 'var(--bg-card-light)';
+                      e.currentTarget.style.borderColor = 'var(--border-light)';
                     }}
                   >
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(0, 194, 255, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -2445,12 +2456,12 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
       </div>
     </section>
 
-    <ServiceDetailEcosystemSection />
-    <ResultsImpactSection/>
-    <CaseStudiesSection/>
-    <ToolsPlatformSection />
-    <FAQSection/>
-    <FinalCTASection/>
+    <ServiceDetailEcosystemSection serviceName={currentKey} />
+    <ResultsImpactSection serviceName={currentKey} />
+    <CaseStudiesSection serviceName={currentKey} onNavigate={handleNavigate} />
+    <ToolsPlatformSection serviceName={currentKey} />
+    <FAQSection serviceName={currentKey} onNavigate={handleNavigate} />
+    <FinalCTASection serviceName={currentKey} onNavigate={handleNavigate} />
     <Footer onNavigate={handleNavigate} />
   </div>;
 };

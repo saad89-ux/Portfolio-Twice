@@ -62,7 +62,7 @@ export const GlobalMapSection: React.FC = () => {
       </span>
       
       <h2 style={{ 
-        color: '#ffffff', 
+        color: 'var(--text-primary)', 
         fontSize: '46px', 
         fontFamily: '"Barlow", sans-serif', 
         fontWeight: 800, 

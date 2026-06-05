@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { PageName } from './ServicedetailPage';
 
 const portfolioStats = [{
   value: '3000+',
@@ -64,7 +65,7 @@ const portfolioProjects = [{
   }]
 }];
 
-export const PortfolioSection: React.FC = () => {
+export const PortfolioSection: React.FC<{ onNavigate?: (page: PageName) => void }> = ({ onNavigate }) => {
   const [activePortfolioCategory, setActivePortfolioCategory] = useState('All Projects');
 
   return (
@@ -153,9 +154,9 @@ export const PortfolioSection: React.FC = () => {
             minWidth: '118px',
             padding: '14px 20px',
             borderRadius: '999px',
-            backgroundColor: activePortfolioCategory === category ? '#00c2ff' : 'rgba(255, 255, 255, 0.05)',
-            color: activePortfolioCategory === category ? 'white' : 'rgba(235, 239, 255, 0.8)',
-            border: activePortfolioCategory === category ? '1px solid #00c2ff' : '1px solid rgba(255, 255, 255, 0.08)',
+            backgroundColor: activePortfolioCategory === category ? '#00c2ff' : 'var(--bg-card-light)',
+            color: activePortfolioCategory === category ? 'var(--text-primary)' : 'var(--text-secondary)',
+            border: activePortfolioCategory === category ? '1px solid #00c2ff' : '1px solid var(--border-light)',
             cursor: 'pointer',
             fontFamily: '"Barlow", sans-serif',
             fontSize: '14px',
@@ -262,7 +263,7 @@ export const PortfolioSection: React.FC = () => {
                       </strong>
                     </div>)}
                 </div>
-                <button style={{
+                <button onClick={() => onNavigate && onNavigate('Contact')} style={{
                 padding: '14px 20px',
                 width: '100%',
                 backgroundColor: '#00c2ff',
@@ -285,7 +286,7 @@ export const PortfolioSection: React.FC = () => {
         maxWidth: '1230px',
         padding: '30px 36px',
         borderRadius: '40px',
-        background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02))',
+        background: 'var(--bg-card)',
         border: '1px solid var(--border-light)',
         display: 'flex',
         alignItems: 'center',
@@ -317,7 +318,7 @@ export const PortfolioSection: React.FC = () => {
                   Let’s build a strategy that grows your business.
                 </p>
             </div>
-            <button style={{
+            <button onClick={() => onNavigate && onNavigate('Contact')} style={{
             minWidth: '220px',
             padding: '16px 24px',
             borderRadius: '18px',

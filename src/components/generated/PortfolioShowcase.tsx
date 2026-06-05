@@ -1,4 +1,13 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { PortfolioHero } from './PortfolioHero';
+import { FeaturedResults } from './FeaturedResults';
+import { CapabilityFilter } from './CapabilityFilter';
+import { CaseStudyShowcase } from './CaseStudyShowcase';
+import { ClientSuccessStories } from './ClientSuccessStories';
+import { ResultsImpactSection } from './ResultsImpactSection';
+import { FAQSection } from './FAQSection';
+import { FinalCTASection } from './FinalCTASection';
 interface BaseComponentProps {
   className?: string;
   style?: React.CSSProperties;
@@ -171,224 +180,21 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
     }} />
 
       {/* Hero Section */}
-      <section style={{
-      width: '100%',
-      maxWidth: '1254px',
-      minHeight: '376px',
-      backgroundColor: 'var(--bg-secondary)',
-      borderRadius: '48px',
-      position: 'relative',
-      marginTop: '53px',
-      overflow: 'hidden',
-      zIndex: 1
-    }}>
-        <div style={{
-        position: 'absolute',
-        left: '-1px',
-        top: '5px',
-        width: '798px',
-        height: '471px'
-      }}>
-          <img src="https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/3566051e-2f6e-47ea-ba85-33a8a7200c69.png" alt="" style={{
-          width: '511px',
-          position: 'absolute',
-          left: 0,
-          top: 0,
-          opacity: 0.4
-        }} />
-          <img src="https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/3566051e-2f6e-47ea-ba85-33a8a7200c69.png" alt="" style={{
-          width: '511px',
-          position: 'absolute',
-          left: '287px',
-          top: '95px',
-          opacity: 0.4
-        }} />
-        </div>
-        <div style={{
-        padding: '93px 66px',
-        position: 'relative',
-        zIndex: 2
-      }}>
-          <h1 style={{
-          width: '386px',
-          color: 'rgba(255, 255, 255, 0.9)',
-          fontSize: '40px',
-          fontFamily: '"Barlow", sans-serif',
-          fontWeight: 700,
-          lineHeight: '48px',
-          margin: 0
-        }}>
-            Our Work, Your Future
-          </h1>
-          <p style={{
-          width: '567px',
-          color: 'rgba(255, 255, 255, 0.9)',
-          fontSize: '16px',
-          fontFamily: '"Barlow", sans-serif',
-          fontWeight: 400,
-          lineHeight: '24px',
-          marginTop: '39px'
-        }}>
-            From machine learning platforms to blockchain protocols and predictive analytics tools, here’s a selection of real-world solutions we’ve delivered for forward-thinking companies.
-          </p>
-        </div>
-        <img src="https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/73a3c308-d7e4-40c6-ab3e-bda587b9c25b.png" alt="Showcase" style={{
-        width: '353px',
-        position: 'absolute',
-        right: '123px',
-        top: '31px',
-        objectFit: 'cover'
-      }} />
-      </section>
+      <PortfolioHero />
 
-      {/* Filter Section */}
-      <section style={{
-      width: '100%',
-      maxWidth: '1226px',
-      marginTop: '129px',
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '51px',
-      zIndex: 2
-    }}>
-        <div style={{
-        textAlign: 'center'
-      }}>
-          <h2 style={{
-          color: 'var(--text-primary)',
-          fontSize: '36px',
-          fontFamily: '"Barlow", sans-serif',
-          fontWeight: 600,
-          margin: '0 0 12px 0'
-        }}>Our Case Studies</h2>
-          <p style={{
-          color: 'rgba(255, 255, 255, 0.9)',
-          fontSize: '16px',
-          fontFamily: '"Barlow", sans-serif',
-          maxWidth: '667px',
-          margin: '0 auto'
-        }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-          </p>
-        </div>
+      {/* Featured Results Section */}
+      <FeaturedResults />
 
-        <div style={{
-        display: 'flex',
-        gap: '55px',
-        alignItems: 'center'
-      }}>
-          <div style={{
-          flex: 1,
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: '10px 10px 10px 20px',
-          backgroundColor: 'var(--bg-secondary)',
-          borderRadius: '100px'
-        }}>
-            <input className="ca-interactive-input" type="text" placeholder="Search by keywords..." value={search} onChange={e => setSearch(e.target.value)} style={{
-            background: 'none',
-            border: 'none',
-            color: 'var(--text-primary)',
-            fontSize: '16px',
-            fontFamily: '"Barlow", sans-serif',
-            outline: 'none',
-            width: '80%'
-          }} />
-            <button className="ca-interactive-btn" style={{
-            width: '36px',
-            height: '36px',
-            backgroundColor: 'rgba(0, 194, 255, 1)',
-            borderRadius: '50%',
-            border: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer'
-          }}>
-              <img src="https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/3e2e75d1-fb1c-4af7-a790-459a095ff8d9.svg" alt="search" style={{
-              width: '20px'
-            }} />
-            </button>
-          </div>
+      {/* Capability Filter Section */}
+      <CapabilityFilter />
 
-          <div style={{
-          display: 'flex',
-          gap: '16px'
-        }}>
-            {['Machine Learning', 'Data Engineering'].map(cat => <button className="ca-interactive-btn" key={cat} onClick={() => setActiveCategory(activeCategory === cat ? null : cat)} style={{
-            height: '56px',
-            padding: '0 20px',
-            backgroundColor: 'var(--bg-secondary)',
-            borderRadius: '100px',
-            border: activeCategory === cat ? '1px solid rgba(0, 194, 255, 1)' : 'none',
-            color: 'rgba(255, 255, 255, 0.8)',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px',
-            cursor: 'pointer',
-            fontSize: '16px'
-          }}>
-                {cat}
-                <img src="https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/147ed9f5-4e21-4396-8837-fab8cf696a6a.svg" alt="arrow" />
-              </button>)}
-            <button className="ca-interactive-btn" onClick={() => {
-            setSearch('');
-            setActiveCategory(null);
-          }} style={{
-            height: '56px',
-            padding: '0 30px',
-            backgroundColor: 'rgba(0, 194, 255, 1)',
-            borderRadius: '100px',
-            border: 'none',
-            color: 'var(--text-primary)',
-            fontWeight: 500,
-            cursor: 'pointer'
-          }}>
-              Clear All
-            </button>
-          </div>
-        </div>
-        <div style={{
-        width: '100%',
-        height: '1px',
-        backgroundColor: 'rgba(255, 255, 255, 0.25)'
-      }} />
-      </section>
-
-      {/* Grid Section */}
-      <section style={{
-      width: '100%',
-      maxWidth: '1230px',
-      display: 'flex',
-      flexWrap: 'wrap',
-      gap: '58px',
-      justifyContent: 'center',
-      marginTop: '112px',
-      paddingBottom: '100px',
-      zIndex: 2
-    }}>
-        {caseStudies.map((project, idx) => <ProjectCard key={idx} {...project} />)}
-      </section>
-
-      {/* Loading Indicator */}
-      <div style={{
-      display: 'flex',
-      alignItems: 'center',
-      gap: '18px',
-      marginBottom: '134px',
-      opacity: 0.7
-    }}>
-        <img src="https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/e8ad544f-8dbc-4d42-8a10-82518a0ac489.svg" alt="loading" style={{
-        width: '24px',
-        animation: 'spin 2s linear infinite'
-      }} />
-        <span style={{
-        color: 'var(--text-primary)',
-        fontSize: '16px',
-        fontWeight: 500
-      }}>Loading...</span>
-      </div>
+      {/* Case Study Showcase Section */}
+      <CaseStudyShowcase />
+      <ResultsImpactSection/>
+      <ClientSuccessStories />
+      <FAQSection/>
+      <FinalCTASection/>
+      
 
       <style>{`
         @keyframes spin {

@@ -65,7 +65,7 @@ export const ServiceCategoriesSection: React.FC = () => {
   return (
     <section style={{
       width: '100%',
-      backgroundColor: '#03050a',
+      backgroundColor: 'var(--bg-primary)',
       boxSizing: 'border-box',
       display: 'flex',
       flexDirection: 'column',
@@ -169,7 +169,7 @@ export const ServiceCategoriesSection: React.FC = () => {
                   borderRadius: '18px',
                   overflow: 'hidden',
                   cursor: 'pointer',
-                  border: '1px solid rgba(255,255,255,0.06)',
+                  border: '1px solid var(--border-light)',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'flex-end',
@@ -213,7 +213,7 @@ export const ServiceCategoriesSection: React.FC = () => {
                   position: 'absolute',
                   top: '16px',
                   left: '16px',
-                  color: 'rgba(255,255,255,0.9)',
+                  color: 'var(--text-primary)',
                   fontSize: '13px',
                   fontWeight: 800,
                   fontFamily: InterFont,
@@ -244,7 +244,7 @@ export const ServiceCategoriesSection: React.FC = () => {
                   </h3>
                   <p style={{
                     margin: 0,
-                    color: 'rgba(255,255,255,0.65)',
+                    color: 'var(--text-muted)',
                     fontSize: '12px',
                     fontFamily: BarlowFont,
                     lineHeight: '18px',
@@ -279,9 +279,9 @@ export const ServiceCategoriesSection: React.FC = () => {
       <div style={{
         width: '100%',
         marginTop: '60px',
-        backgroundColor: '#050816',
-        borderTop: '1px solid rgba(255,255,255,0.04)',
-        borderBottom: '1px solid rgba(255,255,255,0.04)',
+        backgroundColor: 'var(--bg-secondary)',
+        borderTop: '1px solid var(--border-light)',
+        borderBottom: '1px solid var(--border-light)',
         padding: '48px clamp(24px, 5vw, 80px)',
         boxSizing: 'border-box',
         display: 'flex',
@@ -313,7 +313,7 @@ export const ServiceCategoriesSection: React.FC = () => {
             <button className="ca-hover-popup" style={{
               alignSelf: 'flex-start',
               background: 'none',
-              border: '1px solid rgba(255,255,255,0.12)',
+              border: '1px solid var(--border-light)',
               borderRadius: '100px',
               padding: '10px 24px 10px 10px',
               display: 'flex',
@@ -345,7 +345,7 @@ export const ServiceCategoriesSection: React.FC = () => {
                   </span>
                 </div>
                 {i < stats.length - 1 && (
-                  <div style={{ width: '1px', height: '48px', backgroundColor: 'rgba(255,255,255,0.06)', flexShrink: 0 }} />
+                  <div style={{ width: '1px', height: '48px', backgroundColor: 'var(--border-light)', flexShrink: 0 }} />
                 )}
               </React.Fragment>
             ))}

@@ -93,7 +93,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
         gap: '24px'
       }}>
           <h2 style={{
-          color: 'rgba(255, 255, 255, 0.96)',
+          color: 'var(--text-primary)',
           fontSize: 'clamp(40px, 4vw, 64px)',
           fontFamily: '"Inter", sans-serif',
           fontWeight: 700,
@@ -109,7 +109,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
           maxWidth: '640px'
         }}>
             <p style={{
-            color: 'rgba(255, 255, 255, 0.88)',
+            color: 'var(--text-primary)',
             fontSize: '20px',
             fontFamily: BarlowFont,
             fontWeight: 500,
@@ -119,7 +119,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
               I turn strategies into real results and businesses into market leaders.
             </p>
             <p style={{
-            color: 'rgba(228, 233, 244, 0.88)',
+            color: 'var(--text-muted)',
             fontSize: '16px',
             fontFamily: BarlowFont,
             fontWeight: 400,
@@ -156,7 +156,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
                 {stat.value}
               </span>
               <span style={{
-              color: 'rgba(255, 255, 255, 0.78)',
+              color: 'var(--text-muted)',
               fontSize: '14px',
               fontFamily: BarlowFont,
               fontWeight: 500,
@@ -200,7 +200,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
               Muhammad Ahsan
             </span>
             <span style={{
-            color: 'rgba(255, 255, 255, 0.72)',
+            color: 'var(--text-muted)',
             fontSize: '14px',
             fontFamily: BarlowFont,
             fontWeight: 500,
@@ -250,8 +250,8 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
             gap: '10px',
             padding: '12px 16px',
             borderRadius: '999px',
-            backgroundColor: 'rgba(255, 255, 255, 0.08)',
-            border: '1px solid rgba(255, 255, 255, 0.14)',
+            backgroundColor: 'var(--bg-card)',
+            border: '1px solid var(--border-light)',
             color: 'var(--text-primary)',
             width: 'fit-content'
           }}>
@@ -281,7 +281,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
               borderRadius: '24px',
               backgroundColor: 'rgba(0, 194, 255, 0.16)',
               border: '1px solid rgba(0, 194, 255, 0.24)',
-              color: 'rgba(255, 255, 255, 0.95)',
+              color: 'var(--text-primary)',
               fontFamily: BarlowFont,
               fontWeight: 600,
               fontSize: '14px'
@@ -291,9 +291,9 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
               <div style={{
               padding: '14px 18px',
               borderRadius: '24px',
-              backgroundColor: 'rgba(255, 255, 255, 0.08)',
+              backgroundColor: 'var(--bg-card)',
               border: '1px solid var(--border-light)',
-              color: 'rgba(255, 255, 255, 0.9)',
+              color: 'var(--text-primary)',
               fontFamily: BarlowFont,
               fontWeight: 600,
               fontSize: '14px'
@@ -319,8 +319,8 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
             gap: '12px',
             padding: '14px 18px',
             borderRadius: '999px',
-            border: '1px solid rgba(255, 255, 255, 0.16)',
-            backgroundColor: 'rgba(255, 255, 255, 0.08)',
+            border: '1px solid var(--border-light)',
+            backgroundColor: 'var(--bg-card)',
             color: 'var(--text-primary)',
             fontFamily: BarlowFont,
             fontWeight: 600,
@@ -342,7 +342,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
               </span>
               Watch My Story
               <span style={{
-              color: 'rgba(255, 255, 255, 0.72)',
+              color: 'var(--text-muted)',
               fontSize: '13px',
               fontWeight: 500
             }}>
@@ -356,7 +356,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
             gap: '20px',
             padding: '20px 24px',
             borderRadius: '32px',
-            backgroundColor: 'rgba(255, 255, 255, 0.08)',
+            backgroundColor: 'var(--bg-card)',
             border: '1px solid var(--border-light)'
           }}>
               <div style={{
@@ -385,7 +385,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
                   </span>
                 </div>
                 <span style={{
-                color: 'rgba(255, 255, 255, 0.75)',
+                color: 'var(--text-muted)',
                 fontSize: '13px',
                 fontFamily: BarlowFont,
                 fontWeight: 500
@@ -410,12 +410,11 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
                     borderRadius: '999px',
                     objectFit: 'cover',
                     border: '2px solid rgba(6, 8, 22, 1)',
-                    position: 'relative',
                     left: `${index * -12}px`
                   }} />)}
                 </div>
                 <span style={{
-                color: 'rgba(255, 255, 255, 0.82)',
+                color: 'var(--text-muted)',
                 fontSize: '14px',
                 fontFamily: BarlowFont,
                 fontWeight: 500

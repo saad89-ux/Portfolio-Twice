@@ -1,8 +1,9 @@
 import React from 'react';
+import { PageName } from './ServicedetailPage';
 
 const clientAvatars = ['3a9e176a-3863-474d-a596-d593c4d569ea.png', '998d15ff-acf1-4ed8-b332-f13d639b3e03.png', '363356fa-f16d-41aa-99ea-3c436d6bc5df.png'];
 
-export const HeroSection: React.FC = () => {
+export const HeroSection: React.FC<{ onNavigate?: (page: PageName) => void }> = ({ onNavigate }) => {
   return (
       <>
       {/* Hero Section */}
@@ -61,7 +62,7 @@ export const HeroSection: React.FC = () => {
             </span>
           </h1>
           <p className="hero-p" style={{
-          color: 'rgba(255, 255, 255, 0.8)',
+          color: 'var(--text-muted)',
           fontSize: '20px',
           fontFamily: '"Barlow", sans-serif',
           fontWeight: 400,
@@ -71,7 +72,7 @@ export const HeroSection: React.FC = () => {
         }}>
             Leverage the power of machine learning and AI to unlock insights and drive business growth
           </p>
-          <button className="primary-btn hero-cta-btn" style={{
+          <button onClick={() => onNavigate && onNavigate('Contact')} className="primary-btn hero-cta-btn" style={{
           width: '165px',
           height: '42px',
           padding: '0',
@@ -107,14 +108,14 @@ export const HeroSection: React.FC = () => {
               width: '24px',
               height: '24px',
               borderRadius: '100px',
-              border: '2px solid rgba(3, 3, 3, 1)',
+              border: '2px solid var(--bg-primary)',
               position: 'absolute',
               left: `${i * 17}px`,
               objectFit: 'cover'
             }} alt="Client" />)}
             </div>
             <span style={{
-            color: 'rgba(255, 255, 255, 0.8)',
+            color: 'var(--text-muted)',
             fontSize: '14px',
             fontFamily: '"Inter", sans-serif',
             fontWeight: 400,

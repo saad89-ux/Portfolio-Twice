@@ -201,7 +201,7 @@ export const TestimonialsSection: React.FC = () => {
                     overflow: 'hidden',
                     cursor: 'pointer',
                     transition: 'all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                    border: isActive ? '3px solid #00c2ff' : '3px solid rgba(255,255,255,0.1)',
+                    border: isActive ? '3px solid #00c2ff' : '3px solid var(--border-light)',
                     filter: isActive ? 'brightness(1) saturate(1)' : 'brightness(0.55) saturate(0.8)',
                     transform: isActive ? 'scale(1.18)' : 'scale(1)',
                     boxShadow: isActive ? '0 0 0 5px rgba(0, 194, 255, 0.25), 0 0 30px rgba(0, 194, 255, 0.35), 0 8px 32px rgba(0,0,0,0.5)' : 'none',
@@ -229,7 +229,7 @@ export const TestimonialsSection: React.FC = () => {
                   height: '48px',
                   borderRadius: '50%',
                   overflow: 'hidden',
-                  border: isActive ? '2px solid #00c2ff' : '2px solid rgba(255,255,255,0.1)',
+                  border: isActive ? '2px solid #00c2ff' : '2px solid var(--border-light)',
                   filter: isActive ? 'brightness(1) saturate(1)' : 'brightness(0.55) saturate(0.8)',
                   transform: isActive ? 'scale(1.15)' : 'scale(1)',
                   transition: 'all 0.3s ease',
@@ -283,7 +283,7 @@ export const TestimonialsSection: React.FC = () => {
               <p style={{
                 fontSize: '17px',
                 lineHeight: 1.75,
-                color: 'rgba(255,255,255,0.78)',
+                color: 'var(--text-secondary)',
                 fontStyle: 'italic',
                 margin: 0,
                 fontFamily: '"Barlow", sans-serif'
@@ -308,7 +308,7 @@ export const TestimonialsSection: React.FC = () => {
                 }}>{activeTestimonial.name}, {activeTestimonial.title}</div>
                 <div style={{
                   fontSize: '12px',
-                  color: 'rgba(255,255,255,0.45)',
+                  color: 'var(--text-muted)',
                   letterSpacing: '2px',
                   textTransform: 'uppercase',
                   marginTop: '4px',
@@ -323,7 +323,7 @@ export const TestimonialsSection: React.FC = () => {
                   width: idx === activeIndex ? '28px' : '8px',
                   height: '8px',
                   borderRadius: idx === activeIndex ? '4px' : '50%',
-                  background: idx === activeIndex ? '#00c2ff' : 'rgba(255,255,255,0.18)',
+                  background: idx === activeIndex ? '#00c2ff' : 'var(--border-light)',
                   cursor: 'pointer',
                   transition: 'all 0.3s ease'
                 }} />

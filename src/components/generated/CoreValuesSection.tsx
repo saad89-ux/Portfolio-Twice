@@ -137,7 +137,7 @@ export const CoreValuesSection: React.FC = () => {
         {/* Top Header */}
         <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <div style={{ width: '40px', height: '1px', backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
+            <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--border-light)' }} />
             <span
               style={{
                 color: '#00c2ff',
@@ -150,7 +150,7 @@ export const CoreValuesSection: React.FC = () => {
             >
               Core Values
             </span>
-            <div style={{ width: '40px', height: '1px', backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
+            <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--border-light)' }} />
           </div>
 
           <h2
@@ -216,7 +216,7 @@ export const CoreValuesSection: React.FC = () => {
               >
                 OUR PROMISE
               </span>
-              <div style={{ width: '40px', height: '1px', backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
+              <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--border-light)' }} />
             </div>
 
             <h3
@@ -268,7 +268,7 @@ export const CoreValuesSection: React.FC = () => {
                   width: '32px',
                   height: '32px',
                   borderRadius: '50%',
-                  border: '1px solid rgba(255,255,255,0.4)',
+                  border: '1px solid var(--border-light-alt)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -311,8 +311,8 @@ export const CoreValuesSection: React.FC = () => {
                   flexShrink: 0,
                   width: card.active ? '360px' : '280px',
                   borderRadius: '24px',
-                  border: card.active ? '1px solid #00c2ff' : '1px solid rgba(255,255,255,0.08)',
-                  backgroundColor: card.active ? 'rgba(0, 194, 255, 0.05)' : '#050816',
+                  border: card.active ? '1px solid #00c2ff' : '1px solid var(--border-light)',
+                  backgroundColor: card.active ? 'rgba(0, 194, 255, 0.05)' : 'var(--bg-card)',
                   boxShadow: card.active ? '0 0 40px rgba(0, 194, 255, 0.2), inset 0 0 20px rgba(0, 194, 255, 0.1)' : 'none',
                   padding: '40px 32px',
                   display: 'flex',
@@ -353,7 +353,7 @@ export const CoreValuesSection: React.FC = () => {
                   {card.active && <div style={{ width: '40px', height: '2px', backgroundColor: '#00c2ff' }} />}
                   <p
                     style={{
-                      color: card.active ? 'rgba(235, 239, 255, 0.9)' : 'rgba(235, 239, 255, 0.6)',
+                      color: card.active ? 'var(--text-primary)' : 'var(--text-muted)',
                       fontSize: '14px',
                       lineHeight: '24px',
                       fontFamily: BarlowFont,
@@ -414,8 +414,8 @@ export const CoreValuesSection: React.FC = () => {
         <div
           style={{
             marginTop: '20px',
-            background: 'linear-gradient(90deg, rgba(8, 12, 32, 0.8) 0%, rgba(12, 16, 42, 0.95) 50%, rgba(8, 12, 32, 0.8) 100%)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
+            background: 'var(--bg-card-alt)',
+            border: '1px solid var(--border-light)',
             borderRadius: '24px',
             padding: '32px 48px',
             display: 'flex',
@@ -423,7 +423,7 @@ export const CoreValuesSection: React.FC = () => {
             justifyContent: 'space-between',
             flexWrap: 'wrap',
             gap: '40px',
-            boxShadow: '0 24px 48px rgba(0, 0, 0, 0.3)',
+            boxShadow: '0 24px 48px rgba(0, 0, 0, 0.08)',
           }}
         >
           {/* Left Quote */}
@@ -466,8 +466,8 @@ export const CoreValuesSection: React.FC = () => {
                   {feat.icon}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                  <span style={{ color: 'rgba(235, 239, 255, 0.6)', fontSize: '12px', fontFamily: BarlowFont }}>{feat.text1}</span>
-                  <span style={{ color: '#ffffff', fontSize: '13px', fontWeight: 600, fontFamily: BarlowFont }}>{feat.text2}</span>
+                  <span style={{ color: 'var(--text-muted)', fontSize: '12px', fontFamily: BarlowFont }}>{feat.text1}</span>
+                  <span style={{ color: 'var(--text-primary)', fontSize: '13px', fontWeight: 600, fontFamily: BarlowFont }}>{feat.text2}</span>
                 </div>
               </div>
             ))}

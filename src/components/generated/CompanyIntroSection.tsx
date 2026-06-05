@@ -94,9 +94,9 @@ export const CompanyIntroSection: React.FC = () => {
             minHeight: '560px',
             borderRadius: '32px',
             overflow: 'hidden',
-            backgroundColor: 'rgba(8, 12, 32, 0.95)',
-            border: '1px solid rgba(0, 194, 255, 0.12)',
-            boxShadow: '0 32px 80px rgba(0, 0, 0, 0.4)',
+            backgroundColor: 'var(--bg-card)',
+            border: '1px solid var(--border-light)',
+            boxShadow: '0 32px 80px rgba(0, 0, 0, 0.1)',
           }}
         >
           {/* Background office image */}
@@ -185,8 +185,8 @@ export const CompanyIntroSection: React.FC = () => {
                 gap: '12px',
                 padding: '14px 18px',
                 borderRadius: '16px',
-                backgroundColor: 'rgba(10, 12, 32, 0.85)',
-                border: '1px solid rgba(0, 194, 255, 0.18)',
+                backgroundColor: 'var(--bg-card)',
+                border: '1px solid var(--border-light)',
                 backdropFilter: 'blur(12px)',
                 maxWidth: '260px',
                 cursor: 'default',
@@ -210,7 +210,7 @@ export const CompanyIntroSection: React.FC = () => {
               <div>
                 <div
                   style={{
-                    color: '#ffffff',
+                    color: 'var(--text-primary)',
                     fontSize: '14px',
                     fontWeight: 700,
                     fontFamily: BarlowFont,
@@ -221,7 +221,7 @@ export const CompanyIntroSection: React.FC = () => {
                 </div>
                 <div
                   style={{
-                    color: 'rgba(235, 239, 255, 0.6)',
+                    color: 'var(--text-muted)',
                     fontSize: '12px',
                     fontFamily: BarlowFont,
                     lineHeight: '16px',
@@ -363,8 +363,8 @@ export const CompanyIntroSection: React.FC = () => {
               gap: '16px',
               padding: '24px',
               borderRadius: '20px',
-              backgroundColor: 'rgba(8, 12, 32, 0.95)',
-              border: '1px solid rgba(0, 194, 255, 0.12)',
+              backgroundColor: 'var(--bg-card-alt)',
+              border: '1px solid var(--border-light)',
               marginTop: '8px',
             }}
           >
@@ -378,7 +378,7 @@ export const CompanyIntroSection: React.FC = () => {
                   paddingLeft: idx > 0 ? '16px' : '0',
                   borderLeft:
                     idx > 0
-                      ? '1px solid rgba(255, 255, 255, 0.08)'
+                      ? '1px solid var(--border-light)'
                       : 'none',
                 }}
               >

@@ -135,8 +135,8 @@ export const IndustriesSection = () => {
               opacity: idx === activeIndex ? 1 : 0.35,
               borderLeft:
                 idx === activeIndex
-                  ? '4px solid #00c2ff'
-                  : '1px solid rgba(255,255,255,.08)',
+                  ? '4px solid var(--accent-blue, #00c2ff)'
+                  : '1px solid var(--border-light)',
             }}
           >
             <p style={{ color: 'var(--text-muted)', marginBottom: 16, letterSpacing: '0.1em' }}>
@@ -145,7 +145,7 @@ export const IndustriesSection = () => {
             <h2
               style={{
                 fontSize: '56px',
-                color: idx === activeIndex ? '#00c2ff' : 'rgba(255,255,255,.4)',
+                color: idx === activeIndex ? 'var(--accent-blue, #00c2ff)' : 'var(--text-muted)',
                 marginBottom: 24,
                 transition: '.4s',
               }}
@@ -154,7 +154,7 @@ export const IndustriesSection = () => {
             </h2>
             <p
               style={{
-                color: 'rgba(255,255,255,.75)',
+                color: 'var(--text-secondary)',
                 fontSize: '18px',
                 lineHeight: 1.8,
                 maxWidth: '600px',

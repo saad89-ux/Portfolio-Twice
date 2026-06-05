@@ -106,7 +106,7 @@ const GrowthChart = ({ compact }: { compact?: boolean }) => (
 ──────────────────────────────────────────────────── */
 export const ServiceProcessSection: React.FC = () => {
   return (
-    <section style={{ width: '100%', backgroundColor: '#03050a', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
+    <section style={{ width: '100%', backgroundColor: 'var(--bg-primary)', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
 
       {/* ═════════ SECTION 1: Hero + Tower ═════════ */}
       <div style={{ width: '100%', padding: '100px clamp(24px,5vw,80px) 60px', boxSizing: 'border-box', display: 'flex', justifyContent: 'center', position: 'relative' }}>
@@ -140,9 +140,9 @@ export const ServiceProcessSection: React.FC = () => {
             </div>
 
             {/* Numbered process list */}
-            <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '8px' }}>
+            <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '8px' }}>
               {processSteps.map((step, i) => (
-                <div key={i} className="ca-hover-popup" style={{ display: 'flex', gap: '20px', padding: '18px 0', borderBottom: '1px solid rgba(255,255,255,0.04)', cursor: 'pointer' }}>
+                <div key={i} className="ca-hover-popup" style={{ display: 'flex', gap: '20px', padding: '18px 0', borderBottom: '1px solid var(--border-light)', cursor: 'pointer' }}>
                   <span style={{ color: '#00c2ff', fontSize: '22px', fontWeight: 800, fontFamily: InterFont, minWidth: '36px', lineHeight: 1 }}>{step.num}</span>
                   <div>
                     <span style={{ display: 'block', color: 'var(--text-primary)', fontSize: '15px', fontWeight: 700, fontFamily: InterFont, marginBottom: '4px' }}>{step.title}</span>
@@ -156,7 +156,7 @@ export const ServiceProcessSection: React.FC = () => {
           {/* RIGHT: Tower + stats card */}
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '32px', position: 'relative' }}>
             {/* Top-right mini stats card */}
-            <div style={{ alignSelf: 'flex-end', backgroundColor: '#070a18', border: '1px solid rgba(0,194,255,0.15)', borderRadius: '16px', padding: '16px 24px', display: 'flex', gap: '32px' }}>
+            <div style={{ alignSelf: 'flex-end', backgroundColor: 'var(--bg-secondary)', border: '1px solid rgba(0,194,255,0.15)', borderRadius: '16px', padding: '16px 24px', display: 'flex', gap: '32px' }}>
               {[['+350%','Avg ROI'],['250+','Clients'],['98%','Retain']].map(([v,l],i) => (
                 <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
                   <span style={{ color: '#00c2ff', fontSize: '18px', fontWeight: 800, fontFamily: InterFont }}>{v}</span>
@@ -181,7 +181,7 @@ export const ServiceProcessSection: React.FC = () => {
       <div style={{ width: '100%', padding: '0 clamp(24px,5vw,80px)', boxSizing: 'border-box', display: 'flex', justifyContent: 'center' }}>
         <div style={{ maxWidth: '1400px', width: '100%', display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: '14px' }}>
           {approaches.map((item, i) => (
-            <div key={i} className="ca-interactive-card" style={{ backgroundColor: '#070a18', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '18px', overflow: 'hidden', cursor: 'pointer' }}>
+            <div key={i} className="ca-interactive-card" style={{ backgroundColor: 'var(--bg-card)', border: '1px solid var(--border-light)', borderRadius: '18px', overflow: 'hidden', cursor: 'pointer' }}>
               {/* Photo */}
               <div style={{ width: '100%', height: '170px', position: 'relative', overflow: 'hidden' }}>
                 <img src={item.img} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.7) saturate(0.8)' }} />
@@ -207,9 +207,9 @@ export const ServiceProcessSection: React.FC = () => {
             {processSteps.map((step, i) => (
               <div key={i} className="ca-hover-popup" style={{
                 display: 'flex', gap: '18px', padding: '20px 24px',
-                backgroundColor: '#070a18',
+                backgroundColor: 'var(--bg-card)',
                 borderRadius: '12px', marginBottom: '8px',
-                border: '1px solid rgba(255,255,255,0.04)',
+                border: '1px solid var(--border-light)',
                 cursor: 'pointer',
                 transition: 'border-color 0.3s ease',
               }}>
@@ -232,11 +232,11 @@ export const ServiceProcessSection: React.FC = () => {
             {/* Cyan tint overlay */}
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(0,194,255,0.15) 0%, rgba(3,5,10,0.4) 100%)' }} />
             {/* Floating data cards */}
-            <div style={{ position: 'absolute', top: '24px', right: '24px', backgroundColor: 'rgba(5,8,22,0.9)', border: '1px solid rgba(0,194,255,0.3)', borderRadius: '14px', padding: '18px 22px' }}>
+            <div style={{ position: 'absolute', top: '24px', right: '24px', backgroundColor: 'var(--bg-primary)', border: '1px solid rgba(0,194,255,0.3)', borderRadius: '14px', padding: '18px 22px' }}>
               <span style={{ color: 'var(--text-muted)', fontSize: '10px', fontFamily: BarlowFont, display: 'block', marginBottom: '6px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Campaign ROI</span>
               <span style={{ color: '#00c2ff', fontSize: '28px', fontWeight: 800, fontFamily: InterFont }}>+350%</span>
             </div>
-            <div style={{ position: 'absolute', bottom: '24px', left: '24px', backgroundColor: 'rgba(5,8,22,0.9)', border: '1px solid rgba(0,194,255,0.15)', borderRadius: '14px', padding: '16px 20px', display: 'flex', gap: '24px' }}>
+            <div style={{ position: 'absolute', bottom: '24px', left: '24px', backgroundColor: 'var(--bg-primary)', border: '1px solid rgba(0,194,255,0.15)', borderRadius: '14px', padding: '16px 20px', display: 'flex', gap: '24px' }}>
               {[['$8.4M','Revenue'],['4.6X','ROAS'],['98%','Retention']].map(([v,l],i) => (
                 <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
                   <span style={{ color: '#00c2ff', fontSize: '18px', fontWeight: 800, fontFamily: InterFont }}>{v}</span>
@@ -265,7 +265,7 @@ export const ServiceProcessSection: React.FC = () => {
               </p>
             </div>
             <button className="ca-hover-popup" style={{
-              alignSelf: 'flex-start', background: 'none', border: '1px solid rgba(255,255,255,0.1)',
+              alignSelf: 'flex-start', background: 'none', border: '1px solid var(--border-light)',
               borderRadius: '100px', padding: '10px 28px 10px 10px',
               display: 'flex', alignItems: 'center', gap: '14px',
               color: 'var(--text-primary)', fontSize: '14px', fontWeight: 600, fontFamily: BarlowFont, cursor: 'pointer',
@@ -287,7 +287,7 @@ export const ServiceProcessSection: React.FC = () => {
           </div>
 
           {/* Right: Growth chart card */}
-          <div style={{ backgroundColor: '#070a18', border: '1px solid rgba(0,194,255,0.1)', borderRadius: '24px', padding: '32px', boxSizing: 'border-box' }}>
+          <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid rgba(0,194,255,0.1)', borderRadius: '24px', padding: '32px', boxSizing: 'border-box' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
               <div>
                 <span style={{ color: 'var(--text-primary)', fontSize: '16px', fontWeight: 700, fontFamily: InterFont, display: 'block' }}>Grow With Your Plan</span>
@@ -312,7 +312,7 @@ export const ServiceProcessSection: React.FC = () => {
       </div>
 
       {/* ═════════ SECTION 5: Trusted Brands Footer ═════════ */}
-      <div style={{ width: '100%', backgroundColor: '#050816', borderTop: '1px solid rgba(255,255,255,0.04)', padding: '48px clamp(24px,5vw,80px)', boxSizing: 'border-box', display: 'flex', justifyContent: 'center' }}>
+      <div style={{ width: '100%', backgroundColor: 'var(--bg-secondary)', borderTop: '1px solid var(--border-light)', padding: '48px clamp(24px,5vw,80px)', boxSizing: 'border-box', display: 'flex', justifyContent: 'center' }}>
         <div style={{ maxWidth: '1400px', width: '100%', display: 'grid', gridTemplateColumns: 'auto 1fr auto', gap: '60px', alignItems: 'center' }}>
 
           {/* Label */}
@@ -342,7 +342,7 @@ export const ServiceProcessSection: React.FC = () => {
 
           {/* Testimonial */}
           <div style={{ maxWidth: '300px' }}>
-            <p style={{ margin: 0, color: 'rgba(255,255,255,0.75)', fontSize: '14px', fontFamily: BarlowFont, lineHeight: '22px', fontStyle: 'italic' }}>
+            <p style={{ margin: 0, color: 'var(--text-muted)', fontSize: '14px', fontFamily: BarlowFont, lineHeight: '22px', fontStyle: 'italic' }}>
               "Their process didn't just run campaigns — it built a growth machine that we still benefit from today. The ROI was 8x within 6 months."
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '14px' }}>

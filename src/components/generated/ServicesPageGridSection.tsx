@@ -295,9 +295,17 @@ export const ServicesPageGridSection: React.FC<{ onNavigate?: (page: string) => 
               boxShadow: '0 10px 30px rgba(0,0,0,0.2)'
             }}
             onClick={() => {
-              if (item.title.includes('SEO') && onNavigate) {
-                onNavigate('SEO & ORGANIC GROWTH');
-              }
+              if (!onNavigate) return;
+              const titleMap: Record<string, string> = {
+                'SEO &\nOrganic Growth': 'SEO & ORGANIC GROWTH',
+                'Performance\nMarketing': 'PERFORMANCE MARKETING',
+                'Web Design &\nDevelopment': 'WEB DESIGN & DEVELOPMENT',
+                'Brand Strategy &\nIdentity': 'BRAND STRATEGY & IDENTITY',
+                'Content\nMarketing': 'CONTENT MARKETING',
+                'Marketing Automation\n& CRM': 'MARKETING AUTOMATION & CRM'
+              };
+              const pageName = titleMap[item.title];
+              if (pageName) onNavigate(pageName);
             }}
             >
               {/* Graphic background area (right side) */}

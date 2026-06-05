@@ -53,8 +53,7 @@ export const TrustSection: React.FC = () => {
         position: 'relative',
         minHeight: '600px',
         borderRadius: '40px',
-        overflow: 'hidden',
-        backgroundColor: 'rgba(255, 255, 255, 0.04)',
+        backgroundColor: 'var(--bg-card-light)',
         border: '1px solid var(--border-light)'
       }}>
           <img className="ca-hover-popup" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=80" alt="Marketing strategist portrait" style={{
@@ -93,8 +92,7 @@ export const TrustSection: React.FC = () => {
             gap: '12px',
             padding: '14px 20px',
             borderRadius: '18px',
-            border: '1px solid rgba(255, 255, 255, 0.14)',
-            backgroundColor: 'rgba(255, 255, 255, 0.08)',
+            backgroundColor: 'var(--bg-card)',
             color: 'var(--text-primary)',
             fontFamily: '"Barlow", sans-serif',
             fontWeight: 600,
@@ -123,9 +121,8 @@ export const TrustSection: React.FC = () => {
           right: '28px',
           zIndex: 2,
           display: 'flex',
-          flexDirection: 'column',
           gap: '16px',
-          backgroundColor: 'rgba(0, 0, 0, 0.48)',
+          backgroundColor: 'var(--bg-card)',
           borderRadius: '28px',
           padding: '26px',
           backdropFilter: 'blur(10px)'
@@ -141,7 +138,7 @@ export const TrustSection: React.FC = () => {
               Results · Trust · Growth
             </span>
             <p style={{
-            color: 'rgba(255, 255, 255, 0.92)',
+            color: 'var(--text-primary)',
             fontSize: '18px',
             fontFamily: '"Barlow", sans-serif',
             fontWeight: 600,
@@ -178,7 +175,7 @@ export const TrustSection: React.FC = () => {
             backgroundColor: 'rgba(0, 194, 255, 1)'
           }} />
             <p style={{
-            color: 'rgba(225, 230, 245, 0.92)',
+            color: 'var(--text-secondary)',
             fontSize: '16px',
             fontFamily: '"Barlow", sans-serif',
             fontWeight: 400,
@@ -189,7 +186,7 @@ export const TrustSection: React.FC = () => {
             </p>
           </div>
           <p style={{
-          color: 'rgba(210, 215, 235, 0.85)',
+          color: 'var(--text-muted)',
           fontSize: '16px',
           fontFamily: '"Barlow", sans-serif',
           fontWeight: 400,
@@ -224,9 +221,9 @@ export const TrustSection: React.FC = () => {
             gap: '10px',
             padding: '14px 22px',
             borderRadius: '16px',
-            backgroundColor: 'rgba(255, 255, 255, 0.08)',
-            border: '1px solid rgba(255, 255, 255, 0.14)',
-            color: 'rgba(255, 255, 255, 0.94)',
+            backgroundColor: 'var(--bg-card-light)',
+            border: '1px solid var(--border-light)',
+            color: 'var(--text-primary)',
             fontFamily: '"Barlow", sans-serif',
             fontWeight: 600,
             cursor: 'pointer'
@@ -241,8 +238,8 @@ export const TrustSection: React.FC = () => {
       marginTop: '56px',
       padding: '28px',
       borderRadius: '36px',
-      backgroundColor: 'rgba(255, 255, 255, 0.05)',
-      border: '1px solid rgba(255, 255, 255, 0.09)'
+      backgroundColor: 'var(--bg-card)',
+      border: '1px solid var(--border-light)'
     }}>
         <div style={{
         display: 'grid',
@@ -256,7 +253,7 @@ export const TrustSection: React.FC = () => {
           gap: '10px',
           padding: '22px 18px',
           borderRadius: '28px',
-          backgroundColor: '#080c20',
+          backgroundColor: 'var(--bg-secondary)',
           border: '1px solid var(--border-light)'
         }}>
             <img src={stat.icon} alt="" style={{
@@ -272,7 +269,7 @@ export const TrustSection: React.FC = () => {
               {stat.value}
             </span>
             <span style={{
-            color: 'rgba(225, 230, 245, 0.8)',
+            color: 'var(--text-muted)',
             fontSize: '13px',
             fontFamily: '"Barlow", sans-serif',
             fontWeight: 500
@@ -287,7 +284,7 @@ export const TrustSection: React.FC = () => {
       marginTop: '32px',
       padding: '28px 30px',
       borderRadius: '36px',
-      backgroundColor: 'rgba(255, 255, 255, 0.06)',
+      backgroundColor: 'var(--bg-card)',
       border: '1px solid var(--border-light)',
       display: 'flex',
       alignItems: 'center',
@@ -312,7 +309,7 @@ export const TrustSection: React.FC = () => {
           </span>
           <div>
             <p style={{
-            color: 'rgba(255, 255, 255, 0.9)',
+            color: 'var(--text-primary)',
             fontSize: '16px',
             fontFamily: '"Barlow", sans-serif',
             fontWeight: 400,
@@ -341,13 +338,13 @@ export const TrustSection: React.FC = () => {
           height: '48px',
           borderRadius: '999px',
           objectFit: 'cover',
-          border: '2px solid #070b1e',
+          border: '2px solid var(--bg-card)',
           position: 'relative',
           left: `${index * -14}px`
         }} />)}
           <div style={{
           marginLeft: '16px',
-          color: 'rgba(255, 255, 255, 0.88)',
+          color: 'var(--text-primary)',
           fontFamily: '"Barlow", sans-serif',
           fontWeight: 600,
           fontSize: '14px'

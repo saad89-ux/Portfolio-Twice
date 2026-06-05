@@ -11,168 +11,260 @@ const COLORS = {
   cyan: '#00c2ff',
   blueBright: '#1a73ff',
   blueSoft: '#78b9ff',
-  bgDark: '#070b1e',
-  bgDarkDeep: '#030303',
-  surface: '#080c20',
-  surfaceAlt: '#10122b',
-  cardDark: '#141428',
-  white: '#ffffff',
-  textMuted: 'rgba(235, 239, 255, 0.78)',
-  textSoft: '#adb7d0',
-  textDark: '#141414',
-  textGrey: '#858585',
-  lightBg: '#ffffff',
-  lightCard: '#ffffff',
+  bgDark: 'var(--bg-secondary)',
+  bgDarkDeep: 'var(--bg-primary)',
+  surface: 'var(--bg-card-alt)',
+  surfaceAlt: 'var(--bg-card)',
+  cardDark: 'var(--bg-card-light)',
+  white: 'var(--text-primary)',
+  actualWhite: 'var(--bg-card)',
+  textMuted: 'var(--text-muted)',
+  textSoft: 'var(--text-secondary)',
+  textDark: 'var(--text-primary)',
+  textGrey: 'var(--text-muted)',
+  lightBg: 'var(--bg-primary)',
+  lightCard: 'var(--bg-card)',
 };
 
-const ecosystemLeft = [
-  {
-    title: 'STRATEGY & PLANNING',
-    desc: 'Align teams to your goals with clear strategic roadmaps.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <circle cx="12" cy="12" r="6" />
-        <circle cx="12" cy="12" r="2" />
-      </svg>
-    ),
-    angle: -55,
-  },
-  {
-    title: 'CONTENT & MESSAGING',
-    desc: 'Craft compelling content that resonates and drives action.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 20h9" />
-        <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
-      </svg>
-    ),
-    angle: 0,
-  },
-  {
-    title: 'TECHNOLOGY & TOOLS',
-    desc: 'Leverage the right tools and platforms for operational success.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-        <polygon points="12 2 2 7 12 12 22 7 12 2" />
-        <polyline points="2 17 12 22 22 17" />
-        <polyline points="2 12 12 17 22 12" />
-      </svg>
-    ),
-    angle: 55,
-  },
+// ── Reusable SVG icons ──
+const ICONS = {
+  target: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="12" r="6" />
+      <circle cx="12" cy="12" r="2" />
+    </svg>
+  ),
+  pen: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 20h9" />
+      <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+    </svg>
+  ),
+  layers: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="12 2 2 7 12 12 22 7 12 2" />
+      <polyline points="2 17 12 22 22 17" />
+      <polyline points="2 12 12 17 22 12" />
+    </svg>
+  ),
+  megaphone: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+      <path d="m3 11 18-5v12L3 14v-3z" />
+      <path d="M11 6v12" />
+    </svg>
+  ),
+  chart: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="18" y1="20" x2="18" y2="10" />
+      <line x1="12" y1="20" x2="12" y2="4" />
+      <line x1="6" y1="20" x2="6" y2="14" />
+    </svg>
+  ),
+  trendUp: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+      <polyline points="16 7 22 7 22 13" />
+    </svg>
+  ),
+  users: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    </svg>
+  ),
+};
+
+// ── Process step images (shared across services) ──
+const STEP_IMAGES = [
+  'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80',
 ];
 
-const ecosystemRight = [
-  {
-    title: 'DIGITAL MARKETING',
-    desc: 'Reach and engage your audience across all digital channels.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-        <path d="m3 11 18-5v12L3 14v-3z" />
-        <path d="M11 6v12" />
-      </svg>
-    ),
-    angle: -55,
-  },
-  {
-    title: 'DATA & ANALYTICS',
-    desc: 'Transform data into actionable insights for smarter decisions.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10" />
-        <line x1="12" y1="20" x2="12" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="14" />
-      </svg>
-    ),
-    angle: 0,
-  },
-  {
-    title: 'OPTIMIZATION & GROWTH',
-    desc: 'Continuously refine strategies to maximize ROI and growth.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-        <polyline points="16 7 22 7 22 13" />
-      </svg>
-    ),
-    angle: 55,
-  },
-];
+const STEP_ICONS = [ICONS.target, ICONS.megaphone, ICONS.chart, ICONS.layers, ICONS.trendUp, ICONS.users];
+const NODE_ICONS_LEFT = [ICONS.target, ICONS.pen, ICONS.layers];
+const NODE_ICONS_RIGHT = [ICONS.megaphone, ICONS.chart, ICONS.trendUp];
+const NODE_ANGLES_LEFT = [-55, 0, 55] as const;
+const NODE_ANGLES_RIGHT = [-55, 0, 55] as const;
 
-const processSteps = [
-  {
-    title: 'Align',
-    desc: 'We align strategy with your business objectives.',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <circle cx="12" cy="12" r="6" />
-        <circle cx="12" cy="12" r="2" />
-      </svg>
-    ),
+// ── Per-service config ──
+interface ServiceEcosystemConfig {
+  sectionTitle: string;
+  sectionSubtitle: string;
+  hubLabel: string;
+  hubSubLabel: string;
+  processTitle: string;
+  ecosystemLeft: { title: string; desc: string }[];
+  ecosystemRight: { title: string; desc: string }[];
+  processSteps: { title: string; desc: string }[];
+}
+
+const serviceEcosystemConfig: Record<string, ServiceEcosystemConfig> = {
+  'SEO & ORGANIC GROWTH': {
+    sectionTitle: 'A Connected Ecosystem That Drives Organic Growth',
+    sectionSubtitle:
+      'Every SEO discipline works together as one integrated system — keyword research, on-page optimization, technical foundations, link building, content strategy, and analytics all connected to put your organic visibility at the center of sustainable growth.',
+    hubLabel: 'Organic Growth',
+    hubSubLabel: 'Visibility at the Center.',
+    processTitle: 'How Our SEO Process Works Together',
+    ecosystemLeft: [
+      { title: 'KEYWORD RESEARCH', desc: 'Uncover high-intent search terms that align with your audience and business goals.' },
+      { title: 'ON-PAGE SEO', desc: 'Optimize every page element — titles, meta tags, content, and structure for maximum relevance.' },
+      { title: 'TECHNICAL SEO', desc: 'Ensure your site is fast, crawlable, and technically sound for search engine success.' },
+    ],
+    ecosystemRight: [
+      { title: 'LINK BUILDING', desc: 'Earn authoritative backlinks that boost domain authority and search rankings.' },
+      { title: 'CONTENT STRATEGY', desc: 'Plan and create content that ranks, resonates, and drives organic traffic.' },
+      { title: 'ANALYTICS & REPORTING', desc: 'Track rankings, traffic, and conversions to continuously refine your SEO strategy.' },
+    ],
+    processSteps: [
+      { title: 'Audit', desc: 'We audit your current SEO landscape and identify opportunities.' },
+      { title: 'Research', desc: 'We research keywords, competitors, and market gaps.' },
+      { title: 'Optimize', desc: 'We optimize on-page elements and technical foundations.' },
+      { title: 'Build', desc: 'We build high-quality backlinks and domain authority.' },
+      { title: 'Create', desc: 'We create SEO-driven content that ranks and converts.' },
+      { title: 'Measure', desc: 'We measure results and iterate for continuous improvement.' },
+    ],
   },
-  {
-    title: 'Activate',
-    desc: 'We activate the right channels and tactics.',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-        <path d="m3 11 18-5v12L3 14v-3z" />
-        <path d="M11 6v12" />
-      </svg>
-    ),
+  'PERFORMANCE MARKETING': {
+    sectionTitle: 'A Connected Ecosystem That Maximizes ROI',
+    sectionSubtitle:
+      'Every campaign element works together as one integrated system — strategy, targeting, creative, bid management, conversion tracking, and analysis all connected to put your performance goals at the center of scalable growth.',
+    hubLabel: 'Peak Performance',
+    hubSubLabel: 'ROI at the Center.',
+    processTitle: 'How Our Performance Process Works Together',
+    ecosystemLeft: [
+      { title: 'CAMPAIGN STRATEGY', desc: 'Design data-driven campaign frameworks aligned with your KPIs and growth targets.' },
+      { title: 'AUDIENCE TARGETING', desc: 'Identify and segment high-value audiences across platforms for precision reach.' },
+      { title: 'AD CREATIVE', desc: 'Craft compelling ad creative that stops the scroll and drives action.' },
+    ],
+    ecosystemRight: [
+      { title: 'BID MANAGEMENT', desc: 'Optimize bidding strategies in real time to maximize budget efficiency.' },
+      { title: 'CONVERSION TRACKING', desc: 'Implement end-to-end tracking to measure every touchpoint in the funnel.' },
+      { title: 'PERFORMANCE ANALYSIS', desc: 'Analyze campaign data to uncover insights and scale winning strategies.' },
+    ],
+    processSteps: [
+      { title: 'Strategize', desc: 'We define campaign goals, budgets, and channel mix.' },
+      { title: 'Target', desc: 'We build precise audience segments for maximum impact.' },
+      { title: 'Launch', desc: 'We launch campaigns across channels with optimized creative.' },
+      { title: 'Optimize', desc: 'We optimize bids, placements, and creative in real time.' },
+      { title: 'Scale', desc: 'We scale winning campaigns to maximize return on ad spend.' },
+      { title: 'Report', desc: 'We deliver transparent reports with actionable insights.' },
+    ],
   },
-  {
-    title: 'Analyze',
-    desc: 'We analyze performance and uncover opportunities.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10" />
-        <line x1="12" y1="20" x2="12" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="14" />
-      </svg>
-    ),
+  'WEB DESIGN & DEVELOPMENT': {
+    sectionTitle: 'A Connected Ecosystem That Builds Digital Experiences',
+    sectionSubtitle:
+      'Every development discipline works together as one integrated system — UX research, visual design, frontend, backend, CMS integration, and QA all connected to put your users at the center of exceptional digital experiences.',
+    hubLabel: 'Digital Experience',
+    hubSubLabel: 'Users at the Center.',
+    processTitle: 'How Our Development Process Works Together',
+    ecosystemLeft: [
+      { title: 'UX RESEARCH', desc: 'Understand user behaviors, needs, and pain points to inform design decisions.' },
+      { title: 'VISUAL DESIGN', desc: 'Create stunning, on-brand visual interfaces that engage and delight users.' },
+      { title: 'FRONTEND DEV', desc: 'Build responsive, performant interfaces with modern frameworks and best practices.' },
+    ],
+    ecosystemRight: [
+      { title: 'BACKEND DEV', desc: 'Architect robust server-side systems that scale with your business needs.' },
+      { title: 'CMS INTEGRATION', desc: 'Integrate flexible content management systems for easy ongoing updates.' },
+      { title: 'QA & TESTING', desc: 'Ensure flawless functionality across devices, browsers, and use cases.' },
+    ],
+    processSteps: [
+      { title: 'Discover', desc: 'We discover your goals, users, and technical requirements.' },
+      { title: 'Wireframe', desc: 'We wireframe user flows and page structures for clarity.' },
+      { title: 'Design', desc: 'We design pixel-perfect interfaces aligned with your brand.' },
+      { title: 'Develop', desc: 'We develop clean, scalable code across the full stack.' },
+      { title: 'Test', desc: 'We test rigorously for quality, performance, and accessibility.' },
+      { title: 'Launch', desc: 'We launch with confidence and provide ongoing support.' },
+    ],
   },
-  {
-    title: 'Optimize',
-    desc: 'We optimize every element for better results.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-        <polygon points="12 2 2 7 12 12 22 7 12 2" />
-        <polyline points="2 17 12 22 22 17" />
-        <polyline points="2 12 12 17 22 12" />
-      </svg>
-    ),
+  'BRAND STRATEGY & IDENTITY': {
+    sectionTitle: 'A Connected Ecosystem That Shapes Brand Perception',
+    sectionSubtitle:
+      'Every brand element works together as one integrated system — market research, positioning, visual identity, messaging, guidelines, and activation all connected to put your brand story at the center of lasting market impact.',
+    hubLabel: 'Brand Power',
+    hubSubLabel: 'Identity at the Center.',
+    processTitle: 'How Our Branding Process Works Together',
+    ecosystemLeft: [
+      { title: 'MARKET RESEARCH', desc: 'Analyze market dynamics, competitors, and audience perceptions to find your edge.' },
+      { title: 'BRAND POSITIONING', desc: 'Define a clear, differentiated position that resonates with your target audience.' },
+      { title: 'VISUAL IDENTITY', desc: 'Design a cohesive visual system — logo, color, typography — that embodies your brand.' },
+    ],
+    ecosystemRight: [
+      { title: 'MESSAGING', desc: 'Craft compelling brand narratives, taglines, and voice that connect emotionally.' },
+      { title: 'BRAND GUIDELINES', desc: 'Document comprehensive standards to ensure brand consistency across all touchpoints.' },
+      { title: 'BRAND ACTIVATION', desc: 'Bring your brand to life across channels with strategic launch campaigns.' },
+    ],
+    processSteps: [
+      { title: 'Research', desc: 'We research your market, audience, and competitive landscape.' },
+      { title: 'Define', desc: 'We define your brand positioning and core value proposition.' },
+      { title: 'Create', desc: 'We create your visual identity and messaging framework.' },
+      { title: 'Document', desc: 'We document brand guidelines for consistent application.' },
+      { title: 'Implement', desc: 'We implement your brand across all customer touchpoints.' },
+      { title: 'Evolve', desc: 'We evolve your brand as your business and market grows.' },
+    ],
   },
-  {
-    title: 'Grow',
-    desc: 'We scale what works and drive sustainable growth.',
-    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=600&q=80',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-        <polyline points="16 7 22 7 22 13" />
-      </svg>
-    ),
+  'CONTENT MARKETING': {
+    sectionTitle: 'A Connected Ecosystem That Fuels Content Impact',
+    sectionSubtitle:
+      'Every content discipline works together as one integrated system — strategy, editorial planning, creation, SEO integration, distribution, and analytics all connected to put your audience engagement at the center of measurable growth.',
+    hubLabel: 'Content Engine',
+    hubSubLabel: 'Engagement at the Center.',
+    processTitle: 'How Our Content Process Works Together',
+    ecosystemLeft: [
+      { title: 'CONTENT STRATEGY', desc: 'Develop a strategic content roadmap aligned with business goals and audience needs.' },
+      { title: 'EDITORIAL PLANNING', desc: 'Plan editorial calendars, themes, and workflows for consistent content delivery.' },
+      { title: 'CONTENT CREATION', desc: 'Produce high-quality articles, videos, and assets that educate and inspire.' },
+    ],
+    ecosystemRight: [
+      { title: 'SEO INTEGRATION', desc: 'Weave SEO best practices into every piece of content for maximum discoverability.' },
+      { title: 'DISTRIBUTION', desc: 'Distribute content across owned, earned, and paid channels for maximum reach.' },
+      { title: 'PERFORMANCE ANALYTICS', desc: 'Measure content performance and optimize for engagement and conversions.' },
+    ],
+    processSteps: [
+      { title: 'Plan', desc: 'We plan content themes, formats, and editorial calendars.' },
+      { title: 'Create', desc: 'We create compelling content tailored to your audience.' },
+      { title: 'Optimize', desc: 'We optimize every piece for search and engagement.' },
+      { title: 'Publish', desc: 'We publish content on the right platforms at the right time.' },
+      { title: 'Distribute', desc: 'We distribute across channels to amplify reach and impact.' },
+      { title: 'Analyze', desc: 'We analyze performance data to refine and improve.' },
+    ],
   },
-  {
-    title: 'Succeed',
-    desc: 'We deliver measurable results that matter.',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
+  'MARKETING AUTOMATION & CRM': {
+    sectionTitle: 'A Connected Ecosystem That Automates Growth',
+    sectionSubtitle:
+      'Every automation element works together as one integrated system — CRM setup, workflow design, lead scoring, email automation, pipeline management, and reporting all connected to put your customer relationships at the center of scalable growth.',
+    hubLabel: 'Smart Automation',
+    hubSubLabel: 'Relationships at the Center.',
+    processTitle: 'How Our Automation Process Works Together',
+    ecosystemLeft: [
+      { title: 'CRM SETUP', desc: 'Configure and customize your CRM platform to match your sales and marketing processes.' },
+      { title: 'WORKFLOW DESIGN', desc: 'Design intelligent automation workflows that nurture leads through every stage.' },
+      { title: 'LEAD SCORING', desc: 'Implement scoring models that prioritize leads based on engagement and fit.' },
+    ],
+    ecosystemRight: [
+      { title: 'EMAIL AUTOMATION', desc: 'Build targeted email sequences that deliver the right message at the right time.' },
+      { title: 'PIPELINE MANAGEMENT', desc: 'Optimize your sales pipeline with automated tracking and stage management.' },
+      { title: 'REPORTING & INSIGHTS', desc: 'Generate actionable reports that reveal funnel performance and growth opportunities.' },
+    ],
+    processSteps: [
+      { title: 'Assess', desc: 'We assess your current systems, data, and automation needs.' },
+      { title: 'Configure', desc: 'We configure your CRM and automation platform foundations.' },
+      { title: 'Automate', desc: 'We build automated workflows for lead nurturing and engagement.' },
+      { title: 'Nurture', desc: 'We design nurture sequences that move leads through the funnel.' },
+      { title: 'Convert', desc: 'We optimize conversion points to turn leads into customers.' },
+      { title: 'Optimize', desc: 'We continuously optimize based on performance data and insights.' },
+    ],
   },
-];
+};
+
+const DEFAULT_SERVICE = 'SEO & ORGANIC GROWTH';
 
 type EcosystemNodeProps = {
   title: string;
@@ -238,7 +330,30 @@ const EcosystemNode = ({ title, desc, icon, align }: EcosystemNodeProps) => (
   </div>
 );
 
-export const ServiceDetailEcosystemSection: React.FC = () => {
+interface ServiceDetailEcosystemSectionProps {
+  serviceName?: string;
+}
+
+export const ServiceDetailEcosystemSection: React.FC<ServiceDetailEcosystemSectionProps> = ({ serviceName }) => {
+  const config = serviceEcosystemConfig[serviceName || ''] || serviceEcosystemConfig[DEFAULT_SERVICE];
+
+  const ecosystemLeft = config.ecosystemLeft.map((node, i) => ({
+    ...node,
+    icon: NODE_ICONS_LEFT[i],
+    angle: NODE_ANGLES_LEFT[i],
+  }));
+
+  const ecosystemRight = config.ecosystemRight.map((node, i) => ({
+    ...node,
+    icon: NODE_ICONS_RIGHT[i],
+    angle: NODE_ANGLES_RIGHT[i],
+  }));
+
+  const processSteps = config.processSteps.map((step, i) => ({
+    ...step,
+    image: STEP_IMAGES[i],
+    icon: STEP_ICONS[i],
+  }));
   const hubSize = 260;
   const orbitR1 = 118;
   const orbitR2 = 158;
@@ -557,7 +672,7 @@ export const ServiceDetailEcosystemSection: React.FC = () => {
                   width: '52px',
                   height: '52px',
                   borderRadius: '50%',
-                  backgroundColor: COLORS.white,
+                  backgroundColor: COLORS.actualWhite,
                   border: `2px solid ${COLORS.purple}`,
                   display: 'flex',
                   alignItems: 'center',
