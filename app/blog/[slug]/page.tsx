@@ -1,14 +1,13 @@
 import React from 'react';
-import { notFound } from 'next/navigation';
 import { articles, getArticleBySlug } from '../../../src/data/articles';
 import { Blogdetailpage } from '../../../src/components/generated/Blogdetailpage';
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
-export default function Page({ params }: Props) {
-  const { slug } = params;
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
   const article = getArticleBySlug(slug);
   if (!article) {
     return (
