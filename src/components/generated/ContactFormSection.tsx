@@ -50,7 +50,7 @@ export const ContactFormSection: React.FC = () => {
               justifyContent: 'center'
             }}>
                 <span style={{
-                color: '#00c2ff',
+                color: 'var(--brand-500)',
                 fontSize: '12px',
                 fontWeight: 700,
                 letterSpacing: '0.32em',

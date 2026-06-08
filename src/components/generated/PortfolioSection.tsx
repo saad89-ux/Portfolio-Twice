@@ -92,7 +92,7 @@ export const PortfolioSection: React.FC<{ onNavigate?: (page: PageName) => void 
             lineHeight: '1.02',
             margin: '22px 0 18px'
           }}>
-              Real Work. Real <span style={{ color: '#00c2ff' }}>Results.</span>
+              Real Work. Real <span style={{ color: 'var(--brand-500)' }}>Results.</span>
             </h2>
             <p style={{
             color: 'var(--text-muted)',
@@ -124,7 +124,7 @@ export const PortfolioSection: React.FC<{ onNavigate?: (page: PageName) => void 
             justifyContent: 'center'
           }}>
               <span style={{
-              color: 'rgba(0, 194, 255, 1)',
+              color: 'var(--brand-500-strong)',
               fontSize: '32px',
               fontFamily: '"Barlow", sans-serif',
               fontWeight: 800
@@ -154,9 +154,9 @@ export const PortfolioSection: React.FC<{ onNavigate?: (page: PageName) => void 
             minWidth: '118px',
             padding: '14px 20px',
             borderRadius: '999px',
-            backgroundColor: activePortfolioCategory === category ? '#00c2ff' : 'var(--bg-card-light)',
+            backgroundColor: activePortfolioCategory === category ? 'var(--brand-500)' : 'var(--bg-card-light)',
             color: activePortfolioCategory === category ? 'var(--text-primary)' : 'var(--text-secondary)',
-            border: activePortfolioCategory === category ? '1px solid #00c2ff' : '1px solid var(--border-light)',
+            border: activePortfolioCategory === category ? '1px solid var(--brand-500)' : '1px solid var(--border-light)',
             cursor: 'pointer',
             fontFamily: '"Barlow", sans-serif',
             fontSize: '14px',
@@ -204,8 +204,8 @@ export const PortfolioSection: React.FC<{ onNavigate?: (page: PageName) => void 
                 left: '18px',
                 padding: '10px 16px',
                 borderRadius: '999px',
-                backgroundColor: 'rgba(0, 194, 255, 0.18)',
-                color: 'rgba(0, 194, 255, 1)',
+                backgroundColor: 'var(--brand-500-medium)',
+                color: 'var(--brand-500-strong)',
                 fontFamily: '"Barlow", sans-serif',
                 fontWeight: 700,
                 fontSize: '12px',
@@ -266,7 +266,7 @@ export const PortfolioSection: React.FC<{ onNavigate?: (page: PageName) => void 
                 <button onClick={() => onNavigate && onNavigate('Contact')} style={{
                 padding: '14px 20px',
                 width: '100%',
-                backgroundColor: '#00c2ff',
+                backgroundColor: 'var(--brand-500)',
                 color: 'var(--text-primary)',
                 border: 'none',
                 borderRadius: '16px',
@@ -322,7 +322,7 @@ export const PortfolioSection: React.FC<{ onNavigate?: (page: PageName) => void 
             minWidth: '220px',
             padding: '16px 24px',
             borderRadius: '18px',
-            backgroundColor: '#00c2ff',
+            backgroundColor: 'var(--brand-500)',
             color: 'var(--text-primary)',
             border: 'none',
             cursor: 'pointer',

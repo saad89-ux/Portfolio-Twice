@@ -40,12 +40,12 @@ const PrimaryButton: React.FC<{
     alignItems: 'center',
     justifyContent: 'center',
     padding: '14px 22px',
-    backgroundColor: isHovered ? 'rgba(0, 194, 255, 0.95)' : 'rgba(0, 194, 255, 1)',
+    backgroundColor: isHovered ? 'var(--brand-500-strong)' : 'var(--brand-500-strong)',
     borderRadius: '14px',
     border: 'none',
     cursor: 'pointer',
     transition: 'all 0.2s ease',
-    boxShadow: isHovered ? '0 18px 36px rgba(0, 194, 255, 0.28)' : '0 12px 20px rgba(0, 194, 255, 0.22)'
+    boxShadow: isHovered ? '0 18px 36px var(--brand-500-strong)' : '0 12px 20px var(--brand-500-medium)'
   }}>
       <span style={{
       color: 'var(--text-primary)',
@@ -77,7 +77,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
       <div style={{
       position: 'absolute',
       inset: 0,
-      backgroundImage: 'radial-gradient(circle at 14% 18%, rgba(0, 194, 255, 0.16), transparent 24%), radial-gradient(circle at 86% 22%, rgba(0, 194, 255, 0.14), transparent 22%), radial-gradient(circle at 72% 38%, rgba(0, 194, 255, 0.08), transparent 26%), radial-gradient(circle at 50% 88%, rgba(0, 194, 255, 0.18), transparent 32%), radial-gradient(circle at 18% 72%, rgba(120, 185, 255, 0.10), transparent 28%)',
+      backgroundImage: 'radial-gradient(circle at 14% 18%, var(--brand-500-medium), transparent 24%), radial-gradient(circle at 86% 22%, var(--brand-500-soft), transparent 22%), radial-gradient(circle at 72% 38%, var(--brand-500-soft), transparent 26%), radial-gradient(circle at 50% 88%, var(--brand-500-medium), transparent 32%), radial-gradient(circle at 18% 72%, var(--brand-600-soft), transparent 28%)',
       pointerEvents: 'none'
     }} />
       <div style={{
@@ -138,8 +138,8 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
             {aboutStats.map(stat => <div key={stat.label} style={{
             padding: '24px',
             borderRadius: '30px',
-            backgroundColor: 'rgba(0, 194, 255, 0.06)',
-            border: '1px solid rgba(0, 194, 255, 0.14)',
+            backgroundColor: 'var(--brand-500-soft)',
+            border: '1px solid var(--brand-500-soft)',
             minHeight: '120px',
             display: 'flex',
             flexDirection: 'column',
@@ -147,7 +147,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
             gap: '10px'
           }}>
               <span style={{
-              color: 'rgba(0, 194, 255, 1)',
+              color: 'var(--brand-500-strong)',
               fontSize: '32px',
               fontFamily: BarlowFont,
               fontWeight: 800,
@@ -175,8 +175,8 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
             {featureChips.map(chip => <span key={chip} style={{
             padding: '12px 18px',
             borderRadius: '999px',
-            backgroundColor: 'rgba(0, 194, 255, 0.08)',
-            border: '1px solid rgba(0, 194, 255, 0.16)',
+            backgroundColor: 'var(--brand-500-soft)',
+            border: '1px solid var(--brand-500-medium)',
             color: 'var(--text-muted)',
             fontSize: '14px',
             fontFamily: BarlowFont,
@@ -218,7 +218,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
         overflow: 'hidden',
         backgroundColor: '#080c20',
         boxShadow: '0 40px 90px rgba(0, 0, 0, 0.35)',
-        border: '1px solid rgba(0, 194, 255, 0.14)'
+        border: '1px solid var(--brand-500-soft)'
       }}>
           <img className="ca-hover-popup" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1100&q=80" alt="Professional portrait" style={{
           position: 'absolute',
@@ -259,7 +259,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
               width: '12px',
               height: '12px',
               borderRadius: '999px',
-              backgroundColor: 'rgba(0, 194, 255, 1)'
+              backgroundColor: 'var(--brand-500-strong)'
             }} />
               <span style={{
               fontFamily: BarlowFont,
@@ -279,8 +279,8 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
               <div style={{
               padding: '14px 18px',
               borderRadius: '24px',
-              backgroundColor: 'rgba(0, 194, 255, 0.16)',
-              border: '1px solid rgba(0, 194, 255, 0.24)',
+              backgroundColor: 'var(--brand-500-medium)',
+              border: '1px solid var(--brand-500-medium)',
               color: 'var(--text-primary)',
               fontFamily: BarlowFont,
               fontWeight: 600,
@@ -334,7 +334,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
               alignItems: 'center',
               justifyContent: 'center',
               borderRadius: '50%',
-              backgroundColor: 'rgba(0, 194, 255, 1)',
+              backgroundColor: 'var(--brand-500-strong)',
               color: 'var(--text-primary)',
               fontSize: '12px'
             }}>

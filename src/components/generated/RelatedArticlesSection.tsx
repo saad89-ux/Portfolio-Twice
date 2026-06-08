@@ -18,18 +18,96 @@ export const RelatedArticlesSection: React.FC<RelatedArticlesSectionProps> = ({ 
   }, []);
 
   return (
-    <section ref={ref} style={{ marginTop: '80px', padding: '56px 0 0' }}>
+    <section ref={ref} className="related-articles-section">
       <style>{`
-        .ra-tile { transition: all .4s cubic-bezier(.16,1,.3,1) !important; }
-        .ra-tile:hover { border-color: rgba(0,194,255,.18) !important; background: rgba(0,194,255,.025) !important; transform: translateY(-4px) !important; }
-        .ra-tile:hover .ra-arrow { color: rgba(0,194,255,1) !important; transform: translateX(3px) !important; }
+        .related-articles-section {
+          margin-top: clamp(4rem, 5vw, 5.5rem);
+          padding: clamp(3rem, 4vw, 3.5rem) 0 0;
+        }
+
+        .related-articles-section__grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: clamp(1rem, 2vw, 1.5rem);
+        }
+
+        .ra-tile {
+          transition: all .4s cubic-bezier(.16,1,.3,1) !important;
+          text-decoration: none;
+          color: inherit;
+          display: grid;
+          grid-template-columns: 1fr 140px;
+          gap: clamp(1.25rem, 1.75vw, 1.5rem);
+          align-items: center;
+          padding: clamp(1.75rem, 2vw, 2rem) clamp(1.75rem, 2vw, 2rem) clamp(1.75rem, 2vw, 2rem) clamp(2rem, 2vw, 2.5rem);
+          border-radius: 1.5rem;
+          background: rgba(255,255,255,0.015);
+          border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .ra-tile:hover {
+          border-color: var(--brand-500-medium) !important;
+          background: var(--brand-500-soft) !important;
+          transform: translateY(-4px) !important;
+        }
+
+        .ra-tile:hover .ra-arrow {
+          color: var(--brand-500-strong) !important;
+          transform: translateX(3px) !important;
+        }
+
+        .ra-tile__image {
+          width: 100%;
+          max-width: 140px;
+          aspect-ratio: 1 / 1;
+          border-radius: 1rem;
+          overflow: hidden;
+          border: 1px solid rgba(255,255,255,0.06);
+          flex-shrink: 0;
+        }
+
+        .ra-tile__image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: brightness(0.8) saturate(0.85);
+        }
+
+        .ra-tile__body {
+          display: flex;
+          flex-direction: column;
+          gap: clamp(0.75rem, 1vw, 1rem);
+          min-width: 0;
+        }
+
+        @media (max-width: 1024px) {
+          .related-articles-section__grid,
+          .ra-tile {
+            grid-template-columns: 1fr;
+          }
+
+          .ra-tile {
+            padding: clamp(1.5rem, 2vw, 1.75rem);
+          }
+
+          .ra-tile__image {
+            max-width: 100%;
+            aspect-ratio: 16 / 9;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .related-articles-section {
+            padding-top: clamp(2rem, 4vw, 2.5rem);
+          }
+        }
       `}</style>
 
       {/* ── Header ── */}
       <div style={{ marginBottom: '44px' }}>
         <span style={{
           display: 'block',
-          color: 'rgba(0,194,255,1)', fontSize: '11px', fontWeight: 700,
+          color: 'var(--brand-500-strong)', fontSize: '11px', fontWeight: 700,
           letterSpacing: '0.18em', textTransform: 'uppercase',
           fontFamily: '"Inter", sans-serif', marginBottom: '14px'
         }}>Continue Exploring</span>
@@ -39,7 +117,7 @@ export const RelatedArticlesSection: React.FC<RelatedArticlesSectionProps> = ({ 
           lineHeight: 1.1, fontWeight: 800,
           fontFamily: '"Inter", sans-serif', letterSpacing: '-0.04em'
         }}>
-          More insights that{'\u00A0'}drive growth<span style={{ color: 'rgba(0,194,255,0.6)' }}>.</span>
+          More insights that{'\u00A0'}drive growth<span style={{ color: 'var(--brand-500-strong)' }}>.</span>
         </h2>
         <p style={{
           margin: '14px 0 0', maxWidth: '480px',
@@ -51,20 +129,13 @@ export const RelatedArticlesSection: React.FC<RelatedArticlesSectionProps> = ({ 
       </div>
 
       {/* ── Editorial Tiles — 70% Typography / 30% Image ── */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+      <div className="related-articles-section__grid">
         {articles.map((article, idx) => (
           <a
             key={article.slug}
             href={`/blog/${article.slug}`}
             className="ra-tile"
             style={{
-              textDecoration: 'none', color: 'inherit',
-              display: 'grid', gridTemplateColumns: '1fr 130px',
-              gap: '22px', alignItems: 'center',
-              padding: '28px 28px 28px 32px',
-              borderRadius: '20px',
-              background: 'rgba(255,255,255,0.015)',
-              border: '1px solid rgba(255,255,255,0.05)',
               opacity: vis ? 1 : 0,
               transform: vis ? 'translateY(0)' : 'translateY(14px)',
               transition: `all .5s cubic-bezier(.16,1,.3,1) ${idx * 0.08}s`
@@ -80,7 +151,7 @@ export const RelatedArticlesSection: React.FC<RelatedArticlesSectionProps> = ({ 
                   letterSpacing: '-0.04em'
                 }}>{article.number}</span>
                 <span style={{
-                  color: 'rgba(0,194,255,0.7)', fontSize: '10px', fontWeight: 700,
+                  color: 'var(--brand-500-strong)', fontSize: '10px', fontWeight: 700,
                   letterSpacing: '0.14em', textTransform: 'uppercase',
                   fontFamily: '"Inter", sans-serif'
                 }}>{article.eyebrow}</span>
@@ -114,12 +185,7 @@ export const RelatedArticlesSection: React.FC<RelatedArticlesSectionProps> = ({ 
             </div>
 
             {/* Image Side (30%) */}
-            <div style={{
-              width: '130px', height: '130px',
-              borderRadius: '16px', overflow: 'hidden',
-              border: '1px solid rgba(255,255,255,0.06)',
-              flexShrink: 0
-            }}>
+            <div className="ra-tile__image">
               <img src={article.image} alt={article.title} style={{
                 width: '100%', height: '100%', objectFit: 'cover',
                 filter: 'brightness(0.8) saturate(0.85)'

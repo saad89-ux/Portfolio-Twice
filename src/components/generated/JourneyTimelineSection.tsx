@@ -163,7 +163,7 @@ export const JourneyTimelineSection: React.FC = () => {
           position: 'absolute',
           inset: 0,
           backgroundImage:
-            'radial-gradient(circle at 50% -10%, rgba(0, 194, 255, 0.15), transparent 40%), radial-gradient(circle at 90% 90%, rgba(0, 194, 255, 0.05), transparent 50%)',
+            'radial-gradient(circle at 50% -10%, var(--brand-500-medium), transparent 40%), radial-gradient(circle at 90% 90%, var(--brand-500-soft), transparent 50%)',
           pointerEvents: 'none',
         }}
       />
@@ -181,10 +181,10 @@ export const JourneyTimelineSection: React.FC = () => {
         {/* Header */}
         <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <div style={{ width: '3px', height: '18px', borderRadius: '4px', backgroundColor: '#00c2ff' }} />
+            <div style={{ width: '3px', height: '18px', borderRadius: '4px', backgroundColor: 'var(--brand-500)' }} />
             <span
               style={{
-                color: '#00c2ff',
+                color: 'var(--brand-500)',
                 fontSize: '13px',
                 fontWeight: 700,
                 letterSpacing: '0.24em',
@@ -206,7 +206,7 @@ export const JourneyTimelineSection: React.FC = () => {
               margin: 0,
             }}
           >
-            Every Milestone Tells <span style={{ color: '#00c2ff' }}>Our Story</span>
+            Every Milestone Tells <span style={{ color: 'var(--brand-500)' }}>Our Story</span>
           </h2>
 
           <p
@@ -234,14 +234,14 @@ export const JourneyTimelineSection: React.FC = () => {
               left: '0',
               right: '0',
               height: '2px',
-              background: 'linear-gradient(90deg, transparent 0%, rgba(0, 194, 255, 0.8) 10%, rgba(0, 194, 255, 0.8) 90%, transparent 100%)',
+              background: 'linear-gradient(90deg, transparent 0%, var(--brand-500-strong) 10%, var(--brand-500-strong) 90%, transparent 100%)',
               zIndex: 1,
             }}
           >
              {/* Left dashed part */}
-             <div style={{ position: 'absolute', left: '-5%', width: '15%', height: '2px', borderTop: '2px dotted rgba(0, 194, 255, 0.4)' }}></div>
+             <div style={{ position: 'absolute', left: '-5%', width: '15%', height: '2px', borderTop: '2px dotted var(--brand-500-strong)' }}></div>
              {/* Right dashed part */}
-             <div style={{ position: 'absolute', right: '-5%', width: '15%', height: '2px', borderTop: '2px dotted rgba(0, 194, 255, 0.4)' }}></div>
+             <div style={{ position: 'absolute', right: '-5%', width: '15%', height: '2px', borderTop: '2px dotted var(--brand-500-strong)' }}></div>
           </div>
 
           <div
@@ -263,12 +263,12 @@ export const JourneyTimelineSection: React.FC = () => {
                     height: '56px',
                     borderRadius: '50%',
                     backgroundColor: 'var(--bg-primary)',
-                    border: '1px solid rgba(0, 194, 255, 0.6)',
-                    boxShadow: '0 0 24px rgba(0, 194, 255, 0.25), inset 0 0 16px rgba(0, 194, 255, 0.1)',
+                    border: '1px solid var(--brand-500-strong)',
+                    boxShadow: '0 0 24px var(--brand-500-medium), inset 0 0 16px var(--brand-500-soft)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#00c2ff',
+                    color: 'var(--brand-500)',
                   }}
                 >
                   {item.icon}
@@ -277,7 +277,7 @@ export const JourneyTimelineSection: React.FC = () => {
                 {/* Year Label */}
                 <div
                   style={{
-                    color: '#00c2ff',
+                    color: 'var(--brand-500)',
                     fontSize: '18px',
                     fontWeight: 800,
                     fontFamily: InterFont,
@@ -367,12 +367,12 @@ export const JourneyTimelineSection: React.FC = () => {
                   width: '64px',
                   height: '64px',
                   borderRadius: '50%',
-                  background: 'radial-gradient(circle, rgba(0, 194, 255, 0.15) 0%, transparent 70%)',
-                  border: '1px solid rgba(0, 194, 255, 0.3)',
+                  background: 'radial-gradient(circle, var(--brand-500-medium) 0%, transparent 70%)',
+                  border: '1px solid var(--brand-500-strong)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#00c2ff',
+                  color: 'var(--brand-500)',
                   flexShrink: 0,
                 }}
               >
@@ -383,7 +383,7 @@ export const JourneyTimelineSection: React.FC = () => {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                 <div
                   style={{
-                    color: '#00c2ff',
+                    color: 'var(--brand-500)',
                     fontSize: '28px',
                     fontWeight: 800,
                     fontFamily: InterFont,

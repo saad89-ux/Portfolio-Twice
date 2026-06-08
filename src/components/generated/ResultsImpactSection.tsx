@@ -555,7 +555,7 @@ export const ResultsImpactSection: React.FC<ResultsImpactSectionProps> = ({ serv
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
               <span
                 style={{
-                  color: '#00c2ff',
+                  color: 'var(--brand-500)',
                   fontSize: '13px',
                   fontWeight: 700,
                   letterSpacing: '0.1em',
@@ -580,7 +580,7 @@ export const ResultsImpactSection: React.FC<ResultsImpactSectionProps> = ({ serv
             >
               {headerLine1}
               <br />
-              <span style={{ color: '#00c2ff' }}>{headerLine2}</span>
+              <span style={{ color: 'var(--brand-500)' }}>{headerLine2}</span>
             </h2>
 
             <p
@@ -601,7 +601,7 @@ export const ResultsImpactSection: React.FC<ResultsImpactSectionProps> = ({ serv
           <div style={{ display: 'flex', gap: '48px', flexWrap: 'wrap' }}>
             {topStats.map((stat, idx) => (
               <div key={idx} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
-                <div style={{ color: '#00c2ff' }}>
+                <div style={{ color: 'var(--brand-500)' }}>
                   {stat.icon}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px' }}>
@@ -632,14 +632,14 @@ export const ResultsImpactSection: React.FC<ResultsImpactSectionProps> = ({ serv
               zIndex: 0,
               pointerEvents: 'none',
               borderRadius: '50%',
-              background: 'radial-gradient(circle, rgba(0, 194, 255, 0.15) 0%, transparent 60%)',
-              boxShadow: '0 0 100px rgba(0, 194, 255, 0.1)',
+              background: 'radial-gradient(circle, var(--brand-500-medium) 0%, transparent 60%)',
+              boxShadow: '0 0 100px var(--brand-500-soft)',
             }}
           >
             {/* Swirling energy rings */}
-            <div style={{ position: 'absolute', inset: '10%', borderRadius: '50%', border: '2px solid rgba(0, 194, 255, 0.3)', filter: 'blur(4px)', transform: 'scaleY(0.5) rotate(20deg)' }} />
-            <div style={{ position: 'absolute', inset: '15%', borderRadius: '50%', border: '1px solid rgba(0, 194, 255, 0.6)', filter: 'blur(2px)', transform: 'scaleY(0.4) rotate(40deg)' }} />
-            <div style={{ position: 'absolute', inset: '5%', borderRadius: '50%', border: '1px dashed rgba(0, 194, 255, 0.2)', transform: 'scaleY(0.6) rotate(-10deg)', animation: 'spin 40s linear infinite' }} />
+            <div style={{ position: 'absolute', inset: '10%', borderRadius: '50%', border: '2px solid var(--brand-500-strong)', filter: 'blur(4px)', transform: 'scaleY(0.5) rotate(20deg)' }} />
+            <div style={{ position: 'absolute', inset: '15%', borderRadius: '50%', border: '1px solid var(--brand-500-strong)', filter: 'blur(2px)', transform: 'scaleY(0.4) rotate(40deg)' }} />
+            <div style={{ position: 'absolute', inset: '5%', borderRadius: '50%', border: '1px dashed var(--brand-500-medium)', transform: 'scaleY(0.6) rotate(-10deg)', animation: 'spin 40s linear infinite' }} />
           </div>
 
           {/* Left Case Study Card */}
@@ -659,7 +659,7 @@ export const ResultsImpactSection: React.FC<ResultsImpactSectionProps> = ({ serv
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '32px', gap: '24px', flexWrap: 'wrap' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
-                <span style={{ color: '#00c2ff', fontSize: '11px', fontWeight: 700, letterSpacing: '0.1em', fontFamily: BarlowFont, textTransform: 'uppercase' }}>
+                <span style={{ color: 'var(--brand-500)', fontSize: '11px', fontWeight: 700, letterSpacing: '0.1em', fontFamily: BarlowFont, textTransform: 'uppercase' }}>
                   CASE STUDY SPOTLIGHT
                 </span>
                 <h3 style={{ margin: 0, color: 'var(--text-primary)', fontSize: '32px', fontWeight: 800, fontFamily: InterFont, lineHeight: 1.2, whiteSpace: 'pre-line' }}>
@@ -675,7 +675,7 @@ export const ResultsImpactSection: React.FC<ResultsImpactSectionProps> = ({ serv
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '40px', flexWrap: 'wrap', gap: '16px' }}>
               {caseStudyStats.map((stat, i) => (
                 <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                  <span style={{ color: '#00c2ff', fontSize: '24px', fontWeight: 800, fontFamily: InterFont }}>{stat.value}</span>
+                  <span style={{ color: 'var(--brand-500)', fontSize: '24px', fontWeight: 800, fontFamily: InterFont }}>{stat.value}</span>
                   <span style={{ color: 'var(--text-muted)', fontSize: '12px', fontFamily: BarlowFont }}>{stat.label}</span>
                 </div>
               ))}
@@ -697,8 +697,8 @@ export const ResultsImpactSection: React.FC<ResultsImpactSectionProps> = ({ serv
                 {/* Gradient Fill */}
                 <defs>
                   <linearGradient id="chartGlow" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="rgba(0,194,255,0.4)" />
-                    <stop offset="100%" stopColor="rgba(0,194,255,0)" />
+                    <stop offset="0%" stopColor="var(--brand-500-strong)" />
+                    <stop offset="100%" stopColor="var(--brand-500-soft)" />
                   </linearGradient>
                 </defs>
                 <path
@@ -710,7 +710,7 @@ export const ResultsImpactSection: React.FC<ResultsImpactSectionProps> = ({ serv
                 <path
                   d="M40 140 L90 125 L140 130 L190 110 L240 115 L290 85 L340 90 L390 75 L440 80 L490 50 L540 55 L580 20"
                   fill="none"
-                  stroke="#00c2ff"
+                  stroke="var(--brand-500)"
                   strokeWidth="3"
                 />
                 
@@ -719,7 +719,7 @@ export const ResultsImpactSection: React.FC<ResultsImpactSectionProps> = ({ serv
                   [40, 140], [90, 125], [140, 130], [190, 110], [240, 115], 
                   [290, 85], [340, 90], [390, 75], [440, 80], [490, 50], [540, 55], [580, 20]
                 ].map((pt, i) => (
-                  <circle key={i} cx={pt[0]} cy={pt[1]} r="4" fill="var(--bg-primary)" stroke="#00c2ff" strokeWidth="2" />
+                  <circle key={i} cx={pt[0]} cy={pt[1]} r="4" fill="var(--bg-primary)" stroke="var(--brand-500)" strokeWidth="2" />
                 ))}
 
                 {/* X Axis Labels */}
@@ -736,7 +736,7 @@ export const ResultsImpactSection: React.FC<ResultsImpactSectionProps> = ({ serv
                   position: 'absolute',
                   right: '0',
                   top: '-10px',
-                  backgroundColor: '#00c2ff',
+                  backgroundColor: 'var(--brand-500)',
                   padding: '6px 12px',
                   borderRadius: '6px',
                   display: 'flex',
@@ -771,7 +771,7 @@ export const ResultsImpactSection: React.FC<ResultsImpactSectionProps> = ({ serv
                 VIEW FULL CASE STUDY
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: 'var(--bg-card-light)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#00c2ff' }}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--brand-500)' }}>
                       <line x1="5" y1="12" x2="19" y2="12" />
                       <polyline points="12 5 19 12 12 19" />
                     </svg>
@@ -792,7 +792,7 @@ export const ResultsImpactSection: React.FC<ResultsImpactSectionProps> = ({ serv
 
           {/* Right Area Quote */}
           <div style={{ flex: '1 1 400px', position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 40px' }}>
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#00c2ff', marginBottom: '24px' }}>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style={{ color: 'var(--brand-500)', marginBottom: '24px' }}>
               <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" />
             </svg>
             
@@ -858,12 +858,12 @@ export const ResultsImpactSection: React.FC<ResultsImpactSectionProps> = ({ serv
                   width: '48px',
                   height: '48px',
                   borderRadius: '12px',
-                  backgroundColor: 'rgba(0, 194, 255, 0.05)',
-                  border: '1px solid rgba(0, 194, 255, 0.2)',
+                  backgroundColor: 'var(--brand-500-soft)',
+                  border: '1px solid var(--brand-500-medium)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#00c2ff',
+                  color: 'var(--brand-500)',
                   flexShrink: 0,
                 }}
               >

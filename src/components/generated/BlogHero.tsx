@@ -27,8 +27,8 @@ export const BlogHero = () => {
     }}>
       {/* Background Glow */}
       <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none' }}>
-        <div style={{ position: 'absolute', top: '-10%', right: '20%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(168, 85, 247, 0.06) 0%, transparent 60%)', filter: 'blur(80px)' }} />
-        <div style={{ position: 'absolute', bottom: '-10%', left: '10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(59, 130, 246, 0.04) 0%, transparent 60%)', filter: 'blur(60px)' }} />
+        <div style={{ position: 'absolute', top: '-10%', right: '20%', width: '600px', height: '600px', background: 'radial-gradient(circle, var(--brand-400-soft) 0%, transparent 60%)', filter: 'blur(80px)' }} />
+        <div style={{ position: 'absolute', bottom: '-10%', left: '10%', width: '400px', height: '400px', background: 'radial-gradient(circle, var(--brand-600-soft) 0%, transparent 60%)', filter: 'blur(60px)' }} />
       </div>
 
       {/* LEFT COLUMN */}
@@ -36,7 +36,7 @@ export const BlogHero = () => {
         
         {/* Badge */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#a855f7', boxShadow: '0 0 10px rgba(168, 85, 247, 0.6)' }} />
+          <div style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: 'var(--brand-400)', boxShadow: '0 0 10px var(--brand-400-strong)' }} />
           <span style={{ fontSize: '13px', fontWeight: 600, letterSpacing: '0.05em', color: 'var(--text-muted)', textTransform: 'uppercase' }}>OUR BLOG</span>
         </div>
 
@@ -50,7 +50,7 @@ export const BlogHero = () => {
           margin: 0,
           letterSpacing: '-0.03em'
         }}>
-          Insights that drive smarter marketing <span style={{ color: '#a855f7' }}>decisions</span>
+          Insights that drive smarter marketing <span style={{ color: 'var(--brand-400)' }}>decisions</span>
         </h1>
 
         {/* Description */}
@@ -75,7 +75,7 @@ export const BlogHero = () => {
             <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
               <div style={{
                 width: '40px', height: '40px', borderRadius: '50%',
-                backgroundColor: 'rgba(168, 85, 247, 0.1)', border: '1px solid rgba(168, 85, 247, 0.2)',
+                backgroundColor: 'var(--brand-400-soft)', border: '1px solid var(--brand-400-medium)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontSize: '16px', flexShrink: 0
               }}>
@@ -104,7 +104,7 @@ export const BlogHero = () => {
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flex: '1 1 200px' }}>
             <div style={{
               width: '40px', height: '40px', borderRadius: '50%',
-              backgroundColor: 'rgba(168, 85, 247, 0.1)',
+              backgroundColor: 'var(--brand-400-soft)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               fontSize: '18px', flexShrink: 0
             }}>
@@ -124,10 +124,10 @@ export const BlogHero = () => {
               fontFamily: '"Barlow", sans-serif'
             }} />
             <button style={{
-              padding: '12px 24px', backgroundColor: '#a855f7',
+              padding: '12px 24px', backgroundColor: 'var(--brand-400)',
               border: 'none', borderRadius: '10px', color: '#fff',
               fontSize: '13px', fontWeight: 700, cursor: 'pointer',
-              boxShadow: '0 4px 15px rgba(168, 85, 247, 0.4)',
+              boxShadow: '0 4px 15px var(--brand-400-strong)',
               transition: 'all 0.2s', whiteSpace: 'nowrap'
             }}>
               Subscribe
@@ -198,7 +198,7 @@ export const BlogHero = () => {
             <img src="https://images.unsplash.com/photo-1563986768609-322da13575f2?q=80&w=800&auto=format&fit=crop" alt="ROAS" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.7 }} />
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 0%, rgba(10,13,20,0.95) 100%)' }} />
             <div style={{ position: 'absolute', top: '16px', left: '16px' }}>
-              <span style={{ fontSize: '8px', fontWeight: 700, color: '#a855f7', letterSpacing: '0.1em', textTransform: 'uppercase' }}>PERFORMANCE MARKETING</span>
+              <span style={{ fontSize: '8px', fontWeight: 700, color: 'var(--brand-400)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>PERFORMANCE MARKETING</span>
             </div>
             <div style={{ position: 'absolute', bottom: '20px', left: '20px', right: '20px', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '6px' }}>
               <h4 style={{ fontSize: '15px', fontWeight: 700, color: '#fff', margin: 0, lineHeight: 1.3 }}>Proven Ways to Increase ROAS in Paid Campaigns</h4>
@@ -213,8 +213,8 @@ export const BlogHero = () => {
           <div style={{
             position: 'absolute', top: '200px', left: '10%', width: '380px', height: '280px',
             borderRadius: '24px', overflow: 'hidden',
-            border: '1px solid rgba(168, 85, 247, 0.15)',
-            boxShadow: '0 40px 80px rgba(0,0,0,0.6), 0 0 40px rgba(168, 85, 247, 0.08)',
+            border: '1px solid var(--brand-400-medium)',
+            boxShadow: '0 40px 80px rgba(0,0,0,0.6), 0 0 40px var(--brand-400-soft)',
             transform: 'translateZ(100px)', background: '#0a0d14',
             cursor: 'pointer'
           }}
@@ -231,7 +231,7 @@ export const BlogHero = () => {
             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '50%', background: 'linear-gradient(180deg, transparent 0%, rgba(10,13,20,1) 100%)' }} />
             
             <div style={{ padding: '0 24px 24px', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              <span style={{ fontSize: '9px', fontWeight: 700, color: '#a855f7', letterSpacing: '0.1em', textTransform: 'uppercase' }}>FEATURED ARTICLE</span>
+              <span style={{ fontSize: '9px', fontWeight: 700, color: 'var(--brand-400)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>FEATURED ARTICLE</span>
               <h3 style={{ fontSize: '22px', fontWeight: 700, color: '#fff', margin: 0, lineHeight: 1.2, fontFamily: '"Inter", sans-serif' }}>
                 The Future of AI in Digital Marketing
               </h3>
@@ -240,7 +240,7 @@ export const BlogHero = () => {
               </p>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '8px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <img src="https://i.pravatar.cc/100?img=44" alt="" style={{ width: '28px', height: '28px', borderRadius: '50%', border: '2px solid rgba(168,85,247,0.3)' }} />
+                  <img src="https://i.pravatar.cc/100?img=44" alt="" style={{ width: '28px', height: '28px', borderRadius: '50%', border: '2px solid var(--brand-400-strong)' }} />
                   <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <span style={{ fontSize: '11px', fontWeight: 600, color: '#fff' }}>Alex Morgan</span>
                     <span style={{ fontSize: '9px', color: 'rgba(255,255,255,0.5)' }}>May 12, 2025</span>
@@ -248,8 +248,8 @@ export const BlogHero = () => {
                 </div>
                 <div style={{
                   padding: '4px 10px', borderRadius: '999px',
-                  backgroundColor: 'rgba(168, 85, 247, 0.1)', border: '1px solid rgba(168, 85, 247, 0.3)',
-                  color: '#a855f7', fontSize: '10px', fontWeight: 600
+                  backgroundColor: 'var(--brand-400-soft)', border: '1px solid var(--brand-400-strong)',
+                  color: 'var(--brand-400)', fontSize: '10px', fontWeight: 600
                 }}>
                   8 min read
                 </div>
@@ -278,7 +278,7 @@ export const BlogHero = () => {
             <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop" alt="Social" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} />
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 0%, rgba(10,13,20,0.95) 100%)' }} />
             <div style={{ position: 'absolute', top: '12px', left: '12px' }}>
-              <span style={{ fontSize: '8px', fontWeight: 700, color: '#3b82f6', letterSpacing: '0.1em', textTransform: 'uppercase' }}>SOCIAL MEDIA</span>
+              <span style={{ fontSize: '8px', fontWeight: 700, color: 'var(--brand-600)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>SOCIAL MEDIA</span>
             </div>
             <div style={{ position: 'absolute', bottom: '16px', left: '16px', right: '16px', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '6px' }}>
               <h4 style={{ fontSize: '14px', fontWeight: 700, color: '#fff', margin: 0, lineHeight: 1.3 }}>Social Media Trends You Can't Ignore in 2025</h4>

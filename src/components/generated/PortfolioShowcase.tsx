@@ -61,7 +61,7 @@ const ProjectCard = ({
         <div style={{
         display: 'flex',
         padding: '14px',
-        backgroundColor: isHovered ? 'rgba(89, 176, 255, 1)' : 'rgba(0, 194, 255, 1)',
+        backgroundColor: isHovered ? 'var(--brand-600-strong)' : 'var(--brand-500-strong)',
         borderRadius: '135px',
         transition: 'background-color 0.2s ease'
       }}>
@@ -158,14 +158,8 @@ export const PortfolioShowcase = (props: BaseComponentProps) => {
     image: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/b01828fd-57ed-42bd-8ef8-c0d88e24a7a7.png',
     icon: 'https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/ac15737b-e3a2-4a9f-b1dd-c244c7325d91.svg'
   }];
-  return <div className={`portfolio-showcase ${props.className || ''}`} style={{
-    width: '100%',
+  return <div className={`page-shell portfolio-showcase ${props.className || ''}`} style={{
     backgroundColor: 'var(--bg-primary)',
-    position: 'relative',
-    overflowX: 'hidden',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
     ...props.style
   }}>
       {/* Background Decorative Element */}

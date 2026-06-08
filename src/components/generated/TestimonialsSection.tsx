@@ -147,7 +147,7 @@ export const TestimonialsSection: React.FC = () => {
     }}>
       <div style={{ textAlign: 'center', marginBottom: '64px', width: '100%', maxWidth: '1200px', padding: '0 40px', boxSizing: 'border-box' }}>
         <span style={{
-          color: '#00c2ff',
+          color: 'var(--brand-500)',
           fontSize: '13px',
           textTransform: 'uppercase',
           letterSpacing: '3px',
@@ -201,10 +201,10 @@ export const TestimonialsSection: React.FC = () => {
                     overflow: 'hidden',
                     cursor: 'pointer',
                     transition: 'all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                    border: isActive ? '3px solid #00c2ff' : '3px solid var(--border-light)',
+                    border: isActive ? '3px solid var(--brand-500)' : '3px solid var(--border-light)',
                     filter: isActive ? 'brightness(1) saturate(1)' : 'brightness(0.55) saturate(0.8)',
                     transform: isActive ? 'scale(1.18)' : 'scale(1)',
-                    boxShadow: isActive ? '0 0 0 5px rgba(0, 194, 255, 0.25), 0 0 30px rgba(0, 194, 255, 0.35), 0 8px 32px rgba(0,0,0,0.5)' : 'none',
+                    boxShadow: isActive ? '0 0 0 5px var(--brand-500-medium), 0 0 30px var(--brand-500-strong), 0 8px 32px rgba(0,0,0,0.5)' : 'none',
                     zIndex: isActive ? 10 : 1
                   }}>
                     <img src={t.avatar} alt={t.name} loading="lazy" style={{
@@ -229,7 +229,7 @@ export const TestimonialsSection: React.FC = () => {
                   height: '48px',
                   borderRadius: '50%',
                   overflow: 'hidden',
-                  border: isActive ? '2px solid #00c2ff' : '2px solid var(--border-light)',
+                  border: isActive ? '2px solid var(--brand-500)' : '2px solid var(--border-light)',
                   filter: isActive ? 'brightness(1) saturate(1)' : 'brightness(0.55) saturate(0.8)',
                   transform: isActive ? 'scale(1.15)' : 'scale(1)',
                   transition: 'all 0.3s ease',
@@ -276,7 +276,7 @@ export const TestimonialsSection: React.FC = () => {
                 top: '-10px',
                 fontSize: '72px',
                 lineHeight: 1,
-                color: '#00c2ff',
+                color: 'var(--brand-500)',
                 fontFamily: 'Georgia, serif',
                 opacity: 0.9
               }}>"</span>
@@ -296,14 +296,14 @@ export const TestimonialsSection: React.FC = () => {
                 height: '56px',
                 borderRadius: '50%',
                 objectFit: 'cover',
-                border: '2px solid #00c2ff',
-                boxShadow: '0 0 12px rgba(0, 194, 255, 0.4)'
+                border: '2px solid var(--brand-500)',
+                boxShadow: '0 0 12px var(--brand-500-strong)'
               }} />
               <div>
                 <div style={{
                   fontSize: '16px',
                   fontWeight: 700,
-                  color: '#00c2ff',
+                  color: 'var(--brand-500)',
                   fontFamily: '"Barlow", sans-serif'
                 }}>{activeTestimonial.name}, {activeTestimonial.title}</div>
                 <div style={{
@@ -323,7 +323,7 @@ export const TestimonialsSection: React.FC = () => {
                   width: idx === activeIndex ? '28px' : '8px',
                   height: '8px',
                   borderRadius: idx === activeIndex ? '4px' : '50%',
-                  background: idx === activeIndex ? '#00c2ff' : 'var(--border-light)',
+                  background: idx === activeIndex ? 'var(--brand-500)' : 'var(--border-light)',
                   cursor: 'pointer',
                   transition: 'all 0.3s ease'
                 }} />

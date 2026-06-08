@@ -79,7 +79,7 @@ export const TopicCategories = () => {
         position: 'absolute',
         inset: 0,
         pointerEvents: 'none',
-        background: 'radial-gradient(circle at top left, rgba(168, 85, 247, 0.14), transparent 28%), radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.12), transparent 30%)'
+        background: 'radial-gradient(circle at top left, var(--brand-400-soft), transparent 28%), radial-gradient(circle at bottom right, var(--brand-600-soft), transparent 30%)'
       }} />
 
       {/* Header */}
@@ -97,7 +97,7 @@ export const TopicCategories = () => {
           fontWeight: 700,
           letterSpacing: '0.1em',
           textTransform: 'uppercase',
-          color: '#a855f7'
+          color: 'var(--brand-400)'
         }}>
           EXPLORE TOPICS
         </div>
@@ -166,12 +166,12 @@ export const TopicCategories = () => {
                 width: '48px',
                 height: '48px',
                 borderRadius: '12px',
-                backgroundColor: 'rgba(168, 85, 247, 0.14)',
-                border: '1px solid rgba(168, 85, 247, 0.22)',
+                backgroundColor: 'var(--brand-400-soft)',
+                border: '1px solid var(--brand-400-medium)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#a855f7',
+                color: 'var(--brand-400)',
                 marginBottom: 'auto'
               }}>
                 {topic.icon}
@@ -208,7 +208,7 @@ export const TopicCategories = () => {
                   width: '40px',
                   height: '40px',
                   borderRadius: '12px',
-                  backgroundColor: '#a855f7',
+                  backgroundColor: 'var(--brand-400)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -216,8 +216,8 @@ export const TopicCategories = () => {
                   cursor: 'pointer',
                   transition: 'transform 0.2s, backgroundColor 0.2s'
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#9333ea'; e.currentTarget.style.transform = 'scale(1.05)'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#a855f7'; e.currentTarget.style.transform = 'scale(1)'; }}
+                onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'var(--brand-400)'; e.currentTarget.style.transform = 'scale(1.05)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--brand-400)'; e.currentTarget.style.transform = 'scale(1)'; }}
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </div>

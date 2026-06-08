@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/blog/future-of-growth-marketing-2025":{},"/blog/advanced-seo-strategies":{},"/blog/ecommerce-roas-case-study":{},"/blog/web-design-trends-2025":{},"/blog/brand-positioning-framework":{},"/blog/content-marketing-playbook":{},"/blog/crm-automation-workflow":{},"/blog/ecohome-scaled-revenue":{},"/blog/technova-qualified-leads":{},"/blog/healthplus-appointments":{},"/blog/ai-powered-marketing-rules":{},"/blog/marketing-data-analytics-gold":{},"/blog/content-strategies-that-convert":{},"/blog/digital-marketing-trends-2025":{}},"dynamicRoutes":{"/blog/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/blog/[slug]","routeRegex":"^\\/blog\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"7e8d4535a961261e875f17527c640a8c","previewModeSigningKey":"757d75d95bcee6663b2a7d46f76430b8ff3df633fceda268b9b259bc50bb4a9b","previewModeEncryptionKey":"9771c55b845c2960d4689e12fe210c351f46634fe34eb1db42ec9aad01b68365"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "abe8c39b55df89f41cab49463754838b",
+    "previewModeSigningKey": "173c0649e310d6c091cada88f42346479fc6cbdc5db23a064ae3a36aa7c4d1a9",
+    "previewModeEncryptionKey": "57350df16730f668a571a631771e525320efbc536f269680cb64b8c45e8d9152"
+  }
+}

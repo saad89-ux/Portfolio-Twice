@@ -41,8 +41,8 @@ export const QuoteBreak: React.FC<QuoteBreakProps> = ({ quote, author, role }) =
       <div style={{
         position: 'absolute', top: '50%', left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: '400px', height: '200px', borderRadius: '50%',
-        background: 'radial-gradient(ellipse, rgba(0,194,255,0.04), transparent 70%)',
+        width: 'clamp(260px, 28vw, 400px)', height: 'clamp(140px, 18vw, 200px)', borderRadius: '50%',
+        background: 'radial-gradient(ellipse, var(--brand-500-soft), transparent 70%)',
         pointerEvents: 'none',
         animation: visible ? 'quoteGlow 4s ease-in-out infinite' : 'none'
       }} />
@@ -50,16 +50,16 @@ export const QuoteBreak: React.FC<QuoteBreakProps> = ({ quote, author, role }) =
       {/* Top decorative line */}
       <div style={{
         height: '1px',
-        background: 'linear-gradient(90deg, transparent, rgba(0,194,255,0.35), rgba(147,51,234,0.2), transparent)',
+        background: 'linear-gradient(90deg, transparent, var(--brand-500-strong), var(--brand-400-medium), transparent)',
         marginBottom: '48px',
         animation: visible ? 'quoteLineExpand 1s cubic-bezier(0.16, 1, 0.3, 1) forwards' : 'none',
-        width: visible ? '140px' : '0'
+        width: visible ? 'clamp(6rem, 15vw, 8.75rem)' : '0'
       }} />
 
       {/* Quote mark */}
       <span style={{
-        fontSize: '64px', lineHeight: 0.8, height: '40px',
-        color: 'rgba(0,194,255,0.12)',
+        fontSize: 'clamp(3rem, 7vw, 4.5rem)', lineHeight: 0.8,
+        color: 'var(--brand-500-soft)',
         fontFamily: 'Georgia, serif', fontWeight: 700,
         opacity: visible ? 1 : 0,
         transition: 'opacity 0.6s ease 0.15s'
@@ -90,7 +90,7 @@ export const QuoteBreak: React.FC<QuoteBreakProps> = ({ quote, author, role }) =
       }}>
         <span style={{
           width: '24px', height: '1px',
-          background: 'rgba(0,194,255,0.35)'
+          background: 'var(--brand-500-strong)'
         }} />
         <span style={{
           color: 'var(--text-primary)', fontSize: '14px', fontWeight: 700,
@@ -109,7 +109,7 @@ export const QuoteBreak: React.FC<QuoteBreakProps> = ({ quote, author, role }) =
       {/* Bottom decorative line */}
       <div style={{
         height: '1px',
-        background: 'linear-gradient(90deg, transparent, rgba(147,51,234,0.2), rgba(0,194,255,0.35), transparent)',
+        background: 'linear-gradient(90deg, transparent, var(--brand-400-medium), var(--brand-500-strong), transparent)',
         marginTop: '48px',
         animation: visible ? 'quoteLineExpand 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards' : 'none',
         width: visible ? '140px' : '0'

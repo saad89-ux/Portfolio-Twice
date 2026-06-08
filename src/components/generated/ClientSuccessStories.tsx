@@ -39,7 +39,7 @@ export const ClientSuccessStories = () => {
               fontWeight: 700,
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
-              color: '#a855f7'
+              color: 'var(--brand-400)'
             }}>
               CLIENT SUCCESS STORIES
             </div>
@@ -52,7 +52,7 @@ export const ClientSuccessStories = () => {
               margin: 0,
               letterSpacing: '-0.02em',
             }}>
-              Partnerships That Drive <span style={{ color: '#a855f7' }}>Real Growth</span>
+              Partnerships That Drive <span style={{ color: 'var(--brand-400)' }}>Real Growth</span>
             </h2>
             <p style={{
               fontSize: '16px',
@@ -78,7 +78,7 @@ export const ClientSuccessStories = () => {
                 ))}
                 <div style={{
                   width: '40px', height: '40px', borderRadius: '50%',
-                  backgroundColor: '#a855f7', color: '#fff',
+                  backgroundColor: 'var(--brand-400)', color: '#fff',
                   border: '2px solid #030510',
                   marginLeft: '-12px',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -106,7 +106,7 @@ export const ClientSuccessStories = () => {
           }}>
             {/* Text Side */}
             <div style={{ padding: '32px', flex: 1, display: 'flex', flexDirection: 'column', gap: '24px', zIndex: 2 }}>
-              <div style={{ color: '#a855f7' }}>
+              <div style={{ color: 'var(--brand-400)' }}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
               </div>
               <p style={{ fontSize: '15px', color: 'var(--text-primary)', lineHeight: 1.6, fontFamily: '"Barlow", sans-serif', margin: 0, fontWeight: 500 }}>
@@ -115,7 +115,7 @@ export const ClientSuccessStories = () => {
               
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginTop: 'auto' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: 'linear-gradient(45deg, #a855f7, #3b82f6)' }} />
+                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: 'linear-gradient(45deg, var(--brand-400), var(--brand-600))' }} />
                   <span style={{ fontSize: '16px', fontWeight: 800, color: 'var(--text-primary)', fontFamily: '"Inter", sans-serif' }}>TechNova</span>
                 </div>
                 <div style={{ width: '1px', height: '30px', backgroundColor: 'var(--border-light)' }} />
@@ -134,10 +134,10 @@ export const ClientSuccessStories = () => {
               {/* Floating Badge */}
               <div style={{
                 position: 'absolute', bottom: '24px', right: '-10px',
-                backgroundColor: '#a855f7',
+                backgroundColor: 'var(--brand-400)',
                 padding: '12px 20px', borderRadius: '12px',
                 display: 'flex', flexDirection: 'column', gap: '4px',
-                boxShadow: '0 10px 30px rgba(168, 85, 247, 0.4)',
+                boxShadow: '0 10px 30px var(--brand-400-strong)',
                 transform: 'translateX(-20px)'
               }}>
                 <span style={{ fontSize: '24px', fontWeight: 800, color: '#fff', fontFamily: '"Inter", sans-serif', lineHeight: 1 }}>320%</span>
@@ -170,7 +170,7 @@ export const ClientSuccessStories = () => {
               display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer',
               boxShadow: '0 10px 30px rgba(0,0,0,0.4)', zIndex: 10
             }}>
-              <div style={{ width: 0, height: 0, borderTop: '10px solid transparent', borderBottom: '10px solid transparent', borderLeft: '16px solid #a855f7', marginLeft: '4px' }} />
+              <div style={{ width: 0, height: 0, borderTop: '10px solid transparent', borderBottom: '10px solid transparent', borderLeft: '16px solid var(--brand-400)', marginLeft: '4px' }} />
             </div>
 
             {/* Bottom Info Box */}
@@ -198,8 +198,8 @@ export const ClientSuccessStories = () => {
           {/* 3 Stats Cards */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
             {[
-              { icon: '↗', color: '#8b5cf6', bg: 'rgba(139, 92, 246, 0.1)', value: '98%', label: 'Client Satisfaction Rate' },
-              { icon: '⭐', color: '#3b82f6', bg: 'rgba(59, 130, 246, 0.1)', value: '250+', label: 'Successful Projects Delivered' },
+              { icon: '↗', color: 'var(--brand-400)', bg: 'var(--brand-400-soft)', value: '98%', label: 'Client Satisfaction Rate' },
+              { icon: '⭐', color: 'var(--brand-600)', bg: 'var(--brand-600-soft)', value: '250+', label: 'Successful Projects Delivered' },
               { icon: '🏢', color: '#10b981', bg: 'rgba(16, 185, 129, 0.1)', value: '35+', label: 'Industries Served' },
             ].map((stat, idx) => (
               <div key={idx} className="ca-interactive-card" style={{
@@ -270,7 +270,7 @@ export const ClientSuccessStories = () => {
               
               <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                  <span style={{ fontSize: '8px', fontWeight: 700, letterSpacing: '0.1em', color: '#a855f7', textTransform: 'uppercase' }}>{item.cat}</span>
+                  <span style={{ fontSize: '8px', fontWeight: 700, letterSpacing: '0.1em', color: 'var(--brand-400)', textTransform: 'uppercase' }}>{item.cat}</span>
                   <span style={{ fontSize: '13px', fontWeight: 600, color: '#fff', lineHeight: 1.3 }}>{item.title}</span>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>

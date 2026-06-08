@@ -38,17 +38,17 @@ export const Blogdetailpage: React.FC<BlogDetailPageProps> = ({ article }) => {
     <>
       <Navbar activePage={activePage} onNavigate={handleNavigate} scrolled={scrolled} />
       <div style={{ paddingTop: '96px', backgroundColor: 'var(--bg-primary)' }}>
-        <main style={{ padding: '40px 86px', maxWidth: '1320px', margin: '0 auto', boxSizing: 'border-box' }}>
-        <ArticleHero article={article} />
-        <QuoteBreak quote={article.quote} author={article.author} role={article.role} />
-        <TableOfContents article={article} />
-        <ArticleContent article={article} />
-        <CaseStudyHighlight caseStudy={article.caseStudy} />
+        <main className="page-container blog-detail__main">
+          <ArticleHero article={article} />
+          <QuoteBreak quote={article.quote} author={article.author} role={article.role} />
+          <TableOfContents article={article} />
+          <ArticleContent article={article} />
+          <CaseStudyHighlight caseStudy={article.caseStudy} />
 
-        <RelatedArticlesSection articles={article.relatedArticles} />
-        <FinalCTASection onNavigate={handleNavigate} />
-        <Footer onNavigate={handleNavigate} />
-      </main>
+          <RelatedArticlesSection articles={article.relatedArticles} />
+          <FinalCTASection onNavigate={handleNavigate} />
+          <Footer onNavigate={handleNavigate} />
+        </main>
       </div>
     </>
   );

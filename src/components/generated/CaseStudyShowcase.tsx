@@ -58,7 +58,7 @@ export const CaseStudyShowcase = () => {
           fontWeight: 700,
           letterSpacing: '0.1em',
           textTransform: 'uppercase',
-          color: '#a855f7'
+          color: 'var(--brand-400)'
         }}>
           CASE STUDY SHOWCASE
         </div>
@@ -73,7 +73,7 @@ export const CaseStudyShowcase = () => {
           maxWidth: '600px'
         }}>
           Real Challenges.<br />
-          Proven <span style={{ color: '#a855f7' }}>Results.</span>
+          Proven <span style={{ color: 'var(--brand-400)' }}>Results.</span>
         </h2>
         <p style={{
           fontSize: '16px',
@@ -111,7 +111,7 @@ export const CaseStudyShowcase = () => {
               {/* Number Badge */}
               <div style={{
                 position: 'absolute', top: '24px', left: '24px',
-                backgroundColor: 'rgba(168, 85, 247, 0.2)', border: '1px solid rgba(168, 85, 247, 0.5)',
+                backgroundColor: 'var(--brand-400-medium)', border: '1px solid var(--brand-400-strong)',
                 padding: '6px 12px', borderRadius: '8px',
                 color: '#fff', fontSize: '14px', fontWeight: 700
               }}>
@@ -159,7 +159,7 @@ export const CaseStudyShowcase = () => {
                 <button style={{
                   padding: '10px 20px',
                   backgroundColor: 'transparent',
-                  border: '1px solid rgba(168, 85, 247, 0.4)',
+                  border: '1px solid var(--brand-400-strong)',
                   borderRadius: '999px',
                   color: 'var(--text-primary)',
                   fontSize: '13px',
@@ -171,16 +171,16 @@ export const CaseStudyShowcase = () => {
                   transition: 'all 0.2s',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(168, 85, 247, 0.1)';
-                  e.currentTarget.style.borderColor = '#a855f7';
+                  e.currentTarget.style.backgroundColor = 'var(--brand-400-soft)';
+                  e.currentTarget.style.borderColor = 'var(--brand-400)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'transparent';
-                  e.currentTarget.style.borderColor = 'rgba(168, 85, 247, 0.4)';
+                  e.currentTarget.style.borderColor = 'var(--brand-400-strong)';
                 }}
                 >
                   View Case Study
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a855f7" strokeWidth="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-400)" strokeWidth="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
                 </button>
               </div>
             </div>
@@ -192,7 +192,7 @@ export const CaseStudyShowcase = () => {
       <div style={{
         width: '100%',
         background: 'linear-gradient(90deg, rgba(20, 10, 40, 1) 0%, rgba(10, 5, 20, 1) 100%)',
-        border: '1px solid rgba(168, 85, 247, 0.2)',
+        border: '1px solid var(--brand-400-medium)',
         borderRadius: '24px',
         padding: '32px 40px',
         display: 'flex',
@@ -206,10 +206,10 @@ export const CaseStudyShowcase = () => {
         <div style={{ flex: '1 1 250px', display: 'flex', alignItems: 'center', gap: '20px' }}>
           <div style={{
             width: '56px', height: '56px', borderRadius: '50%',
-            backgroundColor: 'rgba(168, 85, 247, 0.15)', border: '1px solid rgba(168, 85, 247, 0.3)',
+            backgroundColor: 'var(--brand-400-medium)', border: '1px solid var(--brand-400-strong)',
             display: 'flex', alignItems: 'center', justifyContent: 'center'
           }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a855f7" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-400)" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
           </div>
           <div style={{ color: 'var(--text-primary)', fontSize: '16px', fontWeight: 600, fontFamily: '"Inter", sans-serif', lineHeight: 1.4 }}>
             Delivering Impact <br/> Across Industries
@@ -225,7 +225,7 @@ export const CaseStudyShowcase = () => {
             { value: '10+', label: 'Years of Experience' },
           ].map((stat, idx) => (
             <div key={idx} style={{ display: 'flex', flexDirection: 'column', gap: '8px', minWidth: '120px' }}>
-              <div style={{ fontSize: '32px', fontWeight: 800, color: '#a855f7', fontFamily: '"Inter", sans-serif', letterSpacing: '-0.02em' }}>
+              <div style={{ fontSize: '32px', fontWeight: 800, color: 'var(--brand-400)', fontFamily: '"Inter", sans-serif', letterSpacing: '-0.02em' }}>
                 {stat.value}
               </div>
               <div style={{ fontSize: '12px', color: 'var(--text-muted)', fontFamily: '"Barlow", sans-serif' }}>

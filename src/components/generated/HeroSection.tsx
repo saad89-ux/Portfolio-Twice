@@ -12,7 +12,7 @@ export const HeroSection: React.FC<{ onNavigate?: (page: PageName) => void }> = 
       height: '732px',
       position: 'relative',
       maxWidth: '1440px',
-      overflow: 'hidden'
+      
     }}>
         {/* Dot grid background */}
         <img className="hero-glow" src="https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/2225324b-69f7-4b09-aa61-332f64bf95e6.svg" alt="" aria-hidden="true" style={{
@@ -49,7 +49,7 @@ export const HeroSection: React.FC<{ onNavigate?: (page: PageName) => void }> = 
           }}>Transforming Data into</span>
             <span className="hero-decisions-badge" style={{
             display: 'inline-block',
-            backgroundColor: 'rgba(0, 194, 255, 1)',
+            backgroundColor: 'var(--brand-500-strong)',
             borderRadius: '16px',
             padding: '0 28px',
             marginTop: '8px',
@@ -79,7 +79,7 @@ export const HeroSection: React.FC<{ onNavigate?: (page: PageName) => void }> = 
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: 'rgba(0, 194, 255, 1)',
+          backgroundColor: 'var(--brand-500-strong)',
           border: 'none',
           borderRadius: '10px',
           color: 'var(--text-primary)',
@@ -142,7 +142,7 @@ export const HeroSection: React.FC<{ onNavigate?: (page: PageName) => void }> = 
           position: 'absolute',
           width: '520px',
           height: '520px',
-          background: 'linear-gradient(180deg, rgba(0, 194, 255, 0) 0%, rgba(120, 185, 255, 1) 55%, rgba(154, 192, 236, 1) 100%)',
+          background: 'linear-gradient(180deg, var(--brand-500-soft) 0%, var(--brand-600-strong) 55%, var(--brand-500-medium) 100%)',
           filter: 'blur(350px)',
           WebkitFilter: 'blur(350px)',
           left: '26px',
@@ -155,7 +155,7 @@ export const HeroSection: React.FC<{ onNavigate?: (page: PageName) => void }> = 
           position: 'absolute',
           width: '320px',
           height: '320px',
-          background: 'radial-gradient(circle, rgba(0, 194, 255, 0.75) 0%, rgba(0, 194, 255, 0.35) 45%, rgba(0, 194, 255, 0) 72%)',
+          background: 'radial-gradient(circle, var(--brand-500-strong) 0%, var(--brand-500-strong) 45%, var(--brand-500-soft) 72%)',
           filter: 'blur(90px)',
           WebkitFilter: 'blur(90px)',
           left: '126px',

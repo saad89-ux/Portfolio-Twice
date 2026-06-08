@@ -19,7 +19,7 @@ export const CapabilityFilter = () => {
           fontWeight: 700,
           letterSpacing: '0.1em',
           textTransform: 'uppercase',
-          color: '#a855f7'
+          color: 'var(--brand-400)'
         }}>
           EXPLORE OUR WORK
         </div>
@@ -33,7 +33,7 @@ export const CapabilityFilter = () => {
           letterSpacing: '-0.02em',
           maxWidth: '800px'
         }}>
-          Find Work That Matches <span style={{ background: 'linear-gradient(90deg, #a855f7, #3b82f6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Your Goals</span>
+          Find Work That Matches <span style={{ background: 'linear-gradient(90deg, var(--brand-400), var(--brand-600))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Your Goals</span>
         </h2>
         <p style={{
           fontSize: '16px',
@@ -68,8 +68,8 @@ export const CapabilityFilter = () => {
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <button className="ca-interactive-btn" style={{
                 padding: '12px 20px',
-                backgroundColor: 'rgba(168, 85, 247, 0.1)',
-                border: '1px solid rgba(168, 85, 247, 0.4)',
+                backgroundColor: 'var(--brand-400-soft)',
+                border: '1px solid var(--brand-400-strong)',
                 borderRadius: '12px',
                 color: '#fff',
                 fontSize: '13px',
@@ -79,7 +79,7 @@ export const CapabilityFilter = () => {
                 alignItems: 'center',
                 gap: '10px'
               }}>
-                <div style={{ color: '#a855f7', display: 'flex' }}>
+                <div style={{ color: 'var(--brand-400)', display: 'flex' }}>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
                 </div>
                 All Capabilities
@@ -157,7 +157,7 @@ export const CapabilityFilter = () => {
           gap: '20px'
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(168, 85, 247, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#a855f7' }}>
+            <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'var(--brand-400-soft)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--brand-400)' }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2v11z"></path></svg>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
@@ -223,9 +223,9 @@ export const CapabilityFilter = () => {
             
             <div style={{
               position: 'absolute', top: '16px', left: '16px',
-              backgroundColor: 'rgba(168, 85, 247, 0.1)', border: '1px solid rgba(168, 85, 247, 0.3)',
+              backgroundColor: 'var(--brand-400-soft)', border: '1px solid var(--brand-400-strong)',
               padding: '4px 12px', borderRadius: '999px',
-              color: '#a855f7', fontSize: '11px', fontWeight: 600
+              color: 'var(--brand-400)', fontSize: '11px', fontWeight: 600
             }}>
               SaaS
             </div>
@@ -255,7 +255,7 @@ export const CapabilityFilter = () => {
 
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <div style={{ color: '#a855f7' }}>
+                <div style={{ color: 'var(--brand-400)' }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
@@ -264,7 +264,7 @@ export const CapabilityFilter = () => {
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <div style={{ color: '#3b82f6' }}>
+                <div style={{ color: 'var(--brand-600)' }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2v10l5.3 5.3"></path></svg>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
@@ -300,9 +300,9 @@ export const CapabilityFilter = () => {
             
             <div style={{
               position: 'absolute', top: '16px', left: '16px',
-              backgroundColor: 'rgba(168, 85, 247, 0.1)', border: '1px solid rgba(168, 85, 247, 0.3)',
+              backgroundColor: 'var(--brand-400-soft)', border: '1px solid var(--brand-400-strong)',
               padding: '4px 12px', borderRadius: '999px',
-              color: '#a855f7', fontSize: '11px', fontWeight: 600
+              color: 'var(--brand-400)', fontSize: '11px', fontWeight: 600
             }}>
               E-commerce
             </div>
@@ -332,7 +332,7 @@ export const CapabilityFilter = () => {
 
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <div style={{ color: '#a855f7' }}>
+                <div style={{ color: 'var(--brand-400)' }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
@@ -341,7 +341,7 @@ export const CapabilityFilter = () => {
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <div style={{ color: '#3b82f6' }}>
+                <div style={{ color: 'var(--brand-600)' }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2v10l5.3 5.3"></path></svg>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
@@ -350,7 +350,7 @@ export const CapabilityFilter = () => {
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <div style={{ color: '#a855f7' }}>
+                <div style={{ color: 'var(--brand-400)' }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
@@ -377,9 +377,9 @@ export const CapabilityFilter = () => {
             
             <div style={{
               position: 'absolute', top: '16px', left: '16px',
-              backgroundColor: 'rgba(168, 85, 247, 0.1)', border: '1px solid rgba(168, 85, 247, 0.3)',
+              backgroundColor: 'var(--brand-400-soft)', border: '1px solid var(--brand-400-strong)',
               padding: '4px 12px', borderRadius: '999px',
-              color: '#a855f7', fontSize: '11px', fontWeight: 600
+              color: 'var(--brand-400)', fontSize: '11px', fontWeight: 600
             }}>
               Healthcare
             </div>
@@ -409,7 +409,7 @@ export const CapabilityFilter = () => {
 
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <div style={{ color: '#a855f7' }}>
+                <div style={{ color: 'var(--brand-400)' }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
@@ -418,7 +418,7 @@ export const CapabilityFilter = () => {
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <div style={{ color: '#a855f7' }}>
+                <div style={{ color: 'var(--brand-400)' }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2v10l5.3 5.3"></path></svg>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
@@ -427,7 +427,7 @@ export const CapabilityFilter = () => {
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <div style={{ color: '#a855f7' }}>
+                <div style={{ color: 'var(--brand-400)' }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polygon points="9 12 11 14 15 10"></polygon></svg>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>

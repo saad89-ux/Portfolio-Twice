@@ -181,7 +181,7 @@ const EcosystemNode = ({ title, desc, icon, align = 'left', onClick }: { title: 
     onClick={onClick}
     style={{
       backgroundColor: 'var(--bg-card)',
-      border: '1px solid rgba(0, 194, 255, 0.1)',
+      border: '1px solid var(--brand-500-soft)',
       borderRadius: '16px',
       padding: '20px',
       display: 'flex',
@@ -199,8 +199,8 @@ const EcosystemNode = ({ title, desc, icon, align = 'left', onClick }: { title: 
   >
     <div style={{
       width: '48px', height: '48px', borderRadius: '12px',
-      backgroundColor: 'rgba(0, 194, 255, 0.05)', border: '1px solid rgba(0, 194, 255, 0.2)',
-      display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#00c2ff', flexShrink: 0
+      backgroundColor: 'var(--brand-500-soft)', border: '1px solid var(--brand-500-medium)',
+      display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--brand-500)', flexShrink: 0
     }}>
       {icon}
     </div>
@@ -209,7 +209,7 @@ const EcosystemNode = ({ title, desc, icon, align = 'left', onClick }: { title: 
       <span style={{ color: 'var(--text-muted)', fontSize: '12px', lineHeight: '18px', fontFamily: BarlowFont }}>{desc}</span>
     </div>
     {align !== 'center' && (
-      <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: 'var(--bg-card-light)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#00c2ff', flexShrink: 0 }}>
+      <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: 'var(--bg-card-light)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--brand-500)', flexShrink: 0 }}>
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </div>
     )}
@@ -239,20 +239,20 @@ export const ServicesEcosystemSection: React.FC<{ onNavigate?: (page: string) =>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '40px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '600px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-              <span style={{ color: '#00c2ff', fontSize: '13px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', fontFamily: BarlowFont }}>
+              <span style={{ color: 'var(--brand-500)', fontSize: '13px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', fontFamily: BarlowFont }}>
                 OUR SERVICES ECOSYSTEM
               </span>
               <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--border-light)' }} />
             </div>
             <h2 style={{ margin: 0, color: 'var(--text-primary)', fontSize: 'clamp(36px, 4vw, 56px)', fontFamily: InterFont, fontWeight: 800, lineHeight: 1.1 }}>
               Integrated Services. <br/>
-              <span style={{ color: '#00c2ff' }}>Exponential Growth.</span>
+              <span style={{ color: 'var(--brand-500)' }}>Exponential Growth.</span>
             </h2>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', maxWidth: '400px' }}>
             <p style={{ margin: 0, color: 'var(--text-muted)', fontSize: '16px', lineHeight: '28px', fontFamily: BarlowFont }}>
-              Our full-funnel ecosystem is built to attract, engage, convert, and retain customers — driving <strong style={{ color: '#00c2ff' }}>measurable growth</strong> at every stage.
+              Our full-funnel ecosystem is built to attract, engage, convert, and retain customers — driving <strong style={{ color: 'var(--brand-500)' }}>measurable growth</strong> at every stage.
             </p>
             <button className="ca-hover-popup" style={{
               alignSelf: 'flex-start',
@@ -279,9 +279,9 @@ export const ServicesEcosystemSection: React.FC<{ onNavigate?: (page: string) =>
           <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 1, pointerEvents: 'none' }}>
             <defs>
               <linearGradient id="lineGlow" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="rgba(0,194,255,0.1)" />
-                <stop offset="50%" stopColor="rgba(0,194,255,0.8)" />
-                <stop offset="100%" stopColor="rgba(0,194,255,0.1)" />
+                <stop offset="0%" stopColor="var(--brand-500-soft)" />
+                <stop offset="50%" stopColor="var(--brand-500-strong)" />
+                <stop offset="100%" stopColor="var(--brand-500-soft)" />
               </linearGradient>
               <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
                 <feGaussianBlur stdDeviation="4" result="blur" />
@@ -291,22 +291,22 @@ export const ServicesEcosystemSection: React.FC<{ onNavigate?: (page: string) =>
 
             {/* Left Lines */}
             {ecosystemLeft.map((node, i) => (
-              <path key={`l-${i}`} d={`M 320 ${node.y} C 460 ${node.y}, 460 ${centerY}, ${centerX} ${centerY}`} fill="none" stroke="#00c2ff" strokeWidth="1.5" opacity="0.6" filter="url(#glow)" />
+              <path key={`l-${i}`} d={`M 320 ${node.y} C 460 ${node.y}, 460 ${centerY}, ${centerX} ${centerY}`} fill="none" stroke="var(--brand-500)" strokeWidth="1.5" opacity="0.6" filter="url(#glow)" />
             ))}
             {/* Right Lines */}
             {ecosystemRight.map((node, i) => (
-              <path key={`r-${i}`} d={`M ${containerW - 320} ${node.y} C ${containerW - 460} ${node.y}, ${containerW - 460} ${centerY}, ${centerX} ${centerY}`} fill="none" stroke="#00c2ff" strokeWidth="1.5" opacity="0.6" filter="url(#glow)" />
+              <path key={`r-${i}`} d={`M ${containerW - 320} ${node.y} C ${containerW - 460} ${node.y}, ${containerW - 460} ${centerY}, ${centerX} ${centerY}`} fill="none" stroke="var(--brand-500)" strokeWidth="1.5" opacity="0.6" filter="url(#glow)" />
             ))}
             {/* Top Line */}
-            <path d={`M ${centerX} 120 C ${centerX} 250, ${centerX} 250, ${centerX} ${centerY}`} fill="none" stroke="#00c2ff" strokeWidth="1.5" opacity="0.6" filter="url(#glow)" />
+            <path d={`M ${centerX} 120 C ${centerX} 250, ${centerX} 250, ${centerX} ${centerY}`} fill="none" stroke="var(--brand-500)" strokeWidth="1.5" opacity="0.6" filter="url(#glow)" />
             {/* Bottom Line */}
-            <path d={`M ${centerX} 680 C ${centerX} 550, ${centerX} 550, ${centerX} ${centerY}`} fill="none" stroke="#00c2ff" strokeWidth="1.5" opacity="0.6" filter="url(#glow)" />
+            <path d={`M ${centerX} 680 C ${centerX} 550, ${centerX} 550, ${centerX} ${centerY}`} fill="none" stroke="var(--brand-500)" strokeWidth="1.5" opacity="0.6" filter="url(#glow)" />
 
             {/* Connection Dots */}
-            {ecosystemLeft.map((node, i) => <circle key={`dl-${i}`} cx="320" cy={node.y} r="4" fill="#00c2ff" filter="url(#glow)" />)}
-            {ecosystemRight.map((node, i) => <circle key={`dr-${i}`} cx={containerW - 320} cy={node.y} r="4" fill="#00c2ff" filter="url(#glow)" />)}
-            <circle cx={centerX} cy="120" r="4" fill="#00c2ff" filter="url(#glow)" />
-            <circle cx={centerX} cy="680" r="4" fill="#00c2ff" filter="url(#glow)" />
+            {ecosystemLeft.map((node, i) => <circle key={`dl-${i}`} cx="320" cy={node.y} r="4" fill="var(--brand-500)" filter="url(#glow)" />)}
+            {ecosystemRight.map((node, i) => <circle key={`dr-${i}`} cx={containerW - 320} cy={node.y} r="4" fill="var(--brand-500)" filter="url(#glow)" />)}
+            <circle cx={centerX} cy="120" r="4" fill="var(--brand-500)" filter="url(#glow)" />
+            <circle cx={centerX} cy="680" r="4" fill="var(--brand-500)" filter="url(#glow)" />
           </svg>
 
           {/* Center Orb */}
@@ -316,16 +316,16 @@ export const ServicesEcosystemSection: React.FC<{ onNavigate?: (page: string) =>
             width: '320px', height: '320px',
             borderRadius: '50%',
             backgroundColor: 'var(--bg-secondary)',
-            border: '2px solid rgba(0, 194, 255, 0.4)',
-            boxShadow: '0 0 80px rgba(0, 194, 255, 0.2), inset 0 0 60px rgba(0, 194, 255, 0.2)',
+            border: '2px solid var(--brand-500-strong)',
+            boxShadow: '0 0 80px var(--brand-500-medium), inset 0 0 60px var(--brand-500-medium)',
             zIndex: 10,
             display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
             textAlign: 'center',
             padding: '40px', boxSizing: 'border-box',
           }}>
-            <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: 'radial-gradient(circle, rgba(0,194,255,0.1) 0%, transparent 70%)' }}></div>
+            <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: 'radial-gradient(circle, var(--brand-500-soft) 0%, transparent 70%)' }}></div>
             {/* Catalyst icon generic shape */}
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="#00c2ff" style={{ marginBottom: '16px', zIndex: 2, filter: 'drop-shadow(0 0 10px rgba(0,194,255,0.8))' }}>
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="var(--brand-500)" style={{ marginBottom: '16px', zIndex: 2, filter: 'drop-shadow(0 0 10px var(--brand-500-strong))' }}>
               <path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13h-13L12 6.5z" />
             </svg>
             <h3 style={{ margin: '0 0 16px 0', color: 'var(--text-primary)', fontSize: '28px', fontWeight: 800, fontFamily: InterFont, lineHeight: 1.1, zIndex: 2 }}>
@@ -334,7 +334,7 @@ export const ServicesEcosystemSection: React.FC<{ onNavigate?: (page: string) =>
             <span style={{ color: 'var(--text-muted)', fontSize: '11px', fontFamily: BarlowFont, textTransform: 'uppercase', letterSpacing: '0.1em', zIndex: 2, marginBottom: '12px' }}>
               Strategy • Data • Creativity • Execution
             </span>
-            <span style={{ color: '#00c2ff', fontSize: '12px', fontWeight: 600, fontFamily: BarlowFont, zIndex: 2 }}>
+            <span style={{ color: 'var(--brand-500)', fontSize: '12px', fontWeight: 600, fontFamily: BarlowFont, zIndex: 2 }}>
               One Ecosystem. Infinite Impact.
             </span>
           </div>
@@ -396,7 +396,7 @@ export const ServicesEcosystemSection: React.FC<{ onNavigate?: (page: string) =>
         }}>
           {stats.map((stat, i) => (
             <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
-              <div style={{ color: '#00c2ff' }}>{stat.icon}</div>
+              <div style={{ color: 'var(--brand-500)' }}>{stat.icon}</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                 <span style={{ color: 'var(--text-primary)', fontSize: '28px', fontWeight: 800, fontFamily: InterFont }}>{stat.value}</span>
                 <span style={{ color: 'var(--text-muted)', fontSize: '14px', fontFamily: BarlowFont }}>{stat.label}</span>

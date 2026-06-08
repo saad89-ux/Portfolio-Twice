@@ -19,18 +19,145 @@ export const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({ caseStud
   const phases = ['Challenge', 'Strategy', 'Execution', 'Results'];
 
   return (
-    <section ref={ref} style={{
-      marginTop: '80px', position: 'relative', overflow: 'hidden',
-      borderRadius: '32px',
-      background: 'linear-gradient(175deg, #020410 0%, #080c1e 40%, #0c0f24 100%)',
-      border: '1px solid rgba(255,255,255,0.07)',
-      padding: '72px 60px 64px'
-    }}>
+    <section ref={ref} className="case-study-highlight">
       <style>{`
         @keyframes csGlow { 0%,100%{opacity:.4;transform:scale(1)} 50%{opacity:.7;transform:scale(1.06)} }
-        @keyframes csPulse { 0%,100%{box-shadow:0 0 0 rgba(147,51,234,0)} 50%{box-shadow:0 0 40px rgba(147,51,234,.08)} }
+        @keyframes csPulse { 0%,100%{box-shadow:0 0 0 var(--brand-400-soft)} 50%{box-shadow:0 0 40px var(--brand-400-soft)} }
         .cs-card-hover { transition: all .35s cubic-bezier(.16,1,.3,1) !important; }
-        .cs-card-hover:hover { border-color: rgba(147,51,234,.35) !important; transform: translateY(-4px) !important; box-shadow: 0 30px 60px rgba(0,0,0,.25), 0 0 30px rgba(147,51,234,.06) !important; }
+        .cs-card-hover:hover { border-color: var(--brand-400-strong) !important; transform: translateY(-4px) !important; box-shadow: 0 30px 60px rgba(0,0,0,.25), 0 0 30px var(--brand-400-soft) !important; }
+
+        .case-study-highlight {
+          margin-top: clamp(3rem, 4vw, 5rem);
+          position: relative;
+          overflow: hidden;
+          border-radius: 2rem;
+          background: linear-gradient(175deg, #020410 0%, #080c1e 40%, #0c0f24 100%);
+          border: 1px solid rgba(255,255,255,0.07);
+          padding: clamp(3rem, 4vw, 4.5rem) clamp(2rem, 3vw, 3.5rem) clamp(2.5rem, 3.5vw, 4rem);
+        }
+
+        .case-study-highlight__header {
+          position: relative;
+          z-index: 1;
+          margin-bottom: clamp(2rem, 3vw, 3rem);
+        }
+
+        .case-study-highlight__header-grid {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          gap: clamp(1.75rem, 2.5vw, 2.75rem);
+          align-items: start;
+        }
+
+        .case-study-highlight__badge {
+          display: flex;
+          align-items: center;
+          gap: clamp(0.75rem, 1.5vw, 1rem);
+          padding: clamp(1rem, 1.5vw, 1.25rem) clamp(1.25rem, 1.5vw, 1.5rem);
+          border-radius: 1rem;
+          background: rgba(255,255,255,0.03);
+          border: 1px solid rgba(255,255,255,0.07);
+          opacity: 0;
+          transition: opacity 0.6s ease 0.25s;
+        }
+
+        .case-study-highlight__hero {
+          position: relative;
+          z-index: 1;
+          border-radius: 1.25rem;
+          overflow: hidden;
+          border: 1px solid rgba(255,255,255,0.07);
+          margin-bottom: clamp(2rem, 3vw, 3rem);
+          opacity: 0;
+          transform: scale(0.97);
+          transition: all 1s cubic-bezier(0.16,1,0.3,1) 0.15s;
+        }
+
+        .case-study-highlight__hero img {
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 16 / 9;
+          object-fit: cover;
+          filter: brightness(0.75) saturate(0.85) contrast(1.05);
+        }
+
+        .case-study-highlight__metrics {
+          position: absolute;
+          bottom: clamp(1.25rem, 2vw, 1.75rem);
+          left: clamp(1.25rem, 2vw, 1.75rem);
+          right: clamp(1.25rem, 2vw, 1.75rem);
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: clamp(0.75rem, 1.5vw, 1rem);
+        }
+
+        .case-study-highlight__phases {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          gap: 0.25rem;
+          margin-bottom: clamp(2rem, 3vw, 2.5rem);
+        }
+
+        .case-study-highlight__cards {
+          position: relative;
+          z-index: 1;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: clamp(1rem, 1.5vw, 1.5rem);
+        }
+
+        .case-study-highlight__card-image {
+          position: relative;
+          height: 170px;
+          overflow: hidden;
+        }
+
+        .case-study-highlight__card-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: brightness(0.7) saturate(0.85);
+        }
+
+        @media (max-width: 1024px) {
+          .case-study-highlight__header-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .case-study-highlight__metrics {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          .case-study-highlight__cards {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .case-study-highlight {
+            padding: clamp(2rem, 4vw, 2.75rem) clamp(1.5rem, 4vw, 1.75rem) clamp(2rem, 4vw, 2.75rem);
+          }
+
+          .case-study-highlight__hero {
+            margin-bottom: clamp(1.5rem, 3vw, 2rem);
+          }
+
+          .case-study-highlight__metrics {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .case-study-highlight {
+            padding: clamp(1.5rem, 4vw, 2rem);
+          }
+
+          .case-study-highlight__badge {
+            width: 100%;
+            justify-content: space-between;
+          }
+        }
       `}</style>
 
       {/* Grid pattern */}
@@ -43,28 +170,28 @@ export const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({ caseStud
       {/* Glow orbs */}
       <div style={{
         position: 'absolute', top: '-15%', right: '8%',
-        width: '480px', height: '480px', borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(147,51,234,0.1), transparent 55%)',
+        width: 'clamp(260px, 28vw, 480px)', height: 'clamp(260px, 28vw, 480px)', borderRadius: '50%',
+        background: 'radial-gradient(circle, var(--brand-400-soft), transparent 55%)',
         pointerEvents: 'none', animation: 'csGlow 6s ease-in-out infinite'
       }} />
       <div style={{
         position: 'absolute', bottom: '-25%', left: '3%',
-        width: '360px', height: '360px', borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(0,194,255,0.06), transparent 55%)',
+        width: 'clamp(210px, 22vw, 360px)', height: 'clamp(210px, 22vw, 360px)', borderRadius: '50%',
+        background: 'radial-gradient(circle, var(--brand-500-soft), transparent 55%)',
         pointerEvents: 'none'
       }} />
 
       {/* ── Header ── */}
-      <div style={{ position: 'relative', zIndex: 1, marginBottom: '48px' }}>
+      <div className="case-study-highlight__header">
         <span style={{
           display: 'inline-block', padding: '5px 16px', borderRadius: '999px',
-          background: 'rgba(147,51,234,0.12)', border: '1px solid rgba(147,51,234,0.28)',
-          color: 'rgba(147,51,234,1)', fontSize: '10px', fontWeight: 700,
+          background: 'var(--brand-400-soft)', border: '1px solid var(--brand-400-strong)',
+          color: 'var(--brand-400-strong)', fontSize: '10px', fontWeight: 700,
           letterSpacing: '0.18em', textTransform: 'uppercase',
           fontFamily: '"Inter", sans-serif', marginBottom: '28px'
         }}>Case Study</span>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '36px', alignItems: 'start' }}>
+        <div className="case-study-highlight__header-grid">
           <div>
             <h2 style={{
               margin: 0, color: '#f7f8ff',
@@ -82,11 +209,8 @@ export const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({ caseStud
           </div>
 
           {/* Brand badge */}
-          <div style={{
-            display: 'flex', alignItems: 'center', gap: '14px',
-            padding: '18px 22px', borderRadius: '16px',
-            background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)',
-            opacity: vis ? 1 : 0, transition: 'opacity 0.6s ease 0.25s'
+          <div className="case-study-highlight__badge" style={{
+            opacity: vis ? 1 : 0
           }}>
             <img src={caseStudy.logoImage} alt={caseStudy.brand} style={{ width: '44px', height: '44px', borderRadius: '11px', objectFit: 'cover' }} />
             <div>
@@ -98,20 +222,21 @@ export const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({ caseStud
       </div>
 
       {/* ── Cinematic Hero Image ── */}
-      <div style={{
-        position: 'relative', zIndex: 1, borderRadius: '20px', overflow: 'hidden',
-        border: '1px solid rgba(255,255,255,0.07)', marginBottom: '48px',
-        opacity: vis ? 1 : 0, transform: vis ? 'scale(1)' : 'scale(0.97)',
-        transition: 'all 1s cubic-bezier(0.16,1,0.3,1) 0.15s'
+      <div className="case-study-highlight__hero" style={{
+        opacity: vis ? 1 : 0,
+        transform: vis ? 'scale(1)' : 'scale(0.97)'
       }}>
         <img src={caseStudy.heroImage} alt={caseStudy.headline} style={{
-          width: '100%', height: '340px', objectFit: 'cover',
+          width: '100%', height: '100%', objectFit: 'cover',
           filter: 'brightness(0.75) saturate(0.85) contrast(1.05)'
         }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(2,4,16,0.15) 0%, rgba(2,4,16,0.65) 100%)' }} />
 
         {/* Floating revenue metrics on image */}
-        <div style={{ position: 'absolute', bottom: '22px', left: '22px', right: '22px', display: 'flex', gap: '14px' }}>
+        <div className="case-study-highlight__metrics" style={{
+          opacity: vis ? 1 : 0,
+          transform: vis ? 'translateY(0)' : 'translateY(14px)'
+        }}>
           {caseStudy.stats.map((stat, i) => (
             <div key={stat.label} style={{
               flex: 1, padding: '18px', borderRadius: '14px', textAlign: 'center',
@@ -128,7 +253,10 @@ export const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({ caseStud
       </div>
 
       {/* ── Growth Timeline: Challenge → Strategy → Execution → Results ── */}
-      <div style={{ position: 'relative', zIndex: 1, display: 'flex', gap: '4px', marginBottom: '44px' }}>
+      <div className="case-study-highlight__phases" style={{
+        opacity: vis ? 1 : 0,
+        transform: vis ? 'translateY(0)' : 'translateY(10px)'
+      }}>
         {phases.map((phase, i) => (
           <div key={phase} style={{
             flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px',
@@ -142,8 +270,8 @@ export const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({ caseStud
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
               <span style={{
                 width: '18px', height: '18px', borderRadius: '5px', display: 'grid', placeItems: 'center',
-                background: 'rgba(147,51,234,0.15)', border: '1px solid rgba(147,51,234,0.3)',
-                color: 'rgba(147,51,234,1)', fontSize: '8px', fontWeight: 800, fontFamily: '"Inter", sans-serif'
+                background: 'var(--brand-400-medium)', border: '1px solid var(--brand-400-strong)',
+                color: 'var(--brand-400-strong)', fontSize: '8px', fontWeight: 800, fontFamily: '"Inter", sans-serif'
               }}>{String(i + 1).padStart(2, '0')}</span>
               <span style={{
                 color: 'rgba(236,239,250,0.5)', fontSize: '10px', fontWeight: 700,
@@ -155,7 +283,10 @@ export const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({ caseStud
       </div>
 
       {/* ── Case Study Cards ── */}
-      <div style={{ position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '18px' }}>
+      <div className="case-study-highlight__cards" style={{
+        opacity: vis ? 1 : 0,
+        transform: vis ? 'translateY(0)' : 'translateY(18px)'
+      }}>
         {caseStudy.cards.map((card, i) => (
           <div key={card.title} className="cs-card-hover" style={{
             borderRadius: '20px', overflow: 'hidden',
@@ -164,7 +295,7 @@ export const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({ caseStud
             transition: `all 0.7s cubic-bezier(0.16,1,0.3,1) ${0.55 + i * 0.12}s`
           }}>
             {/* Card image */}
-            <div style={{ position: 'relative', height: '170px', overflow: 'hidden' }}>
+            <div className="case-study-highlight__card-image">
               <img src={card.image} alt={card.imageAlt} style={{
                 width: '100%', height: '100%', objectFit: 'cover',
                 filter: 'brightness(0.7) saturate(0.85)'
@@ -176,7 +307,7 @@ export const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({ caseStud
                 padding: '4px 10px', borderRadius: '8px',
                 background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(12px)',
                 border: '1px solid rgba(255,255,255,0.1)',
-                color: 'rgba(147,51,234,1)', fontSize: '10px', fontWeight: 800,
+                color: 'var(--brand-400-strong)', fontSize: '10px', fontWeight: 800,
                 letterSpacing: '0.12em', fontFamily: '"Inter", sans-serif'
               }}>{phases[i] || `Phase ${i + 1}`}</div>
             </div>
@@ -186,7 +317,7 @@ export const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({ caseStud
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
                 <div style={{
                   width: '26px', height: '26px', borderRadius: '7px',
-                  background: 'linear-gradient(135deg, rgba(147,51,234,0.25), rgba(0,194,255,0.15))',
+                  background: 'linear-gradient(135deg, var(--brand-400-medium), var(--brand-500-medium))',
                   display: 'grid', placeItems: 'center',
                   color: '#fff', fontSize: '9px', fontWeight: 800, fontFamily: '"Inter", sans-serif'
                 }}>{String(i + 1).padStart(2, '0')}</div>
@@ -201,7 +332,7 @@ export const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({ caseStud
               <div style={{ display: 'flex', gap: '18px', marginTop: '16px' }}>
                 {card.stats.map(s => (
                   <div key={s.label}>
-                    <div style={{ color: 'rgba(147,51,234,1)', fontWeight: 800, fontSize: '15px', fontFamily: '"Inter", sans-serif' }}>{s.value}</div>
+                    <div style={{ color: 'var(--brand-400-strong)', fontWeight: 800, fontSize: '15px', fontFamily: '"Inter", sans-serif' }}>{s.value}</div>
                     <div style={{ color: 'rgba(236,239,250,0.45)', fontSize: '11px', marginTop: '2px', fontFamily: '"Barlow", sans-serif' }}>{s.label}</div>
                   </div>
                 ))}

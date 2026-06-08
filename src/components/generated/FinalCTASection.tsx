@@ -146,7 +146,7 @@ export const FinalCTASection: React.FC<{ serviceName?: string; onNavigate?: (pag
             <div>
               <span style={{
               display: 'inline-block',
-              color: 'rgba(0, 194, 255, 0.82)',
+              color: 'var(--brand-500-strong)',
               fontSize: '12px',
               fontWeight: 700,
               letterSpacing: '0.28em',
@@ -162,7 +162,7 @@ export const FinalCTASection: React.FC<{ serviceName?: string; onNavigate?: (pag
               lineHeight: 1.05,
               margin: '24px 0 24px 0'
             }}>
-                {config.headline} <span style={{ color: 'rgba(0, 194, 255, 1)' }}>{config.highlightWord}</span>
+                {config.headline} <span style={{ color: 'var(--brand-500-strong)' }}>{config.highlightWord}</span>
               </h2>
               <p style={{
               maxWidth: '560px',
@@ -184,14 +184,14 @@ export const FinalCTASection: React.FC<{ serviceName?: string; onNavigate?: (pag
               padding: '18px 28px',
               borderRadius: '999px',
               border: 'none',
-              background: 'linear-gradient(90deg, rgba(0, 194, 255, 1), rgba(0, 194, 255, 1))',
+              background: 'linear-gradient(90deg, var(--brand-500-strong), var(--brand-500-strong))',
               color: 'var(--text-primary)',
               fontSize: '14px',
               fontWeight: 700,
               cursor: 'pointer',
               transition: 'box-shadow 0.2s ease, transform 0.2s ease'
             }} onMouseEnter={e => {
-              e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 194, 255, 0.3)';
+              e.currentTarget.style.boxShadow = '0 20px 40px var(--brand-500-strong)';
               e.currentTarget.style.transform = 'translateY(-1px)';
             }} onMouseLeave={e => {
               e.currentTarget.style.boxShadow = 'none';
@@ -238,11 +238,11 @@ export const FinalCTASection: React.FC<{ serviceName?: string; onNavigate?: (pag
                   width: '38px',
                   height: '38px',
                   borderRadius: '50%',
-                  background: 'rgba(0, 194, 255, 0.16)',
+                  background: 'var(--brand-500-medium)',
                   display: 'grid',
                   placeItems: 'center'
                 }}>
-                  <span style={{ color: 'rgba(0, 194, 255, 1)', fontSize: '18px', fontWeight: 700 }}>•</span>
+                  <span style={{ color: 'var(--brand-500-strong)', fontSize: '18px', fontWeight: 700 }}>•</span>
                 </div>
                 <span style={{
                   color: 'var(--text-muted)',
@@ -308,7 +308,7 @@ export const FinalCTASection: React.FC<{ serviceName?: string; onNavigate?: (pag
             border: '1px solid var(--border-light)'
           }}>
               <div style={{
-                color: 'rgba(0, 194, 255, 1)',
+                color: 'var(--brand-500-strong)',
                 fontSize: '18px',
                 fontWeight: 700,
                 marginBottom: '6px'

@@ -34,12 +34,12 @@ export const TrustSection: React.FC = () => {
     position: 'relative',
     overflow: 'hidden',
     boxSizing: 'border-box',
-    border: '1px solid rgba(0, 194, 255, 0.08)'
+    border: '1px solid var(--brand-500-soft)'
   }}>
       <div style={{
       position: 'absolute',
       inset: 0,
-      backgroundImage: 'radial-gradient(circle at 16% 18%, rgba(0, 194, 255, 0.18), transparent 28%), radial-gradient(circle at 88% 16%, rgba(0, 194, 255, 0.14), transparent 24%), radial-gradient(circle at 62% 40%, rgba(0, 194, 255, 0.10), transparent 30%), radial-gradient(circle at 50% 85%, rgba(0, 194, 255, 0.20), transparent 38%), radial-gradient(circle at 22% 78%, rgba(0, 194, 255, 0.10), transparent 32%)',
+      backgroundImage: 'radial-gradient(circle at 16% 18%, var(--brand-500-medium), transparent 28%), radial-gradient(circle at 88% 16%, var(--brand-500-soft), transparent 24%), radial-gradient(circle at 62% 40%, var(--brand-500-soft), transparent 30%), radial-gradient(circle at 50% 85%, var(--brand-500-medium), transparent 38%), radial-gradient(circle at 22% 78%, var(--brand-500-soft), transparent 32%)',
       pointerEvents: 'none'
     }} />
       <div style={{
@@ -76,8 +76,8 @@ export const TrustSection: React.FC = () => {
             <div style={{
             padding: '14px 18px',
             borderRadius: '28px',
-            backgroundColor: 'rgba(0, 194, 255, 0.16)',
-            border: '1px solid rgba(0, 194, 255, 0.24)',
+            backgroundColor: 'var(--brand-500-medium)',
+            border: '1px solid var(--brand-500-medium)',
             color: 'var(--text-primary)',
             fontFamily: '"Barlow", sans-serif',
             fontWeight: 600,
@@ -105,7 +105,7 @@ export const TrustSection: React.FC = () => {
               alignItems: 'center',
               justifyContent: 'center',
               borderRadius: '50%',
-              backgroundColor: 'rgba(0, 194, 255, 1)',
+              backgroundColor: 'var(--brand-500-strong)',
               color: 'var(--text-primary)',
               fontSize: '12px'
             }}>
@@ -128,7 +128,7 @@ export const TrustSection: React.FC = () => {
           backdropFilter: 'blur(10px)'
         }}>
             <span style={{
-            color: 'rgba(0, 194, 255, 1)',
+            color: 'var(--brand-500-strong)',
             fontSize: '14px',
             fontFamily: '"Barlow", sans-serif',
             fontWeight: 700,
@@ -172,7 +172,7 @@ export const TrustSection: React.FC = () => {
             width: '4px',
             minHeight: '60px',
             borderRadius: '999px',
-            backgroundColor: 'rgba(0, 194, 255, 1)'
+            backgroundColor: 'var(--brand-500-strong)'
           }} />
             <p style={{
             color: 'var(--text-secondary)',
@@ -206,7 +206,7 @@ export const TrustSection: React.FC = () => {
             gap: '12px',
             padding: '14px 22px',
             borderRadius: '16px',
-            backgroundColor: 'rgba(0, 194, 255, 1)',
+            backgroundColor: 'var(--brand-500-strong)',
             border: 'none',
             color: 'var(--text-primary)',
             fontFamily: '"Barlow", sans-serif',
@@ -299,7 +299,7 @@ export const TrustSection: React.FC = () => {
         minWidth: '320px'
       }}>
           <span style={{
-          color: 'rgba(0, 194, 255, 1)',
+          color: 'var(--brand-500-strong)',
           fontSize: '28px',
           fontFamily: '"Inter", sans-serif',
           fontWeight: 800,

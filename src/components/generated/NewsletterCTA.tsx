@@ -23,12 +23,12 @@ export const NewsletterCTA: React.FC = () => {
         position: 'absolute',
         inset: 0,
         pointerEvents: 'none',
-        background: 'radial-gradient(circle at top left, rgba(168, 85, 247, 0.16), transparent 22%), radial-gradient(circle at bottom right, rgba(79, 70, 229, 0.12), transparent 18%)'
+        background: 'radial-gradient(circle at top left, var(--brand-400-medium), transparent 22%), radial-gradient(circle at bottom right, var(--brand-400-soft), transparent 18%)'
       }} />
 
       <div style={{ position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1.1fr 1.15fr', gap: '48px', alignItems: 'flex-start' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', paddingTop: '8px' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '10px 18px', borderRadius: '999px', backgroundColor: 'rgba(168, 85, 247, 0.12)', border: '1px solid rgba(168, 85, 247, 0.25)', color: '#a855f7', fontSize: '12px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', width: 'fit-content' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '10px 18px', borderRadius: '999px', backgroundColor: 'var(--brand-400-soft)', border: '1px solid var(--brand-400-medium)', color: 'var(--brand-400)', fontSize: '12px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', width: 'fit-content' }}>
             ✦ Weekly Newsletter
           </div>
 
@@ -42,7 +42,7 @@ export const NewsletterCTA: React.FC = () => {
               lineHeight: 1.05,
               letterSpacing: '-0.03em'
             }}>
-              Actionable Growth Insights. <span style={{ color: '#a855f7' }}>Every Week.</span>
+              Actionable Growth Insights. <span style={{ color: 'var(--brand-400)' }}>Every Week.</span>
             </h2>
             <p style={{
               margin: 0,
@@ -63,7 +63,7 @@ export const NewsletterCTA: React.FC = () => {
               { icon: '📋', title: 'Exclusive Resources', desc: 'Guides, templates, and frameworks.' }
             ].map((item, idx) => (
               <div key={idx} style={{ display: 'flex', gap: '18px', alignItems: 'flex-start' }}>
-                <div style={{ width: '48px', height: '48px', borderRadius: '18px', display: 'grid', placeItems: 'center', backgroundColor: 'rgba(168, 85, 247, 0.14)', color: '#a855f7', fontSize: '20px', flexShrink: 0 }}>
+                <div style={{ width: '48px', height: '48px', borderRadius: '18px', display: 'grid', placeItems: 'center', backgroundColor: 'var(--brand-400-soft)', color: 'var(--brand-400)', fontSize: '20px', flexShrink: 0 }}>
                   {item.icon}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', paddingTop: '3px' }}>
@@ -79,7 +79,7 @@ export const NewsletterCTA: React.FC = () => {
               {[1, 2, 3].map((n) => (
                 <img key={n} src={`https://i.pravatar.cc/100?img=${n + 20}`} alt="Team avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', border: '2px solid var(--bg-primary)', marginLeft: n > 1 ? '-12px' : 0, objectFit: 'cover' }} />
               ))}
-              <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(168, 85, 247, 0.18)', display: 'grid', placeItems: 'center', fontSize: '12px', fontWeight: 700, color: '#a855f7', marginLeft: '-12px', border: '2px solid var(--bg-primary)' }}>
+              <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'var(--brand-400-medium)', display: 'grid', placeItems: 'center', fontSize: '12px', fontWeight: 700, color: 'var(--brand-400)', marginLeft: '-12px', border: '2px solid var(--bg-primary)' }}>
                 10K+
               </div>
             </div>
@@ -95,16 +95,16 @@ export const NewsletterCTA: React.FC = () => {
             borderRadius: '32px',
             overflow: 'hidden',
             backgroundColor: 'rgba(255,255,255,0.03)',
-            border: '1px solid rgba(168, 85, 247, 0.15)',
+            border: '1px solid var(--brand-400-medium)',
             boxShadow: '0 50px 100px rgba(0, 0, 0, 0.32)'
           }}>
             <div style={{ position: 'relative', minHeight: '300px', overflow: 'hidden' }}>
               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Newsletter preview" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.65) saturate(1.2)' }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.28), rgba(124, 58, 237, 0.18)), linear-gradient(180deg, rgba(10, 14, 34, 0.16), rgba(8, 11, 24, 0.95))' }} />
-              <div style={{ position: 'absolute', top: '24px', left: '24px', display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 16px', borderRadius: '999px', backgroundColor: 'rgba(20, 23, 44, 0.9)', border: '1px solid rgba(168, 85, 247, 0.28)', color: '#a855f7', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.14em' }}>
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, var(--brand-400-strong), var(--brand-400-medium)), linear-gradient(180deg, rgba(10, 14, 34, 0.16), rgba(8, 11, 24, 0.95))' }} />
+              <div style={{ position: 'absolute', top: '24px', left: '24px', display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 16px', borderRadius: '999px', backgroundColor: 'rgba(20, 23, 44, 0.9)', border: '1px solid var(--brand-400-strong)', color: 'var(--brand-400)', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.14em' }}>
                 🚀 antigravity
               </div>
-              <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '100px', height: '100px', borderRadius: '20px', backgroundColor: 'rgba(168, 85, 247, 0.2)', display: 'grid', placeItems: 'center', fontSize: '44px', color: '#fff' }}>
+              <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '100px', height: '100px', borderRadius: '20px', backgroundColor: 'var(--brand-400-medium)', display: 'grid', placeItems: 'center', fontSize: '44px', color: '#fff' }}>
                 ✉️
               </div>
             </div>
@@ -123,7 +123,7 @@ export const NewsletterCTA: React.FC = () => {
                   'Top Digital Marketing Trends You Can\'t Ignore'
                 ].map((item, idx) => (
                   <div key={idx} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                    <span style={{ display: 'inline-flex', width: '24px', height: '24px', borderRadius: '8px', backgroundColor: 'rgba(168, 85, 247, 0.18)', color: '#a855f7', alignItems: 'center', justifyContent: 'center', fontSize: '12px', marginTop: '2px', fontWeight: 700, flexShrink: 0 }}>✓</span>
+                    <span style={{ display: 'inline-flex', width: '24px', height: '24px', borderRadius: '8px', backgroundColor: 'var(--brand-400-medium)', color: 'var(--brand-400)', alignItems: 'center', justifyContent: 'center', fontSize: '12px', marginTop: '2px', fontWeight: 700, flexShrink: 0 }}>✓</span>
                     <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '14px', lineHeight: '1.65' }}>{item}</span>
                   </div>
                 ))}
@@ -135,11 +135,11 @@ export const NewsletterCTA: React.FC = () => {
             borderRadius: '32px',
             padding: '36px',
             backgroundColor: 'rgba(20, 23, 44, 0.94)',
-            border: '1px solid rgba(168, 85, 247, 0.16)',
-            boxShadow: '0 30px 60px rgba(168, 85, 247, 0.08)'
+            border: '1px solid var(--brand-400-medium)',
+            boxShadow: '0 30px 60px var(--brand-400-soft)'
           }}>
             <div style={{ marginBottom: '28px' }}>
-              <span style={{ color: '#a855f7', fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase' }}>Get Our Best Strategies In Your Inbox</span>
+              <span style={{ color: 'var(--brand-400)', fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase' }}>Get Our Best Strategies In Your Inbox</span>
               <p style={{ margin: '12px 0 0', color: 'var(--text-primary)', fontSize: '22px', lineHeight: '1.3', fontWeight: 800, fontFamily: '"Inter", sans-serif' }}>No spam. Unsubscribe anytime.</p>
             </div>
 
@@ -160,12 +160,12 @@ export const NewsletterCTA: React.FC = () => {
                 padding: '16px 28px',
                 borderRadius: '16px',
                 border: 'none',
-                backgroundImage: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)',
+                backgroundImage: 'linear-gradient(135deg, var(--brand-400) 0%, var(--brand-400) 100%)',
                 color: '#fff',
                 fontWeight: 700,
                 fontSize: '14px',
                 cursor: 'pointer',
-                boxShadow: '0 20px 40px rgba(168, 85, 247, 0.28)'
+                boxShadow: '0 20px 40px var(--brand-400-strong)'
               }}>
                 Subscribe Now →
               </button>
@@ -174,7 +174,7 @@ export const NewsletterCTA: React.FC = () => {
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
               {['100% Free', 'No Spam', 'Unsubscribe Anytime'].map((label, idx) => (
                 <span key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)', fontSize: '13px' }}>
-                  <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#a855f7' }} />
+                  <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'var(--brand-400)' }} />
                   {label}
                 </span>
               ))}

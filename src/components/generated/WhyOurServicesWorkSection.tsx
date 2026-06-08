@@ -56,8 +56,8 @@ const RevenueChart = () => (
     <svg width="100%" height="120" viewBox="0 0 500 120" preserveAspectRatio="none">
       <defs>
         <linearGradient id="wsg1" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="rgba(0,194,255,0.3)" />
-          <stop offset="100%" stopColor="rgba(0,194,255,0)" />
+          <stop offset="0%" stopColor="var(--brand-500-strong)" />
+          <stop offset="100%" stopColor="var(--brand-500-soft)" />
         </linearGradient>
         <filter id="glow">
           <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
@@ -70,10 +70,10 @@ const RevenueChart = () => (
       {/* Fill Area */}
       <path d="M0 110 C80 100, 120 80, 200 70 S300 40, 380 30 L450 15 L500 10 L500 120 L0 120Z" fill="url(#wsg1)" />
       {/* Line */}
-      <path d="M0 110 C80 100, 120 80, 200 70 S300 40, 380 30 L450 15 L500 10" fill="none" stroke="#00c2ff" strokeWidth="2.5" filter="url(#glow)" />
+      <path d="M0 110 C80 100, 120 80, 200 70 S300 40, 380 30 L450 15 L500 10" fill="none" stroke="var(--brand-500)" strokeWidth="2.5" filter="url(#glow)" />
       {/* Dots */}
       {[[0,110],[200,70],[380,30],[500,10]].map(([x,y], i) => (
-        <circle key={i} cx={x} cy={y} r="4" fill="#03050a" stroke="#00c2ff" strokeWidth="2" filter="url(#glow)" />
+        <circle key={i} cx={x} cy={y} r="4" fill="#03050a" stroke="var(--brand-500)" strokeWidth="2" filter="url(#glow)" />
       ))}
     </svg>
     <div style={{ position: 'absolute', bottom: '-20px', left: 0, right: 0, display: 'flex', justifyContent: 'space-between', color: 'rgba(255,255,255,0.4)', fontSize: '9px', fontFamily: BarlowFont }}>
@@ -116,13 +116,13 @@ export const WhyOurServicesWorkSection: React.FC = () => {
             position: 'relative',
             zIndex: 1,
           }}>
-            <span style={{ color: '#00c2ff', fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: BarlowFont, marginBottom: '20px' }}>
+            <span style={{ color: 'var(--brand-500)', fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: BarlowFont, marginBottom: '20px' }}>
               WHY OUR SERVICES WORK
             </span>
             <h2 style={{ margin: 0, color: 'var(--text-primary)', fontSize: 'clamp(32px, 4vw, 56px)', fontFamily: InterFont, fontWeight: 800, lineHeight: 1.15, marginBottom: '24px' }}>
               We combine insight,<br />
               creativity and<br />
-              <span style={{ color: '#00c2ff' }}>relentless optimization</span><br />
+              <span style={{ color: 'var(--brand-500)' }}>relentless optimization</span><br />
               to deliver real growth.
             </h2>
             <p style={{ margin: 0, color: 'rgba(255,255,255,0.6)', fontSize: '14px', lineHeight: '24px', fontFamily: BarlowFont, maxWidth: '420px', marginBottom: '48px' }}>
@@ -132,7 +132,7 @@ export const WhyOurServicesWorkSection: React.FC = () => {
             <div style={{ display: 'flex', gap: '48px', flexWrap: 'wrap' }}>
               {[['$1.2B+','Revenue Generated'],['250+','Brands Scaled'],['98%','Client Retention']].map(([v,l],i) => (
                 <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                  <span style={{ color: '#00c2ff', fontSize: '28px', fontWeight: 800, fontFamily: InterFont }}>{v}</span>
+                  <span style={{ color: 'var(--brand-500)', fontSize: '28px', fontWeight: 800, fontFamily: InterFont }}>{v}</span>
                   <span style={{ color: 'rgba(255,255,255,0.8)', fontSize: '12px', fontWeight: 500, fontFamily: BarlowFont }}>{l}</span>
                 </div>
               ))}
@@ -165,7 +165,7 @@ export const WhyOurServicesWorkSection: React.FC = () => {
         gap: '40px',
       }}>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px', textAlign: 'center' }}>
-          <span style={{ color: '#00c2ff', fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: BarlowFont }}>
+          <span style={{ color: 'var(--brand-500)', fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: BarlowFont }}>
             OUR ADVANTAGE
           </span>
           <h3 style={{ margin: 0, color: 'var(--text-primary)', fontSize: 'clamp(28px, 3vw, 36px)', fontFamily: InterFont, fontWeight: 800 }}>
@@ -211,7 +211,7 @@ export const WhyOurServicesWorkSection: React.FC = () => {
         }}>
           {/* Left: numbered process */}
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <span style={{ color: '#00c2ff', fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: BarlowFont, marginBottom: '16px' }}>
+            <span style={{ color: 'var(--brand-500)', fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: BarlowFont, marginBottom: '16px' }}>
               HOW IT WORKS
             </span>
             <h3 style={{ margin: '0 0 32px 0', color: 'var(--text-primary)', fontSize: 'clamp(28px, 3vw, 40px)', fontFamily: InterFont, fontWeight: 800, lineHeight: 1.15 }}>
@@ -226,7 +226,7 @@ export const WhyOurServicesWorkSection: React.FC = () => {
                   borderBottom: i < provenProcess.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none',
                   cursor: 'pointer'
                 }}>
-                  <span style={{ color: '#00c2ff', fontSize: '22px', fontWeight: 800, fontFamily: InterFont, lineHeight: 1, minWidth: '32px' }}>{step.num}</span>
+                  <span style={{ color: 'var(--brand-500)', fontSize: '22px', fontWeight: 800, fontFamily: InterFont, lineHeight: 1, minWidth: '32px' }}>{step.num}</span>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     <span style={{ color: 'var(--text-primary)', fontSize: '15px', fontWeight: 700, fontFamily: InterFont }}>{step.title}</span>
                     <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', fontFamily: BarlowFont, lineHeight: '20px', maxWidth: '340px' }}>{step.desc}</span>
@@ -244,7 +244,7 @@ export const WhyOurServicesWorkSection: React.FC = () => {
               style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.6) saturate(0.8)' }}
             />
             {/* Subtle inner glow */}
-            <div style={{ position: 'absolute', inset: 0, border: '1px solid rgba(0,194,255,0.1)', borderRadius: '16px', pointerEvents: 'none' }} />
+            <div style={{ position: 'absolute', inset: 0, border: '1px solid var(--brand-500-soft)', borderRadius: '16px', pointerEvents: 'none' }} />
           </div>
         </div>
       </div>
@@ -281,7 +281,7 @@ export const WhyOurServicesWorkSection: React.FC = () => {
                   <span style={{ display: 'block', color: 'var(--text-primary)', fontSize: '14px', fontWeight: 700, fontFamily: InterFont, marginBottom: '4px' }}>Revenue Growth</span>
                   <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '11px', fontFamily: BarlowFont }}>Last 24 months</span>
                 </div>
-                <span style={{ color: '#00c2ff', fontSize: '14px', fontWeight: 800, fontFamily: InterFont }}>+350%<br/><span style={{ fontSize: '10px', color: 'rgba(255,255,255,0.4)', fontWeight: 500 }}>Growth</span></span>
+                <span style={{ color: 'var(--brand-500)', fontSize: '14px', fontWeight: 800, fontFamily: InterFont }}>+350%<br/><span style={{ fontSize: '10px', color: 'rgba(255,255,255,0.4)', fontWeight: 500 }}>Growth</span></span>
               </div>
               <RevenueChart />
             </div>

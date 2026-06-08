@@ -40,39 +40,109 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ article }) => 
   }, [summaryVisible]);
 
   return (
-    <div style={{ marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '64px' }}>
+    <div className="toc-section">
       <style>{`
         @keyframes summaryGlow {
           0%, 100% { opacity: 0.5; }
           50% { opacity: 0.8; }
+        }
+
+        .toc-section {
+          margin-top: clamp(2.5rem, 4vw, 5rem);
+          display: flex;
+          flex-direction: column;
+          gap: clamp(3rem, 4vw, 4rem);
+        }
+
+        .toc-summary-panel {
+          position: relative;
+          padding: clamp(2.5rem, 3vw, 3.25rem) clamp(2rem, 3vw, 3rem);
+          border-radius: 1.75rem;
+          overflow: hidden;
+          background: rgba(255,255,255,0.02);
+          backdrop-filter: blur(24px);
+          border: 1px solid rgba(255,255,255,0.07);
+          box-shadow: 0 40px 100px rgba(0,0,0,0.12);
+          transform: translateY(0);
+          transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .toc-roadmap__layout {
+          display: grid;
+          grid-template-columns: 72px 1fr;
+          gap: clamp(1.5rem, 2vw, 2.5rem);
+          position: relative;
+          align-items: start;
+        }
+
+        .toc-takeaways-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: clamp(1rem, 2vw, 1.5rem);
+        }
+
+        .toc-step-list {
+          display: flex;
+          flex-direction: column;
+          gap: clamp(0.75rem, 1vw, 1rem);
+          position: sticky;
+          top: 120px;
+          align-self: start;
+        }
+
+        @media (max-width: 1024px) {
+          .toc-roadmap__layout {
+            grid-template-columns: 1fr;
+          }
+
+          .toc-step-list {
+            position: relative;
+            top: 0;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: clamp(0.75rem, 1vw, 1rem);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .toc-summary-panel {
+            padding: clamp(1.75rem, 3vw, 2.25rem);
+          }
+
+          .toc-step-list {
+            justify-content: center;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .toc-section {
+            gap: clamp(2rem, 5vw, 2.5rem);
+          }
+
+          .toc-summary-panel {
+            padding: clamp(1.5rem, 3vw, 1.75rem);
+          }
         }
       `}</style>
 
       {/* ═══════════════════════════════════════════
           EXECUTIVE SUMMARY — Glassmorphism Panel
          ═══════════════════════════════════════════ */}
-      <div ref={summaryRef} style={{
-        position: 'relative', padding: '48px 52px',
-        borderRadius: '28px', overflow: 'hidden',
-        background: 'rgba(255,255,255,0.02)',
-        backdropFilter: 'blur(24px)',
-        border: '1px solid rgba(255,255,255,0.07)',
-        boxShadow: '0 40px 100px rgba(0,0,0,0.12)',
+      <div ref={summaryRef} className="toc-summary-panel" style={{
         opacity: summaryVisible ? 1 : 0,
-        transform: summaryVisible ? 'translateY(0)' : 'translateY(24px)',
-        transition: 'all 0.9s cubic-bezier(0.16, 1, 0.3, 1)'
+        transform: summaryVisible ? 'translateY(0)' : 'translateY(24px)'
       }}>
         {/* Background glow */}
         <div style={{
           position: 'absolute', top: '-40%', right: '-15%',
-          width: '420px', height: '420px', borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(0,194,255,0.05), transparent 55%)',
+          width: 'clamp(260px, 25vw, 420px)', height: 'clamp(260px, 25vw, 420px)', borderRadius: '50%',
+          background: 'radial-gradient(circle, var(--brand-500-soft), transparent 55%)',
           pointerEvents: 'none', animation: 'summaryGlow 5s ease-in-out infinite'
         }} />
         <div style={{
           position: 'absolute', bottom: '-30%', left: '-10%',
-          width: '300px', height: '300px', borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(147,51,234,0.04), transparent 55%)',
+          width: 'clamp(180px, 18vw, 300px)', height: 'clamp(180px, 18vw, 300px)', borderRadius: '50%',
+          background: 'radial-gradient(circle, var(--brand-400-soft), transparent 55%)',
           pointerEvents: 'none'
         }} />
 
@@ -83,8 +153,8 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ article }) => 
         }}>
           <span style={{
             padding: '5px 16px', borderRadius: '999px',
-            background: 'rgba(0,194,255,0.08)', border: '1px solid rgba(0,194,255,0.18)',
-            color: 'rgba(0,194,255,1)', fontSize: '10px', fontWeight: 700,
+            background: 'var(--brand-500-soft)', border: '1px solid var(--brand-500-medium)',
+            color: 'var(--brand-500-strong)', fontSize: '10px', fontWeight: 700,
             letterSpacing: '0.18em', textTransform: 'uppercase',
             fontFamily: '"Inter", sans-serif'
           }}>
@@ -96,12 +166,12 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ article }) => 
               Reading Progress
             </span>
             <div style={{
-              width: '100px', height: '3px', borderRadius: '999px',
+              width: 'clamp(8rem, 12vw, 10rem)', height: '3px', borderRadius: '999px',
               background: 'rgba(255,255,255,0.06)', overflow: 'hidden'
             }}>
               <div style={{
                 width: `${progressWidth}%`, height: '100%', borderRadius: '999px',
-                background: 'linear-gradient(90deg, rgba(0,194,255,0.7), rgba(147,51,234,0.7))',
+                background: 'linear-gradient(90deg, var(--brand-500-strong), var(--brand-400-strong))',
                 transition: 'width 60ms linear'
               }} />
             </div>
@@ -145,7 +215,7 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ article }) => 
       <section>
         <div style={{ marginBottom: '28px' }}>
           <span style={{
-            color: 'rgba(0,194,255,1)', fontSize: '11px', fontWeight: 700,
+            color: 'var(--brand-500-strong)', fontSize: '11px', fontWeight: 700,
             letterSpacing: '0.18em', textTransform: 'uppercase',
             fontFamily: '"Inter", sans-serif'
           }}>
@@ -153,30 +223,23 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ article }) => 
           </span>
         </div>
 
-        <div style={{
-          display: 'grid', gridTemplateColumns: '72px 1fr', gap: '28px',
-          position: 'relative'
-        }}>
+        <div className="toc-roadmap__layout">
           {/* Left — Sticky Step Numbers */}
-          <div style={{
-            position: 'sticky', top: '120px', alignSelf: 'start',
-            display: 'flex', flexDirection: 'column', gap: '0',
-            height: 'fit-content'
-          }}>
+          <div className="toc-step-list">
             {article.toc.map((item, index) => (
               <div key={item.step} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <button
                   onClick={() => setActiveStep(index)}
                   style={{
                     all: 'unset', cursor: 'pointer',
-                    width: '44px', height: '44px', borderRadius: '13px',
+                    width: '2.75rem', height: '2.75rem', borderRadius: '13px',
                     display: 'grid', placeItems: 'center',
                     fontSize: '13px', fontWeight: 800,
                     fontFamily: '"Inter", sans-serif',
-                    color: activeStep === index ? 'rgba(0,194,255,1)' : 'var(--text-muted)',
-                    background: activeStep === index ? 'rgba(0,194,255,0.08)' : 'transparent',
-                    border: activeStep === index ? '1px solid rgba(0,194,255,0.25)' : '1px solid transparent',
-                    boxShadow: activeStep === index ? '0 0 20px rgba(0,194,255,0.06)' : 'none',
+                    color: activeStep === index ? 'var(--brand-500-strong)' : 'var(--text-muted)',
+                    background: activeStep === index ? 'var(--brand-500-soft)' : 'transparent',
+                    border: activeStep === index ? '1px solid var(--brand-500-medium)' : '1px solid transparent',
+                    boxShadow: activeStep === index ? '0 0 20px var(--brand-500-soft)' : 'none',
                     transition: 'all 0.35s ease'
                   }}
                 >
@@ -185,7 +248,7 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ article }) => 
                 {index !== article.toc.length - 1 && (
                   <div style={{
                     width: '2px', height: '28px',
-                    background: index < activeStep ? 'rgba(0,194,255,0.35)' : 'rgba(255,255,255,0.05)',
+                    background: index < activeStep ? 'var(--brand-500-strong)' : 'rgba(255,255,255,0.05)',
                     transition: 'background 0.35s ease'
                   }} />
                 )}
@@ -204,7 +267,7 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ article }) => 
                   padding: activeStep === index ? '28px 32px' : '20px 32px',
                   borderRadius: '18px',
                   background: activeStep === index ? 'rgba(255,255,255,0.03)' : 'transparent',
-                  border: activeStep === index ? '1px solid rgba(0,194,255,0.12)' : '1px solid rgba(255,255,255,0.03)',
+                  border: activeStep === index ? '1px solid var(--brand-500-soft)' : '1px solid rgba(255,255,255,0.03)',
                   transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
                   opacity: activeStep === index ? 1 : 0.5,
                   display: 'block', width: '100%', boxSizing: 'border-box',
@@ -213,7 +276,7 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ article }) => 
               >
                 <span style={{
                   display: 'block',
-                  color: activeStep === index ? 'rgba(0,194,255,1)' : 'var(--text-muted)',
+                  color: activeStep === index ? 'var(--brand-500-strong)' : 'var(--text-muted)',
                   fontSize: '10px', fontWeight: 700,
                   textTransform: 'uppercase', letterSpacing: '0.16em',
                   marginBottom: '8px', transition: 'color 0.3s ease',
@@ -251,7 +314,7 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ article }) => 
       <section>
         <div style={{ marginBottom: '28px' }}>
           <span style={{
-            color: 'rgba(0,194,255,1)', fontSize: '11px', fontWeight: 700,
+            color: 'var(--brand-500-strong)', fontSize: '11px', fontWeight: 700,
             letterSpacing: '0.18em', textTransform: 'uppercase',
             fontFamily: '"Inter", sans-serif'
           }}>
@@ -259,7 +322,7 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ article }) => 
           </span>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+        <div className="toc-takeaways-grid">
           {article.takeaways.map((item, idx) => (
             <div key={idx} style={{
               display: 'flex', gap: '18px', alignItems: 'flex-start',
@@ -269,8 +332,8 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ article }) => 
               transition: 'all 0.3s ease', cursor: 'default'
             }}
             onMouseEnter={e => {
-              e.currentTarget.style.border = '1px solid rgba(0,194,255,0.18)';
-              e.currentTarget.style.background = 'rgba(0,194,255,0.025)';
+              e.currentTarget.style.border = '1px solid var(--brand-500-medium)';
+              e.currentTarget.style.background = 'var(--brand-500-soft)';
               e.currentTarget.style.transform = 'translateY(-2px)';
             }}
             onMouseLeave={e => {

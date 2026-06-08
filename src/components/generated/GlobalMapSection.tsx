@@ -46,7 +46,7 @@ export const GlobalMapSection: React.FC = () => {
       
       {/* Header */}
       <span style={{ 
-        color: 'rgba(0, 194, 255, 1)', 
+        color: 'var(--brand-500-strong)', 
         fontSize: '13px', 
         fontFamily: '"Barlow", sans-serif', 
         fontWeight: 700, 
@@ -55,8 +55,8 @@ export const GlobalMapSection: React.FC = () => {
         marginBottom: '20px', 
         padding: '6px 16px', 
         borderRadius: '20px', 
-        border: '1px solid rgba(0, 194, 255, 0.25)', 
-        backgroundColor: 'rgba(0, 194, 255, 0.06)' 
+        border: '1px solid var(--brand-500-medium)', 
+        backgroundColor: 'var(--brand-500-soft)' 
       }}>
         OUR GLOBAL PRESENCE
       </span>
@@ -73,7 +73,7 @@ export const GlobalMapSection: React.FC = () => {
       }}>
         Strategically Located.<br/>
         <span style={{ 
-          background: 'linear-gradient(135deg, rgba(147, 51, 234, 1), rgba(0, 194, 255, 1))', 
+          background: 'linear-gradient(135deg, var(--brand-400-strong), var(--brand-500-strong))', 
           WebkitBackgroundClip: 'text', 
           WebkitTextFillColor: 'transparent', 
           backgroundClip: 'text' 

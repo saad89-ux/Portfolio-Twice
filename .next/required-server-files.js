@@ -103,7 +103,7 @@ self.__SERVER_FILES_MANIFEST={
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Saad\\OneDrive\\Documents\\Company\\Portfolio-Twice",
+    "outputFileTracingRoot": "C:\\Users\\Dell\\Documents\\Portfolio\\Portfolio-Twice",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -165,7 +165,7 @@ self.__SERVER_FILES_MANIFEST={
       "proxyPrefetch": "flexible",
       "optimisticClientCache": true,
       "manualClientBasePath": false,
-      "cpus": 3,
+      "cpus": 7,
       "memoryBasedWorkersCount": false,
       "imgOptConcurrency": null,
       "imgOptTimeoutInSeconds": 7,
@@ -303,11 +303,11 @@ self.__SERVER_FILES_MANIFEST={
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.js",
     "turbopack": {
-      "root": "C:\\Users\\Saad\\OneDrive\\Documents\\Company\\Portfolio-Twice"
+      "root": "C:\\Users\\Dell\\Documents\\Portfolio\\Portfolio-Twice"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "C:\\Users\\Saad\\OneDrive\\Documents\\Company\\Portfolio-Twice",
+  "appDir": "C:\\Users\\Dell\\Documents\\Portfolio\\Portfolio-Twice",
   "relativeAppDir": "",
   "files": [
     ".next\\package.json",

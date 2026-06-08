@@ -113,7 +113,7 @@ export const TeamSection: React.FC = () => {
           left: '-10%',
           width: '50%',
           height: '40%',
-          background: 'radial-gradient(ellipse at left, rgba(0, 194, 255, 0.1), transparent 70%)',
+          background: 'radial-gradient(ellipse at left, var(--brand-500-soft), transparent 70%)',
           pointerEvents: 'none',
         }}
       />
@@ -144,7 +144,7 @@ export const TeamSection: React.FC = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
               <span
                 style={{
-                  color: '#00c2ff',
+                  color: 'var(--brand-500)',
                   fontSize: '13px',
                   fontWeight: 700,
                   letterSpacing: '0.1em',
@@ -169,7 +169,7 @@ export const TeamSection: React.FC = () => {
             >
               A Team of Thinkers,
               <br />
-              Creators & <span style={{ color: '#00c2ff' }}>Growth Architects.</span>
+              Creators & <span style={{ color: 'var(--brand-500)' }}>Growth Architects.</span>
             </h2>
 
             <p
@@ -195,7 +195,7 @@ export const TeamSection: React.FC = () => {
                 padding: '12px 24px',
                 borderRadius: '8px',
                 backgroundColor: 'transparent',
-                border: '1px solid rgba(0, 194, 255, 0.4)',
+                border: '1px solid var(--brand-500-strong)',
                 color: 'var(--text-primary)',
                 fontFamily: BarlowFont,
                 fontWeight: 600,
@@ -205,7 +205,7 @@ export const TeamSection: React.FC = () => {
                 marginTop: '8px',
               }}
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#00c2ff' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--brand-500)' }}>
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                 <circle cx="9" cy="7" r="4" />
                 <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -235,12 +235,12 @@ export const TeamSection: React.FC = () => {
                     width: '56px',
                     height: '56px',
                     borderRadius: '50%',
-                    background: 'rgba(0, 194, 255, 0.05)',
-                    border: '1px solid rgba(0, 194, 255, 0.2)',
+                    background: 'var(--brand-500-soft)',
+                    border: '1px solid var(--brand-500-medium)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#00c2ff',
+                    color: 'var(--brand-500)',
                     flexShrink: 0,
                   }}
                 >
@@ -310,8 +310,8 @@ export const TeamSection: React.FC = () => {
                     transform: 'translate(-50%, -50%)',
                     width: '120%',
                     height: '120%',
-                    background: 'radial-gradient(circle, rgba(0, 194, 255, 0.15) 0%, transparent 60%)',
-                    border: '1px dashed rgba(0, 194, 255, 0.2)',
+                    background: 'radial-gradient(circle, var(--brand-500-medium) 0%, transparent 60%)',
+                    border: '1px dashed var(--brand-500-medium)',
                     borderRadius: '50%',
                     zIndex: 1,
                   }}
@@ -326,8 +326,8 @@ export const TeamSection: React.FC = () => {
                     zIndex: 3,
                     padding: '6px 12px',
                     borderRadius: '12px',
-                    backgroundColor: 'rgba(0, 194, 255, 0.2)',
-                    border: '1px solid rgba(0, 194, 255, 0.3)',
+                    backgroundColor: 'var(--brand-500-medium)',
+                    border: '1px solid var(--brand-500-strong)',
                     color: 'var(--text-primary)',
                     fontSize: '10px',
                     fontWeight: 700,
@@ -391,7 +391,7 @@ export const TeamSection: React.FC = () => {
                   </div>
                 </div>
                 
-                <span style={{ color: '#00c2ff', fontSize: '12px', fontWeight: 600, fontFamily: BarlowFont, marginBottom: '16px' }}>
+                <span style={{ color: 'var(--brand-500)', fontSize: '12px', fontWeight: 600, fontFamily: BarlowFont, marginBottom: '16px' }}>
                   {member.role}
                 </span>
 
@@ -420,14 +420,14 @@ export const TeamSection: React.FC = () => {
         >
           {/* Left Block */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#00c2ff', flexShrink: 0 }}>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style={{ color: 'var(--brand-500)', flexShrink: 0 }}>
               <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" />
             </svg>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
               <span style={{ color: 'var(--text-primary)', fontSize: '16px', fontWeight: 700, fontFamily: BarlowFont }}>
                 Different minds. One mission.
               </span>
-              <span style={{ color: '#00c2ff', fontSize: '16px', fontWeight: 700, fontFamily: BarlowFont }}>
+              <span style={{ color: 'var(--brand-500)', fontSize: '16px', fontWeight: 700, fontFamily: BarlowFont }}>
                 Building digital growth that lasts.
               </span>
             </div>
@@ -438,7 +438,7 @@ export const TeamSection: React.FC = () => {
             <p style={{ margin: 0, color: 'var(--text-muted)', fontSize: '14px', lineHeight: '22px', fontFamily: BarlowFont }}>
               We combine creativity, data, and technology to build strategies that scale brands.
             </p>
-            <span style={{ color: '#00c2ff', fontSize: '20px', fontFamily: '"Caveat", "Brush Script MT", cursive', fontStyle: 'italic' }}>
+            <span style={{ color: 'var(--brand-500)', fontSize: '20px', fontFamily: '"Caveat", "Brush Script MT", cursive', fontStyle: 'italic' }}>
               Together We Grow.
             </span>
           </div>
@@ -451,8 +451,8 @@ export const TeamSection: React.FC = () => {
                 width: '48px',
                 height: '48px',
                 borderRadius: '50%',
-                background: 'rgba(0, 194, 255, 0.1)',
-                border: '1px solid rgba(0, 194, 255, 0.3)',
+                background: 'var(--brand-500-soft)',
+                border: '1px solid var(--brand-500-strong)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',

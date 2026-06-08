@@ -130,7 +130,7 @@ export const MissionVisionSection: React.FC = () => {
             <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--border-light-alt)' }} />
             <span
               style={{
-                color: '#00c2ff',
+                color: 'var(--brand-500)',
                 fontSize: '13px',
                 fontWeight: 700,
                 letterSpacing: '0.24em',
@@ -153,7 +153,7 @@ export const MissionVisionSection: React.FC = () => {
               margin: 0,
             }}
           >
-            Driven by Purpose. <span style={{ color: '#00c2ff' }}>Focused on Impact.</span>
+            Driven by Purpose. <span style={{ color: 'var(--brand-500)' }}>Focused on Impact.</span>
           </h2>
 
           <p
@@ -187,7 +187,7 @@ export const MissionVisionSection: React.FC = () => {
             style={{
               position: 'relative',
               borderRadius: '24px',
-              border: '1px solid rgba(0, 194, 255, 0.15)',
+              border: '1px solid var(--brand-500-medium)',
               overflow: 'hidden',
               display: 'flex',
               flexDirection: 'column',
@@ -224,10 +224,10 @@ export const MissionVisionSection: React.FC = () => {
                 left: '-10%',
                 width: '120%',
                 height: '40%',
-                borderTop: '1px dashed rgba(0, 194, 255, 0.3)',
+                borderTop: '1px dashed var(--brand-500-strong)',
                 borderRadius: '50%',
                 transform: 'rotate(-10deg)',
-                boxShadow: 'inset 0 20px 40px rgba(0, 194, 255, 0.05)',
+                boxShadow: 'inset 0 20px 40px var(--brand-500-soft)',
               }}
             />
 
@@ -239,9 +239,9 @@ export const MissionVisionSection: React.FC = () => {
                   width: '80px',
                   height: '80px',
                   borderRadius: '50%',
-                  background: 'radial-gradient(circle, rgba(0, 194, 255, 0.2) 0%, rgba(0, 194, 255, 0.05) 70%, transparent 100%)',
-                  border: '1px solid rgba(0, 194, 255, 0.4)',
-                  boxShadow: '0 0 40px rgba(0, 194, 255, 0.3)',
+                  background: 'radial-gradient(circle, var(--brand-500-medium) 0%, var(--brand-500-soft) 70%, transparent 100%)',
+                  border: '1px solid var(--brand-500-strong)',
+                  boxShadow: '0 0 40px var(--brand-500-strong)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -270,10 +270,10 @@ export const MissionVisionSection: React.FC = () => {
                   gap: '8px',
                 }}
               >
-                OUR <span style={{ color: '#00c2ff' }}>MISSION</span>
+                OUR <span style={{ color: 'var(--brand-500)' }}>MISSION</span>
               </h3>
               
-              <div style={{ width: '32px', height: '2px', backgroundColor: '#00c2ff', marginBottom: '24px' }} />
+              <div style={{ width: '32px', height: '2px', backgroundColor: 'var(--brand-500)', marginBottom: '24px' }} />
 
               {/* Description */}
               <p
@@ -308,11 +308,11 @@ export const MissionVisionSection: React.FC = () => {
                         height: '40px',
                         borderRadius: '50%',
                         backgroundColor: 'var(--bg-card)',
-                        border: '1px solid rgba(0, 194, 255, 0.2)',
+                        border: '1px solid var(--brand-500-medium)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        color: '#00c2ff',
+                        color: 'var(--brand-500)',
                       }}
                     >
                       {feat.icon}
@@ -332,7 +332,7 @@ export const MissionVisionSection: React.FC = () => {
             style={{
               position: 'relative',
               borderRadius: '24px',
-              border: '1px solid rgba(0, 194, 255, 0.15)',
+              border: '1px solid var(--brand-500-medium)',
               overflow: 'hidden',
               display: 'flex',
               flexDirection: 'column',
@@ -370,9 +370,9 @@ export const MissionVisionSection: React.FC = () => {
                   width: '80px',
                   height: '80px',
                   borderRadius: '50%',
-                  background: 'radial-gradient(circle, rgba(0, 194, 255, 0.2) 0%, rgba(0, 194, 255, 0.05) 70%, transparent 100%)',
-                  border: '1px solid rgba(0, 194, 255, 0.4)',
-                  boxShadow: '0 0 40px rgba(0, 194, 255, 0.3)',
+                  background: 'radial-gradient(circle, var(--brand-500-medium) 0%, var(--brand-500-soft) 70%, transparent 100%)',
+                  border: '1px solid var(--brand-500-strong)',
+                  boxShadow: '0 0 40px var(--brand-500-strong)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -400,10 +400,10 @@ export const MissionVisionSection: React.FC = () => {
                   gap: '8px',
                 }}
               >
-                OUR <span style={{ color: '#00c2ff' }}>VISION</span>
+                OUR <span style={{ color: 'var(--brand-500)' }}>VISION</span>
               </h3>
               
-              <div style={{ width: '32px', height: '2px', backgroundColor: '#00c2ff', marginBottom: '24px' }} />
+              <div style={{ width: '32px', height: '2px', backgroundColor: 'var(--brand-500)', marginBottom: '24px' }} />
 
               {/* Description */}
               <p
@@ -438,11 +438,11 @@ export const MissionVisionSection: React.FC = () => {
                         height: '40px',
                         borderRadius: '50%',
                         backgroundColor: 'var(--bg-card)',
-                        border: '1px solid rgba(0, 194, 255, 0.2)',
+                        border: '1px solid var(--brand-500-medium)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        color: '#00c2ff',
+                        color: 'var(--brand-500)',
                       }}
                     >
                       {feat.icon}
@@ -474,7 +474,7 @@ export const MissionVisionSection: React.FC = () => {
             textAlign: 'center',
           }}
         >
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#00c2ff', flexShrink: 0 }}>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style={{ color: 'var(--brand-500)', flexShrink: 0 }}>
             <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" />
           </svg>
           <p
@@ -486,7 +486,7 @@ export const MissionVisionSection: React.FC = () => {
               fontWeight: 500,
             }}
           >
-            We don't just aim for visibility. We aim for <span style={{ color: '#00c2ff', fontWeight: 700 }}>meaningful impact</span> that drives <span style={{ color: '#00c2ff', fontWeight: 700 }}>real business growth</span>.
+            We don't just aim for visibility. We aim for <span style={{ color: 'var(--brand-500)', fontWeight: 700 }}>meaningful impact</span> that drives <span style={{ color: 'var(--brand-500)', fontWeight: 700 }}>real business growth</span>.
           </p>
         </div>
 

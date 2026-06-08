@@ -121,7 +121,7 @@ const ServiceCard = ({
     gap: '32px',
     backgroundColor: 'var(--bg-secondary)',
     borderRadius: '36px',
-    border: isHovered ? '1px solid rgba(0, 194, 255, 0.3)' : '1px solid transparent',
+    border: isHovered ? '1px solid var(--brand-500-strong)' : '1px solid transparent',
     cursor: 'pointer'
   }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <img src={item.image} alt={item.title} style={{
@@ -186,7 +186,7 @@ const ServiceCard = ({
       transition: 'background 0.2s ease'
     }} onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)'} onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
         <div style={{
-        background: 'rgba(0, 194, 255, 1)',
+        background: 'var(--brand-500-strong)',
         borderRadius: '135px',
         padding: '6px 14px',
         display: 'flex',
@@ -227,7 +227,7 @@ const IndustryCard = ({
     cursor: 'pointer',
     transform: isHovered ? 'scale(1.03)' : 'scale(1)',
     transition: 'transform 0.3s ease',
-    boxShadow: isHovered ? '0 20px 40px rgba(0, 194, 255, 0.25)' : 'none'
+    boxShadow: isHovered ? '0 20px 40px var(--brand-500-medium)' : 'none'
   }} onMouseEnter={() => {
     setIsHovered(true);
     onHover(true);

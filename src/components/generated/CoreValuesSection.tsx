@@ -107,7 +107,7 @@ export const CoreValuesSection: React.FC = () => {
           left: 0,
           width: '50%',
           height: '40%',
-          background: 'radial-gradient(ellipse at bottom left, rgba(0, 194, 255, 0.15), transparent 70%)',
+          background: 'radial-gradient(ellipse at bottom left, var(--brand-500-medium), transparent 70%)',
           pointerEvents: 'none',
         }}
       />
@@ -118,7 +118,7 @@ export const CoreValuesSection: React.FC = () => {
           right: '0',
           width: '30%',
           height: '50%',
-          background: 'radial-gradient(ellipse at right, rgba(0, 194, 255, 0.08), transparent 70%)',
+          background: 'radial-gradient(ellipse at right, var(--brand-500-soft), transparent 70%)',
           pointerEvents: 'none',
         }}
       />
@@ -140,7 +140,7 @@ export const CoreValuesSection: React.FC = () => {
             <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--border-light)' }} />
             <span
               style={{
-                color: '#00c2ff',
+                color: 'var(--brand-500)',
                 fontSize: '13px',
                 fontWeight: 700,
                 letterSpacing: '0.24em',
@@ -163,7 +163,7 @@ export const CoreValuesSection: React.FC = () => {
               margin: 0,
             }}
           >
-            The Standards We <span style={{ color: '#00c2ff' }}>Live By.</span>
+            The Standards We <span style={{ color: 'var(--brand-500)' }}>Live By.</span>
           </h2>
 
           <p
@@ -206,7 +206,7 @@ export const CoreValuesSection: React.FC = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
               <span
                 style={{
-                  color: '#00c2ff',
+                  color: 'var(--brand-500)',
                   fontSize: '13px',
                   fontWeight: 700,
                   letterSpacing: '0.1em',
@@ -231,7 +231,7 @@ export const CoreValuesSection: React.FC = () => {
             >
               We don't follow trends.
               <br />
-              <span style={{ color: '#00c2ff' }}>We set standards.</span>
+              <span style={{ color: 'var(--brand-500)' }}>We set standards.</span>
             </h3>
 
             <p
@@ -285,7 +285,7 @@ export const CoreValuesSection: React.FC = () => {
             <div style={{ display: 'flex', gap: '24px', marginTop: 'auto', paddingTop: '40px' }}>
               {leftStats.map((stat, i) => (
                 <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                  <span style={{ color: '#00c2ff', fontSize: '24px', fontWeight: 800, fontFamily: InterFont }}>{stat.value}</span>
+                  <span style={{ color: 'var(--brand-500)', fontSize: '24px', fontWeight: 800, fontFamily: InterFont }}>{stat.value}</span>
                   <span style={{ color: 'var(--text-muted)', fontSize: '11px', fontFamily: BarlowFont }}>{stat.label}</span>
                 </div>
               ))}
@@ -311,9 +311,9 @@ export const CoreValuesSection: React.FC = () => {
                   flexShrink: 0,
                   width: card.active ? '360px' : '280px',
                   borderRadius: '24px',
-                  border: card.active ? '1px solid #00c2ff' : '1px solid var(--border-light)',
-                  backgroundColor: card.active ? 'rgba(0, 194, 255, 0.05)' : 'var(--bg-card)',
-                  boxShadow: card.active ? '0 0 40px rgba(0, 194, 255, 0.2), inset 0 0 20px rgba(0, 194, 255, 0.1)' : 'none',
+                  border: card.active ? '1px solid var(--brand-500)' : '1px solid var(--border-light)',
+                  backgroundColor: card.active ? 'var(--brand-500-soft)' : 'var(--bg-card)',
+                  boxShadow: card.active ? '0 0 40px var(--brand-500-medium), inset 0 0 20px var(--brand-500-soft)' : 'none',
                   padding: '40px 32px',
                   display: 'flex',
                   flexDirection: 'column',
@@ -325,7 +325,7 @@ export const CoreValuesSection: React.FC = () => {
                 {/* Number */}
                 <span
                   style={{
-                    color: card.active ? '#00c2ff' : 'rgba(0, 194, 255, 0.5)',
+                    color: card.active ? 'var(--brand-500)' : 'var(--brand-500-strong)',
                     fontSize: '16px',
                     fontWeight: 700,
                     fontFamily: InterFont,
@@ -350,7 +350,7 @@ export const CoreValuesSection: React.FC = () => {
 
                 {/* Desc */}
                 <div style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
-                  {card.active && <div style={{ width: '40px', height: '2px', backgroundColor: '#00c2ff' }} />}
+                  {card.active && <div style={{ width: '40px', height: '2px', backgroundColor: 'var(--brand-500)' }} />}
                   <p
                     style={{
                       color: card.active ? 'var(--text-primary)' : 'var(--text-muted)',
@@ -400,7 +400,7 @@ export const CoreValuesSection: React.FC = () => {
                       transform: 'translateX(-50%)',
                       width: '200px',
                       height: '100px',
-                      background: 'radial-gradient(ellipse, rgba(0, 194, 255, 0.4), transparent 70%)',
+                      background: 'radial-gradient(ellipse, var(--brand-500-strong), transparent 70%)',
                       pointerEvents: 'none',
                     }}
                   />
@@ -428,7 +428,7 @@ export const CoreValuesSection: React.FC = () => {
         >
           {/* Left Quote */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flex: '1 1 400px' }}>
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#00c2ff', flexShrink: 0 }}>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style={{ color: 'var(--brand-500)', flexShrink: 0 }}>
               <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" />
             </svg>
             <p
@@ -455,12 +455,12 @@ export const CoreValuesSection: React.FC = () => {
                     width: '40px',
                     height: '40px',
                     borderRadius: '50%',
-                    background: 'rgba(0, 194, 255, 0.1)',
-                    border: '1px solid rgba(0, 194, 255, 0.2)',
+                    background: 'var(--brand-500-soft)',
+                    border: '1px solid var(--brand-500-medium)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#00c2ff',
+                    color: 'var(--brand-500)',
                   }}
                 >
                   {feat.icon}

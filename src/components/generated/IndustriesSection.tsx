@@ -135,7 +135,7 @@ export const IndustriesSection = () => {
               opacity: idx === activeIndex ? 1 : 0.35,
               borderLeft:
                 idx === activeIndex
-                  ? '4px solid var(--accent-blue, #00c2ff)'
+                  ? '4px solid var(--brand-500)'
                   : '1px solid var(--border-light)',
             }}
           >
@@ -145,7 +145,7 @@ export const IndustriesSection = () => {
             <h2
               style={{
                 fontSize: '56px',
-                color: idx === activeIndex ? 'var(--accent-blue, #00c2ff)' : 'var(--text-muted)',
+                color: idx === activeIndex ? 'var(--brand-500)' : 'var(--text-muted)',
                 marginBottom: 24,
                 transition: '.4s',
               }}
@@ -170,8 +170,8 @@ export const IndustriesSection = () => {
                   style={{
                     padding: '8px 18px',
                     borderRadius: 999,
-                    border: '1px solid rgba(0,194,255,.25)',
-                    background: 'rgba(0,194,255,.08)',
+                    border: '1px solid var(--brand-500-medium)',
+                    background: 'var(--brand-500-soft)',
                     color: 'var(--text-primary)',
                   }}
                 >
@@ -207,8 +207,8 @@ export const IndustriesSection = () => {
             maxWidth: '520px',
             aspectRatio: '1 / 1.3',
             borderRadius: '280px',
-            border: '2px solid rgba(0,194,255,.25)',
-            boxShadow: '0 0 80px rgba(0,194,255,.2)',
+            border: '2px solid var(--brand-500-medium)',
+            boxShadow: '0 0 80px var(--brand-500-medium)',
             overflow: 'hidden',
           }}
         >

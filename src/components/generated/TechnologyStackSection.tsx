@@ -66,27 +66,27 @@ const partners = [
 /* ── Bottom Mini Charts ── */
 const LineChartUp = () => (
   <svg width="100%" height="40" viewBox="0 0 100 40" preserveAspectRatio="none">
-    <path d="M0 35 L20 30 L40 25 L60 15 L80 10 L100 5" fill="none" stroke="#00c2ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="100" cy="5" r="3" fill="#03050a" stroke="#00c2ff" strokeWidth="2" />
+    <path d="M0 35 L20 30 L40 25 L60 15 L80 10 L100 5" fill="none" stroke="var(--brand-500)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="100" cy="5" r="3" fill="#03050a" stroke="var(--brand-500)" strokeWidth="2" />
   </svg>
 );
 const BarChart = () => (
   <div style={{ display: 'flex', alignItems: 'flex-end', height: '40px', gap: '4px', width: '100%' }}>
     {[10,15,12,20,18,25,22,30,28,35,32,40].map((h, i) => (
-      <div key={i} style={{ flex: 1, height: `${h}px`, backgroundColor: i === 11 ? '#00c2ff' : 'rgba(0,194,255,0.4)', borderRadius: '2px 2px 0 0' }} />
+      <div key={i} style={{ flex: 1, height: `${h}px`, backgroundColor: i === 11 ? 'var(--brand-500)' : 'var(--brand-500-strong)', borderRadius: '2px 2px 0 0' }} />
     ))}
   </div>
 );
 const SineChart = () => (
   <svg width="100%" height="40" viewBox="0 0 100 40" preserveAspectRatio="none">
-    <path d="M0 20 Q 12.5 5, 25 20 T 50 20 T 75 20 T 100 20" fill="none" stroke="rgba(0,194,255,0.4)" strokeWidth="2" strokeLinecap="round" />
-    <path d="M0 20 Q 12.5 35, 25 20 T 50 20 T 75 20 T 100 20" fill="none" stroke="#00c2ff" strokeWidth="2" strokeLinecap="round" />
+    <path d="M0 20 Q 12.5 5, 25 20 T 50 20 T 75 20 T 100 20" fill="none" stroke="var(--brand-500-strong)" strokeWidth="2" strokeLinecap="round" />
+    <path d="M0 20 Q 12.5 35, 25 20 T 50 20 T 75 20 T 100 20" fill="none" stroke="var(--brand-500)" strokeWidth="2" strokeLinecap="round" />
   </svg>
 );
 const LineChartDown = () => (
   <svg width="100%" height="40" viewBox="0 0 100 40" preserveAspectRatio="none">
-    <path d="M0 5 L20 10 L40 15 L60 25 L80 30 L100 35" fill="none" stroke="#00c2ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="100" cy="35" r="3" fill="#03050a" stroke="#00c2ff" strokeWidth="2" />
+    <path d="M0 5 L20 10 L40 15 L60 25 L80 30 L100 35" fill="none" stroke="var(--brand-500)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="100" cy="35" r="3" fill="#03050a" stroke="var(--brand-500)" strokeWidth="2" />
   </svg>
 );
 
@@ -114,12 +114,12 @@ export const TechnologyStackSection: React.FC = () => {
             display: 'flex', flexDirection: 'column', justifyContent: 'center',
             position: 'relative', zIndex: 1,
           }}>
-            <span style={{ color: '#00c2ff', fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: BarlowFont, marginBottom: '20px' }}>
+            <span style={{ color: 'var(--brand-500)', fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: BarlowFont, marginBottom: '20px' }}>
               TECHNOLOGY ECOSYSTEM
             </span>
             <h2 style={{ margin: 0, color: 'var(--text-primary)', fontSize: 'clamp(32px, 4vw, 56px)', fontFamily: InterFont, fontWeight: 800, lineHeight: 1.15, marginBottom: '24px', maxWidth: '500px' }}>
               The technology<br />
-              behind every <span style={{ color: '#00c2ff' }}>growth</span><br />
+              behind every <span style={{ color: 'var(--brand-500)' }}>growth</span><br />
               breakthrough.
             </h2>
             <p style={{ margin: 0, color: 'rgba(255,255,255,0.6)', fontSize: '14px', lineHeight: '24px', fontFamily: BarlowFont, maxWidth: '420px', marginBottom: '48px' }}>
@@ -134,7 +134,7 @@ export const TechnologyStackSection: React.FC = () => {
                 { v: '24/7', l: 'Performance Monitoring' }
               ].map((s, i) => (
                 <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                  <span style={{ color: '#00c2ff', fontSize: '24px', fontWeight: 800, fontFamily: InterFont }}>{s.v}</span>
+                  <span style={{ color: 'var(--brand-500)', fontSize: '24px', fontWeight: 800, fontFamily: InterFont }}>{s.v}</span>
                   <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '11px', fontFamily: BarlowFont, lineHeight: '15px' }}>{s.l}</span>
                 </div>
               ))}
@@ -181,8 +181,8 @@ export const TechnologyStackSection: React.FC = () => {
               {/* Content */}
               <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', gap: '16px', flex: 1 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div style={{ width: '32px', height: '32px', borderRadius: '50%', border: '1px solid rgba(0,194,255,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,194,255,0.1)' }}>
-                    <span style={{ color: '#00c2ff', fontSize: '12px', fontWeight: 700, fontFamily: InterFont }}>{cat.num}</span>
+                  <div style={{ width: '32px', height: '32px', borderRadius: '50%', border: '1px solid var(--brand-500-strong)', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--brand-500-soft)' }}>
+                    <span style={{ color: 'var(--brand-500)', fontSize: '12px', fontWeight: 700, fontFamily: InterFont }}>{cat.num}</span>
                   </div>
                   <h4 style={{ margin: 0, color: 'var(--text-primary)', fontSize: '14px', fontWeight: 700, fontFamily: InterFont, lineHeight: 1.2 }}>{cat.title}</h4>
                 </div>
@@ -191,7 +191,7 @@ export const TechnologyStackSection: React.FC = () => {
                 <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   {cat.bullets.map((b, bi) => (
                     <li key={bi} style={{ color: 'rgba(255,255,255,0.4)', fontSize: '11px', fontFamily: BarlowFont, display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                      <span style={{ color: '#00c2ff', fontSize: '10px' }}>•</span> {b}
+                      <span style={{ color: 'var(--brand-500)', fontSize: '10px' }}>•</span> {b}
                     </li>
                   ))}
                 </ul>
@@ -218,17 +218,17 @@ export const TechnologyStackSection: React.FC = () => {
           {workflow.map((w, i) => (
             <div key={i} className="ca-hover-popup" style={{ display: 'flex', flexDirection: 'column', position: 'relative', cursor: 'pointer' }}>
               {/* Top rounded box w/ image */}
-              <div style={{ width: '100%', height: '120px', borderRadius: '12px', overflow: 'hidden', position: 'relative', border: '1px solid rgba(0,194,255,0.15)', marginBottom: '24px' }}>
+              <div style={{ width: '100%', height: '120px', borderRadius: '12px', overflow: 'hidden', position: 'relative', border: '1px solid var(--brand-500-medium)', marginBottom: '24px' }}>
                 <img src={w.img} alt={w.title} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.5)' }} />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,194,255,0.1), rgba(3,5,10,0.8))' }} />
-                <div style={{ position: 'absolute', top: '12px', left: '12px', backgroundColor: '#00c2ff', borderRadius: '4px', padding: '2px 8px' }}>
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, var(--brand-500-soft), rgba(3,5,10,0.8))' }} />
+                <div style={{ position: 'absolute', top: '12px', left: '12px', backgroundColor: 'var(--brand-500)', borderRadius: '4px', padding: '2px 8px' }}>
                   <span style={{ color: '#03050a', fontSize: '12px', fontWeight: 800, fontFamily: InterFont }}>{w.num}</span>
                 </div>
               </div>
               {/* Arrow connector (except last) */}
               {i < workflow.length - 1 && (
                 <div style={{ position: 'absolute', top: '60px', right: '-12px', transform: 'translateY(-50%)', zIndex: 2 }}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-500)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               )}
               {/* Text */}
@@ -259,7 +259,7 @@ export const TechnologyStackSection: React.FC = () => {
             {/* Left Image */}
             <div style={{ width: '100%', height: '200px', borderRadius: '16px', overflow: 'hidden', position: 'relative', border: '1px solid rgba(255,255,255,0.05)' }}>
               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Tech partners" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.3) saturate(0.5)' }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at center, rgba(0,194,255,0.1), transparent)' }} />
+              <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at center, var(--brand-500-soft), transparent)' }} />
             </div>
             {/* Right Lists */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -295,7 +295,7 @@ export const TechnologyStackSection: React.FC = () => {
               Our technology stack isn't just powerful - it's proven.
             </p>
             <button className="ca-hover-popup" style={{
-              alignSelf: 'flex-start', backgroundColor: '#00c2ff', border: 'none', borderRadius: '100px',
+              alignSelf: 'flex-start', backgroundColor: 'var(--brand-500)', border: 'none', borderRadius: '100px',
               padding: '12px 24px', color: '#03050a', fontSize: '11px', fontWeight: 800, fontFamily: InterFont,
               letterSpacing: '0.06em', textTransform: 'uppercase', cursor: 'pointer'
             }}>

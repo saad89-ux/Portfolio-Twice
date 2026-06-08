@@ -71,7 +71,7 @@ export const CompanyIntroSection: React.FC = () => {
           position: 'absolute',
           inset: 0,
           backgroundImage:
-            'radial-gradient(circle at 20% 50%, rgba(0, 194, 255, 0.08), transparent 40%), radial-gradient(circle at 80% 30%, rgba(0, 194, 255, 0.06), transparent 35%)',
+            'radial-gradient(circle at 20% 50%, var(--brand-500-soft), transparent 40%), radial-gradient(circle at 80% 30%, var(--brand-500-soft), transparent 35%)',
           pointerEvents: 'none',
         }}
       />
@@ -135,7 +135,7 @@ export const CompanyIntroSection: React.FC = () => {
               height: '180px',
               borderRadius: '50%',
               background:
-                'radial-gradient(circle, rgba(0, 194, 255, 0.25) 0%, rgba(0, 194, 255, 0.08) 50%, transparent 70%)',
+                'radial-gradient(circle, var(--brand-500-medium) 0%, var(--brand-500-soft) 50%, transparent 70%)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -148,8 +148,8 @@ export const CompanyIntroSection: React.FC = () => {
                 height: '120px',
                 borderRadius: '50%',
                 background:
-                  'linear-gradient(135deg, rgba(0, 194, 255, 0.3), rgba(0, 194, 255, 0.1))',
-                border: '1px solid rgba(0, 194, 255, 0.25)',
+                  'linear-gradient(135deg, var(--brand-500-strong), var(--brand-500-soft))',
+                border: '1px solid var(--brand-500-medium)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -160,7 +160,7 @@ export const CompanyIntroSection: React.FC = () => {
                 style={{
                   fontSize: '48px',
                   fontWeight: 900,
-                  color: '#00c2ff',
+                  color: 'var(--brand-500)',
                   fontFamily: InterFont,
                 }}
               >
@@ -198,7 +198,7 @@ export const CompanyIntroSection: React.FC = () => {
                   height: '38px',
                   minWidth: '38px',
                   borderRadius: '12px',
-                  background: 'rgba(0, 194, 255, 0.15)',
+                  background: 'var(--brand-500-medium)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -249,12 +249,12 @@ export const CompanyIntroSection: React.FC = () => {
                 width: '4px',
                 height: '24px',
                 borderRadius: '999px',
-                backgroundColor: '#00c2ff',
+                backgroundColor: 'var(--brand-500)',
               }}
             />
             <span
               style={{
-                color: '#00c2ff',
+                color: 'var(--brand-500)',
                 fontSize: '13px',
                 fontWeight: 700,
                 letterSpacing: '0.24em',
@@ -278,7 +278,7 @@ export const CompanyIntroSection: React.FC = () => {
             }}
           >
             We&apos;re More Than Just A Marketing{' '}
-            <span style={{ color: '#00c2ff' }}>Agency.</span>
+            <span style={{ color: 'var(--brand-500)' }}>Agency.</span>
           </h2>
 
           {/* Description */}
@@ -319,8 +319,8 @@ export const CompanyIntroSection: React.FC = () => {
                     width: '44px',
                     height: '44px',
                     borderRadius: '14px',
-                    background: 'rgba(0, 194, 255, 0.12)',
-                    border: '1px solid rgba(0, 194, 255, 0.18)',
+                    background: 'var(--brand-500-soft)',
+                    border: '1px solid var(--brand-500-medium)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -384,7 +384,7 @@ export const CompanyIntroSection: React.FC = () => {
               >
                 <span
                   style={{
-                    color: '#00c2ff',
+                    color: 'var(--brand-500)',
                     fontSize: '28px',
                     fontFamily: BarlowFont,
                     fontWeight: 800,

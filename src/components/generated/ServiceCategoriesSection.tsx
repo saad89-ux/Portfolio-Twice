@@ -56,8 +56,8 @@ const stats = [
 /* Wave SVG for the stats bar */
 const WaveLine = () => (
   <svg width="100%" height="60" viewBox="0 0 800 60" preserveAspectRatio="none" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, opacity: 0.3 }}>
-    <path d="M0 40 C100 20, 200 55, 300 35 S500 15, 600 35 S750 55, 800 30 L800 60 L0 60Z" fill="rgba(0,194,255,0.15)" />
-    <path d="M0 40 C100 20, 200 55, 300 35 S500 15, 600 35 S750 55, 800 30" fill="none" stroke="rgba(0,194,255,0.5)" strokeWidth="1.5" />
+    <path d="M0 40 C100 20, 200 55, 300 35 S500 15, 600 35 S750 55, 800 30 L800 60 L0 60Z" fill="var(--brand-500-medium)" />
+    <path d="M0 40 C100 20, 200 55, 300 35 S500 15, 600 35 S750 55, 800 30" fill="none" stroke="var(--brand-500-strong)" strokeWidth="1.5" />
   </svg>
 );
 
@@ -88,11 +88,11 @@ export const ServiceCategoriesSection: React.FC = () => {
         position: 'relative',
       }}>
         {/* Background glow */}
-        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at top, rgba(0,194,255,0.08) 0%, transparent 65%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at top, var(--brand-500-soft) 0%, transparent 65%)', pointerEvents: 'none' }} />
 
         {/* Badge */}
         <span style={{
-          color: '#00c2ff',
+          color: 'var(--brand-500)',
           fontSize: '13px',
           fontWeight: 700,
           letterSpacing: '0.12em',
@@ -117,7 +117,7 @@ export const ServiceCategoriesSection: React.FC = () => {
           maxWidth: '800px',
         }}>
           Integrated Digital Solutions<br />
-          Built For <span style={{ color: '#00c2ff' }}>Real Growth</span>
+          Built For <span style={{ color: 'var(--brand-500)' }}>Real Growth</span>
         </h2>
 
         {/* Subtitle */}
@@ -204,7 +204,7 @@ export const ServiceCategoriesSection: React.FC = () => {
                   top: '-40px', left: '-40px',
                   width: '180px', height: '180px',
                   borderRadius: '50%',
-                  background: 'radial-gradient(circle, rgba(0,194,255,0.15) 0%, transparent 70%)',
+                  background: 'radial-gradient(circle, var(--brand-500-medium) 0%, transparent 70%)',
                   pointerEvents: 'none',
                 }} />
 
@@ -255,7 +255,7 @@ export const ServiceCategoriesSection: React.FC = () => {
                     display: 'flex',
                     alignItems: 'center',
                     gap: '8px',
-                    color: '#00c2ff',
+                    color: 'var(--brand-500)',
                     fontSize: '12px',
                     fontWeight: 700,
                     fontFamily: BarlowFont,
@@ -308,7 +308,7 @@ export const ServiceCategoriesSection: React.FC = () => {
             </span>
             <h3 style={{ margin: 0, color: 'var(--text-primary)', fontSize: 'clamp(28px, 3vw, 40px)', fontFamily: InterFont, fontWeight: 800, lineHeight: 1.15 }}>
               Real Results.<br />
-              <span style={{ color: '#00c2ff' }}>Real Impact.</span>
+              <span style={{ color: 'var(--brand-500)' }}>Real Impact.</span>
             </h3>
             <button className="ca-hover-popup" style={{
               alignSelf: 'flex-start',
@@ -325,8 +325,8 @@ export const ServiceCategoriesSection: React.FC = () => {
               fontFamily: BarlowFont,
               cursor: 'pointer',
             }}>
-              <div style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: 'rgba(0,194,255,0.1)', border: '1px solid rgba(0,194,255,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              <div style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: 'var(--brand-500-soft)', border: '1px solid var(--brand-500-strong)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--brand-500)" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </div>
               View Case Studies
             </button>
@@ -337,7 +337,7 @@ export const ServiceCategoriesSection: React.FC = () => {
             {stats.map((s, i) => (
               <React.Fragment key={i}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', textAlign: 'center' }}>
-                  <span style={{ color: '#00c2ff', fontSize: 'clamp(28px, 3vw, 48px)', fontWeight: 800, fontFamily: InterFont, lineHeight: 1 }}>
+                  <span style={{ color: 'var(--brand-500)', fontSize: 'clamp(28px, 3vw, 48px)', fontWeight: 800, fontFamily: InterFont, lineHeight: 1 }}>
                     {s.value}
                   </span>
                   <span style={{ color: 'var(--text-muted)', fontSize: '13px', fontFamily: BarlowFont }}>

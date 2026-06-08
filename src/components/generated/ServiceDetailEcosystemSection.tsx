@@ -6,11 +6,11 @@ const Barlow = '"Barlow", sans-serif';
 const Inter = '"Inter", sans-serif';
 
 const COLORS = {
-  blue: '#0a84ff',
-  purple: '#9168ff',
-  cyan: '#00c2ff',
-  blueBright: '#1a73ff',
-  blueSoft: '#78b9ff',
+  blue: 'var(--brand-600)',
+  purple: 'var(--brand-400)',
+  cyan: 'var(--brand-500)',
+  blueBright: 'var(--brand-600)',
+  blueSoft: 'var(--brand-600)',
   bgDark: 'var(--bg-secondary)',
   bgDarkDeep: 'var(--bg-primary)',
   surface: 'var(--bg-card-alt)',
@@ -292,7 +292,7 @@ const EcosystemNode = ({ title, desc, icon, align }: EcosystemNodeProps) => (
         minWidth: '48px',
         borderRadius: '12px',
         backgroundColor: COLORS.cardDark,
-        border: `1px solid rgba(10, 132, 255, 0.22)`,
+        border: `1px solid var(--brand-600-medium)`,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -425,7 +425,7 @@ export const ServiceDetailEcosystemSection: React.FC<ServiceDetailEcosystemSecti
           padding: '100px clamp(24px, 5vw, 86px) 80px',
           background: `linear-gradient(180deg, ${COLORS.bgDarkDeep} 0%, ${COLORS.bgDark} 45%, ${COLORS.surface} 100%)`,
           boxSizing: 'border-box',
-          borderTop: '1px solid rgba(10, 132, 255, 0.08)',
+          borderTop: '1px solid var(--brand-600-soft)',
         }}
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto', width: '100%' }}>
@@ -501,7 +501,7 @@ export const ServiceDetailEcosystemSection: React.FC<ServiceDetailEcosystemSecti
                     </feMerge>
                   </filter>
                 </defs>
-                <circle cx="170" cy="170" r={orbitR2} fill="none" stroke="rgba(10, 132, 255, 0.14)" strokeWidth="1" strokeDasharray="4 7" />
+                <circle cx="170" cy="170" r={orbitR2} fill="none" stroke="var(--brand-600-soft)" strokeWidth="1" strokeDasharray="4 7" />
                 <circle cx="170" cy="170" r={orbitR1} fill="none" stroke="rgba(145, 104, 255, 0.2)" strokeWidth="1" strokeDasharray="3 6" />
                 {[
                   { x: 52, y: 95, side: 'left' },
@@ -517,7 +517,7 @@ export const ServiceDetailEcosystemSection: React.FC<ServiceDetailEcosystemSecti
                       y1={dot.y}
                       x2={dot.x}
                       y2={dot.y}
-                      stroke={dot.side === 'left' ? 'rgba(10, 132, 255, 0.28)' : 'rgba(145, 104, 255, 0.28)'}
+                      stroke={dot.side === 'left' ? 'var(--brand-600-strong)' : 'rgba(145, 104, 255, 0.28)'}
                       strokeWidth="1"
                       strokeDasharray="4 5"
                     />
@@ -552,7 +552,7 @@ export const ServiceDetailEcosystemSection: React.FC<ServiceDetailEcosystemSecti
                     borderRadius: '50%',
                     padding: '4px',
                     background: `linear-gradient(135deg, ${COLORS.blue} 0%, ${COLORS.purple} 50%, ${COLORS.cyan} 100%)`,
-                    boxShadow: `0 0 60px rgba(10, 132, 255, 0.35), 0 0 40px rgba(145, 104, 255, 0.2)`,
+                    boxShadow: `0 0 60px var(--brand-600-strong), 0 0 40px rgba(145, 104, 255, 0.2)`,
                   }}
                 >
                   <div
@@ -644,7 +644,7 @@ export const ServiceDetailEcosystemSection: React.FC<ServiceDetailEcosystemSecti
                 alignItems: 'center',
                 textAlign: 'center',
                 boxShadow: '0 4px 24px rgba(0, 0, 0, 0.06)',
-                border: '1px solid rgba(10, 132, 255, 0.06)',
+                border: '1px solid var(--brand-600-soft)',
               }}
             >
               <div

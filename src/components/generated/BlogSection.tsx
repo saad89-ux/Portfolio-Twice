@@ -82,7 +82,7 @@ export const BlogSection: React.FC = () => {
             width: '240px',
             height: '240px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(10,132,255,0.24), transparent 55%)',
+            background: 'radial-gradient(circle, var(--brand-600-medium), transparent 55%)',
             filter: 'blur(80px)'
           }} />
           <div style={{
@@ -190,7 +190,7 @@ export const BlogSection: React.FC = () => {
                     width: '24px',
                     height: '24px',
                     borderRadius: '999px',
-                    background: 'rgba(0, 194, 255, 0.15)',
+                    background: 'var(--brand-500-medium)',
                     display: 'grid',
                     placeItems: 'center'
                   }}>★</span>
@@ -236,7 +236,7 @@ export const BlogSection: React.FC = () => {
                 width: '52px',
                 height: '52px',
                 borderRadius: '18px',
-                background: 'linear-gradient(135deg, rgba(10,132,255,0.16), rgba(145,104,255,0.16))',
+                background: 'linear-gradient(135deg, var(--brand-600-medium), rgba(145,104,255,0.16))',
                 display: 'grid',
                 placeItems: 'center'
               }}>
@@ -282,7 +282,7 @@ export const BlogSection: React.FC = () => {
                 left: '22px',
                 padding: '10px 16px',
                 borderRadius: '999px',
-                background: 'rgba(10,132,255,0.16)',
+                background: 'var(--brand-600-medium)',
                 color: '#66b2ff',
                 fontSize: '12px',
                 fontWeight: 700,
@@ -366,7 +366,7 @@ export const BlogSection: React.FC = () => {
                   left: '18px',
                   padding: '8px 14px',
                   borderRadius: '999px',
-                  background: 'rgba(10,132,255,0.16)',
+                  background: 'var(--brand-600-medium)',
                   color: '#8cb4ff',
                   fontSize: '11px',
                   fontWeight: 700,
@@ -424,7 +424,7 @@ export const BlogSection: React.FC = () => {
               padding: '16px 28px',
               borderRadius: '999px',
               border: '1px solid var(--border-light)',
-              background: 'linear-gradient(90deg, #00c2ff 0%, #00c2ff 100%)',
+              background: 'linear-gradient(90deg, var(--brand-500) 0%, var(--brand-600) 100%)',
               color: 'var(--text-primary)',
               fontWeight: 700,
               cursor: 'pointer',

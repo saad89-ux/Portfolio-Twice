@@ -45,18 +45,18 @@ export const FeaturedArticle = () => {
         position: 'absolute',
         inset: 0,
         pointerEvents: 'none',
-        background: 'radial-gradient(circle at top left, rgba(168, 85, 247, 0.16), transparent 22%), radial-gradient(circle at bottom right, rgba(96, 165, 250, 0.12), transparent 26%)'
+        background: 'radial-gradient(circle at top left, var(--brand-400-medium), transparent 22%), radial-gradient(circle at bottom right, rgba(96, 165, 250, 0.12), transparent 26%)'
       }} />
 
       <div style={{ position: 'relative', zIndex: 1, width: '100%', display: 'flex', flexDirection: 'column', gap: '24px' }}>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', padding: '10px 18px', backgroundColor: 'rgba(168, 85, 247, 0.12)', border: '1px solid rgba(168, 85, 247, 0.25)', borderRadius: '999px', color: '#a855f7', fontWeight: 700, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', padding: '10px 18px', backgroundColor: 'var(--brand-400-soft)', border: '1px solid var(--brand-400-medium)', borderRadius: '999px', color: 'var(--brand-400)', fontWeight: 700, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
           FEATURED ARTICLE
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: '40px', alignItems: 'center' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '10px 16px', backgroundColor: 'rgba(168, 85, 247, 0.12)', border: '1px solid rgba(168, 85, 247, 0.18)', borderRadius: '999px', color: '#d8b4fe', fontSize: '12px', fontWeight: 600, maxWidth: 'fit-content' }}>
-              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '28px', height: '28px', borderRadius: '10px', backgroundColor: 'rgba(168, 85, 247, 0.2)', color: '#a855f7', fontSize: '14px' }}>✈️</span>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '10px 16px', backgroundColor: 'var(--brand-400-soft)', border: '1px solid var(--brand-400-medium)', borderRadius: '999px', color: '#d8b4fe', fontSize: '12px', fontWeight: 600, maxWidth: 'fit-content' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '28px', height: '28px', borderRadius: '10px', backgroundColor: 'var(--brand-400-medium)', color: 'var(--brand-400)', fontSize: '14px' }}>✈️</span>
               GROWTH STRATEGY
             </div>
 
@@ -92,22 +92,22 @@ export const FeaturedArticle = () => {
               <button style={{
                 padding: '14px 28px',
                 borderRadius: '999px',
-                border: '1px solid rgba(168, 85, 247, 0.4)',
-                background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.92), rgba(124, 58, 237, 0.92))',
+                border: '1px solid var(--brand-400-strong)',
+                background: 'linear-gradient(135deg, var(--brand-400-strong), var(--brand-400-strong))',
                 color: '#fff',
                 fontWeight: 700,
                 fontSize: '14px',
                 cursor: 'pointer',
-                boxShadow: '0 18px 45px rgba(168, 85, 247, 0.25)',
+                boxShadow: '0 18px 45px var(--brand-400-medium)',
                 transition: 'transform 0.2s ease, box-shadow 0.2s ease'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-1px) scale(1.01)';
-                e.currentTarget.style.boxShadow = '0 22px 55px rgba(168, 85, 247, 0.32)';
+                e.currentTarget.style.boxShadow = '0 22px 55px var(--brand-400-strong)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0px) scale(1)';
-                e.currentTarget.style.boxShadow = '0 18px 45px rgba(168, 85, 247, 0.25)';
+                e.currentTarget.style.boxShadow = '0 18px 45px var(--brand-400-medium)';
               }}
               onClick={() => router.push(`/blog/${featuredSlug}`)}>
                 Read Full Article →
@@ -131,7 +131,7 @@ export const FeaturedArticle = () => {
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(255,255,255,0.04), transparent 35%)' }} />
             <div style={{ position: 'absolute', top: '24px', left: '24px', display: 'grid', gap: '18px' }}>
               {['📈', '⏱️', '📣', '👥'].map((icon, idx) => (
-                <div key={idx} style={{ width: '58px', height: '58px', borderRadius: '20px', backgroundColor: 'rgba(255, 255, 255, 0.04)', border: '1px solid rgba(255,255,255,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#a855f7', fontSize: '22px', boxShadow: '0 16px 40px rgba(0,0,0,0.25)' }}>
+                <div key={idx} style={{ width: '58px', height: '58px', borderRadius: '20px', backgroundColor: 'rgba(255, 255, 255, 0.04)', border: '1px solid rgba(255,255,255,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--brand-400)', fontSize: '22px', boxShadow: '0 16px 40px rgba(0,0,0,0.25)' }}>
                   {icon}
                 </div>
               ))}
@@ -204,8 +204,8 @@ export const FeaturedArticle = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              backgroundColor: 'rgba(168, 85, 247, 0.16)',
-              color: '#a855f7',
+              backgroundColor: 'var(--brand-400-medium)',
+              color: 'var(--brand-400)',
               fontSize: '18px'
             }}>
               {metric.icon}

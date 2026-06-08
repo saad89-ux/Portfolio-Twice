@@ -21,9 +21,9 @@ export const CaseStudyArticles: React.FC = () => {
     cta: 'View Full Case Study',
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
     metrics: [
-      { label: '320% Organic Traffic', accent: '#a855f7' },
-      { label: '8.6x ROAS', accent: '#8b5cf6' },
-      { label: '$2.4M Revenue Generated', accent: '#7c3aed' }
+      { label: '320% Organic Traffic', accent: 'var(--brand-400)' },
+      { label: '8.6x ROAS', accent: 'var(--brand-400)' },
+      { label: '$2.4M Revenue Generated', accent: 'var(--brand-400)' }
     ]
   };
 
@@ -59,20 +59,20 @@ export const CaseStudyArticles: React.FC = () => {
         position: 'absolute',
         inset: 0,
         pointerEvents: 'none',
-        background: 'radial-gradient(circle at top left, rgba(168, 85, 247, 0.18), transparent 20%), radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.14), transparent 18%)'
+        background: 'radial-gradient(circle at top left, var(--brand-400-medium), transparent 20%), radial-gradient(circle at bottom right, var(--brand-400-soft), transparent 18%)'
       }} />
 
       <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '18px', textAlign: 'center' }}>
         <span style={{
-          color: '#a855f7',
+          color: 'var(--brand-400)',
           fontSize: '12px',
           letterSpacing: '0.3em',
           textTransform: 'uppercase',
           fontWeight: 700,
-          backgroundColor: 'rgba(168, 85, 247, 0.12)',
+          backgroundColor: 'var(--brand-400-soft)',
           padding: '10px 20px',
           borderRadius: '999px',
-          border: '1px solid rgba(168, 85, 247, 0.25)'
+          border: '1px solid var(--brand-400-medium)'
         }}>
           Our Impact
         </span>
@@ -84,7 +84,7 @@ export const CaseStudyArticles: React.FC = () => {
           lineHeight: 1.05,
           margin: 0
         }}>
-          Case Studies That <span style={{ color: '#a855f7' }}>Speak for Themselves.</span>
+          Case Studies That <span style={{ color: 'var(--brand-400)' }}>Speak for Themselves.</span>
         </h2>
         <p style={{
           maxWidth: '760px',
@@ -175,8 +175,8 @@ export const CaseStudyArticles: React.FC = () => {
               gap: '10px',
               padding: '10px 16px',
               borderRadius: '999px',
-              backgroundColor: 'rgba(168, 85, 247, 0.14)',
-              color: '#a855f7',
+              backgroundColor: 'var(--brand-400-soft)',
+              color: 'var(--brand-400)',
               fontSize: '12px',
               fontWeight: 700,
               letterSpacing: '0.14em',
@@ -207,7 +207,7 @@ export const CaseStudyArticles: React.FC = () => {
           </div>
 
           <div style={{ padding: '36px', display: 'flex', flexDirection: 'column', gap: '24px', flex: 1 }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '10px 16px', borderRadius: '999px', backgroundColor: 'rgba(168, 85, 247, 0.12)', color: '#a855f7', fontSize: '12px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '10px 16px', borderRadius: '999px', backgroundColor: 'var(--brand-400-soft)', color: 'var(--brand-400)', fontSize: '12px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
               {featured.category}
             </div>
               <a href={`/blog/${articles.find(a => a.slug === featured.slug)?.slug ?? featured.slug}`} style={{ textDecoration: 'none' }} aria-label={`Read ${featured.title}`}>
@@ -223,9 +223,9 @@ export const CaseStudyArticles: React.FC = () => {
                 <button style={{
                   padding: '14px 24px',
                   borderRadius: '999px',
-                  border: '1px solid rgba(168, 85, 247, 0.45)',
-                  backgroundColor: 'rgba(168, 85, 247, 0.16)',
-                  color: '#a855f7',
+                  border: '1px solid var(--brand-400-strong)',
+                  backgroundColor: 'var(--brand-400-medium)',
+                  color: 'var(--brand-400)',
                   fontSize: '14px',
                   fontWeight: 700,
                   cursor: 'pointer'
@@ -252,7 +252,7 @@ export const CaseStudyArticles: React.FC = () => {
                 <div style={{ position: 'relative', minHeight: '180px', overflow: 'hidden' }}>
                   <img src={card.image} alt={card.title} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.72)' }} />
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(8, 11, 24, 0.1), rgba(8, 11, 24, 0.92))' }} />
-                  <div style={{ position: 'absolute', top: '20px', left: '20px', display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '10px 14px', borderRadius: '999px', backgroundColor: 'rgba(168, 85, 247, 0.14)', color: '#a855f7', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase' }}>
+                  <div style={{ position: 'absolute', top: '20px', left: '20px', display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '10px 14px', borderRadius: '999px', backgroundColor: 'var(--brand-400-soft)', color: 'var(--brand-400)', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase' }}>
                     {card.category}
                   </div>
                 </div>
@@ -264,9 +264,9 @@ export const CaseStudyArticles: React.FC = () => {
                     alignSelf: 'flex-start',
                     padding: '12px 18px',
                     borderRadius: '999px',
-                    border: '1px solid rgba(168, 85, 247, 0.35)',
-                    backgroundColor: 'rgba(168, 85, 247, 0.12)',
-                    color: '#a855f7',
+                    border: '1px solid var(--brand-400-strong)',
+                    backgroundColor: 'var(--brand-400-soft)',
+                    color: 'var(--brand-400)',
                     fontSize: '13px',
                     fontWeight: 700,
                     cursor: 'pointer',

@@ -86,13 +86,13 @@ export const Navbar: React.FC<NavbarProps> = ({
         {navItems.map(item => <button key={item} className="nav-item" onClick={() => handleNavClick(item)} style={{
           background: 'none',
           border: 'none',
-          color: activePage === item ? 'rgba(0, 194, 255, 1)' : 'white',
+          color: activePage === item ? 'var(--brand-500-strong)' : 'white',
           fontSize: '16px',
           fontFamily: '"Barlow", sans-serif',
           cursor: 'pointer',
           padding: '10px',
           transition: 'color 0.2s ease',
-          borderBottom: activePage === item ? '2px solid rgba(0, 194, 255, 1)' : '2px solid transparent'
+          borderBottom: activePage === item ? '2px solid var(--brand-500-strong)' : '2px solid transparent'
         }}>
           {item}
         </button>)}
@@ -105,7 +105,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'rgba(0, 194, 255, 1)',
+        backgroundColor: 'var(--brand-500-strong)',
         border: '1px dotted var(--text-primary)',
         borderRadius: '10px',
         color: 'var(--text-primary)',
@@ -181,7 +181,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       {navItems.map(item => <button key={item} className="nav-item" onClick={() => handleNavClick(item)} style={{
         background: 'none',
         border: 'none',
-        color: activePage === item ? 'rgba(0, 194, 255, 1)' : 'var(--text-primary)',
+        color: activePage === item ? 'var(--brand-500-strong)' : 'var(--text-primary)',
         fontSize: '17px',
         fontFamily: '"Barlow", sans-serif',
         cursor: 'pointer',
@@ -207,7 +207,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: 'rgba(0, 194, 255, 1)',
+          backgroundColor: 'var(--brand-500-strong)',
           border: '1px dotted var(--text-primary)',
           borderRadius: '10px',
           color: 'var(--text-primary)',
@@ -539,46 +539,46 @@ const serviceConfigs: Record<string, {
 const ChallengeIcon: React.FC<{ type: string }> = ({ type }) => {
   switch (type) {
     case 'chart':
-      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0, 194, 255, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px rgba(0, 194, 255, 0.4))' }}>
+      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-500-strong)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px var(--brand-500-strong))' }}>
         <path d="M3 3v18h18" />
         <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" />
       </svg>;
     case 'eye':
-      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0, 194, 255, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px rgba(0, 194, 255, 0.4))' }}>
+      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-500-strong)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px var(--brand-500-strong))' }}>
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
         <circle cx="12" cy="12" r="3" />
       </svg>;
     case 'funnel':
-      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0, 194, 255, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px rgba(0, 194, 255, 0.4))' }}>
+      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-500-strong)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px var(--brand-500-strong))' }}>
         <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" />
       </svg>;
     case 'user':
-      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0, 194, 255, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px rgba(0, 194, 255, 0.4))' }}>
+      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-500-strong)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px var(--brand-500-strong))' }}>
         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
         <circle cx="12" cy="7" r="4" />
       </svg>;
     case 'gear':
-      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0, 194, 255, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px rgba(0, 194, 255, 0.4))' }}>
+      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-500-strong)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px var(--brand-500-strong))' }}>
         <circle cx="12" cy="12" r="3" />
         <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
       </svg>;
     case 'shield':
-      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0, 194, 255, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px rgba(0, 194, 255, 0.4))' }}>
+      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-500-strong)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px var(--brand-500-strong))' }}>
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>;
     case 'mail':
-      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0, 194, 255, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px rgba(0, 194, 255, 0.4))' }}>
+      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-500-strong)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px var(--brand-500-strong))' }}>
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
         <polyline points="22,6 12,13 2,6" />
       </svg>;
     case 'database':
-      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0, 194, 255, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px rgba(0, 194, 255, 0.4))' }}>
+      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-500-strong)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px var(--brand-500-strong))' }}>
         <ellipse cx="12" cy="5" rx="9" ry="3" />
         <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
         <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
       </svg>;
     default:
-      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0, 194, 255, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px rgba(0, 194, 255, 0.4))' }}>
+      return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-500-strong)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 4px var(--brand-500-strong))' }}>
         <circle cx="12" cy="12" r="10" />
         <line x1="12" y1="8" x2="12" y2="12" />
         <line x1="12" y1="16" x2="12.01" y2="16" />
@@ -601,10 +601,10 @@ const ChallengeCard: React.FC<{
         backgroundColor: 'var(--bg-card-alt)',
         backdropFilter: 'blur(12px)',
         borderRadius: '20px',
-        border: hovered ? '1px solid rgba(147, 51, 234, 0.45)' : '1px solid var(--border-light)',
+        border: hovered ? '1px solid var(--brand-400-strong)' : '1px solid var(--border-light)',
         padding: '32px 24px',
         boxSizing: 'border-box',
-        boxShadow: hovered ? '0 15px 30px rgba(147, 51, 234, 0.12)' : '0 10px 25px rgba(0,0,0,0.3)',
+        boxShadow: hovered ? '0 15px 30px var(--brand-400-soft)' : '0 10px 25px rgba(0,0,0,0.3)',
         transform: hovered ? 'translateY(-6px)' : 'translateY(0)',
         transition: 'all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1)',
         display: 'flex',
@@ -621,13 +621,13 @@ const ChallengeCard: React.FC<{
         height: '48px',
         borderRadius: '12px',
         background: hovered 
-          ? 'linear-gradient(135deg, rgba(147, 51, 234, 0.3), rgba(0, 194, 255, 0.1))' 
-          : 'linear-gradient(135deg, rgba(147, 51, 234, 0.15), rgba(0, 194, 255, 0.03))',
-        border: hovered ? '1px solid rgba(147, 51, 234, 0.55)' : '1px solid rgba(147, 51, 234, 0.25)',
+          ? 'linear-gradient(135deg, var(--brand-400-strong), var(--brand-500-soft))' 
+          : 'linear-gradient(135deg, var(--brand-400-medium), var(--brand-500-soft))',
+        border: hovered ? '1px solid var(--brand-400-strong)' : '1px solid var(--brand-400-medium)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        boxShadow: hovered ? '0 0 12px rgba(147, 51, 234, 0.3)' : 'none',
+        boxShadow: hovered ? '0 0 12px var(--brand-400-strong)' : 'none',
         transition: 'all 0.3s ease'
       }}>
         <ChallengeIcon type={iconType} />
@@ -672,7 +672,7 @@ const toolsData = [
 ];
 
 const ToolIcon = ({ type }: { type: string }) => {
-  const color = "rgba(0, 194, 255, 1)";
+  const color = "var(--brand-500-strong)";
   switch (type) {
     case 'chart-bar': return <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>;
     case 'search': return <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>;
@@ -721,7 +721,7 @@ const ToolsPlatformSection: React.FC<{ serviceName?: string }> = ({ serviceName 
           .tools-grid { grid-template-columns: 1fr; }
         }
       `}</style>
-      <span style={{ color: 'rgba(147, 51, 234, 1)', fontSize: '13px', fontFamily: '"Barlow", sans-serif', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '16px' }}>
+      <span style={{ color: 'var(--brand-400-strong)', fontSize: '13px', fontFamily: '"Barlow", sans-serif', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '16px' }}>
         TOOLS & PLATFORMS
       </span>
       <h2 style={{ color: 'var(--text-primary)', fontSize: '42px', fontFamily: '"Barlow", sans-serif', fontWeight: 800, textAlign: 'center', margin: '0 0 16px 0', letterSpacing: '-0.5px' }}>
@@ -741,14 +741,14 @@ const ToolsPlatformSection: React.FC<{ serviceName?: string }> = ({ serviceName 
               padding: '12px 28px',
               borderRadius: '30px',
               border: cat === activeCategory ? 'none' : '1px solid rgba(255, 255, 255, 0.06)',
-              background: cat === activeCategory ? 'linear-gradient(135deg, rgba(147, 51, 234, 1), rgba(0, 194, 255, 1))' : 'var(--bg-card-light)',
+              background: cat === activeCategory ? 'linear-gradient(135deg, var(--brand-400-strong), var(--brand-500-strong))' : 'var(--bg-card-light)',
               color: activeCategory === cat ? 'var(--text-primary)' : 'var(--text-secondary)',
               fontSize: '14px',
               fontFamily: '"Barlow", sans-serif',
               fontWeight: 600,
               cursor: 'pointer',
               transition: 'all 0.3s ease',
-              boxShadow: cat === activeCategory ? '0 8px 20px rgba(147, 51, 234, 0.25)' : 'none'
+              boxShadow: cat === activeCategory ? '0 8px 20px var(--brand-400-medium)' : 'none'
             }}
             onMouseEnter={(e) => {
               if (cat !== activeCategory) {
@@ -784,8 +784,8 @@ const ToolsPlatformSection: React.FC<{ serviceName?: string }> = ({ serviceName 
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'translateY(-6px)';
-            e.currentTarget.style.boxShadow = '0 15px 30px rgba(0,0,0,0.4), 0 0 20px rgba(0, 194, 255, 0.1)';
-            e.currentTarget.style.borderColor = 'rgba(0, 194, 255, 0.25)';
+            e.currentTarget.style.boxShadow = '0 15px 30px rgba(0,0,0,0.4), 0 0 20px var(--brand-500-soft)';
+            e.currentTarget.style.borderColor = 'var(--brand-500-medium)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'translateY(0)';
@@ -805,7 +805,7 @@ const ToolsPlatformSection: React.FC<{ serviceName?: string }> = ({ serviceName 
               </div>
               <p style={{ color: 'var(--text-secondary)', fontSize: '14px', fontFamily: '"Barlow", sans-serif', fontWeight: 400, margin: '0 0 24px 0', lineHeight: '1.5', flex: 1 }}>{tool.description}</p>
               
-              <div style={{ display: 'inline-block', padding: '4px 12px', borderRadius: '12px', border: '1px solid rgba(0, 194, 255, 0.3)', backgroundColor: 'rgba(0, 194, 255, 0.06)', color: 'rgba(0, 194, 255, 1)', fontSize: '12px', fontFamily: '"Barlow", sans-serif', fontWeight: 600, alignSelf: 'flex-start' }}>
+              <div style={{ display: 'inline-block', padding: '4px 12px', borderRadius: '12px', border: '1px solid var(--brand-500-strong)', backgroundColor: 'var(--brand-500-soft)', color: 'var(--brand-500-strong)', fontSize: '12px', fontFamily: '"Barlow", sans-serif', fontWeight: 600, alignSelf: 'flex-start' }}>
                 {tool.category}
               </div>
             </div>
@@ -852,8 +852,8 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
         100% { transform: rotate(360deg); }
       }
       @keyframes pulse-glow {
-        0%, 100% { opacity: 0.35; filter: drop-shadow(0 0 2px rgba(0, 194, 255, 0.2)); }
-        50% { opacity: 0.85; filter: drop-shadow(0 0 10px rgba(0, 194, 255, 0.6)); }
+        0%, 100% { opacity: 0.35; filter: drop-shadow(0 0 2px var(--brand-500-medium)); }
+        50% { opacity: 0.85; filter: drop-shadow(0 0 10px var(--brand-500-strong)); }
       }
       @keyframes float-slow-1 {
         0%, 100% { transform: translateY(0px); }
@@ -1006,14 +1006,14 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
           display: 'flex',
           alignItems: 'center',
           gap: '12px',
-          color: 'rgba(147, 51, 234, 1)',
+          color: 'var(--brand-400-strong)',
           fontSize: '14px',
           fontFamily: '"Barlow", sans-serif',
           fontWeight: 700,
           letterSpacing: '1.5px'
         }}>
           {/* Hexagon icon */}
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(147, 51, 234, 1)" strokeWidth="2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-400-strong)" strokeWidth="2">
             <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" />
             <circle cx="12" cy="12" r="3" />
           </svg>
@@ -1038,7 +1038,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
             {config.headlineWord1}
             <br />
             <span style={{
-              background: 'linear-gradient(135deg, rgba(0, 194, 255, 1), rgba(147, 51, 234, 1))',
+              background: 'linear-gradient(135deg, var(--brand-500-strong), var(--brand-400-strong))',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
@@ -1047,7 +1047,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
             </span>
             <br />
             <span style={{
-              background: 'linear-gradient(135deg, rgba(147, 51, 234, 1), rgba(0, 194, 255, 1))',
+              background: 'linear-gradient(135deg, var(--brand-400-strong), var(--brand-500-strong))',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
@@ -1078,7 +1078,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
           {/* Book A Strategy Call Button */}
           <button onClick={() => { if (onNavigate) onNavigate('Contact'); }} style={{
             padding: '14px 28px',
-            background: 'linear-gradient(135deg, rgba(0, 194, 255, 1), rgba(147, 51, 234, 1))',
+            background: 'linear-gradient(135deg, var(--brand-500-strong), var(--brand-400-strong))',
             border: 'none',
             borderRadius: '30px',
             color: 'var(--text-primary)',
@@ -1090,13 +1090,13 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
             alignItems: 'center',
             gap: '12px',
             transition: 'all 0.3s ease',
-            boxShadow: '0 8px 20px rgba(0, 194, 255, 0.25)'
+            boxShadow: '0 8px 20px var(--brand-500-medium)'
           }} onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'translateY(-2px)';
-            e.currentTarget.style.boxShadow = '0 12px 28px rgba(0, 194, 255, 0.4)';
+            e.currentTarget.style.boxShadow = '0 12px 28px var(--brand-500-strong)';
           }} onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = '0 8px 20px rgba(0, 194, 255, 0.25)';
+            e.currentTarget.style.boxShadow = '0 8px 20px var(--brand-500-medium)';
           }}>
             Book A Strategy Call
             <span style={{
@@ -1127,9 +1127,9 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
             gap: '12px',
             transition: 'all 0.3s ease'
           }} onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(0, 194, 255, 0.08)';
-            e.currentTarget.style.borderColor = 'rgba(0, 194, 255, 0.7)';
-            e.currentTarget.style.color = 'rgba(0, 194, 255, 1)';
+            e.currentTarget.style.backgroundColor = 'var(--brand-500-soft)';
+            e.currentTarget.style.borderColor = 'var(--brand-500-strong)';
+            e.currentTarget.style.color = 'var(--brand-500-strong)';
           }} onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = 'transparent';
             e.currentTarget.style.borderColor = 'var(--border-light)';
@@ -1164,8 +1164,8 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
         <svg width="100%" height="100%" viewBox="0 0 600 580" style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', zIndex: 1 }}>
           <defs>
             <linearGradient id="orbitGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="rgba(0, 194, 255, 0.4)" />
-              <stop offset="100%" stopColor="rgba(147, 51, 234, 0.4)" />
+              <stop offset="0%" stopColor="var(--brand-500-strong)" />
+              <stop offset="100%" stopColor="var(--brand-400-strong)" />
             </linearGradient>
           </defs>
 
@@ -1181,11 +1181,11 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
           <line x1="300" y1="290" x2="270" y2="480" stroke="url(#orbitGlow)" strokeWidth="1.5" strokeDasharray="5 5" style={{ animation: 'pulse-glow 6s infinite' }} />
 
           {/* Glowing junction nodes */}
-          <circle cx="130" cy="110" r="4.5" fill="rgba(0, 194, 255, 1)" style={{ filter: 'drop-shadow(0 0 6px rgba(0, 194, 255, 0.8))' }} />
-          <circle cx="470" cy="130" r="4.5" fill="rgba(147, 51, 234, 1)" style={{ filter: 'drop-shadow(0 0 6px rgba(147, 51, 234, 0.8))' }} />
-          <circle cx="110" cy="290" r="4.5" fill="rgba(0, 194, 255, 1)" style={{ filter: 'drop-shadow(0 0 6px rgba(0, 194, 255, 0.8))' }} />
-          <circle cx="490" cy="320" r="4.5" fill="rgba(147, 51, 234, 1)" style={{ filter: 'drop-shadow(0 0 6px rgba(147, 51, 234, 0.8))' }} />
-          <circle cx="270" cy="480" r="4.5" fill="rgba(0, 194, 255, 1)" style={{ filter: 'drop-shadow(0 0 6px rgba(0, 194, 255, 0.8))' }} />
+          <circle cx="130" cy="110" r="4.5" fill="var(--brand-500-strong)" style={{ filter: 'drop-shadow(0 0 6px var(--brand-500-strong))' }} />
+          <circle cx="470" cy="130" r="4.5" fill="var(--brand-400-strong)" style={{ filter: 'drop-shadow(0 0 6px var(--brand-400-strong))' }} />
+          <circle cx="110" cy="290" r="4.5" fill="var(--brand-500-strong)" style={{ filter: 'drop-shadow(0 0 6px var(--brand-500-strong))' }} />
+          <circle cx="490" cy="320" r="4.5" fill="var(--brand-400-strong)" style={{ filter: 'drop-shadow(0 0 6px var(--brand-400-strong))' }} />
+          <circle cx="270" cy="480" r="4.5" fill="var(--brand-500-strong)" style={{ filter: 'drop-shadow(0 0 6px var(--brand-500-strong))' }} />
         </svg>
 
         {/* Central Glowing Gauge */}
@@ -1204,7 +1204,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
             width: '240px',
             height: '240px',
             borderRadius: '50%',
-            border: '2px dashed rgba(0, 194, 255, 0.25)',
+            border: '2px dashed var(--brand-500-medium)',
             animation: 'spin-slow 25s linear infinite'
           }} />
           {/* Glowing pulse ring */}
@@ -1213,8 +1213,8 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
             width: '200px',
             height: '200px',
             borderRadius: '50%',
-            border: '1.5px solid rgba(0, 194, 255, 0.45)',
-            boxShadow: '0 0 25px rgba(0, 194, 255, 0.25), inset 0 0 20px rgba(0, 194, 255, 0.15)',
+            border: '1.5px solid var(--brand-500-strong)',
+            boxShadow: '0 0 25px var(--brand-500-medium), inset 0 0 20px var(--brand-500-medium)',
             animation: 'pulse-glow 5s ease-in-out infinite'
           }} />
           {/* Deep center core */}
@@ -1224,8 +1224,8 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
             height: '130px',
             borderRadius: '50%',
             backgroundColor: 'rgba(10, 12, 32, 0.95)',
-            border: '2px solid rgba(147, 51, 234, 0.65)',
-            boxShadow: '0 0 30px rgba(147, 51, 234, 0.35)',
+            border: '2px solid var(--brand-400-strong)',
+            boxShadow: '0 0 30px var(--brand-400-strong)',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -1239,7 +1239,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                 width: '64px',
                 height: '64px',
                 objectFit: 'contain',
-                filter: 'drop-shadow(0 0 8px rgba(147, 51, 234, 0.8))'
+                filter: 'drop-shadow(0 0 8px var(--brand-400-strong))'
               }}
             />
           </div>
@@ -1320,7 +1320,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
               <div key={i} style={{
                 width: '4px',
                 height: `${h}px`,
-                backgroundColor: 'rgba(147, 51, 234, 1)',
+                backgroundColor: 'var(--brand-400-strong)',
                 borderRadius: '2px',
                 opacity: 0.5 + (i * 0.125)
               }} />
@@ -1354,14 +1354,14 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
           <svg width="100%" height="32" viewBox="0 0 150 32" style={{ marginTop: '6px' }}>
             <defs>
               <linearGradient id="blueSpark" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="rgba(0, 194, 255, 0.25)" />
-                <stop offset="100%" stopColor="rgba(0, 194, 255, 0)" />
+                <stop offset="0%" stopColor="var(--brand-500-medium)" />
+                <stop offset="100%" stopColor="var(--brand-500-soft)" />
               </linearGradient>
             </defs>
-            <path d="M 0 25 Q 30 18 60 22 T 110 8 T 150 4" fill="none" stroke="rgba(0, 194, 255, 1)" strokeWidth="2" strokeLinecap="round" />
+            <path d="M 0 25 Q 30 18 60 22 T 110 8 T 150 4" fill="none" stroke="var(--brand-500-strong)" strokeWidth="2" strokeLinecap="round" />
             <path d="M 0 25 Q 30 18 60 22 T 110 8 T 150 4 L 150 32 L 0 32 Z" fill="url(#blueSpark)" />
           </svg>
-          <div style={{ fontSize: '10px', color: 'rgba(0, 194, 255, 1)', fontFamily: '"Barlow", sans-serif', fontWeight: 600, marginTop: '4px' }}>
+          <div style={{ fontSize: '10px', color: 'var(--brand-500-strong)', fontFamily: '"Barlow", sans-serif', fontWeight: 600, marginTop: '4px' }}>
             ▲ 145% vs last 6 months
           </div>
         </div>
@@ -1392,11 +1392,11 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
           <svg width="100%" height="32" viewBox="0 0 150 32" style={{ marginTop: '6px' }}>
             <defs>
               <linearGradient id="purpleSpark" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="rgba(147, 51, 234, 0.25)" />
-                <stop offset="100%" stopColor="rgba(147, 51, 234, 0)" />
+                <stop offset="0%" stopColor="var(--brand-400-medium)" />
+                <stop offset="100%" stopColor="var(--brand-400-soft)" />
               </linearGradient>
             </defs>
-            <path d="M 0 28 Q 20 30 50 16 T 100 18 T 150 4" fill="none" stroke="rgba(147, 51, 234, 1)" strokeWidth="2" strokeLinecap="round" />
+            <path d="M 0 28 Q 20 30 50 16 T 100 18 T 150 4" fill="none" stroke="var(--brand-400-strong)" strokeWidth="2" strokeLinecap="round" />
             <path d="M 0 28 Q 20 30 50 16 T 100 18 T 150 4 L 150 32 L 0 32 Z" fill="url(#purpleSpark)" />
           </svg>
           <div style={{ fontSize: '10px', color: 'var(--text-muted)', fontFamily: '"Barlow", sans-serif', fontWeight: 500, marginTop: '4px' }}>
@@ -1477,8 +1477,8 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
             width: '8px',
             height: '8px',
             borderRadius: '50%',
-            backgroundColor: 'rgba(147, 51, 234, 1)',
-            boxShadow: '0 0 8px rgba(147, 51, 234, 1)'
+            backgroundColor: 'var(--brand-400-strong)',
+            boxShadow: '0 0 8px var(--brand-400-strong)'
           }} />
           <span style={{
             fontSize: '11px',
@@ -1557,7 +1557,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                 cursor: 'pointer'
               }}
             >
-              <span style={{ color: 'rgba(0, 194, 255, 1)', fontSize: '18px' }}>{logo.icon}</span>
+              <span style={{ color: 'var(--brand-500-strong)', fontSize: '18px' }}>{logo.icon}</span>
               <span>{logo.name}</span>
             </div>
           ))}
@@ -1573,9 +1573,9 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
         flexShrink: 0
       }}>
         {[
-          { value: '250+', label: 'Happy Clients', color: 'rgba(0, 194, 255, 1)' },
-          { value: '$100M+', label: 'Revenue Generated', color: 'rgba(147, 51, 234, 1)' },
-          { value: '98%', label: 'Client Retention', color: 'rgba(0, 194, 255, 1)' }
+          { value: '250+', label: 'Happy Clients', color: 'var(--brand-500-strong)' },
+          { value: '$100M+', label: 'Revenue Generated', color: 'var(--brand-400-strong)' },
+          { value: '98%', label: 'Client Retention', color: 'var(--brand-500-strong)' }
         ].map((stat, idx) => (
           <div key={idx} style={{
             display: 'flex',
@@ -1620,7 +1620,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
     }}>
       {/* Subtitle */}
       <span style={{
-        color: 'rgba(147, 51, 234, 1)',
+        color: 'var(--brand-400-strong)',
         fontSize: '14px',
         fontFamily: '"Barlow", sans-serif',
         fontWeight: 700,
@@ -1679,8 +1679,8 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
               width: '8px',
               height: '8px',
               borderRadius: '50%',
-              backgroundColor: dotIndex === 0 ? 'rgba(147, 51, 234, 1)' : 'var(--bg-card-light)',
-              boxShadow: dotIndex === 0 ? '0 0 8px rgba(147, 51, 234, 0.8)' : 'none',
+              backgroundColor: dotIndex === 0 ? 'var(--brand-400-strong)' : 'var(--bg-card-light)',
+              boxShadow: dotIndex === 0 ? '0 0 8px var(--brand-400-strong)' : 'none',
               cursor: 'pointer',
               transition: 'all 0.3s ease'
             }}
@@ -1710,13 +1710,13 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
         width: '800px',
         height: '800px',
         borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(147, 51, 234, 0.04) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, var(--brand-400-soft) 0%, transparent 70%)',
         pointerEvents: 'none'
       }} />
 
       {/* Section Subtitle */}
       <span style={{
-        color: 'rgba(0, 194, 255, 1)',
+        color: 'var(--brand-500-strong)',
         fontSize: '14px',
         fontFamily: '"Barlow", sans-serif',
         fontWeight: 700,
@@ -1781,7 +1781,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
               height: '48px',
               borderRadius: '50%',
               background: idx === 0
-                ? 'linear-gradient(135deg, rgba(0, 194, 255, 1), rgba(147, 51, 234, 1))'
+                ? 'linear-gradient(135deg, var(--brand-500-strong), var(--brand-400-strong))'
                 : 'rgba(10, 12, 32, 0.9)',
               border: idx === 0
                 ? 'none'
@@ -1791,7 +1791,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
               justifyContent: 'center',
               flexShrink: 0,
               boxShadow: idx === 0
-                ? '0 0 20px rgba(0, 194, 255, 0.4), 0 0 40px rgba(147, 51, 234, 0.2)'
+                ? '0 0 20px var(--brand-500-strong), 0 0 40px var(--brand-400-medium)'
                 : '0 4px 12px rgba(0,0,0,0.3)',
               transition: 'all 0.3s ease'
             }}>
@@ -1811,7 +1811,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
               <div style={{
                 flex: 1,
                 height: '2px',
-                backgroundImage: 'linear-gradient(to right, rgba(0, 194, 255, 0.3) 6px, transparent 6px)',
+                backgroundImage: 'linear-gradient(to right, var(--brand-500-strong) 6px, transparent 6px)',
                 backgroundSize: '14px 2px',
                 backgroundRepeat: 'repeat-x',
                 margin: '0 4px'
@@ -1834,11 +1834,11 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
       }}>
         {config.frameworkSteps.map((step, idx) => {
           const iconColors = [
-            'rgba(0, 194, 255, 1)',
-            'rgba(147, 51, 234, 1)',
-            'rgba(0, 194, 255, 1)',
-            'rgba(147, 51, 234, 1)',
-            'rgba(0, 194, 255, 1)'
+            'var(--brand-500-strong)',
+            'var(--brand-400-strong)',
+            'var(--brand-500-strong)',
+            'var(--brand-400-strong)',
+            'var(--brand-500-strong)'
           ];
           const FrameworkStepIcon: React.FC = () => {
             switch (step.iconType) {
@@ -1876,8 +1876,8 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-6px)';
-                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 194, 255, 0.12), 0 0 20px rgba(147, 51, 234, 0.08)';
-                e.currentTarget.style.borderColor = 'rgba(0, 194, 255, 0.35)';
+                e.currentTarget.style.boxShadow = '0 20px 40px var(--brand-500-soft), 0 0 20px var(--brand-400-soft)';
+                e.currentTarget.style.borderColor = 'var(--brand-500-strong)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
@@ -1979,8 +1979,8 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                 width: '100%',
                 height: '3px',
                 background: idx % 2 === 0
-                  ? 'linear-gradient(to right, rgba(0, 194, 255, 0.6), rgba(147, 51, 234, 0.3))'
-                  : 'linear-gradient(to right, rgba(147, 51, 234, 0.6), rgba(0, 194, 255, 0.3))'
+                  ? 'linear-gradient(to right, var(--brand-500-strong), var(--brand-400-strong))'
+                  : 'linear-gradient(to right, var(--brand-400-strong), var(--brand-500-strong))'
               }} />
             </div>
           );
@@ -2057,17 +2057,17 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                 height: '24px',
                 borderRadius: '6px',
                 background: idx % 2 === 0
-                  ? 'linear-gradient(135deg, rgba(0, 194, 255, 0.2), rgba(0, 194, 255, 0.05))'
-                  : 'linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(147, 51, 234, 0.05))',
+                  ? 'linear-gradient(135deg, var(--brand-500-medium), var(--brand-500-soft))'
+                  : 'linear-gradient(135deg, var(--brand-400-medium), var(--brand-400-soft))',
                 border: idx % 2 === 0
-                  ? '1px solid rgba(0, 194, 255, 0.35)'
-                  : '1px solid rgba(147, 51, 234, 0.35)',
+                  ? '1px solid var(--brand-500-strong)'
+                  : '1px solid var(--brand-400-strong)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 flexShrink: 0
               }}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={idx % 2 === 0 ? 'rgba(0, 194, 255, 1)' : 'rgba(147, 51, 234, 1)'} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={idx % 2 === 0 ? 'var(--brand-500-strong)' : 'var(--brand-400-strong)'} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
               </div>
@@ -2099,7 +2099,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
     }}>
       {/* Section Label */}
       <span style={{
-        color: 'rgba(0, 194, 255, 1)',
+        color: 'var(--brand-500-strong)',
         fontSize: '13px',
         fontFamily: '"Barlow", sans-serif',
         fontWeight: 700,
@@ -2109,8 +2109,8 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
         textAlign: 'center',
         padding: '6px 16px',
         borderRadius: '20px',
-        border: '1px solid rgba(0, 194, 255, 0.25)',
-        backgroundColor: 'rgba(0, 194, 255, 0.06)'
+        border: '1px solid var(--brand-500-medium)',
+        backgroundColor: 'var(--brand-500-soft)'
       }}>
         What&apos;s Included
       </span>
@@ -2141,7 +2141,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
       }}>
         {config.whatsIncludedHeadline}
         <span style={{
-          background: 'linear-gradient(135deg, rgba(0, 194, 255, 1), rgba(147, 51, 234, 1))',
+          background: 'linear-gradient(135deg, var(--brand-500-strong), var(--brand-400-strong))',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text'
@@ -2255,7 +2255,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
               style={{
                 background: 'none',
                 border: 'none',
-                color: 'rgba(0, 194, 255, 1)',
+                color: 'var(--brand-500-strong)',
                 fontSize: '13px',
                 fontFamily: '"Barlow", sans-serif',
                 fontWeight: 700,
@@ -2270,11 +2270,11 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.color = 'rgba(147, 51, 234, 1)';
+                e.currentTarget.style.color = 'var(--brand-400-strong)';
                 e.currentTarget.style.gap = '14px';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.color = 'rgba(0, 194, 255, 1)';
+                e.currentTarget.style.color = 'var(--brand-500-strong)';
                 e.currentTarget.style.gap = '10px';
               }}
             >
@@ -2286,8 +2286,8 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                 width: '24px',
                 height: '24px',
                 borderRadius: '50%',
-                backgroundColor: 'rgba(0, 194, 255, 0.15)',
-                border: '1px solid rgba(0, 194, 255, 0.3)',
+                backgroundColor: 'var(--brand-500-medium)',
+                border: '1px solid var(--brand-500-strong)',
                 fontSize: '12px',
                 transition: 'all 0.3s ease'
               }}>→</span>
@@ -2305,7 +2305,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
         }}>
           {config.includedServices.map((service, idx) => {
             const IncludedIcon: React.FC = () => {
-              const iconColor = 'rgba(0, 194, 255, 1)';
+              const iconColor = 'var(--brand-500-strong)';
               switch (service.iconType) {
                 case 'globe':
                   return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={iconColor} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>;
@@ -2358,7 +2358,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                   position: 'relative'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(0, 194, 255, 0.03)';
+                  e.currentTarget.style.backgroundColor = 'var(--brand-500-soft)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'transparent';
@@ -2369,8 +2369,8 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                   width: '44px',
                   height: '44px',
                   borderRadius: '12px',
-                  backgroundColor: 'rgba(0, 194, 255, 0.06)',
-                  border: '1px solid rgba(0, 194, 255, 0.18)',
+                  backgroundColor: 'var(--brand-500-soft)',
+                  border: '1px solid var(--brand-500-medium)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
@@ -2380,7 +2380,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
 
                 {/* Number */}
                 <span style={{
-                  color: 'rgba(0, 194, 255, 1)',
+                  color: 'var(--brand-500-strong)',
                   fontSize: '14px',
                   fontFamily: '"Barlow", sans-serif',
                   fontWeight: 700,
@@ -2435,15 +2435,15 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                       transition: 'all 0.3s ease'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgba(0, 194, 255, 0.12)';
-                      e.currentTarget.style.borderColor = 'rgba(0, 194, 255, 0.4)';
+                      e.currentTarget.style.backgroundColor = 'var(--brand-500-soft)';
+                      e.currentTarget.style.borderColor = 'var(--brand-500-strong)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.backgroundColor = 'var(--bg-card-light)';
                       e.currentTarget.style.borderColor = 'var(--border-light)';
                     }}
                   >
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(0, 194, 255, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-500-strong)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <line x1="5" y1="12" x2="19" y2="12" />
                       <polyline points="12 5 19 12 12 19" />
                     </svg>

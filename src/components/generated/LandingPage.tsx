@@ -168,8 +168,8 @@ const FAQItem: React.FC<FAQItemProps> = ({
   return <div style={{
     borderRadius: '28px',
     overflow: 'hidden',
-    border: isOpen ? '1px solid rgba(0, 194, 255, 0.68)' : '1px solid rgba(255, 255, 255, 0.08)',
-    background: isOpen ? 'linear-gradient(180deg, rgba(0, 194, 255, 0.16), rgba(0, 194, 255, 0.08))' : 'rgba(8, 12, 32, 0.88)',
+    border: isOpen ? '1px solid var(--brand-500-strong)' : '1px solid rgba(255, 255, 255, 0.08)',
+    background: isOpen ? 'linear-gradient(180deg, var(--brand-500-medium), var(--brand-500-soft))' : 'rgba(8, 12, 32, 0.88)',
     boxShadow: '0 30px 80px rgba(0, 0, 0, 0.25)'
   }}>
       <button onClick={onClick} style={{
@@ -192,7 +192,7 @@ const FAQItem: React.FC<FAQItemProps> = ({
           width: '56px',
           height: '56px',
           borderRadius: '18px',
-          background: isOpen ? '#00c2ff' : 'rgba(0, 194, 255, 0.16)',
+          background: isOpen ? 'var(--brand-500)' : 'var(--brand-500-medium)',
           display: 'grid',
           placeItems: 'center',
           color: 'var(--text-primary)',
@@ -304,13 +304,13 @@ const Navbar: React.FC<NavbarProps> = ({
           {navItems.map(item => <button key={item} className="nav-item" onClick={() => handleNavClick(item)} style={{
           background: 'none',
           border: 'none',
-          color: activePage === item ? 'rgba(0, 194, 255, 1)' : 'var(--text-primary)',
+          color: activePage === item ? 'var(--brand-500-strong)' : 'var(--text-primary)',
           fontSize: '16px',
           fontFamily: '"Barlow", sans-serif',
           cursor: 'pointer',
           padding: '10px',
           transition: 'color 0.2s ease',
-          borderBottom: activePage === item ? '2px solid rgba(0, 194, 255, 1)' : '2px solid transparent'
+          borderBottom: activePage === item ? '2px solid var(--brand-500-strong)' : '2px solid transparent'
         }}>
               {item}
             </button>)}
@@ -323,7 +323,7 @@ const Navbar: React.FC<NavbarProps> = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'rgba(0, 194, 255, 1)',
+        backgroundColor: 'var(--brand-500-strong)',
         border: '1px dotted var(--text-primary)',
         borderRadius: '10px',
         color: 'var(--text-primary)',
@@ -399,7 +399,7 @@ const Navbar: React.FC<NavbarProps> = ({
           {navItems.map(item => <button key={item} className="nav-item" onClick={() => handleNavClick(item)} style={{
         background: 'none',
         border: 'none',
-        color: activePage === item ? 'rgba(0, 194, 255, 1)' : 'var(--text-primary)',
+        color: activePage === item ? 'var(--brand-500-strong)' : 'var(--text-primary)',
         fontSize: '17px',
         fontFamily: '"Barlow", sans-serif',
         cursor: 'pointer',
@@ -425,7 +425,7 @@ const Navbar: React.FC<NavbarProps> = ({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: 'rgba(0, 194, 255, 1)',
+          backgroundColor: 'var(--brand-500-strong)',
           border: '1px dotted var(--text-primary)',
           borderRadius: '10px',
           color: 'var(--text-primary)',
@@ -478,7 +478,7 @@ export const Footer: React.FC<FooterProps> = ({
             width: '48px',
             height: '48px',
             borderRadius: '14px',
-            background: 'linear-gradient(135deg, rgba(10,132,255,1), rgba(145,104,255,1))',
+            background: 'linear-gradient(135deg, var(--brand-600-strong), rgba(145,104,255,1))',
             display: 'grid',
             placeItems: 'center'
           }}>
@@ -563,7 +563,7 @@ export const Footer: React.FC<FooterProps> = ({
             cursor: 'pointer',
             transition: 'color 0.2s ease'
           }}
-          onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(0, 194, 255, 1)'; }}
+          onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--brand-500-strong)'; }}
           onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-muted)'; }}
           >{item.label}</span>)}
         </div>
@@ -868,12 +868,7 @@ const HomeContent: React.FC<{
   onNavigate
 }) => {
 
-  return <div style={{
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
-  }}>
+  return <div className="page-inner page-content">
       <HeroSection onNavigate={onNavigate} />
 
       <AboutSection />
@@ -1015,13 +1010,10 @@ export const LandingPage: React.FC<BaseComponentProps> = ({
       behavior: 'smooth'
     });
   };
-  return <div className={`landing-page ${className || ''}`} style={{
-    width: '100%',
+  return <div className={`page-shell landing-page ${className || ''}`} style={{
     minHeight: '100vh',
-    backgroundColor: 'var(--bg-primary)',
     boxSizing: 'border-box',
     overflowX: 'clip',
-    position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -1044,11 +1036,11 @@ export const LandingPage: React.FC<BaseComponentProps> = ({
           animation: robotJump 2.8s ease-in-out infinite;
           transform-origin: center bottom;
         }
-        .nav-item:hover { color: rgba(0, 194, 255, 1) !important; }
-        .primary-btn:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 194, 255, 0.3); }
+        .nav-item:hover { color: var(--brand-500-strong) !important; }
+        .primary-btn:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 4px 12px var(--brand-500-strong); }
         .primary-btn:active { transform: translateY(0); }
         .service-card:hover { transform: translateY(-8px); background-color: rgba(30, 30, 30, 1) !important; }
-        .value-circle:hover { border-color: rgba(0, 194, 255, 0.5) !important; transform: scale(1.02); }
+        .value-circle:hover { border-color: var(--brand-500-strong) !important; transform: scale(1.02); }
         .mobile-menu { animation: slideDown 0.25s ease; }
         @media (max-width: 767px) {
           .desktop-nav { display: none !important; }

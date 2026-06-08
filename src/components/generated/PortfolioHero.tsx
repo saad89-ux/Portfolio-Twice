@@ -18,7 +18,7 @@ export const PortfolioHero = () => {
       {/* Background Glows */}
       <div style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none' }}>
         <div style={{ position: 'absolute', top: '-20%', right: '-10%', width: '800px', height: '800px', background: 'radial-gradient(circle, rgba(100, 50, 255, 0.08) 0%, transparent 60%)', filter: 'blur(80px)' }} />
-        <div style={{ position: 'absolute', bottom: '-20%', left: '-10%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(0, 194, 255, 0.05) 0%, transparent 60%)', filter: 'blur(80px)' }} />
+        <div style={{ position: 'absolute', bottom: '-20%', left: '-10%', width: '600px', height: '600px', background: 'radial-gradient(circle, var(--brand-500-soft) 0%, transparent 60%)', filter: 'blur(80px)' }} />
       </div>
 
       {/* Left Content */}
@@ -50,7 +50,7 @@ export const PortfolioHero = () => {
           margin: 0,
           letterSpacing: '-0.02em'
         }}>
-          Work That Drives Results. <span style={{ color: '#a855f7' }}>Stories</span> That <span style={{ color: '#3b82f6' }}>Inspire.</span>
+          Work That Drives Results. <span style={{ color: 'var(--brand-400)' }}>Stories</span> That <span style={{ color: 'var(--brand-600)' }}>Inspire.</span>
         </h1>
 
         {/* Paragraph */}
@@ -88,11 +88,11 @@ export const PortfolioHero = () => {
             width: '42px',
             height: '42px',
             borderRadius: '50%',
-            background: 'linear-gradient(135deg, #a855f7, #6366f1)',
+            background: 'linear-gradient(135deg, var(--brand-400), var(--brand-400))',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 4px 15px rgba(168, 85, 247, 0.4)'
+            boxShadow: '0 4px 15px var(--brand-400-strong)'
           }}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -105,7 +105,7 @@ export const PortfolioHero = () => {
         <div style={{ display: 'flex', gap: '32px', marginTop: '40px', flexWrap: 'wrap' }}>
           {/* Stat 1 */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6366f1" strokeWidth="2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-400)" strokeWidth="2">
               <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
               <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
             </svg>
@@ -115,7 +115,7 @@ export const PortfolioHero = () => {
           <div style={{ width: '1px', height: '60px', background: 'rgba(255, 255, 255, 0.1)', alignSelf: 'center' }}></div>
           {/* Stat 2 */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-600)" strokeWidth="2">
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
             </svg>
             <div style={{ fontSize: '42px', fontWeight: 800, color: '#ffffff', fontFamily: '"Inter", sans-serif', letterSpacing: '-0.03em', lineHeight: 1 }}>98%</div>
@@ -124,7 +124,7 @@ export const PortfolioHero = () => {
           <div style={{ width: '1px', height: '60px', background: 'rgba(255, 255, 255, 0.1)', alignSelf: 'center' }}></div>
           {/* Stat 3 */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-600)" strokeWidth="2">
               <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
               <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
               <path d="M4 22h16"></path>
@@ -257,7 +257,7 @@ export const PortfolioHero = () => {
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(5,16,21,0.9) 0%, rgba(5,16,21,0.2) 100%)' }} />
             
             <div style={{ position: 'relative', zIndex: 1, padding: '36px', height: '100%', display: 'flex', flexDirection: 'column' }}>
-              <span style={{ fontSize: '9px', color: '#00e5ff', letterSpacing: '0.15em', marginBottom: '16px', fontWeight: 600 }}>CASE STUDY</span>
+              <span style={{ fontSize: '9px', color: 'var(--brand-500)', letterSpacing: '0.15em', marginBottom: '16px', fontWeight: 600 }}>CASE STUDY</span>
               <h3 style={{ fontSize: '34px', color: '#fff', fontWeight: 700, lineHeight: 1.15, margin: 0, width: '65%', fontFamily: '"Inter", sans-serif', letterSpacing: '-0.02em' }}>
                 Next-Gen <br/>Healthcare <br/>Platform
               </h3>
@@ -286,13 +286,13 @@ export const PortfolioHero = () => {
             
             <div style={{ position: 'relative', zIndex: 1, padding: '36px', height: '100%', display: 'flex', flexDirection: 'column' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a855f7" strokeWidth="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-400)" strokeWidth="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
                 <div style={{ display: 'flex', gap: '16px', fontSize: '9px', color: 'rgba(255,255,255,0.6)', letterSpacing: '0.05em' }}>
                   <span>Work</span><span>About</span><span>Services</span><span>Insights</span><span>Contact</span>
                 </div>
               </div>
               <h3 style={{ fontSize: '38px', color: '#fff', fontWeight: 700, lineHeight: 1.15, margin: 0, width: '70%', fontFamily: '"Inter", sans-serif', letterSpacing: '-0.02em' }}>
-                Redefining <br/>Digital <br/><span style={{ color: '#a855f7' }}>Experiences</span>
+                Redefining <br/>Digital <br/><span style={{ color: 'var(--brand-400)' }}>Experiences</span>
               </h3>
               <div style={{ position: 'absolute', top: '50%', right: '25%', transform: 'translateY(-50%)', width: '48px', height: '48px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.3)' }}>
                 <div style={{ width: '0', height: '0', borderTop: '6px solid transparent', borderBottom: '6px solid transparent', borderLeft: '10px solid #000', marginLeft: '3px' }} />

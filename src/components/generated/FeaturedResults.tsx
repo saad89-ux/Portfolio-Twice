@@ -64,7 +64,7 @@ export const FeaturedResults = () => {
         letterSpacing: '-0.02em'
       }}>
         Real Results. <br/>
-        <span style={{ color: '#00c2ff' }}>Measurable Growth.</span>
+        <span style={{ color: 'var(--brand-500)' }}>Measurable Growth.</span>
       </h2>
 
       <p style={{
@@ -134,7 +134,7 @@ export const FeaturedResults = () => {
                   width: '36px',
                   height: '36px',
                   borderRadius: '10px',
-                  backgroundColor: 'rgba(0, 194, 255, 0.1)',
+                  backgroundColor: 'var(--brand-500-soft)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -169,12 +169,12 @@ export const FeaturedResults = () => {
                   <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 100 100">
                     <defs>
                       <linearGradient id={`grad-${idx}`} x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stopColor="#00c2ff" stopOpacity="0.3" />
-                        <stop offset="100%" stopColor="#00c2ff" stopOpacity="0" />
+                        <stop offset="0%" stopColor="var(--brand-500)" stopOpacity="0.3" />
+                        <stop offset="100%" stopColor="var(--brand-500)" stopOpacity="0" />
                       </linearGradient>
                     </defs>
                     <path d="M0 90 Q 15 80 30 75 T 60 50 T 100 20 L 100 100 L 0 100 Z" fill={`url(#grad-${idx})`} />
-                    <path d="M0 90 Q 15 80 30 75 T 60 50 T 100 20" fill="none" stroke="#00c2ff" strokeWidth="3" strokeLinecap="round" />
+                    <path d="M0 90 Q 15 80 30 75 T 60 50 T 100 20" fill="none" stroke="var(--brand-500)" strokeWidth="3" strokeLinecap="round" />
                     {/* Glowing Dot at end */}
                     <circle cx="100" cy="20" r="3" fill="#fff" />
                   </svg>
@@ -183,7 +183,7 @@ export const FeaturedResults = () => {
                     position: 'absolute',
                     right: 0,
                     top: '-5px',
-                    backgroundColor: '#00c2ff',
+                    backgroundColor: 'var(--brand-500)',
                     color: '#000',
                     fontSize: '10px',
                     fontWeight: 700,
@@ -239,7 +239,7 @@ export const FeaturedResults = () => {
           <div style={{ fontSize: '64px', color: 'var(--border-light)', fontFamily: 'serif', lineHeight: 0.5, marginTop: '20px' }}>
             "
           </div>
-          <div style={{ display: 'flex', gap: '4px', color: '#00c2ff' }}>
+          <div style={{ display: 'flex', gap: '4px', color: 'var(--brand-500)' }}>
             {Array(5).fill(0).map((_, i) => <span key={i}>★</span>)}
           </div>
           <p style={{ fontSize: '14px', color: 'var(--text-muted)', lineHeight: 1.6, fontFamily: '"Barlow", sans-serif', margin: 0 }}>
@@ -262,7 +262,7 @@ export const FeaturedResults = () => {
                 <span style={{ fontSize: '20px' }}>{stat.icon}</span> {stat.company}
               </div>
               <div>
-                <div style={{ fontSize: '32px', fontWeight: 800, color: '#00c2ff', fontFamily: '"Inter", sans-serif', letterSpacing: '-0.02em' }}>
+                <div style={{ fontSize: '32px', fontWeight: 800, color: 'var(--brand-500)', fontFamily: '"Inter", sans-serif', letterSpacing: '-0.02em' }}>
                   {stat.value}
                 </div>
                 <div style={{ fontSize: '13px', color: 'var(--text-primary)', fontFamily: '"Barlow", sans-serif' }}>

@@ -57,7 +57,7 @@ export const LatestArticles = () => {
         position: 'absolute',
         inset: 0,
         pointerEvents: 'none',
-        background: 'radial-gradient(circle at top, rgba(168, 85, 247, 0.14), transparent 22%), radial-gradient(circle at left bottom, rgba(59, 130, 246, 0.08), transparent 20%)'
+        background: 'radial-gradient(circle at top, var(--brand-400-soft), transparent 22%), radial-gradient(circle at left bottom, var(--brand-600-soft), transparent 20%)'
       }} />
 
       <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center', textAlign: 'center' }}>
@@ -67,9 +67,9 @@ export const LatestArticles = () => {
           justifyContent: 'center',
           padding: '10px 18px',
           borderRadius: '999px',
-          backgroundColor: 'rgba(168, 85, 247, 0.12)',
-          border: '1px solid rgba(168, 85, 247, 0.25)',
-          color: '#a855f7',
+          backgroundColor: 'var(--brand-400-soft)',
+          border: '1px solid var(--brand-400-medium)',
+          color: 'var(--brand-400)',
           fontWeight: 700,
           letterSpacing: '0.14em',
           fontSize: '12px',
@@ -85,7 +85,7 @@ export const LatestArticles = () => {
           fontFamily: '"Inter", sans-serif',
           fontWeight: 800
         }}>
-          Latest <span style={{ color: '#a855f7' }}>Articles</span>
+          Latest <span style={{ color: 'var(--brand-400)' }}>Articles</span>
         </h2>
         <p style={{
           maxWidth: '720px',
@@ -135,8 +135,8 @@ export const LatestArticles = () => {
             <div style={{ position: 'relative', minHeight: '240px', overflow: 'hidden' }}>
               <img src={article.image} alt={article.title} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.78)' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(20, 23, 44, 0.15), rgba(5, 8, 20, 0.82))' }} />
-              <div style={{ position: 'absolute', top: '22px', left: '22px', display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '10px 14px', backgroundColor: 'rgba(20, 23, 44, 0.84)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '16px', color: '#a855f7', textTransform: 'uppercase', fontSize: '11px', letterSpacing: '0.14em', fontWeight: 700 }}>
-                <span style={{ width: '28px', height: '28px', borderRadius: '12px', backgroundColor: 'rgba(168, 85, 247, 0.18)', display: 'grid', placeItems: 'center' }}>✦</span>
+              <div style={{ position: 'absolute', top: '22px', left: '22px', display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '10px 14px', backgroundColor: 'rgba(20, 23, 44, 0.84)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '16px', color: 'var(--brand-400)', textTransform: 'uppercase', fontSize: '11px', letterSpacing: '0.14em', fontWeight: 700 }}>
+                <span style={{ width: '28px', height: '28px', borderRadius: '12px', backgroundColor: 'var(--brand-400-medium)', display: 'grid', placeItems: 'center' }}>✦</span>
                 {article.badge}
               </div>
               <div style={{ position: 'absolute', bottom: '20px', left: '22px', display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: 'rgba(0, 0, 0, 0.52)', borderRadius: '999px', padding: '10px 14px', color: 'rgba(255,255,255,0.85)', fontSize: '12px' }}>
@@ -149,10 +149,10 @@ export const LatestArticles = () => {
               <div style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <div style={{ width: '10px', height: '10px', borderRadius: '999px', backgroundColor: '#a855f7' }} />
+                  <div style={{ width: '10px', height: '10px', borderRadius: '999px', backgroundColor: 'var(--brand-400)' }} />
                   <span style={{ fontSize: '13px', fontWeight: 700, color: '#d8b4fe', textTransform: 'uppercase', letterSpacing: '0.12em' }}>{article.category}</span>
                 </div>
-                <div style={{ width: '38px', height: '38px', borderRadius: '14px', backgroundColor: 'rgba(168, 85, 247, 0.12)', display: 'grid', placeItems: 'center', color: '#a855f7', fontSize: '16px' }}>→</div>
+                <div style={{ width: '38px', height: '38px', borderRadius: '14px', backgroundColor: 'var(--brand-400-soft)', display: 'grid', placeItems: 'center', color: 'var(--brand-400)', fontSize: '16px' }}>→</div>
               </div>
                 <div>
                 <h3 style={{ margin: 0, color: 'var(--text-primary)', fontSize: '24px', lineHeight: 1.2, fontWeight: 800, fontFamily: '"Inter", sans-serif' }}>{article.title}</h3>
@@ -168,7 +168,7 @@ export const LatestArticles = () => {
                     <span style={{ color: 'var(--text-muted)', fontSize: '12px' }}>{article.role}</span>
                   </div>
                 </div>
-                <div style={{ width: '44px', height: '44px', borderRadius: '14px', backgroundColor: '#7c3aed', display: 'grid', placeItems: 'center', color: '#fff', boxShadow: '0 14px 28px rgba(124, 58, 237, 0.3)', cursor: 'pointer' }}>
+                <div style={{ width: '44px', height: '44px', borderRadius: '14px', backgroundColor: 'var(--brand-400)', display: 'grid', placeItems: 'center', color: '#fff', boxShadow: '0 14px 28px var(--brand-400-strong)', cursor: 'pointer' }}>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </div>
               </div>
@@ -182,16 +182,16 @@ export const LatestArticles = () => {
         <button style={{
           padding: '14px 28px',
           borderRadius: '999px',
-          border: '1px solid rgba(168, 85, 247, 0.35)',
-          backgroundColor: 'rgba(168, 85, 247, 0.12)',
-          color: '#a855f7',
+          border: '1px solid var(--brand-400-strong)',
+          backgroundColor: 'var(--brand-400-soft)',
+          color: 'var(--brand-400)',
           fontWeight: 700,
           fontSize: '14px',
           cursor: 'pointer',
           transition: 'transform 0.2s ease, background-color 0.2s ease'
         }}
-        onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.backgroundColor = 'rgba(168, 85, 247, 0.18)'; }}
-        onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.backgroundColor = 'rgba(168, 85, 247, 0.12)'; }}>
+        onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.backgroundColor = 'var(--brand-400-medium)'; }}
+        onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.backgroundColor = 'var(--brand-400-soft)'; }}>
           View All Articles →
         </button>
       </div>

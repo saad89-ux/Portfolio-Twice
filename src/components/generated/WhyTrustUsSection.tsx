@@ -186,12 +186,12 @@ const FeatureCard: React.FC<{
         height: '56px',
         minWidth: '56px',
         borderRadius: '16px',
-        backgroundColor: 'rgba(0, 194, 255, 0.08)',
-        border: '1px solid rgba(0, 194, 255, 0.2)',
+        backgroundColor: 'var(--brand-500-soft)',
+        border: '1px solid var(--brand-500-medium)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: '#00c2ff',
+        color: 'var(--brand-500)',
         position: 'relative',
         zIndex: 2,
       }}
@@ -261,7 +261,7 @@ export const WhyTrustUsSection: React.FC = () => {
             <div style={{ width: '40px', height: '1px', backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
             <span
               style={{
-                color: '#00c2ff',
+                color: 'var(--brand-500)',
                 fontSize: '13px',
                 fontWeight: 700,
                 letterSpacing: '0.24em',
@@ -284,7 +284,7 @@ export const WhyTrustUsSection: React.FC = () => {
               margin: 0,
             }}
           >
-            Trust Is Earned. Results <span style={{ color: '#00c2ff' }}>Keep It.</span>
+            Trust Is Earned. Results <span style={{ color: 'var(--brand-500)' }}>Keep It.</span>
           </h2>
 
           <p
@@ -344,8 +344,8 @@ export const WhyTrustUsSection: React.FC = () => {
                 width: '100%',
                 height: '100%',
                 borderRadius: '50%',
-                border: '1px dashed rgba(0, 194, 255, 0.3)',
-                boxShadow: '0 0 60px rgba(0, 194, 255, 0.1), inset 0 0 60px rgba(0, 194, 255, 0.1)',
+                border: '1px dashed var(--brand-500-strong)',
+                boxShadow: '0 0 60px var(--brand-500-soft), inset 0 0 60px var(--brand-500-soft)',
                 animation: 'spin 60s linear infinite',
               }}
             />
@@ -358,8 +358,8 @@ export const WhyTrustUsSection: React.FC = () => {
                 width: '80%',
                 height: '110%',
                 borderRadius: '50%',
-                border: '1px solid rgba(0, 194, 255, 0.1)',
-                boxShadow: 'inset 0 0 40px rgba(0, 194, 255, 0.1)',
+                border: '1px solid var(--brand-500-soft)',
+                boxShadow: 'inset 0 0 40px var(--brand-500-soft)',
               }}
             />
 
@@ -369,9 +369,9 @@ export const WhyTrustUsSection: React.FC = () => {
                 width: '180px',
                 height: '180px',
                 borderRadius: '50%',
-                background: 'linear-gradient(135deg, rgba(0, 194, 255, 0.2), rgba(0, 194, 255, 0.05))',
-                border: '1px solid rgba(0, 194, 255, 0.5)',
-                boxShadow: '0 0 80px rgba(0, 194, 255, 0.4), inset 0 0 30px rgba(0, 194, 255, 0.2)',
+                background: 'linear-gradient(135deg, var(--brand-500-medium), var(--brand-500-soft))',
+                border: '1px solid var(--brand-500-strong)',
+                boxShadow: '0 0 80px var(--brand-500-strong), inset 0 0 30px var(--brand-500-medium)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -379,7 +379,7 @@ export const WhyTrustUsSection: React.FC = () => {
                 zIndex: 2,
               }}
             >
-              <span style={{ fontSize: '72px', fontWeight: 900, color: '#00c2ff', fontFamily: InterFont, textShadow: '0 0 20px rgba(0,194,255,0.5)' }}>
+              <span style={{ fontSize: '72px', fontWeight: 900, color: 'var(--brand-500)', fontFamily: InterFont, textShadow: '0 0 20px var(--brand-500-strong)' }}>
                 CA
               </span>
             </div>
@@ -425,7 +425,7 @@ export const WhyTrustUsSection: React.FC = () => {
                 ))}
               </div>
               {/* Stars */}
-              <div style={{ display: 'flex', gap: '4px', color: '#00c2ff' }}>
+              <div style={{ display: 'flex', gap: '4px', color: 'var(--brand-500)' }}>
                 {[1, 2, 3, 4, 5].map((s) => (
                   <svg key={s} width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
@@ -467,12 +467,12 @@ export const WhyTrustUsSection: React.FC = () => {
                   width: '56px',
                   height: '56px',
                   borderRadius: '50%',
-                  background: 'rgba(0, 194, 255, 0.05)',
-                  border: '1px solid rgba(0, 194, 255, 0.2)',
+                  background: 'var(--brand-500-soft)',
+                  border: '1px solid var(--brand-500-medium)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#00c2ff',
+                  color: 'var(--brand-500)',
                   flexShrink: 0,
                 }}
               >

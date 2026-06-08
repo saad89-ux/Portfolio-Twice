@@ -57,12 +57,12 @@ const COLORS = {
   white: 'var(--text-primary)',
   grayText: 'var(--text-muted)',
   grayTextLight: 'var(--text-secondary)',
-  purple: '#00c2ff',
-  purpleAlpha15: 'rgba(0, 194, 255, 0.15)',
-  purpleAlpha12: 'rgba(0, 194, 255, 0.12)',
-  blue: '#00c2ff',
-  blueAlpha15: 'rgba(0, 194, 255, 0.15)',
-  blueAlpha08: 'rgba(0, 194, 255, 0.08)',
+  purple: 'var(--brand-500)',
+  purpleAlpha15: 'var(--brand-500-medium)',
+  purpleAlpha12: 'var(--brand-500-soft)',
+  blue: 'var(--brand-500)',
+  blueAlpha15: 'var(--brand-500-medium)',
+  blueAlpha08: 'var(--brand-500-soft)',
   font: '"Barlow", sans-serif',
 };
 
@@ -648,10 +648,10 @@ const AccordionItem = ({
     <div
       style={{
         background: isOpen
-          ? 'linear-gradient(180deg, rgba(0, 194, 255, 0.12), rgba(0, 194, 255, 0.08))'
+          ? 'linear-gradient(180deg, var(--brand-500-soft), var(--brand-500-soft))'
           : 'var(--bg-card)',
         border: isOpen
-          ? '1px solid rgba(0, 194, 255, 0.5)'
+          ? '1px solid var(--brand-500-strong)'
           : '1px solid var(--border-light)',
         borderRadius: '12px',
         overflow: 'hidden',
@@ -949,7 +949,7 @@ export const FAQSection: React.FC<{ serviceName?: string; onNavigate?: (page: Pa
                   padding: '20px 22px',
                   borderRadius: '20px',
                   background: COLORS.blueAlpha08,
-                  border: '1px solid rgba(0, 194, 255, 0.18)',
+                  border: '1px solid var(--brand-500-medium)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',

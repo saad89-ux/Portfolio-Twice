@@ -405,7 +405,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ serviceN
             gap: '12px'
           }}>
               <span style={{
-              color: 'rgba(0, 194, 255, 1)',
+              color: 'var(--brand-500-strong)',
               fontSize: '32px',
               fontFamily: '"Barlow", sans-serif',
               fontWeight: 800
@@ -435,9 +435,9 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ serviceN
             minWidth: '130px',
             padding: '14px 22px',
             borderRadius: '999px',
-            backgroundColor: activeCaseStudyCategory === category ? '#00c2ff' : 'var(--bg-card-light)',
+            backgroundColor: activeCaseStudyCategory === category ? 'var(--brand-500)' : 'var(--bg-card-light)',
             color: activeCaseStudyCategory === category ? 'var(--text-primary)' : 'var(--text-secondary)',
-            border: activeCaseStudyCategory === category ? '1px solid #00c2ff' : '1px solid var(--border-light)',
+            border: activeCaseStudyCategory === category ? '1px solid var(--brand-500)' : '1px solid var(--border-light)',
             cursor: 'pointer',
             fontFamily: '"Barlow", sans-serif',
             fontSize: '14px',
@@ -479,10 +479,10 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ serviceN
                   alignItems: 'center',
                   gap: '12px',
                   padding: '10px 18px',
-                  backgroundColor: 'rgba(0, 194, 255, 0.12)',
+                  backgroundColor: 'var(--brand-500-soft)',
                   borderRadius: '999px',
                   width: 'fit-content',
-                  color: '#00c2ff',
+                  color: 'var(--brand-500)',
                   fontSize: '12px',
                   fontFamily: '"Barlow", sans-serif',
                   fontWeight: 700,
@@ -571,7 +571,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ serviceN
               }}>
                     <div>
                       <h4 style={{
-                      color: '#00c2ff',
+                      color: 'var(--brand-500)',
                       fontSize: '18px',
                       fontFamily: '"Barlow", sans-serif',
                       fontWeight: 700,
@@ -616,7 +616,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ serviceN
                     padding: '18px 24px',
                     borderRadius: '18px',
                     border: 'none',
-                    backgroundColor: '#00c2ff',
+                    backgroundColor: 'var(--brand-500)',
                     color: 'var(--text-primary)',
                     cursor: 'pointer',
                     fontFamily: '"Barlow", sans-serif',
@@ -677,8 +677,8 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ serviceN
                   gap: '10px',
                   padding: '8px 16px',
                   borderRadius: '999px',
-                  backgroundColor: 'rgba(0, 194, 255, 0.12)',
-                  color: '#00c2ff',
+                  backgroundColor: 'var(--brand-500-soft)',
+                  color: 'var(--brand-500)',
                   fontSize: '12px',
                   fontFamily: '"Barlow", sans-serif',
                   fontWeight: 700,
@@ -754,7 +754,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ serviceN
             minWidth: '220px',
             padding: '16px 24px',
             borderRadius: '18px',
-            backgroundColor: '#00c2ff',
+            backgroundColor: 'var(--brand-500)',
             color: 'var(--text-primary)',
             border: 'none',
             cursor: 'pointer',
