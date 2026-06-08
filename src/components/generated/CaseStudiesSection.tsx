@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { PageName } from './ServicedetailPage';
 
 interface CaseStudyStat {
@@ -336,10 +337,11 @@ const defaultServiceName = 'SEO & ORGANIC GROWTH';
 
 interface CaseStudiesSectionProps {
   serviceName?: string;
-  onNavigate?: (page: PageName) => void;
+  
 }
 
-export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ serviceName, onNavigate }) => {
+export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ serviceName }) => {
+  const router = useRouter();
   const config = serviceConfigs[serviceName || ''] || serviceConfigs[defaultServiceName];
   const caseStudyCategories = config.categories;
   const caseStudyStats = config.stats;
@@ -611,7 +613,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ serviceN
                           </div>)}
                       </div>
                     </div>
-                    <button onClick={() => onNavigate && onNavigate('Contact')} style={{
+                    <button onClick={() => router.push('/contact')} style={{
                     width: '100%',
                     padding: '18px 24px',
                     borderRadius: '18px',
@@ -750,7 +752,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ serviceN
                   Let's create something extraordinary together.
                 </p>
             </div>
-            <button onClick={() => onNavigate && onNavigate('Contact')} style={{
+            <button onClick={() => router.push('/contact')} style={{
             minWidth: '220px',
             padding: '16px 24px',
             borderRadius: '18px',

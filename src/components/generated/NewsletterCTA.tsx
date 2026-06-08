@@ -1,11 +1,11 @@
-﻿import React from 'react';
+import React from 'react';
 
 export const NewsletterCTA: React.FC = () => {
   const stats = [
-    { icon: '👥', title: '10K+', value: 'Active Subscribers' },
-    { icon: '📧', title: '48%', value: 'Avg. Open Rate' },
-    { icon: '🔗', title: '12%', value: 'Avg. Click Rate' },
-    { icon: '⭐', title: '4.9/5', value: 'Subscriber Rating' }
+    { icon: '??', title: '10K+', value: 'Active Subscribers' },
+    { icon: '??', title: '48%', value: 'Avg. Open Rate' },
+    { icon: '??', title: '12%', value: 'Avg. Click Rate' },
+    { icon: '?', title: '4.9/5', value: 'Subscriber Rating' }
   ];
 
   const brands = ['TechNova', 'EcoHome', 'HealthPlus', 'UrbanTrend', 'FinEdge'];
@@ -29,7 +29,7 @@ export const NewsletterCTA: React.FC = () => {
       <div style={{ position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1.1fr 1.15fr', gap: '48px', alignItems: 'flex-start' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', paddingTop: '8px' }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '10px 18px', borderRadius: '999px', backgroundColor: 'var(--brand-400-soft)', border: '1px solid var(--brand-400-medium)', color: 'var(--brand-400)', fontSize: '12px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', width: 'fit-content' }}>
-            ✦ Weekly Newsletter
+            ? Weekly Newsletter
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
@@ -58,9 +58,9 @@ export const NewsletterCTA: React.FC = () => {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
             {[
-              { icon: '📈', title: 'Proven Strategies', desc: 'Real tactics that drive measurable results.' },
-              { icon: '💡', title: 'Industry Insights', desc: 'Stay updated with the latest trends.' },
-              { icon: '📋', title: 'Exclusive Resources', desc: 'Guides, templates, and frameworks.' }
+              { icon: '??', title: 'Proven Strategies', desc: 'Real tactics that drive measurable results.' },
+              { icon: '??', title: 'Industry Insights', desc: 'Stay updated with the latest trends.' },
+              { icon: '??', title: 'Exclusive Resources', desc: 'Guides, templates, and frameworks.' }
             ].map((item, idx) => (
               <div key={idx} style={{ display: 'flex', gap: '18px', alignItems: 'flex-start' }}>
                 <div style={{ width: '48px', height: '48px', borderRadius: '18px', display: 'grid', placeItems: 'center', backgroundColor: 'var(--brand-400-soft)', color: 'var(--brand-400)', fontSize: '20px', flexShrink: 0 }}>
@@ -102,14 +102,14 @@ export const NewsletterCTA: React.FC = () => {
               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Newsletter preview" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.65) saturate(1.2)' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, var(--brand-400-strong), var(--brand-400-medium)), linear-gradient(180deg, rgba(10, 14, 34, 0.16), rgba(8, 11, 24, 0.95))' }} />
               <div style={{ position: 'absolute', top: '24px', left: '24px', display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 16px', borderRadius: '999px', backgroundColor: 'rgba(20, 23, 44, 0.9)', border: '1px solid var(--brand-400-strong)', color: 'var(--brand-400)', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.14em' }}>
-                🚀 antigravity
+                ?? antigravity
               </div>
               <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '100px', height: '100px', borderRadius: '20px', backgroundColor: 'var(--brand-400-medium)', display: 'grid', placeItems: 'center', fontSize: '44px', color: '#fff' }}>
-                ✉️
+                ??
               </div>
             </div>
 
-            <div style={{ padding: '32px 28px', display: 'flex', flexDirection: 'column', gap: '24px', backgroundColor: 'rgba(12, 16, 32, 0.72)' }}>
+            <div style={{ padding: '32px 28px', display: 'flex', flexDirection: 'column', gap: '24px', backgroundColor: 'rgba(7, 10, 24, 0.72)' }}>
               <div>
                 <span style={{ display: 'block', color: 'rgba(255,255,255,0.55)', fontSize: '11px', marginBottom: '10px', letterSpacing: '0.13em', textTransform: 'uppercase', fontWeight: 700 }}>Weekly Growth Insights</span>
                 <h3 style={{ margin: 0, color: 'var(--text-primary)', fontSize: '28px', lineHeight: 1.15, fontWeight: 800, fontFamily: '"Inter", sans-serif' }}>Issue #48</h3>
@@ -123,7 +123,7 @@ export const NewsletterCTA: React.FC = () => {
                   'Top Digital Marketing Trends You Can\'t Ignore'
                 ].map((item, idx) => (
                   <div key={idx} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                    <span style={{ display: 'inline-flex', width: '24px', height: '24px', borderRadius: '8px', backgroundColor: 'var(--brand-400-medium)', color: 'var(--brand-400)', alignItems: 'center', justifyContent: 'center', fontSize: '12px', marginTop: '2px', fontWeight: 700, flexShrink: 0 }}>✓</span>
+                    <span style={{ display: 'inline-flex', width: '24px', height: '24px', borderRadius: '8px', backgroundColor: 'var(--brand-400-medium)', color: 'var(--brand-400)', alignItems: 'center', justifyContent: 'center', fontSize: '12px', marginTop: '2px', fontWeight: 700, flexShrink: 0 }}>?</span>
                     <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '14px', lineHeight: '1.65' }}>{item}</span>
                   </div>
                 ))}
@@ -167,7 +167,7 @@ export const NewsletterCTA: React.FC = () => {
                 cursor: 'pointer',
                 boxShadow: '0 20px 40px var(--brand-400-strong)'
               }}>
-                Subscribe Now →
+                Subscribe Now ?
               </button>
             </div>
 

@@ -158,7 +158,7 @@ export const TopicCategories = () => {
               zIndex: 0
             }}>
               <img src={topic.bgImg} alt={topic.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10, 13, 20, 0.02), rgba(10, 13, 20, 0.82))' }} />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(7, 10, 24, 0.02), rgba(7, 10, 24, 0.82))' }} />
             </div>
 
             <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '20px', height: '100%' }}>

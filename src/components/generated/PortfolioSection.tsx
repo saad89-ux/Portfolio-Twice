@@ -1,5 +1,6 @@
+"use client";
 import React, { useState } from 'react';
-import { PageName } from './ServicedetailPage';
+import { useRouter } from 'next/navigation';
 
 const portfolioStats = [{
   value: '3000+',
@@ -65,7 +66,8 @@ const portfolioProjects = [{
   }]
 }];
 
-export const PortfolioSection: React.FC<{ onNavigate?: (page: PageName) => void }> = ({ onNavigate }) => {
+export const PortfolioSection: React.FC = () => {
+  const router = useRouter();
   const [activePortfolioCategory, setActivePortfolioCategory] = useState('All Projects');
 
   return (
@@ -263,7 +265,7 @@ export const PortfolioSection: React.FC<{ onNavigate?: (page: PageName) => void 
                       </strong>
                     </div>)}
                 </div>
-                <button onClick={() => onNavigate && onNavigate('Contact')} style={{
+                <button onClick={() => router.push('/contact')} style={{
                 padding: '14px 20px',
                 width: '100%',
                 backgroundColor: 'var(--brand-500)',
@@ -318,7 +320,7 @@ export const PortfolioSection: React.FC<{ onNavigate?: (page: PageName) => void 
                   Let’s build a strategy that grows your business.
                 </p>
             </div>
-            <button onClick={() => onNavigate && onNavigate('Contact')} style={{
+            <button onClick={() => router.push('/contact')} style={{
             minWidth: '220px',
             padding: '16px 24px',
             borderRadius: '18px',

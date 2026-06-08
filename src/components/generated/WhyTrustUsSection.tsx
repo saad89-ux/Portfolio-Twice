@@ -152,7 +152,7 @@ const FeatureCard: React.FC<{
     style={{
       position: 'relative',
       borderRadius: '16px',
-      backgroundColor: '#070a1a',
+      backgroundColor: '#070a18',
       border: '1px solid rgba(255, 255, 255, 0.05)',
       padding: '28px 24px',
       display: 'flex',
@@ -390,7 +390,7 @@ export const WhyTrustUsSection: React.FC = () => {
                 position: 'absolute',
                 bottom: '10px',
                 zIndex: 3,
-                backgroundColor: 'rgba(8, 12, 32, 0.9)',
+                backgroundColor: 'rgba(7, 10, 24, 0.9)',
                 border: '1px solid rgba(255, 255, 255, 0.1)',
                 borderRadius: '16px',
                 padding: '16px 24px',
@@ -446,7 +446,7 @@ export const WhyTrustUsSection: React.FC = () => {
         {/* Bottom Wide Stats Bar */}
         <div
           style={{
-            background: 'linear-gradient(90deg, rgba(8, 12, 32, 0.6) 0%, rgba(12, 16, 42, 0.8) 50%, rgba(8, 12, 32, 0.6) 100%)',
+            background: 'linear-gradient(90deg, rgba(7, 10, 24, 0.6) 0%, rgba(7, 10, 24, 0.8) 50%, rgba(7, 10, 24, 0.6) 100%)',
             border: '1px solid rgba(255, 255, 255, 0.05)',
             borderRadius: '24px',
             padding: '40px 48px',

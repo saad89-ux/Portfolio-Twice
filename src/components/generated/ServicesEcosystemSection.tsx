@@ -1,4 +1,6 @@
+"use client";
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 const BarlowFont = '"Barlow", sans-serif';
 const InterFont = '"Inter", sans-serif';
@@ -217,6 +219,7 @@ const EcosystemNode = ({ title, desc, icon, align = 'left', onClick }: { title: 
 );
 
 export const ServicesEcosystemSection: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNavigate }) => {
+  const router = useRouter();
   const containerW = 1200;
   const containerH = 800;
   const centerX = containerW / 2;

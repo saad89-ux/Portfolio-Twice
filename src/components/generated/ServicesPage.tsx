@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { IndustriesSection } from './IndustriesSection';
 import { ServicesEcosystemSection } from './ServicesEcosystemSection';
 import { ServicesPageGridSection } from './ServicesPageGridSection';
@@ -20,7 +21,7 @@ interface BaseComponentProps {
 }
 
 interface ServicesPageProps {
-  onNavigate?: (page: any) => void;
+  
 }
 
 interface ServiceItem {
@@ -279,8 +280,20 @@ const IndustryCard = ({
       </div>
     </div>;
 };
-export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
+export const ServicesPage: React.FC<ServicesPageProps> = () => {
+  const router = useRouter();
   const [isMarqueePaused, setIsMarqueePaused] = useState(false);
+  const onNavigate = (page: string) => {
+    const routes: Record<string, string> = {
+      'SEO & ORGANIC GROWTH': '/services/seo-organic-growth',
+      'PERFORMANCE MARKETING': '/services/performance-marketing',
+      'WEB DESIGN & DEVELOPMENT': '/services/web-design-development',
+      'BRAND STRATEGY & IDENTITY': '/services/brand-strategy-identity',
+      'CONTENT MARKETING': '/services/content-marketing',
+      'MARKETING AUTOMATION & CRM': '/services/marketing-automation-crm'
+    };
+    router.push(routes[page] || '/services');
+  };
   return <div style={{
     width: '100%',
     backgroundColor: 'var(--bg-primary)',

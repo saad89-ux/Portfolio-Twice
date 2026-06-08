@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import {
   Send,
   TrendingUp,
@@ -757,7 +758,8 @@ const AccordionItem = ({
    ═══════════════════════════════════════════════ */
 import { PageName } from './ServicedetailPage';
 
-export const FAQSection: React.FC<{ serviceName?: string; onNavigate?: (page: PageName) => void }> = ({ serviceName, onNavigate }) => {
+export const FAQSection: React.FC<{ serviceName?: string; onNavigate?: (page: PageName) => void }> = ({ serviceName }) => {
+  const router = useRouter();
   const [openIdx, setOpenIdx] = useState<number>(0);
 
   const config = SERVICE_FAQ_CONFIGS[serviceName || DEFAULT_SERVICE] || SERVICE_FAQ_CONFIGS[DEFAULT_SERVICE];
@@ -1030,7 +1032,7 @@ export const FAQSection: React.FC<{ serviceName?: string; onNavigate?: (page: Pa
                     justifyContent: 'center',
                     cursor: 'pointer',
                   }}
-                  onClick={() => onNavigate && onNavigate('Contact')}
+                  onClick={() => router.push('/contact')}
                 >
                   <ArrowRight size={18} color={COLORS.white} strokeWidth={2.5} />
                 </div>

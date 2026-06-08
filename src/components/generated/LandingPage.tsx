@@ -1,4 +1,6 @@
+"use client";
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { ServicesPage } from './ServicesPage';
 import { PortfolioShowcase } from './PortfolioShowcase';
 import { AboutSection } from './AboutSection';
@@ -169,7 +171,7 @@ const FAQItem: React.FC<FAQItemProps> = ({
     borderRadius: '28px',
     overflow: 'hidden',
     border: isOpen ? '1px solid var(--brand-500-strong)' : '1px solid rgba(255, 255, 255, 0.08)',
-    background: isOpen ? 'linear-gradient(180deg, var(--brand-500-medium), var(--brand-500-soft))' : 'rgba(8, 12, 32, 0.88)',
+    background: isOpen ? 'linear-gradient(180deg, var(--brand-500-medium), var(--brand-500-soft))' : 'rgba(7, 10, 24, 0.88)',
     boxShadow: '0 30px 80px rgba(0, 0, 0, 0.25)'
   }}>
       <button onClick={onClick} style={{
@@ -234,12 +236,13 @@ const FAQItem: React.FC<FAQItemProps> = ({
     </div>;
 };
 interface NavbarProps {
-  activePage: PageName;
+  currentPage: PageName;
   onNavigate: (page: PageName) => void;
+  
   scrolled: boolean;
 }
 const Navbar: React.FC<NavbarProps> = ({
-  activePage,
+  currentPage,
   onNavigate,
   scrolled
 }) => {
@@ -304,13 +307,13 @@ const Navbar: React.FC<NavbarProps> = ({
           {navItems.map(item => <button key={item} className="nav-item" onClick={() => handleNavClick(item)} style={{
           background: 'none',
           border: 'none',
-          color: activePage === item ? 'var(--brand-500-strong)' : 'var(--text-primary)',
+          color: currentPage === item ? 'var(--brand-500-strong)' : 'var(--text-primary)',
           fontSize: '16px',
           fontFamily: '"Barlow", sans-serif',
           cursor: 'pointer',
           padding: '10px',
           transition: 'color 0.2s ease',
-          borderBottom: activePage === item ? '2px solid var(--brand-500-strong)' : '2px solid transparent'
+          borderBottom: currentPage === item ? '2px solid var(--brand-500-strong)' : '2px solid transparent'
         }}>
               {item}
             </button>)}
@@ -399,7 +402,7 @@ const Navbar: React.FC<NavbarProps> = ({
           {navItems.map(item => <button key={item} className="nav-item" onClick={() => handleNavClick(item)} style={{
         background: 'none',
         border: 'none',
-        color: activePage === item ? 'var(--brand-500-strong)' : 'var(--text-primary)',
+        color: currentPage === item ? 'var(--brand-500-strong)' : 'var(--text-primary)',
         fontSize: '17px',
         fontFamily: '"Barlow", sans-serif',
         cursor: 'pointer',
@@ -444,11 +447,20 @@ const Navbar: React.FC<NavbarProps> = ({
     </React.Fragment>;
 };
 export interface FooterProps {
-  onNavigate: (page: PageName) => void;
+  onNavigate?: (page: PageName) => void;
 }
 export const Footer: React.FC<FooterProps> = ({
   onNavigate
 }) => {
+  const router = useRouter();
+  const serviceRoutes: Record<string, string> = {
+    'SEO & ORGANIC GROWTH': '/services/seo-organic-growth',
+    'PERFORMANCE MARKETING': '/services/performance-marketing',
+    'WEB DESIGN & DEVELOPMENT': '/services/web-design-development',
+    'BRAND STRATEGY & IDENTITY': '/services/brand-strategy-identity',
+    'CONTENT MARKETING': '/services/content-marketing',
+    'MARKETING AUTOMATION & CRM': '/services/marketing-automation-crm'
+  };
   return <footer style={{
     width: '100%',
     maxWidth: '1440px',
@@ -473,7 +485,7 @@ export const Footer: React.FC<FooterProps> = ({
           alignItems: 'center',
           gap: '14px',
           cursor: 'pointer'
-        }} onClick={() => onNavigate('Home')}>
+        }} onClick={() => router.push('/')}>
             <div style={{
             width: '48px',
             height: '48px',
@@ -556,7 +568,7 @@ export const Footer: React.FC<FooterProps> = ({
             { label: 'Brand Strategy & Identity', page: 'BRAND STRATEGY & IDENTITY' },
             { label: 'Content Marketing', page: 'CONTENT MARKETING' },
             { label: 'Marketing Automation & CRM', page: 'MARKETING AUTOMATION & CRM' }
-          ].map(item => <span key={item.label} onClick={() => onNavigate(item.page as any)} style={{
+          ].map(item => <span key={item.label} onClick={() => onNavigate ? onNavigate(item.page as any) : router.push(serviceRoutes[item.page])} style={{
             color: 'var(--text-muted)',
             fontSize: '16px',
             fontFamily: '"Barlow", sans-serif',
@@ -606,7 +618,7 @@ export const Footer: React.FC<FooterProps> = ({
         }}>
             Company
           </span>
-          {['About Us', 'Our Work', 'Case Studies', 'Careers', 'Blog', 'Contact'].map(item => <span key={item} onClick={() => { if (item === 'Contact' && onNavigate) onNavigate('Contact'); }} style={{
+          {['About Us', 'Our Work', 'Case Studies', 'Careers', 'Blog', 'Contact'].map(item => <span key={item} onClick={() => { if (item === 'Contact' && onNavigate) router.push('/contact'); }} style={{
             color: 'var(--text-muted)',
             fontSize: '16px',
             fontFamily: '"Barlow", sans-serif',
@@ -862,14 +874,10 @@ const IndustriesServedSection = () => {
 
 
 
-const HomeContent: React.FC<{
-  onNavigate: (page: PageName) => void;
-}> = ({
-  onNavigate
-}) => {
+export const HomeContent: React.FC = () => {
 
   return <div className="page-inner page-content">
-      <HeroSection onNavigate={onNavigate} />
+      <HeroSection />
 
       <AboutSection />
 
@@ -877,9 +885,9 @@ const HomeContent: React.FC<{
 
       <ServicesGridSection />
 
-      <PortfolioSection onNavigate={onNavigate} />
+      <PortfolioSection />
 
-      <CaseStudiesSection onNavigate={onNavigate} />
+      <CaseStudiesSection />
 
       {/* Companies Logo Ticker — marquee */}
       <TrustedBrandsSection />
@@ -972,11 +980,11 @@ const HomeContent: React.FC<{
 
 
       {/* FAQ Section */}
-      <FAQSection onNavigate={onNavigate} />
+      <FAQSection />
 
 
 
-      <FinalCTASection onNavigate={onNavigate} />
+      <FinalCTASection />
 
       <ContactFormSection />
 
@@ -992,136 +1000,4 @@ const HomeContent: React.FC<{
     }} />
     </div>;
 };
-export const LandingPage: React.FC<BaseComponentProps> = ({
-  className,
-  style
-}) => {
-  const [activePage, setActivePage] = useState<PageName>('Home');
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  const handleNavigate = (page: PageName) => {
-    setActivePage(page);
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-  return <div className={`page-shell landing-page ${className || ''}`} style={{
-    minHeight: '100vh',
-    boxSizing: 'border-box',
-    overflowX: 'clip',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    ...style
-  }}>
-      <style>{`
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes robotJump {
-          0%, 100% { transform: translateY(0); }
-          25% { transform: translateY(-8px); }
-          50% { transform: translateY(-22px); }
-          75% { transform: translateY(-8px); }
-        }
-        @keyframes scroll-marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .hero-robot-jump {
-          animation: robotJump 2.8s ease-in-out infinite;
-          transform-origin: center bottom;
-        }
-        .nav-item:hover { color: var(--brand-500-strong) !important; }
-        .primary-btn:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 4px 12px var(--brand-500-strong); }
-        .primary-btn:active { transform: translateY(0); }
-        .service-card:hover { transform: translateY(-8px); background-color: rgba(30, 30, 30, 1) !important; }
-        .value-circle:hover { border-color: var(--brand-500-strong) !important; transform: scale(1.02); }
-        .mobile-menu { animation: slideDown 0.25s ease; }
-        @media (max-width: 767px) {
-          .desktop-nav { display: none !important; }
-          .desktop-cta { display: none !important; }
-          .hamburger-btn { display: flex !important; }
-          .hero-content { left: 0 !important; top: 64px !important; width: 100% !important; padding: 0 24px !important; box-sizing: border-box !important; }
-          .hero-visual { display: none !important; }
-          .hero-section { height: auto !important; min-height: 520px !important; padding-bottom: 48px !important; }
-          .hero-glow { width: 100% !important; opacity: 0.5 !important; }
-          .hero-h1 { font-size: clamp(32px, 9vw, 56px) !important; line-height: 1.15 !important; }
-          .hero-decisions-badge { font-size: clamp(32px, 9vw, 56px) !important; line-height: 1.3 !important; height: auto !important; padding: 4px 16px !important; margin-top: 4px !important; }
-          .hero-p { width: 100% !important; font-size: 16px !important; }
-          .hero-cta-btn { width: 165px !important; }
-          .services-grid { flex-direction: column !important; align-items: center !important; padding: 0 24px !important; }
-          .service-card-item { width: 100% !important; max-width: 420px !important; }
-          .values-grid { flex-wrap: wrap !important; padding: 0 24px !important; gap: 20px !important; }
-          .value-circle-item { width: 160px !important; height: 160px !important; padding: 0 18px !important; }
-          .value-icon { width: 22px !important; margin-bottom: 8px !important; }
-          .value-title { font-size: 14px !important; margin: 0 0 6px 0 !important; }
-          .value-text { font-size: 11px !important; line-height: 1.4 !important; }
-          .story-wrapper { flex-direction: column !important; padding: 0 24px !important; gap: 32px !important; }
-          .story-nav-btn { display: none !important; }
-          .story-items-row { flex-direction: column !important; gap: 40px !important; }
-          .faq-section { padding: 60px 16px 80px !important; }
-          .section-pad { padding: 80px 0 !important; }
-          .services-title { width: 100% !important; padding: 0 24px !important; box-sizing: border-box !important; font-size: 26px !important; line-height: 1.4 !important; }
-          .nav-header { padding: 0 20px !important; }
-          .logo-text { font-size: 16px !important; }
-          .logo-img { width: 48px !important; height: 48px !important; }
-        }
-        @media (min-width: 768px) and (max-width: 1023px) {
-          .hamburger-btn { display: none !important; }
-          .desktop-nav { display: flex !important; }
-          .desktop-cta { display: flex !important; }
-          .hero-content { left: 40px !important; top: 120px !important; width: 55% !important; }
-          .hero-h1 { font-size: clamp(38px, 6vw, 60px) !important; line-height: 1.15 !important; }
-          .hero-decisions-badge { font-size: clamp(38px, 6vw, 60px) !important; line-height: 1.3 !important; height: auto !important; padding: 4px 20px !important; }
-          .hero-p { width: 90% !important; font-size: 17px !important; }
-          .hero-visual { left: auto !important; right: 0 !important; width: 42% !important; top: 100px !important; }
-          .hero-section { height: 780px !important; }
-          .services-grid { flex-wrap: wrap !important; justify-content: center !important; padding: 0 32px !important; gap: 28px !important; }
-          .service-card-item { width: calc(50% - 14px) !important; max-width: 380px !important; }
-          .values-grid { flex-wrap: wrap !important; padding: 0 32px !important; gap: 24px !important; }
-          .value-circle-item { width: 220px !important; height: 220px !important; padding: 0 28px !important; }
-          .story-wrapper { padding: 0 32px !important; }
-          .story-items-row { gap: 32px !important; }
-          .faq-section { padding: 80px 32px 120px !important; }
-          .nav-header { padding: 0 32px !important; }
-        }
-        @media (min-width: 1024px) {
-          .hamburger-btn { display: none !important; }
-          .desktop-nav { display: flex !important; }
-          .desktop-cta { display: flex !important; }
-        }
-      `}</style>
 
-      <Navbar activePage={activePage} onNavigate={handleNavigate} scrolled={scrolled} />
-
-      {/* Page spacer for fixed navbar */}
-      <div style={{
-      height: '96px',
-      width: '100%',
-      flexShrink: 0
-    }} />
-
-      {/* Page Content */}
-      {activePage === 'Home' && <HomeContent onNavigate={handleNavigate} />}
-      {activePage === 'Services' && <ServicesPage onNavigate={handleNavigate} />}
-      {activePage === 'Portfolio' && <PortfolioShowcase />}
-      {activePage === 'About Us' && <><AboutSection /><CompanyIntroSection /><TrustSection /><JourneyTimelineSection /><MissionVisionSection /><CoreValuesSection /><WhyTrustUsSection /><TeamSection /><TrustedBrandsSection /><ResultsImpactSection /><TestimonialsSection /><FAQSection onNavigate={handleNavigate} /><FinalCTASection onNavigate={handleNavigate} /></>}
-      {activePage === 'Careers' && <CareerJobListing />}
-      {activePage === 'Contact' && <ContactFormpage onNavigate={handleNavigate} />}
-      {activePage === 'SEO & ORGANIC GROWTH' && <ServicedetailPage onNavigate={handleNavigate} serviceName="SEO & ORGANIC GROWTH" />}
-      {activePage === 'PERFORMANCE MARKETING' && <ServicedetailPage onNavigate={handleNavigate} serviceName="PERFORMANCE MARKETING" />}
-      {activePage === 'WEB DESIGN & DEVELOPMENT' && <ServicedetailPage onNavigate={handleNavigate} serviceName="WEB DESIGN & DEVELOPMENT" />}
-      {activePage === 'BRAND STRATEGY & IDENTITY' && <ServicedetailPage onNavigate={handleNavigate} serviceName="BRAND STRATEGY & IDENTITY" />}
-      {activePage === 'CONTENT MARKETING' && <ServicedetailPage onNavigate={handleNavigate} serviceName="CONTENT MARKETING" />}
-      {activePage === 'MARKETING AUTOMATION & CRM' && <ServicedetailPage onNavigate={handleNavigate} serviceName="MARKETING AUTOMATION & CRM" />}
-      {activePage === 'Blog' && <BlogPage />}
-      
-
-      <Footer onNavigate={handleNavigate} />
-    </div>;
-};

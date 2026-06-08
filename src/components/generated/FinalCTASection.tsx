@@ -110,8 +110,10 @@ const SERVICE_CTA_CONFIGS: Record<string, CTAConfig> = {
 const DEFAULT_SERVICE = 'SEO & ORGANIC GROWTH';
 
 import { PageName } from './ServicedetailPage';
+import { useRouter } from 'next/navigation';
 
-export const FinalCTASection: React.FC<{ serviceName?: string; onNavigate?: (page: PageName) => void }> = ({ serviceName, onNavigate }) => {
+export const FinalCTASection: React.FC<{ serviceName?: string; onNavigate?: (page: PageName) => void }> = ({ serviceName }) => {
+  const router = useRouter();
   const config = SERVICE_CTA_CONFIGS[serviceName || DEFAULT_SERVICE] || SERVICE_CTA_CONFIGS[DEFAULT_SERVICE];
 
   return (
@@ -179,7 +181,7 @@ export const FinalCTASection: React.FC<{ serviceName?: string; onNavigate?: (pag
             flexWrap: 'wrap',
             gap: '16px'
           }}>
-              <button onClick={() => onNavigate && onNavigate('Contact')} style={{
+              <button onClick={() => router.push('/contact')} style={{
               minWidth: '220px',
               padding: '18px 28px',
               borderRadius: '999px',
@@ -199,7 +201,7 @@ export const FinalCTASection: React.FC<{ serviceName?: string; onNavigate?: (pag
             }}>
                 {config.primaryButton}
               </button>
-              <button onClick={() => onNavigate && onNavigate('Contact')} style={{
+              <button onClick={() => router.push('/contact')} style={{
               minWidth: '220px',
               padding: '18px 28px',
               borderRadius: '999px',

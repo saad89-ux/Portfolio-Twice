@@ -49,7 +49,7 @@ export const CapabilityFilter = () => {
 
       {/* Main Filter Container */}
       <div style={{
-        backgroundColor: '#0a0d14', // Very dark background matching image
+        backgroundColor: '#070a18', // Very dark background matching image
         border: '1px solid rgba(255,255,255,0.05)',
         borderRadius: '24px',
         display: 'flex',
@@ -210,7 +210,7 @@ export const CapabilityFilter = () => {
       }}>
         {/* Card 1: SaaS */}
         <div className="ca-interactive-card" style={{
-          backgroundColor: '#0a0d14',
+          backgroundColor: '#070a18',
           border: '1px solid rgba(255,255,255,0.05)',
           borderRadius: '20px',
           overflow: 'hidden',
@@ -219,7 +219,7 @@ export const CapabilityFilter = () => {
         }}>
           <div style={{ position: 'relative', height: '240px', width: '100%' }}>
             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" alt="Dashboard" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }} />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10,13,20,0) 0%, rgba(10,13,20,1) 100%)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(7,10,24,0) 0%, rgba(7,10,24,1) 100%)' }} />
             
             <div style={{
               position: 'absolute', top: '16px', left: '16px',
@@ -287,7 +287,7 @@ export const CapabilityFilter = () => {
 
         {/* Card 2: E-commerce */}
         <div className="ca-interactive-card" style={{
-          backgroundColor: '#0a0d14',
+          backgroundColor: '#070a18',
           border: '1px solid rgba(255,255,255,0.05)',
           borderRadius: '20px',
           overflow: 'hidden',
@@ -296,7 +296,7 @@ export const CapabilityFilter = () => {
         }}>
           <div style={{ position: 'relative', height: '240px', width: '100%' }}>
             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" alt="Fashion" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }} />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10,13,20,0) 0%, rgba(10,13,20,1) 100%)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(7,10,24,0) 0%, rgba(7,10,24,1) 100%)' }} />
             
             <div style={{
               position: 'absolute', top: '16px', left: '16px',
@@ -364,7 +364,7 @@ export const CapabilityFilter = () => {
 
         {/* Card 3: Healthcare */}
         <div className="ca-interactive-card" style={{
-          backgroundColor: '#0a0d14',
+          backgroundColor: '#070a18',
           border: '1px solid rgba(255,255,255,0.05)',
           borderRadius: '20px',
           overflow: 'hidden',
@@ -373,7 +373,7 @@ export const CapabilityFilter = () => {
         }}>
           <div style={{ position: 'relative', height: '240px', width: '100%' }}>
             <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1000&auto=format&fit=crop" alt="Healthcare" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }} />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10,13,20,0) 0%, rgba(10,13,20,1) 100%)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(7,10,24,0) 0%, rgba(7,10,24,1) 100%)' }} />
             
             <div style={{
               position: 'absolute', top: '16px', left: '16px',

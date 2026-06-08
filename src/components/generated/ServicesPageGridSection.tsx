@@ -1,4 +1,6 @@
+"use client";
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 const BarlowFont = '"Barlow", sans-serif';
 const InterFont = '"Inter", sans-serif';
@@ -99,7 +101,7 @@ const servicesGridData = [
         </div>
         <div style={{
           position: 'absolute', right: '10px', width: '140px', height: '160px',
-          backgroundColor: '#0a0f26', border: '1px solid var(--brand-500-soft)', borderRadius: '12px',
+          backgroundColor: '#070a18', border: '1px solid var(--brand-500-soft)', borderRadius: '12px',
           transform: 'perspective(500px) rotateY(-15deg) rotateX(5deg) translateZ(-40px)',
           opacity: 0.6, zIndex: 1
         }}></div>
@@ -229,6 +231,7 @@ const stats = [
 ];
 
 export const ServicesPageGridSection: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNavigate }) => {
+  const router = useRouter();
   return (
     <section style={{
       width: '100%',
@@ -295,17 +298,20 @@ export const ServicesPageGridSection: React.FC<{ onNavigate?: (page: string) => 
               boxShadow: '0 10px 30px rgba(0,0,0,0.2)'
             }}
             onClick={() => {
-              if (!onNavigate) return;
               const titleMap: Record<string, string> = {
-                'SEO &\nOrganic Growth': 'SEO & ORGANIC GROWTH',
-                'Performance\nMarketing': 'PERFORMANCE MARKETING',
-                'Web Design &\nDevelopment': 'WEB DESIGN & DEVELOPMENT',
-                'Brand Strategy &\nIdentity': 'BRAND STRATEGY & IDENTITY',
-                'Content\nMarketing': 'CONTENT MARKETING',
-                'Marketing Automation\n& CRM': 'MARKETING AUTOMATION & CRM'
+                'SEO &\nOrganic Growth': '/services/seo-organic-growth',
+                'Performance\nMarketing': '/services/performance-marketing',
+                'Web Design &\nDevelopment': '/services/web-design-development',
+                'Brand Strategy &\nIdentity': '/services/brand-strategy-identity',
+                'Content\nMarketing': '/services/content-marketing',
+                'Marketing Automation\n& CRM': '/services/marketing-automation-crm'
               };
-              const pageName = titleMap[item.title];
-              if (pageName) onNavigate(pageName);
+              const route = titleMap[item.title];
+              if (route) {
+                router.push(route);
+                return;
+              }
+              if (onNavigate) onNavigate(item.title);
             }}
             >
               {/* Graphic background area (right side) */}

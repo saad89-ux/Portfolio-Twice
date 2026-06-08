@@ -266,7 +266,7 @@ export const ClientSuccessStories = () => {
               padding: '20px'
             }}>
               <img src={item.img} alt={item.cat} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10,13,20,0) 0%, rgba(10,13,20,0.95) 100%)' }} />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(7,10,24,0) 0%, rgba(7,10,24,0.95) 100%)' }} />
               
               <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>

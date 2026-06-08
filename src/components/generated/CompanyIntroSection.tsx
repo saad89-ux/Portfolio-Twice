@@ -119,7 +119,7 @@ export const CompanyIntroSection: React.FC = () => {
               position: 'absolute',
               inset: 0,
               background:
-                'linear-gradient(180deg, rgba(3, 3, 3, 0.3) 0%, rgba(8, 12, 32, 0.85) 100%)',
+                'linear-gradient(180deg, rgba(3, 3, 3, 0.3) 0%, rgba(7, 10, 24, 0.85) 100%)',
               pointerEvents: 'none',
             }}
           />

@@ -1,233 +1,16 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import { ThemeSwitch } from '../ThemeSwitch';
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { ServiceDetailEcosystemSection } from './ServiceDetailEcosystemSection';
 import { ResultsImpactSection } from './ResultsImpactSection';
 import { CaseStudiesSection } from './CaseStudiesSection';
 import { FAQSection } from './FAQSection';
 import { FinalCTASection } from './FinalCTASection';
-import { Footer } from './LandingPage';
 
 export type PageName = 'Home' | 'Services' | 'Portfolio' | 'About Us' | 'Careers' | 'SEO & ORGANIC GROWTH' | 'PERFORMANCE MARKETING' | 'WEB DESIGN & DEVELOPMENT' | 'BRAND STRATEGY & IDENTITY' | 'CONTENT MARKETING' | 'MARKETING AUTOMATION & CRM' | 'Contact' | 'Blog';
 
-const navItems: PageName[] = ['Home', 'About Us', 'Services', 'Portfolio', 'Blog'];
-
-export interface NavbarProps {
-  activePage: PageName;
-  onNavigate: (page: PageName) => void;
-  scrolled: boolean;
-}
-
-export const Navbar: React.FC<NavbarProps> = ({
-  activePage,
-  onNavigate,
-  scrolled
-}) => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleNavClick = (page: PageName) => {
-    onNavigate(page);
-    setMenuOpen(false);
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-
-  return <React.Fragment>
-    <header className="nav-header" style={{
-      width: '100%',
-      height: '96px',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      padding: '0 86px',
-      backgroundColor: 'var(--bg-primary)',
-      backdropFilter: scrolled ? 'blur(10px)' : 'none',
-      boxSizing: 'border-box',
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      zIndex: 1000,
-      borderBottom: scrolled ? '1px solid var(--border-light)' : 'none',
-      transition: 'all 0.3s ease'
-    }}>
-      {/* Logo */}
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        cursor: 'pointer'
-      }} onClick={() => handleNavClick('Home')}>
-        <img className="logo-img" src="https://storage.googleapis.com/storage.magicpath.ai/user/411851438805884928/figma-assets/2f27409e-ca8b-4ecc-a6bc-ba60974bd799.png" alt="Logo" style={{
-          width: '64px',
-          height: '64px',
-          objectFit: 'cover'
-        }} />
-        <span className="logo-text" style={{
-          color: 'var(--text-primary)',
-          fontSize: '20px',
-          fontFamily: '"Barlow", sans-serif',
-          fontWeight: 700,
-          marginLeft: '4px',
-          lineHeight: '1.1'
-        }}>
-          Catalyst
-          <br />
-          Analytics
-        </span>
-      </div>
-
-      {/* Desktop Nav */}
-      <nav className="desktop-nav" style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: '22px'
-      }}>
-        {navItems.map(item => <button key={item} className="nav-item" onClick={() => handleNavClick(item)} style={{
-          background: 'none',
-          border: 'none',
-          color: activePage === item ? 'var(--brand-500-strong)' : 'white',
-          fontSize: '16px',
-          fontFamily: '"Barlow", sans-serif',
-          cursor: 'pointer',
-          padding: '10px',
-          transition: 'color 0.2s ease',
-          borderBottom: activePage === item ? '2px solid var(--brand-500-strong)' : '2px solid transparent'
-        }}>
-          {item}
-        </button>)}
-      </nav>
-
-      {/* Desktop CTA */}
-      <button className="primary-btn desktop-cta" style={{
-        width: '140px',
-        padding: '14px 10px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'var(--brand-500-strong)',
-        border: '1px dotted var(--text-primary)',
-        borderRadius: '10px',
-        color: 'var(--text-primary)',
-        fontSize: '14px',
-        fontWeight: 600,
-        fontFamily: '"Barlow", sans-serif',
-        lineHeight: '14px',
-        cursor: 'pointer',
-        boxSizing: 'border-box',
-        transition: 'all 0.2s ease'
-      }} onClick={() => handleNavClick('Contact')}>
-        Contact Us
-      </button>
-
-      {/* Theme Switch */}
-      <div style={{ display: 'flex', alignItems: 'center', marginLeft: '16px' }}>
-        <ThemeSwitch />
-      </div>
-
-      {/* Hamburger */}
-      <button className="hamburger-btn" onClick={() => setMenuOpen(!menuOpen)} style={{
-        display: 'none',
-        background: 'none',
-        border: 'none',
-        cursor: 'pointer',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: '5px',
-        padding: '8px'
-      }} aria-label="Toggle menu">
-        <span style={{
-          display: 'block',
-          width: '24px',
-          height: '2px',
-          backgroundColor: 'var(--text-primary)',
-          transition: 'all 0.3s ease',
-          transform: menuOpen ? 'rotate(45deg) translateY(7px)' : 'none'
-        }} />
-        <span style={{
-          display: 'block',
-          width: '24px',
-          height: '2px',
-          backgroundColor: 'var(--text-primary)',
-          transition: 'all 0.3s ease',
-          opacity: menuOpen ? 0 : 1
-        }} />
-        <span style={{
-          display: 'block',
-          width: '24px',
-          height: '2px',
-          backgroundColor: 'var(--text-primary)',
-          transition: 'all 0.3s ease',
-          transform: menuOpen ? 'rotate(-45deg) translateY(-7px)' : 'none'
-        }} />
-      </button>
-    </header>
-
-    {/* Mobile Menu */}
-    {menuOpen && <div className="mobile-menu" style={{
-      position: 'fixed',
-      top: '96px',
-      left: 0,
-      width: '100%',
-      backgroundColor: 'var(--bg-card-alt)',
-      backdropFilter: 'blur(12px)',
-      zIndex: 999,
-      display: 'flex',
-      flexDirection: 'column',
-      padding: '16px 0 24px',
-      borderBottom: '1px solid var(--border-light)'
-    }}>
-      {navItems.map(item => <button key={item} className="nav-item" onClick={() => handleNavClick(item)} style={{
-        background: 'none',
-        border: 'none',
-        color: activePage === item ? 'var(--brand-500-strong)' : 'var(--text-primary)',
-        fontSize: '17px',
-        fontFamily: '"Barlow", sans-serif',
-        cursor: 'pointer',
-        padding: '14px 24px',
-        textAlign: 'left',
-        transition: 'color 0.2s ease'
-      }}>
-        {item}
-      </button>)}
-      <div style={{
-        padding: '8px 24px 0',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '16px'
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <span style={{ color: 'var(--text-primary)', fontFamily: '"Barlow", sans-serif', fontSize: '16px', fontWeight: 600 }}>Theme</span>
-          <ThemeSwitch />
-        </div>
-        <button className="primary-btn" style={{
-          width: '100%',
-          padding: '14px 10px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: 'var(--brand-500-strong)',
-          border: '1px dotted var(--text-primary)',
-          borderRadius: '10px',
-          color: 'var(--text-primary)',
-          fontSize: '14px',
-          fontWeight: 600,
-          fontFamily: '"Barlow", sans-serif',
-          lineHeight: '14px',
-          cursor: 'pointer',
-          boxSizing: 'border-box',
-          transition: 'all 0.2s ease'
-        }} onClick={() => handleNavClick('Contact')}>
-          Contact Us
-        </button>
-      </div>
-    </div>}
-  </React.Fragment>;
-};
-
 interface ServicedetailPageProps {
-  onNavigate?: (page: PageName) => void;
+  
   serviceName?: PageName;
 }
 
@@ -772,7 +555,7 @@ const ToolsPlatformSection: React.FC<{ serviceName?: string }> = ({ serviceName 
       <div className="tools-grid">
         {filteredTools.map((tool, idx) => (
           <div key={idx} className="ca-hover-popup" style={{ 
-            backgroundColor: 'rgba(10, 12, 32, 0.7)', 
+            backgroundColor: 'rgba(7, 10, 24, 0.7)', 
             border: '1px solid rgba(255, 255, 255, 0.05)', 
             borderRadius: '16px', 
             overflow: 'hidden', 
@@ -816,25 +599,8 @@ const ToolsPlatformSection: React.FC<{ serviceName?: string }> = ({ serviceName 
   );
 };
 
-export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate, serviceName }) => {
-  const [activePage, setActivePage] = useState<PageName>('Services');
-  const [scrolled, setScrolled] = useState(false);
-
-  const handleNavigate = (page: PageName) => {
-    setActivePage(page);
-    if (onNavigate) {
-      onNavigate(page);
-    }
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ serviceName }) => {
+  const router = useRouter();
 
   const currentKey = serviceName && serviceConfigs[serviceName] ? serviceName : 'SEO & ORGANIC GROWTH';
   const config = serviceConfigs[currentKey];
@@ -974,15 +740,6 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
       }
     `}</style>
 
-    <Navbar activePage={activePage} onNavigate={handleNavigate} scrolled={scrolled} />
-
-    {/* Page spacer for fixed navbar */}
-    <div style={{
-      height: '96px',
-      width: '100%',
-      flexShrink: 0
-    }} />
-
     {/* Service Hero Section */}
     <section className="hero-section-detail" style={{
       width: '100%',
@@ -1076,7 +833,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
           flexWrap: 'wrap'
         }}>
           {/* Book A Strategy Call Button */}
-          <button onClick={() => { if (onNavigate) onNavigate('Contact'); }} style={{
+          <button onClick={() => router.push('/contact')} style={{
             padding: '14px 28px',
             background: 'linear-gradient(135deg, var(--brand-500-strong), var(--brand-400-strong))',
             border: 'none',
@@ -1223,7 +980,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
             width: '130px',
             height: '130px',
             borderRadius: '50%',
-            backgroundColor: 'rgba(10, 12, 32, 0.95)',
+            backgroundColor: 'rgba(7, 10, 24, 0.95)',
             border: '2px solid var(--brand-400-strong)',
             boxShadow: '0 0 30px var(--brand-400-strong)',
             display: 'flex',
@@ -1445,7 +1202,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                   width: '24px',
                   height: '24px',
                   borderRadius: '50%',
-                  border: '2px solid rgba(10, 12, 32, 1)',
+                  border: '2px solid rgba(7, 10, 24, 1)',
                   position: 'absolute',
                   left: `${(num - 1) * 12}px`,
                   objectFit: 'cover'
@@ -1461,7 +1218,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
           bottom: '40px',
           right: '30px',
           borderRadius: '30px',
-          backgroundColor: 'rgba(10, 12, 32, 0.85)',
+          backgroundColor: 'rgba(7, 10, 24, 0.85)',
           backdropFilter: 'blur(12px)',
           border: '1px solid var(--border-light)',
           padding: '10px 20px',
@@ -1499,7 +1256,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
       width: '100%',
       maxWidth: '1268px',
       margin: '0 auto 60px',
-      backgroundColor: 'rgba(10, 12, 32, 0.4)',
+      backgroundColor: 'rgba(7, 10, 24, 0.4)',
       backdropFilter: 'blur(10px)',
       borderRadius: '24px',
       border: '1px solid var(--border-light)',
@@ -1782,7 +1539,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
               borderRadius: '50%',
               background: idx === 0
                 ? 'linear-gradient(135deg, var(--brand-500-strong), var(--brand-400-strong))'
-                : 'rgba(10, 12, 32, 0.9)',
+                : 'rgba(7, 10, 24, 0.9)',
               border: idx === 0
                 ? 'none'
                 : '2px solid var(--border-light)',
@@ -1925,7 +1682,7 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
                 width: '46px',
                 height: '46px',
                 borderRadius: '50%',
-                backgroundColor: 'rgba(10, 12, 32, 0.95)',
+                backgroundColor: 'rgba(7, 10, 24, 0.95)',
                 border: `2px solid ${iconColors[idx]}`,
                 display: 'flex',
                 alignItems: 'center',
@@ -2458,10 +2215,9 @@ export const ServicedetailPage: React.FC<ServicedetailPageProps> = ({ onNavigate
 
     <ServiceDetailEcosystemSection serviceName={currentKey} />
     <ResultsImpactSection serviceName={currentKey} />
-    <CaseStudiesSection serviceName={currentKey} onNavigate={handleNavigate} />
+    <CaseStudiesSection serviceName={currentKey} />
     <ToolsPlatformSection serviceName={currentKey} />
-    <FAQSection serviceName={currentKey} onNavigate={handleNavigate} />
-    <FinalCTASection serviceName={currentKey} onNavigate={handleNavigate} />
-    <Footer onNavigate={handleNavigate} />
+    <FAQSection serviceName={currentKey} />
+    <FinalCTASection serviceName={currentKey} />
   </div>;
 };

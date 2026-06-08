@@ -216,7 +216,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
         minHeight: '620px',
         borderRadius: '40px',
         overflow: 'hidden',
-        backgroundColor: '#080c20',
+        backgroundColor: '#070a18',
         boxShadow: '0 40px 90px rgba(0, 0, 0, 0.35)',
         border: '1px solid var(--brand-500-soft)'
       }}>
@@ -231,7 +231,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
           <div style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(180deg, rgba(3, 3, 3, 0.12) 0%, rgba(7, 11, 30, 0.55) 45%, rgba(8, 12, 32, 0.92) 100%)',
+          background: 'linear-gradient(180deg, rgba(3, 3, 3, 0.12) 0%, rgba(7, 11, 30, 0.55) 45%, rgba(7, 10, 24, 0.92) 100%)',
           pointerEvents: 'none'
         }} />
           <div style={{
@@ -244,63 +244,8 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
           flexDirection: 'column',
           gap: '18px'
         }}>
-            <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '10px',
-            padding: '12px 16px',
-            borderRadius: '999px',
-            backgroundColor: 'var(--bg-card)',
-            border: '1px solid var(--border-light)',
-            color: 'var(--text-primary)',
-            width: 'fit-content'
-          }}>
-              <span style={{
-              width: '12px',
-              height: '12px',
-              borderRadius: '999px',
-              backgroundColor: 'var(--brand-500-strong)'
-            }} />
-              <span style={{
-              fontFamily: BarlowFont,
-              fontWeight: 600,
-              fontSize: '13px',
-              lineHeight: '1',
-              letterSpacing: '0.04em'
-            }}>
-                6+ Years Experience
-              </span>
-            </div>
-            <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '14px'
-          }}>
-              <div style={{
-              padding: '14px 18px',
-              borderRadius: '24px',
-              backgroundColor: 'var(--brand-500-medium)',
-              border: '1px solid var(--brand-500-medium)',
-              color: 'var(--text-primary)',
-              fontFamily: BarlowFont,
-              fontWeight: 600,
-              fontSize: '14px'
-            }}>
-                Data-Driven Growth Expert
-              </div>
-              <div style={{
-              padding: '14px 18px',
-              borderRadius: '24px',
-              backgroundColor: 'var(--bg-card)',
-              border: '1px solid var(--border-light)',
-              color: 'var(--text-primary)',
-              fontFamily: BarlowFont,
-              fontWeight: 600,
-              fontSize: '14px'
-            }}>
-                Results That Matter
-              </div>
-            </div>
+ 
+       
           </div>
           <div style={{
           position: 'absolute',
@@ -312,117 +257,7 @@ export const AboutSection: React.FC<BaseComponentProps> = ({
           flexDirection: 'column',
           gap: '18px'
         }}>
-            <button style={{
-            width: 'fit-content',
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '12px',
-            padding: '14px 18px',
-            borderRadius: '999px',
-            border: '1px solid var(--border-light)',
-            backgroundColor: 'var(--bg-card)',
-            color: 'var(--text-primary)',
-            fontFamily: BarlowFont,
-            fontWeight: 600,
-            fontSize: '14px',
-            cursor: 'pointer'
-          }}>
-              <span style={{
-              width: '16px',
-              height: '16px',
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: '50%',
-              backgroundColor: 'var(--brand-500-strong)',
-              color: 'var(--text-primary)',
-              fontSize: '12px'
-            }}>
-                ?
-              </span>
-              Watch My Story
-              <span style={{
-              color: 'var(--text-muted)',
-              fontSize: '13px',
-              fontWeight: 500
-            }}>
-                2 min video
-              </span>
-            </button>
-            <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: '20px',
-            padding: '20px 24px',
-            borderRadius: '32px',
-            backgroundColor: 'var(--bg-card)',
-            border: '1px solid var(--border-light)'
-          }}>
-              <div style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '8px'
-            }}>
-                <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '10px'
-              }}>
-                  <span style={{
-                  color: 'rgba(255, 215, 0, 1)',
-                  fontSize: '18px'
-                }}>
-                    ?????
-                  </span>
-                  <span style={{
-                  color: 'var(--text-primary)',
-                  fontFamily: BarlowFont,
-                  fontWeight: 700,
-                  fontSize: '18px'
-                }}>
-                    4.9/5
-                  </span>
-                </div>
-                <span style={{
-                color: 'var(--text-muted)',
-                fontSize: '13px',
-                fontFamily: BarlowFont,
-                fontWeight: 500
-              }}>
-                  120+ Reviews
-                </span>
-              </div>
-              <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px'
-            }}>
-                <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                position: 'relative',
-                minWidth: '90px'
-              }}>
-                    {reviewAvatars.map((src, index) => <img className="ca-hover-popup" key={src} src={src} alt="Reviewer avatar" style={{
-                    width: '36px',
-                    height: '36px',
-                    borderRadius: '999px',
-                    objectFit: 'cover',
-                    border: '2px solid rgba(6, 8, 22, 1)',
-                    left: `${index * -12}px`
-                  }} />)}
-                </div>
-                <span style={{
-                color: 'var(--text-muted)',
-                fontSize: '14px',
-                fontFamily: BarlowFont,
-                fontWeight: 500
-              }}>
-                  Trusted by business owners worldwide
-                </span>
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>

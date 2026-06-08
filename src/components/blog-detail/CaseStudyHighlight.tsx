@@ -31,7 +31,7 @@ export const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({ caseStud
           position: relative;
           overflow: hidden;
           border-radius: 2rem;
-          background: linear-gradient(175deg, #020410 0%, #080c1e 40%, #0c0f24 100%);
+          background: linear-gradient(175deg, #020410 0%, #070a18 40%, #070a18 100%);
           border: 1px solid rgba(255,255,255,0.07);
           padding: clamp(3rem, 4vw, 4.5rem) clamp(2rem, 3vw, 3.5rem) clamp(2.5rem, 3.5vw, 4rem);
         }

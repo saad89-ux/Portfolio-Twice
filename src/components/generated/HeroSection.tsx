@@ -1,9 +1,11 @@
+"use client";
 import React from 'react';
-import { PageName } from './ServicedetailPage';
+import { useRouter } from 'next/navigation';
 
 const clientAvatars = ['3a9e176a-3863-474d-a596-d593c4d569ea.png', '998d15ff-acf1-4ed8-b332-f13d639b3e03.png', '363356fa-f16d-41aa-99ea-3c436d6bc5df.png'];
 
-export const HeroSection: React.FC<{ onNavigate?: (page: PageName) => void }> = ({ onNavigate }) => {
+export const HeroSection: React.FC = () => {
+  const router = useRouter();
   return (
       <>
       {/* Hero Section */}
@@ -72,7 +74,7 @@ export const HeroSection: React.FC<{ onNavigate?: (page: PageName) => void }> = 
         }}>
             Leverage the power of machine learning and AI to unlock insights and drive business growth
           </p>
-          <button onClick={() => onNavigate && onNavigate('Contact')} className="primary-btn hero-cta-btn" style={{
+          <button onClick={() => router.push('/contact')} className="primary-btn hero-cta-btn" style={{
           width: '165px',
           height: '42px',
           padding: '0',

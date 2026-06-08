@@ -154,7 +154,7 @@ export const BlogHero = () => {
             borderRadius: '20px', overflow: 'hidden',
             border: '1px solid rgba(255,255,255,0.08)',
             boxShadow: '0 30px 60px rgba(0,0,0,0.5)',
-            transform: 'translateZ(60px)', background: '#0a0d14',
+            transform: 'translateZ(60px)', background: '#070a18',
             cursor: 'pointer'
           }}
           role="link"
@@ -167,7 +167,7 @@ export const BlogHero = () => {
             }
           }}>
             <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop" alt="SEO" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.7 }} />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 0%, rgba(10,13,20,0.95) 100%)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 0%, rgba(7,10,24,0.95) 100%)' }} />
             <div style={{ position: 'absolute', bottom: '20px', left: '20px', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '6px' }}>
               <h4 style={{ fontSize: '16px', fontWeight: 700, color: '#fff', margin: 0, lineHeight: 1.3 }}>The Ultimate SEO Checklist for 2025</h4>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -183,7 +183,7 @@ export const BlogHero = () => {
             borderRadius: '20px', overflow: 'hidden',
             border: '1px solid rgba(255,255,255,0.08)',
             boxShadow: '0 30px 60px rgba(0,0,0,0.5)',
-            transform: 'translateZ(30px)', background: '#0a0d14',
+            transform: 'translateZ(30px)', background: '#070a18',
             cursor: 'pointer'
           }}
           role="link"
@@ -196,7 +196,7 @@ export const BlogHero = () => {
             }
           }}>
             <img src="https://images.unsplash.com/photo-1563986768609-322da13575f2?q=80&w=800&auto=format&fit=crop" alt="ROAS" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.7 }} />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 0%, rgba(10,13,20,0.95) 100%)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 0%, rgba(7,10,24,0.95) 100%)' }} />
             <div style={{ position: 'absolute', top: '16px', left: '16px' }}>
               <span style={{ fontSize: '8px', fontWeight: 700, color: 'var(--brand-400)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>PERFORMANCE MARKETING</span>
             </div>
@@ -215,7 +215,7 @@ export const BlogHero = () => {
             borderRadius: '24px', overflow: 'hidden',
             border: '1px solid var(--brand-400-medium)',
             boxShadow: '0 40px 80px rgba(0,0,0,0.6), 0 0 40px var(--brand-400-soft)',
-            transform: 'translateZ(100px)', background: '#0a0d14',
+            transform: 'translateZ(100px)', background: '#070a18',
             cursor: 'pointer'
           }}
           role="link"
@@ -228,7 +228,7 @@ export const BlogHero = () => {
             }
           }}>
             <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop" alt="AI" style={{ width: '100%', height: '50%', objectFit: 'cover', opacity: 0.8 }} />
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '50%', background: 'linear-gradient(180deg, transparent 0%, rgba(10,13,20,1) 100%)' }} />
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '50%', background: 'linear-gradient(180deg, transparent 0%, rgba(7,10,24,1) 100%)' }} />
             
             <div style={{ padding: '0 24px 24px', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <span style={{ fontSize: '9px', fontWeight: 700, color: 'var(--brand-400)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>FEATURED ARTICLE</span>
@@ -263,7 +263,7 @@ export const BlogHero = () => {
             borderRadius: '16px', overflow: 'hidden',
             border: '1px solid rgba(255,255,255,0.06)',
             boxShadow: '0 20px 40px rgba(0,0,0,0.5)',
-            transform: 'translateZ(40px)', background: '#0a0d14',
+            transform: 'translateZ(40px)', background: '#070a18',
             cursor: 'pointer'
           }}
           role="link"
@@ -276,7 +276,7 @@ export const BlogHero = () => {
             }
           }}>
             <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop" alt="Social" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 0%, rgba(10,13,20,0.95) 100%)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 0%, rgba(7,10,24,0.95) 100%)' }} />
             <div style={{ position: 'absolute', top: '12px', left: '12px' }}>
               <span style={{ fontSize: '8px', fontWeight: 700, color: 'var(--brand-600)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>SOCIAL MEDIA</span>
             </div>
@@ -296,7 +296,7 @@ export const BlogHero = () => {
             borderRadius: '16px', overflow: 'hidden',
             border: '1px solid rgba(255,255,255,0.06)',
             boxShadow: '0 20px 40px rgba(0,0,0,0.5)',
-            transform: 'translateZ(10px)', background: '#0a0d14',
+            transform: 'translateZ(10px)', background: '#070a18',
             cursor: 'pointer'
           }}
           role="link"
@@ -309,7 +309,7 @@ export const BlogHero = () => {
             }
           }}>
             <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=800&auto=format&fit=crop" alt="Content" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 0%, rgba(10,13,20,0.95) 100%)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 0%, rgba(7,10,24,0.95) 100%)' }} />
             <div style={{ position: 'absolute', bottom: '16px', left: '16px', right: '16px', zIndex: 1, display: 'flex', flexDirection: 'column', gap: '6px' }}>
               <h4 style={{ fontSize: '13px', fontWeight: 700, color: '#fff', margin: 0, lineHeight: 1.3 }}>How to Build a Content Strategy That Converts</h4>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>

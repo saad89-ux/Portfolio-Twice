@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { Theme } from './settings/types';
-import { LandingPage } from './components/generated/LandingPage';
+import { HomeContent } from './components/generated/LandingPage';
 // %IMPORT_STATEMENT
 
 let theme: Theme = 'light';
@@ -20,7 +20,7 @@ function App() {
     setTheme(theme);
   }, []);
 
-  return <LandingPage />; // %EXPORT_STATEMENT%
+  return <HomeContent />; // %EXPORT_STATEMENT%
 }
 
 export default App;
